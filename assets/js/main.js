@@ -141,6 +141,12 @@ function initScrollAnimations() {
   const reveals = document.querySelectorAll('.reveal-on-scroll');
   if (!reveals.length) return;
 
+  // On mobile & tablet viewports (<1024px), immediately reveal all elements so content is 100% visible
+  if (window.innerWidth < 1024) {
+    reveals.forEach(el => el.classList.add('revealed'));
+    return;
+  }
+
   const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -149,8 +155,8 @@ function initScrollAnimations() {
       }
     });
   }, {
-    threshold: 0.12,
-    rootMargin: '0px 0px -40px 0px'
+    threshold: 0.08,
+    rootMargin: '0px 0px -20px 0px'
   });
 
   reveals.forEach(el => observer.observe(el));

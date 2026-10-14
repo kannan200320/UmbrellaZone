@@ -386,7 +386,7 @@ html.dark .hero-gradient-2 {
   animation: errorSlideDown 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-/* Scroll Reveal Animations */
+/* Scroll Reveal Animations (Desktop Smooth Lift; Mobile & Tablet Guaranteed Instant Visibility) */
 .reveal-on-scroll {
   opacity: 0;
   transform: translateY(28px);
@@ -396,6 +396,14 @@ html.dark .hero-gradient-2 {
 .reveal-on-scroll.revealed {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (max-width: 1023px) {
+  .reveal-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
 }
 
 /* Header Navigation: Strictly hidden on mobile (<640px) and tablet (<1024px), displayed only on desktop (>=1024px) */
