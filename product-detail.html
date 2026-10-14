@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details | UmbrellaZone™</title>
+  <meta name="description" content="View engineering specifications, wind-tunnel certification, and customer reviews for UmbrellaZone specialty rain gear.">
+  
+  <!-- Instant Dark Mode & RTL Theme Initializer (Prevents Theme Flash / Glitch on Navigation) -->
+  <script>
+    (function() {
+      try {
+        var theme = localStorage.getItem('umbrellaZone_theme_v1');
+        if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+        var dir = localStorage.getItem('umbrellaZone_dir_v1');
+        if (dir === 'rtl') {
+          document.documentElement.setAttribute('dir', 'rtl');
+          document.documentElement.setAttribute('lang', 'ar');
+        } else {
+          document.documentElement.setAttribute('dir', 'ltr');
+          document.documentElement.setAttribute('lang', 'en');
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50: '#f0f9ff', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1', dark: '#090e17' }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            display: ['"Space Grotesk"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="shortcut icon" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans antialiased selection:bg-sky-500 selection:text-white">
+
+
+  <!-- ==================== MAIN HEADER ==================== -->
+  <header class="sticky top-0 z-40 glass-nav transition-all duration-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-600 to-cyan-500 flex items-center justify-center text-white font-bold shadow-md shadow-sky-600/30 group-hover:scale-105 transition shrink-0">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 2C6.48 2 2 6.48 2 12c0 1.25.23 2.45.65 3.55.15.39.54.64.96.61h16.78c.42.03.81-.22.96-.61.42-1.1.65-2.3.65-3.55 0-5.52-4.48-10-10-10z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 12v7a2 2 0 104 0"></path></svg>
+          </div>
+          <span class="font-display font-extrabold text-2xl tracking-tight text-slate-900 dark:text-white group-hover:text-sky-600 transition whitespace-nowrap">
+            Umbrella<span class="text-sky-600">Zone</span>
+          </span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden lg:flex items-center gap-6 xl:gap-8 flex-nowrap shrink-0 nav-container">
+          <div class="relative dropdown-group">
+            <button class="nav-link whitespace-nowrap flex items-center gap-1.5 py-2 px-1 text-[14px] font-semibold text-slate-700 dark:text-slate-200 hover:text-sky-600 dark:hover:text-sky-400 transition">
+              <span>Home</span>
+              <svg class="dropdown-chevron w-4 h-4 text-slate-400 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="dropdown-menu absolute top-full left-0 w-72 bg-white dark:bg-slate-900 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-800 p-2 z-50">
+              <a href="index.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-sky-50 dark:hover:bg-slate-800 transition group">
+                <div class="w-8 h-8 rounded-lg bg-sky-100 dark:bg-sky-950/80 text-sky-600 dark:text-sky-400 flex items-center justify-center text-sm mt-0.5 shrink-0">🏙️</div>
+                <div>
+                  <div class="text-sm font-bold text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400">Urban Commute</div>
+                  <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Everyday city commute rainwear & compact umbrellas</div>
+                </div>
+              </a>
+              <a href="home-2.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-sky-50 dark:hover:bg-slate-800 transition group">
+                <div class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 flex items-center justify-center text-sm mt-0.5 shrink-0">🌪️</div>
+                <div>
+                  <div class="text-sm font-bold text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400">Cyclone & Storms</div>
+                  <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Heavy-duty gale umbrellas, mud boots & rain parkas</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="relative dropdown-group">
+            <button id="nav-parent-products" class="nav-link whitespace-nowrap active text-sky-600 font-semibold flex items-center gap-1.5 py-2 px-1 text-[14px] transition">
+              <span>Products</span>
+              <svg class="dropdown-chevron w-4 h-4 text-sky-600 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="dropdown-menu absolute top-full left-0 w-72 bg-white dark:bg-slate-900 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-800 p-3 z-50">
+              <a href="products-umbrellas.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm"><span>☂️</span> Umbrellas</a>
+              <a href="products-raincoats.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm"><span>🧥</span> Raincoats</a>
+              <a href="products-boots.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm"><span>👢</span> Rain Boots</a>
+            </div>
+          </div>
+
+          <a href="pricing.html" class="nav-link whitespace-nowrap text-[14px] font-semibold text-slate-700 dark:text-slate-200 hover:text-sky-600 dark:hover:text-sky-400 py-2 px-1 transition">Pricing</a>
+          <a href="warranty.html" class="nav-link whitespace-nowrap text-[14px] font-semibold text-slate-700 dark:text-slate-200 hover:text-sky-600 dark:hover:text-sky-400 py-2 px-1 transition">Warranty</a>
+          <a href="about.html" class="nav-link whitespace-nowrap text-[14px] font-semibold text-slate-700 dark:text-slate-200 hover:text-sky-600 dark:hover:text-sky-400 py-2 px-1 transition">About Us</a>
+          <a href="blog.html" class="nav-link whitespace-nowrap text-[14px] font-semibold text-slate-700 dark:text-slate-200 hover:text-sky-600 dark:hover:text-sky-400 py-2 px-1 transition">Blog</a>
+          <a href="contact.html" class="nav-link whitespace-nowrap text-[14px] font-semibold text-slate-700 dark:text-slate-200 hover:text-sky-600 dark:hover:text-sky-400 py-2 px-1 transition">Contact Us</a>
+        </nav>
+
+        <!-- Right Action Controls (Dark Mode + RTL + Search + Wishlist + Cart + Hamburger) -->
+        <div class="flex items-center gap-2 sm:gap-3">
+          <!-- Dark Mode: Hidden on mobile & tablet (<1024px, inside drawer), visible on desktop -->
+          <button type="button" class="theme-toggle-btn hidden lg:inline-flex w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 items-center justify-center transition cursor-pointer" title="Toggle Dark/Light Mode">
+            <span class="theme-toggle-icon"></span>
+          </button>
+
+          <!-- RTL: Hidden on mobile & tablet (<1024px, inside drawer), visible on desktop -->
+          <button type="button" class="rtl-toggle-btn hidden lg:inline-flex px-2.5 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs font-bold transition items-center gap-1.5 cursor-pointer" title="Switch to RTL Layout">
+            <span class="rtl-arrow-icon text-sm font-bold">←</span>
+            <span class="rtl-label-text font-bold">RTL</span>
+          </button>
+
+          <!-- Search: Visible on Mobile, Tablet & Desktop -->
+          <button type="button" class="search-modal-trigger w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 flex items-center justify-center transition cursor-pointer" aria-label="Search rain gear" title="Search Store">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+          </button>
+
+          <!-- Wishlist: Hidden on mobile & tablet (<1024px, accessed via drawer Saved Wishlist), visible on desktop -->
+          <a href="favorites.html" class="hidden lg:inline-flex relative w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-200 items-center justify-center transition" aria-label="Monsoon Favorites" title="Monsoon Favorites">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+            </svg>
+            <span class="wishlist-badge-count absolute -top-1 -right-1 w-5 h-5 bg-rose-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center shadow-xs">0</span>
+          </a>
+
+          <!-- Cart: Visible on Mobile, Tablet & Desktop with badge -->
+          <a href="cart.html" class="relative w-10 h-10 rounded-xl bg-sky-600 hover:bg-sky-700 text-white flex items-center justify-center transition shadow-md shadow-sky-600/20 active:scale-95" aria-label="Open Shopping Cart" title="View Cart">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+            </svg>
+            <span class="cart-badge-count absolute -top-1.5 -right-1.5 w-5 h-5 bg-sky-400 text-slate-900 text-[11px] font-black rounded-full flex items-center justify-center ring-2 ring-white dark:ring-slate-900 shadow-xs">0</span>
+          </a>
+
+          <!-- Hamburger: Visible on Mobile & Tablet -->
+          <button type="button" id="mobile-menu-btn" onclick="openUmbrellaDrawer(event)" class="lg:hidden w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 flex items-center justify-center transition active:scale-95 cursor-pointer" aria-label="Open mobile navigation menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== BREADCRUMBS ==================== -->
+  <div class="bg-white dark:bg-slate-900 border-b border-slate-200/80 dark:border-slate-800 py-3">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div id="pd-breadcrumbs" class="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400 flex-wrap">
+        <a href="index.html" class="hover:text-sky-600 dark:hover:text-sky-400">Home</a>
+        <span>/</span>
+        <a href="products-umbrellas.html" id="pd-bc-cat-link" class="hover:text-sky-600 dark:hover:text-sky-400">Products</a>
+        <span>/</span>
+        <span id="pd-bc-name" class="text-slate-900 dark:text-white font-bold">Vortex-9 Windproof Compact Umbrella</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MAIN PRODUCT HERO / PURCHASE SECTION ==================== -->
+  <section class="py-10 sm:py-14 reveal-on-scroll">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+        
+        <!-- Left: Image Gallery Showcase -->
+        <div class="lg:col-span-7 space-y-4">
+          
+          <!-- Main Display Image with Zoom container -->
+          <div class="relative aspect-square sm:aspect-[4/3] rounded-3xl overflow-hidden bg-slate-100 dark:bg-slate-800 border border-slate-200/90 dark:border-slate-700 shadow-md group">
+            <img id="pd-main-img" src="" alt="Main Product Preview" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+            <span id="pd-badge" class="absolute top-4 left-4 text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white bg-white/95 dark:bg-slate-900/95 backdrop-blur-md px-3 py-1.5 rounded-full shadow-sm">
+              Best Seller
+            </span>
+          </div>
+
+          <!-- Thumbnails Strip -->
+          <div id="pd-thumbnails" class="flex gap-3 overflow-x-auto pb-2">
+            <!-- Dynamically populated -->
+          </div>
+
+          <!-- Feature Quick-Banner -->
+          <div class="grid grid-cols-3 gap-3 p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center text-xs">
+            <div>
+              <span class="block font-bold text-sky-600 dark:text-sky-400 text-sm">80 km/h</span>
+              <span class="text-slate-500 dark:text-slate-400 text-[11px]">Wind Tested</span>
+            </div>
+            <div class="border-x border-slate-100 dark:border-slate-800">
+              <span class="block font-bold text-sky-600 dark:text-sky-400 text-sm">Nano-Coated</span>
+              <span class="text-slate-500 dark:text-slate-400 text-[11px]">Instant Shake Dry</span>
+            </div>
+            <div>
+              <span class="block font-bold text-sky-600 dark:text-sky-400 text-sm">2-Year</span>
+              <span class="text-slate-500 dark:text-slate-400 text-[11px]">Monsoon Warranty</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Purchasing Controls & Details -->
+        <div class="lg:col-span-5 space-y-6">
+          
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <span id="pd-subcategory" class="text-xs font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950/80 px-2.5 py-0.5 rounded-full">
+                Compact Commuter
+              </span>
+              <div class="flex items-center text-amber-400 text-xs font-semibold">
+                <span id="pd-rating">★ 4.9</span>
+                <a href="#reviews-section" class="text-slate-400 dark:text-slate-500 font-normal ml-1 hover:underline">(<span id="pd-review-count">342</span> reviews)</a>
+              </div>
+            </div>
+
+            <h1 id="pd-title" class="font-display text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-snug">
+              Vortex-9 Windproof Compact Umbrella
+            </h1>
+            <p id="pd-tagline" class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 italic mt-1 font-sans">
+              Aerospace-grade 9-rib fiberglass canopy engineered to withstand 80 km/h monsoon winds.
+            </p>
+          </div>
+
+          <!-- Pricing -->
+          <div class="flex items-baseline gap-3 p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800">
+            <span id="pd-price" class="font-display text-3xl font-extrabold text-slate-900 dark:text-white">₹1,299</span>
+            <span id="pd-original-price" class="text-lg text-slate-400 line-through">₹1,799</span>
+            <span id="pd-save-badge" class="text-xs font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/80 px-2.5 py-1 rounded-lg">Save ₹500</span>
+          </div>
+
+          <!-- Expanded Product Details & Engineering Overview -->
+          <div class="space-y-4 py-3 border-y border-slate-200/80 dark:border-slate-800">
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 block mb-1">Product Overview & Commuter Defense</span>
+              <p id="pd-desc" class="text-sm font-semibold text-slate-800 dark:text-slate-200 leading-relaxed"></p>
+            </div>
+            
+            <div>
+              <p id="pd-long-desc" class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed"></p>
+            </div>
+
+            <!-- Quick Specs Badges -->
+            <div class="pt-1">
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white block mb-2">Technical Specifications At A Glance:</span>
+              <div id="pd-quick-specs" class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                <!-- Dynamically populated by JS -->
+              </div>
+            </div>
+
+            <!-- Key Feature Callouts -->
+            <div class="pt-1">
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white block mb-2">Key Engineering Features:</span>
+              <ul id="pd-quick-features" class="space-y-1.5 text-xs text-slate-600 dark:text-slate-300">
+                <!-- Dynamically populated by JS -->
+              </ul>
+            </div>
+          </div>
+
+          <!-- Interactive Color Selection -->
+          <div id="pd-colors-wrapper" class="space-y-2">
+            <span class="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider block">
+              Color Finish: <span id="pd-selected-color-name" class="text-sky-600 dark:text-sky-400 font-bold">Obsidian Black</span>
+            </span>
+            <div id="pd-colors-container" class="flex gap-2.5">
+              <!-- Rendered by JS -->
+            </div>
+          </div>
+
+          <!-- Interactive Size / Specification Selector -->
+          <div id="pd-sizes-wrapper" class="space-y-2">
+            <span class="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider block">
+              Size / Fit: <span id="pd-selected-size-name" class="text-sky-600 dark:text-sky-400 font-bold">Standard</span>
+            </span>
+            <div id="pd-sizes-container" class="flex flex-wrap gap-2">
+              <!-- Rendered by JS -->
+            </div>
+          </div>
+
+          <!-- Quantity & Purchase Actions -->
+          <div class="pt-2 space-y-3">
+            <div class="flex items-center gap-3">
+              <!-- Quantity Spinner -->
+              <div class="flex items-center border border-slate-300 dark:border-slate-700 rounded-xl bg-white dark:bg-slate-800 overflow-hidden shadow-xs h-12">
+                <button onclick="changePdQty(-1)" class="w-10 h-full flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 font-bold text-lg">−</button>
+                <span id="pd-qty-display" class="w-10 text-center text-sm font-bold text-slate-900 dark:text-white">1</span>
+                <button onclick="changePdQty(1)" class="w-10 h-full flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 font-bold text-lg">+</button>
+              </div>
+
+              <!-- Add to Cart Button -->
+              <button onclick="handlePdAddToCart()" class="flex-1 h-12 bg-sky-600 hover:bg-sky-700 active:scale-98 text-white font-bold text-sm rounded-xl shadow-lg shadow-sky-600/25 transition flex items-center justify-center gap-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+                <span>Add to Cart</span>
+              </button>
+
+              <!-- Wishlist Toggle Button -->
+              <button onclick="handlePdWishlistToggle()" id="pd-wishlist-btn" class="w-12 h-12 rounded-xl border border-slate-300 dark:border-slate-700 hover:border-slate-400 dark:hover:border-slate-600 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-rose-500 flex items-center justify-center transition cursor-pointer" title="Save to Wishlist" aria-label="Save to Wishlist">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+              </button>
+            </div>
+
+            <!-- Instant Buy Now Button -->
+            <button onclick="handlePdBuyNow()" class="w-full h-12 bg-slate-900 hover:bg-slate-800 dark:bg-slate-100 dark:hover:bg-white dark:text-slate-900 text-white font-bold text-sm rounded-xl transition shadow-md flex items-center justify-center gap-2">
+              <span>Instant Buy Now</span>
+              <span>→</span>
+            </button>
+          </div>
+
+          <!-- Stock & Guarantee Badges -->
+          <div class="pt-4 border-t border-slate-200/80 dark:border-slate-800 space-y-2 text-xs text-slate-600 dark:text-slate-300">
+            <div class="flex items-center gap-2 text-emerald-600 font-semibold">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span id="pd-stock">In Stock (Dispatched in 24h from Central Warehouse)</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span>🛡️</span>
+              <span>2-Year Monsoon Warranty: Free doorstep rib replacement nationwide.</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span>🚚</span>
+              <span>Free delivery nationwide on orders over ₹999. All payment options available.</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+  </section>
+
+  <!-- ==================== DETAILED SPECS & REVIEWS TABS ==================== -->
+  <section class="py-16 bg-slate-50/70 dark:bg-slate-950/70 border-t border-slate-200/80 dark:border-slate-800/80 transition-colors" id="reviews-section">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Modern Segmented Pill Tabs Navigation -->
+      <div class="flex items-center justify-start pb-2 overflow-x-auto scrollbar-none">
+        <div class="inline-flex p-1.5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm gap-1.5 shrink-0">
+          <button onclick="switchTab('specs')" id="tab-btn-specs" class="pd-tab-btn px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition flex items-center gap-2 whitespace-nowrap bg-sky-600 text-white shadow-md shadow-sky-600/20">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+            <span>Technical Specifications</span>
+          </button>
+          <button onclick="switchTab('features')" id="tab-btn-features" class="pd-tab-btn px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center gap-2 whitespace-nowrap text-slate-600 dark:text-slate-300 hover:text-slate-950 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+            <span>Engineering Highlights</span>
+          </button>
+          <button onclick="switchTab('care')" id="tab-btn-care" class="pd-tab-btn px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center gap-2 whitespace-nowrap text-slate-600 dark:text-slate-300 hover:text-slate-950 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+            <span>Care &amp; Maintenance</span>
+          </button>
+          <button onclick="switchTab('reviews')" id="tab-btn-reviews" class="pd-tab-btn px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center gap-2 whitespace-nowrap text-slate-600 dark:text-slate-300 hover:text-slate-950 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800">
+            <svg class="w-4 h-4 text-amber-500 fill-amber-500" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            <span>Verified Reviews (<span id="pd-tab-review-count">342</span>)</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Tab 1: Technical Specifications -->
+      <div id="tab-content-specs" class="py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Left Column: Specs Card -->
+          <div class="lg:col-span-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm p-6 sm:p-8 transition-colors">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-5 border-b border-slate-100 dark:border-slate-800 gap-3 mb-6">
+              <div>
+                <h3 class="font-display text-lg sm:text-xl font-black text-slate-950 dark:text-white">
+                  Precision Engineering Specifications
+                </h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                  Validated in monsoon wind tunnel facilities for high-velocity gale resilience.
+                </p>
+              </div>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-50 dark:bg-sky-950/80 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-800 text-xs font-bold self-start sm:self-auto shrink-0">
+                <span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span> Verified Spec
+              </span>
+            </div>
+
+            <!-- Specs Grid Container -->
+            <div class="overflow-hidden rounded-2xl border border-slate-200/80 dark:border-slate-800">
+              <table class="w-full text-left text-xs sm:text-sm border-collapse" id="pd-specs-table">
+                <tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+                  <!-- Dynamically rendered -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Right Column: Monsoon Lab Standards & Trust Sidebar Card -->
+          <div class="lg:col-span-4 space-y-6">
+            
+            <!-- Trust Card: Lab Stress Tested Standards -->
+            <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm p-6 sm:p-7 space-y-5 transition-colors">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-2xl bg-sky-100 dark:bg-sky-950 text-sky-600 dark:text-sky-400 flex items-center justify-center text-lg font-black shrink-0">
+                  🌪️
+                </div>
+                <div>
+                  <h4 class="font-display font-black text-sm text-slate-950 dark:text-white">Lab Stress Tested</h4>
+                  <p class="text-[11px] text-slate-500 dark:text-slate-400">Wind-Tunnel Certified Standards</p>
+                </div>
+              </div>
+
+              <div class="space-y-3 text-xs">
+                <div class="flex items-start gap-3 p-3 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-700/60">
+                  <span class="text-base leading-none">💨</span>
+                  <div>
+                    <div class="font-bold text-slate-900 dark:text-white">Gale Force Certified</div>
+                    <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Dual aerodynamic vents equalize pressure to prevent inside-out flipping.</div>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3 p-3 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-700/60">
+                  <span class="text-base leading-none">💧</span>
+                  <div>
+                    <div class="font-bold text-slate-900 dark:text-white">Lotus Hydrophobic Bead</div>
+                    <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">High-density nano-barrier fabric sheds 95% standing water with one flick.</div>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3 p-3 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-700/60">
+                  <span class="text-base leading-none">🛡️</span>
+                  <div>
+                    <div class="font-bold text-slate-900 dark:text-white">Lifetime Frame Guarantee</div>
+                    <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Free doorstep replacement and reverse logistics for structural rib damage.</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-2">
+                <a href="warranty.html" class="w-full py-3 px-4 bg-slate-100 hover:bg-sky-50 dark:bg-slate-800 dark:hover:bg-slate-700/80 text-sky-700 dark:text-sky-300 font-bold rounded-2xl text-xs transition flex items-center justify-center gap-2 border border-slate-200 dark:border-slate-700">
+                  <span>View Warranty Coverage</span>
+                  <span>→</span>
+                </a>
+              </div>
+            </div>
+
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Tab 2: Features List -->
+      <div id="tab-content-features" class="hidden py-8">
+        <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm p-6 sm:p-8 transition-colors">
+          <div class="max-w-2xl mb-6">
+            <h3 class="font-display text-lg sm:text-xl font-black text-slate-950 dark:text-white">
+              Core Engineering Highlights
+            </h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+              Every mechanical component is reinforced against heavy cyclonic rainfall and wind torque.
+            </p>
+          </div>
+          <ul id="pd-features-list" class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
+            <!-- Dynamically rendered -->
+          </ul>
+        </div>
+      </div>
+
+      <!-- Tab 3: Care Guide -->
+      <div id="tab-content-care" class="hidden py-8">
+        <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm p-6 sm:p-8 transition-colors">
+          <div class="max-w-2xl mb-8">
+            <span class="text-xs font-bold uppercase tracking-widest text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950/80 px-3 py-1 rounded-full border border-sky-200 dark:border-sky-800 inline-block mb-2">Longevity Protocols</span>
+            <h3 class="font-display text-lg sm:text-xl font-black text-slate-950 dark:text-white">
+              How To Care For Your Monsoon Gear
+            </h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+              Proper handling preserves the hydrophobic lotus-leaf membrane and flexible frame hinges for decades.
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 space-y-3">
+              <div class="w-10 h-10 rounded-xl bg-sky-100 dark:bg-sky-950 text-sky-600 dark:text-sky-400 font-black text-sm flex items-center justify-center">01</div>
+              <h4 class="font-bold text-sm text-slate-950 dark:text-white">Always Shake Dry</h4>
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">After stepping indoors, give the canopy 1-2 firm vertical shakes. The Teflon™ EcoElite nano-barrier will cast off 95% of moisture droplets immediately.</p>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 space-y-3">
+              <div class="w-10 h-10 rounded-xl bg-sky-100 dark:bg-sky-950 text-sky-600 dark:text-sky-400 font-black text-sm flex items-center justify-center">02</div>
+              <h4 class="font-bold text-sm text-slate-950 dark:text-white">Air Dry Open</h4>
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">When convenient, leave the umbrella open for 15-20 minutes in a well-ventilated room before folding and zipping into its sleeve to prevent mildew.</p>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 space-y-3">
+              <div class="w-10 h-10 rounded-xl bg-sky-100 dark:bg-sky-950 text-sky-600 dark:text-sky-400 font-black text-sm flex items-center justify-center">03</div>
+              <h4 class="font-bold text-sm text-slate-950 dark:text-white">Gentle Cleaning</h4>
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">For technical outerwear or boots, rinse with cold tap water. Do not use chemical fabric softeners as they coat the microporous waterproof membrane.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 4: Reviews -->
+      <div id="tab-content-reviews" class="hidden py-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="card-align-content h-full p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+            <div class="card-top-content flex-1 flex flex-col">
+              <div class="flex text-amber-400 text-xs mb-3">★★★★★</div>
+              <h5 class="card-title-aligned font-bold text-sm text-slate-950 dark:text-white min-h-[2.5rem] flex items-center">"Survived 80 km/h waterfront winds!"</h5>
+              <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed flex-1">"Walking outside along the open coastal promenade during heavy winds used to break every cheap umbrella in seconds. The Vortex-9 simply bent with the gusts, vented the wind, and kept me 100% dry."</p>
+            </div>
+            <div class="card-bottom-line card-bottom-author mt-auto pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center gap-3">
+              <img src="assets/images/avatars/avatar-manav.jpg" alt="Manav T." class="w-9 h-9 rounded-full object-cover shadow-xs border border-slate-200 dark:border-slate-700 shrink-0">
+              <div>
+                <div class="font-bold text-xs text-slate-950 dark:text-white">Manav T.</div>
+                <div class="text-[11px] text-slate-500 dark:text-slate-400">Metro Commuter • Verified Buyer</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-align-content h-full p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+            <div class="card-top-content flex-1 flex flex-col">
+              <div class="flex text-amber-400 text-xs mb-3">★★★★★</div>
+              <h5 class="card-title-aligned font-bold text-sm text-slate-950 dark:text-white min-h-[2.5rem] flex items-center">"Fastest drying umbrella I have ever used"</h5>
+              <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed flex-1">"One quick shake and almost every single raindrop beads off instantly. I slip it straight into my office laptop bag without a single drop wetting my papers or electronics."</p>
+            </div>
+            <div class="card-bottom-line card-bottom-author mt-auto pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center gap-3">
+              <img src="assets/images/avatars/avatar-swati.jpg" alt="Swati J." class="w-9 h-9 rounded-full object-cover shadow-xs border border-slate-200 dark:border-slate-700 shrink-0">
+              <div>
+                <div class="font-bold text-xs text-slate-950 dark:text-white">Swati J.</div>
+                <div class="text-[11px] text-slate-500 dark:text-slate-400">Daily Commuter • Verified Buyer</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-align-content h-full p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+            <div class="card-top-content flex-1 flex flex-col">
+              <div class="flex text-amber-400 text-xs mb-3">★★★★★</div>
+              <h5 class="card-title-aligned font-bold text-sm text-slate-950 dark:text-white min-h-[2.5rem] flex items-center">"Extremely solid build quality"</h5>
+              <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed flex-1">"The auto open/close button fires with solid mechanical strength. The fiberglass rib hinges feel premium and heavy-duty compared to local standard umbrellas."</p>
+            </div>
+            <div class="card-bottom-line card-bottom-author mt-auto pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center gap-3">
+              <img src="assets/images/avatars/avatar-lokesh.jpg" alt="Lokesh W." class="w-9 h-9 rounded-full object-cover shadow-xs border border-slate-200 dark:border-slate-700 shrink-0">
+              <div>
+                <div class="font-bold text-xs text-slate-950 dark:text-white">Lokesh W.</div>
+                <div class="text-[11px] text-slate-500 dark:text-slate-400">Urban Traveler • Verified Buyer</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 3: RELATED STORM GEAR ==================== -->
+  <section class="py-16 bg-slate-50 dark:bg-slate-900/40 border-t border-slate-200 dark:border-slate-800 reveal-on-scroll">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-end mb-8">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-sky-600 dark:text-sky-400">Complete Your Weather Defense</span>
+          <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-1">Recommended Pairings</h2>
+        </div>
+      </div>
+
+      <div id="pd-related-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 4: WIND-TUNNEL TORTURE TEST CERTIFICATION ==================== -->
+  <section class="py-16 sm:py-20 bg-white dark:bg-slate-900/60 border-t border-slate-200/80 dark:border-slate-800 reveal-on-scroll">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-bold uppercase tracking-widest text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950/80 px-3 py-1 rounded-full border border-sky-200 dark:border-sky-800 inline-block mb-2">Laboratory Protocol</span>
+        <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">80 km/h Aerodynamic Wind Testing Certification</h2>
+        <p class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm mt-2">Every model undergoes a rigorous 14-point aerodynamic stress protocol inside our wind tunnel facility before production approval.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div class="card-align-content h-full p-6 rounded-3xl bg-slate-50 dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs flex flex-col justify-between hover-lift">
+          <div class="card-top-content flex-1 flex flex-col">
+            <div class="w-10 h-10 rounded-2xl bg-sky-100 dark:bg-sky-950/80 text-sky-600 dark:text-sky-400 flex items-center justify-center font-bold text-sm mb-3">01</div>
+            <h4 class="card-title-aligned font-bold text-slate-900 dark:text-white text-sm min-h-[2.5rem] flex items-center">80 km/h Wind Gust Test</h4>
+            <p class="card-desc-aligned text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed flex-1">Continuous 30-minute blast testing. Canopy flexes up to 45° without rib dislocation or frame warping.</p>
+          </div>
+          <div class="card-bottom-line card-bottom-metric pt-4 mt-auto border-t border-slate-200 dark:border-slate-700 text-[11px] font-bold text-sky-600 dark:text-sky-400">Pass: Coastal Gale Certified</div>
+        </div>
+
+        <div class="card-align-content h-full p-6 rounded-3xl bg-slate-50 dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs flex flex-col justify-between hover-lift">
+          <div class="card-top-content flex-1 flex flex-col">
+            <div class="w-10 h-10 rounded-2xl bg-sky-100 dark:bg-sky-950/80 text-sky-600 dark:text-sky-400 flex items-center justify-center font-bold text-sm mb-3">02</div>
+            <h4 class="card-title-aligned font-bold text-slate-900 dark:text-white text-sm min-h-[2.5rem] flex items-center">50,000 Auto-Fire Cycles</h4>
+            <p class="card-desc-aligned text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed flex-1">Automated mechanical piston repeatedly opens and closes the spring chassis to simulate years of daily monsoon use.</p>
+          </div>
+          <div class="card-bottom-line card-bottom-metric pt-4 mt-auto border-t border-slate-200 dark:border-slate-700 text-[11px] font-bold text-sky-600 dark:text-sky-400">Pass: Zero Spring Fatigue</div>
+        </div>
+
+        <div class="card-align-content h-full p-6 rounded-3xl bg-slate-50 dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs flex flex-col justify-between hover-lift">
+          <div class="card-top-content flex-1 flex flex-col">
+            <div class="w-10 h-10 rounded-2xl bg-sky-100 dark:bg-sky-950/80 text-sky-600 dark:text-sky-400 flex items-center justify-center font-bold text-sm mb-3">03</div>
+            <h4 class="card-title-aligned font-bold text-slate-900 dark:text-white text-sm min-h-[2.5rem] flex items-center">Anti-Rust Humidity Chamber</h4>
+            <p class="card-desc-aligned text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed flex-1">72 continuous hours in heavy coastal humidity chamber. Stainless steel springs and joints show zero corrosion.</p>
+          </div>
+          <div class="card-bottom-line card-bottom-metric pt-4 mt-auto border-t border-slate-200 dark:border-slate-700 text-[11px] font-bold text-sky-600 dark:text-sky-400">Pass: 100% Rust-Proof</div>
+        </div>
+
+        <div class="card-align-content h-full p-6 rounded-3xl bg-slate-50 dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs flex flex-col justify-between hover-lift">
+          <div class="card-top-content flex-1 flex flex-col">
+            <div class="w-10 h-10 rounded-2xl bg-sky-100 dark:bg-sky-950/80 text-sky-600 dark:text-sky-400 flex items-center justify-center font-bold text-sm mb-3">04</div>
+            <h4 class="card-title-aligned font-bold text-slate-900 dark:text-white text-sm min-h-[2.5rem] flex items-center">Heavy Cloudburst Simulation</h4>
+            <p class="card-desc-aligned text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed flex-1">Simulated 120 mm/hr downpour at 45-degree angle. High-density 300T pongee fabric blocks 100% of water seepage.</p>
+          </div>
+          <div class="card-bottom-line card-bottom-metric pt-4 mt-auto border-t border-slate-200 dark:border-slate-700 text-[11px] font-bold text-sky-600 dark:text-sky-400">Pass: Zero Water Infiltration</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 5: MATERIAL SCIENCE BREAKDOWN ==================== -->
+  <section class="py-16 sm:py-20 bg-slate-50 dark:bg-slate-900/40 border-t border-slate-200/80 dark:border-slate-800 reveal-on-scroll">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-5 space-y-4">
+          <span class="text-xs font-bold uppercase tracking-widest text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950/80 px-3 py-1 rounded-full border border-sky-200 dark:border-sky-800 inline-block mb-2">Molecular Engineering</span>
+          <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">Precision Material Science</h2>
+          <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+            By rejecting cheap brittle plastic ribs and rusted iron shafts, we engineer rain gear built to endure year after year of heavy monsoon downpours and squalls.
+          </p>
+          <div class="pt-2">
+            <a href="about.html" class="inline-flex items-center gap-2 text-xs font-bold text-sky-600 dark:text-sky-400 hover:underline">
+              <span>Read About Our Testing Standards</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-5">
+          <div class="p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs">
+            <span class="text-2xl mb-2 block">🛩️</span>
+            <h4 class="font-bold text-sm text-slate-900 dark:text-white">Fiberglass & Titanium</h4>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">Flex joints engineered to bend under gale winds and spring back without snapping or permanent bending.</p>
+          </div>
+          <div class="p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs">
+            <span class="text-2xl mb-2 block">💧</span>
+            <h4 class="font-bold text-sm text-slate-900 dark:text-white">Lotus Nano Barrier</h4>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">Bio-mimetic surface treatment forces rainwater to roll off instantly in tight beads, drying the canopy in 10 seconds.</p>
+          </div>
+          <div class="p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs">
+            <span class="text-2xl mb-2 block">🌱</span>
+            <h4 class="font-bold text-sm text-slate-900 dark:text-white">FSC® Natural Rubber</h4>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">Tapped from sustainable rubber plantations. Naturally flexible and provides confident grip on wet metro stairs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 6: GEAR LONGEVITY & PERFORMANCE CARE PROTOCOL ==================== -->
+  <section class="py-16 sm:py-20 bg-white dark:bg-slate-900/60 border-t border-slate-200/80 dark:border-slate-800 reveal-on-scroll">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950/80 px-3 py-1 rounded-full border border-sky-200 dark:border-sky-800 inline-block mb-2">Product Longevity Care</span>
+          <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">Monsoon Gear Longevity & Technical Care Protocol</h2>
+          <p class="text-slate-500 dark:text-slate-400 text-sm mt-1 max-w-xl">Proven practices to keep your hydrophobic nano-coatings, sealed seams, and vulcanized rubber performing like new for years.</p>
+        </div>
+        <div class="mt-4 md:mt-0 flex gap-2">
+          <span class="text-xs font-semibold text-slate-400">Official Factory Care Standards</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="p-6 rounded-3xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 shadow-xs flex flex-col justify-between hover-lift">
+          <div>
+            <div class="w-10 h-10 rounded-2xl bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-400 flex items-center justify-center font-bold text-base mb-4">01</div>
+            <h4 class="font-bold text-sm text-slate-900 dark:text-white">Vertical Shake Protocol</h4>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
+              Before slipping your umbrella into its travel sleeve, give it two crisp vertical downward shakes. The Teflon™ EcoElite coating repels surface moisture, casting off 95% of rain droplets immediately.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-200 dark:border-slate-700 text-[11px] font-bold text-sky-600 dark:text-sky-400">
+            Prevents In-Bag Moisture
+          </div>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 shadow-xs flex flex-col justify-between hover-lift">
+          <div>
+            <div class="w-10 h-10 rounded-2xl bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-400 flex items-center justify-center font-bold text-base mb-4">02</div>
+            <h4 class="font-bold text-sm text-slate-900 dark:text-white">Air-Dry Before Tight Storage</h4>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
+              Once indoors, allow the canopy or rain outerwear to air-dry open for 15–20 minutes in a well-ventilated room before folding and strapping. Avoid placing directly on radiators or high heat.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-200 dark:border-slate-700 text-[11px] font-bold text-sky-600 dark:text-sky-400">
+            Protects Spring & Hinge Tension
+          </div>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 shadow-xs flex flex-col justify-between hover-lift">
+          <div>
+            <div class="w-10 h-10 rounded-2xl bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-400 flex items-center justify-center font-bold text-base mb-4">03</div>
+            <h4 class="font-bold text-sm text-slate-900 dark:text-white">Cold Water Rinse Only</h4>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
+              To clean muddy street splashes off raincoats and rubber gumboots, use a damp cloth with cold or lukewarm water. Never use harsh chemical bleach or fabric softeners that clog microporous membranes.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-200 dark:border-slate-700 text-[11px] font-bold text-sky-600 dark:text-sky-400">
+            Preserves 25,000mm Membrane
+          </div>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 shadow-xs flex flex-col justify-between hover-lift">
+          <div>
+            <div class="w-10 h-10 rounded-2xl bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-400 flex items-center justify-center font-bold text-base mb-4">04</div>
+            <h4 class="font-bold text-sm text-slate-900 dark:text-white">Free Doorstep Rib Replacement</h4>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
+              If an extreme storm gust ever compromises your frame, rib hinge, or push-button piston, our 2-Year Monsoon Warranty provides free doorstep replacement nationwide without return hassles.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-200 dark:border-slate-700 text-[11px] font-bold text-sky-600 dark:text-sky-400">
+            100% Backed By UmbrellaZone
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 7: INTERACTIVE DELIVERY & TRANSIT ESTIMATOR ==================== -->
+  <section class="py-16 sm:py-20 bg-slate-50 dark:bg-slate-900/40 border-t border-slate-200/80 dark:border-slate-800 reveal-on-scroll">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-10">
+        <span class="text-xs font-bold uppercase tracking-widest text-sky-600 dark:text-sky-400">Express Transit Network</span>
+        <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-1">Live Transit Timelines & Delivery Zones</h2>
+        <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-2">Dispatched directly from our centralized fulfillment hub with live courier tracking nationwide.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs">
+          <div class="flex items-center justify-between text-xs font-bold text-slate-400 mb-2"><span>Metropolitan Zone</span><span>Same / Next Day</span></div>
+          <div class="text-xl font-display font-extrabold text-slate-900 dark:text-white">24 Hours</div>
+          <p class="text-xs text-emerald-600 dark:text-emerald-400 font-semibold mt-1">Free Express Delivery (₹999+)</p>
+          <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-2">Orders before 2 PM dispatched same day.</div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs">
+          <div class="flex items-center justify-between text-xs font-bold text-slate-400 mb-2"><span>Regional Hubs</span><span>Metro Express</span></div>
+          <div class="text-xl font-display font-extrabold text-slate-900 dark:text-white">2 - 3 Days</div>
+          <p class="text-xs text-sky-600 dark:text-sky-400 font-semibold mt-1">Air Cargo Priority</p>
+          <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-2">Live SMS dispatch notifications.</div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs">
+          <div class="flex items-center justify-between text-xs font-bold text-slate-400 mb-2"><span>Major Outer Districts</span><span>Standard Transit</span></div>
+          <div class="text-xl font-display font-extrabold text-slate-900 dark:text-white">2 - 3 Days</div>
+          <p class="text-xs text-sky-600 dark:text-sky-400 font-semibold mt-1">Priority Courier Partners</p>
+          <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-2">Doorstep delivery with full tracking.</div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs">
+          <div class="flex items-center justify-between text-xs font-bold text-slate-400 mb-2"><span>Standard Delivery Zones</span><span>Towns & Outlying</span></div>
+          <div class="text-xl font-display font-extrabold text-slate-900 dark:text-white">3 - 5 Days</div>
+          <p class="text-xs text-sky-600 dark:text-sky-400 font-semibold mt-1">Express Surface Fleet</p>
+          <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-2">100% coverage across all postal routes.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 8: 2-YEAR MONSOON GUARANTEE PLEDGE & CLAIMS DESK ==================== -->
+  <section class="py-16 bg-gradient-to-r from-sky-50 via-slate-50 to-sky-100 dark:from-slate-900 dark:via-sky-950 dark:to-slate-900 text-slate-900 dark:text-white border-t border-slate-200 dark:border-sky-800/50 relative overflow-hidden transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-8 space-y-4">
+          <div class="inline-flex items-center gap-2 bg-sky-100 dark:bg-sky-500/20 text-sky-700 dark:text-sky-400 border border-sky-200 dark:border-sky-400/30 px-3.5 py-1.5 rounded-full text-xs font-bold">
+            <span>🛡️</span> UmbrellaZone Ironclad Monsoon Promise
+          </div>
+          <h2 class="font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white">
+            Backed By Our 2-Year Doorstep Monsoon Guarantee.
+          </h2>
+          <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm max-w-2xl leading-relaxed">
+            If your umbrella frame flips, bends, or snaps during extreme monsoon winds, simply send a photo to our support desk. We send a free replacement item directly to your doorstep.
+          </p>
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="warranty.html" class="px-6 py-3 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs shadow-lg shadow-sky-600/20 transition flex items-center gap-2">
+              <span>Read Full Warranty Policy</span>
+              <span>→</span>
+            </a>
+            <a href="contact.html" class="px-6 py-3 rounded-xl bg-white dark:bg-slate-800/80 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-white border border-slate-300 dark:border-slate-700 font-bold text-xs transition">
+              Contact Central Support Desk
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-4 bg-white dark:bg-slate-800/60 p-6 rounded-3xl border border-slate-200 dark:border-slate-700/80 shadow-md backdrop-blur-md space-y-3 text-xs text-slate-600 dark:text-slate-300 transition-colors">
+          <div class="font-bold text-sky-600 dark:text-sky-400 uppercase tracking-wider mb-2">Claim Desk Highlights</div>
+          <div class="flex items-start gap-2"><span class="text-sky-500 font-bold">✓</span><span>No tedious paperwork required with order ID</span></div>
+          <div class="flex items-start gap-2"><span class="text-sky-500 font-bold">✓</span><span>Free doorstep pickup and replacement dispatch</span></div>
+          <div class="flex items-start gap-2"><span class="text-sky-500 font-bold">✓</span><span>Zero return courier fee or restocking charge</span></div>
+          <div class="flex items-start gap-2"><span class="text-sky-500 font-bold">✓</span><span>WhatsApp support with under 2-hour response time</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SHARED DRAWERS & MODALS ==================== -->
+  <div id="cart-drawer" class="hidden fixed inset-0 z-50 overflow-hidden">
+    <div id="cart-drawer-backdrop" onclick="closeCartDrawer()" class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm opacity-0 drawer-backdrop transition-opacity"></div>
+    <div class="fixed inset-y-0 right-0 max-w-full flex pl-10">
+      <div id="cart-drawer-panel" class="w-screen max-w-md bg-white shadow-2xl flex flex-col translate-x-full drawer-content text-slate-900">
+        <div class="p-5 border-b border-slate-100 flex items-center justify-between bg-slate-50">
+          <div class="flex items-center gap-2"><svg class="w-5 h-5 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg><h3 class="font-bold text-slate-900 text-lg">Your Rain Gear Cart</h3></div>
+          <button onclick="closeCartDrawer()" class="text-slate-400 hover:text-slate-600 p-2 rounded-lg hover:bg-slate-200 transition"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+        </div>
+        <div class="bg-sky-50 px-5 py-3 border-b border-sky-100 text-xs text-sky-800">🌧️ Free delivery unlocked on orders ₹999+!</div>
+        <div id="cart-drawer-items" class="flex-1 overflow-y-auto p-5 divide-y divide-slate-100"></div>
+        <div class="p-5 border-t border-slate-100 bg-slate-50/50 space-y-4">
+          <div class="flex justify-between items-center text-sm"><span class="text-slate-500 font-medium">Subtotal</span><span id="cart-drawer-subtotal" class="font-bold text-slate-900 text-lg">₹0</span></div>
+          <p class="text-[11px] text-slate-400">All prices include GST. Free express delivery available.</p>
+          <div class="grid grid-cols-2 gap-3">
+            <a href="cart.html" onclick="closeCartDrawer()" class="py-3 px-4 border border-slate-300 hover:bg-slate-100 text-slate-700 font-bold text-xs rounded-xl text-center transition">View Cart Page</a>
+            <a href="cart.html" id="cart-drawer-checkout-btn" onclick="closeCartDrawer()" class="py-3 px-4 bg-sky-600 hover:bg-sky-700 text-white font-bold text-xs rounded-xl text-center transition shadow-md">Checkout Now →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-slate-950 text-slate-400 text-sm pt-16 pb-12 border-t border-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800/80">
+        
+        <!-- Col 1: Brand Info & Social Media -->
+        <div class="lg:col-span-2 space-y-4">
+          <a href="index.html" class="flex items-center gap-3 group cursor-pointer inline-flex" title="UmbrellaZone Home">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-600 to-cyan-500 flex items-center justify-center text-white font-bold shadow-md shadow-sky-600/30 shrink-0 group-hover:scale-105 transition">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 2C6.48 2 2 6.48 2 12c0 1.25.23 2.45.65 3.55.15.39.54.64.96.61h16.78c.42.03.81-.22.96-.61.42-1.1.65-2.3.65-3.55 0-5.52-4.48-10-10-10z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 12v7a2 2 0 104 0"></path></svg>
+            </div>
+            <span class="font-display font-extrabold text-2xl tracking-tight text-white whitespace-nowrap">Umbrella<span class="text-sky-600">Zone</span></span>
+          </a>
+          <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
+            Specialty windproof umbrellas, waterproof raincoats, and anti-slip rain boots engineered to survive the heaviest monsoons with complete 2-year warranty support.
+          </p>
+
+          <!-- Social Media Icons Redirecting Properly -->
+          <div class="flex items-center gap-2.5 pt-2">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-slate-900 hover:bg-sky-600 text-slate-400 hover:text-white border border-slate-800 flex items-center justify-center transition shadow-xs" title="Facebook" aria-label="UmbrellaZone on Facebook">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.704 0-1.07.132-1.341.38-.344.316-.479.897-.479 2.008v1.599h3.805l-.545 3.667h-3.26v7.98c5.441-.837 9.596-5.549 9.596-11.238C23.693 5.488 18.455.25 12 .25S.307 5.488.307 11.953c0 5.689 4.155 10.401 9.794 11.238z"/></svg>
+            </a>
+            <a href="https://x.com/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-slate-900 hover:bg-sky-600 text-slate-400 hover:text-white border border-slate-800 flex items-center justify-center transition shadow-xs" title="X / Twitter" aria-label="UmbrellaZone on X / Twitter">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-slate-900 hover:bg-sky-600 text-slate-400 hover:text-white border border-slate-800 flex items-center justify-center transition shadow-xs" title="Instagram" aria-label="UmbrellaZone on Instagram">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-slate-900 hover:bg-sky-600 text-slate-400 hover:text-white border border-slate-800 flex items-center justify-center transition shadow-xs" title="LinkedIn" aria-label="UmbrellaZone on LinkedIn">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Dropdowns & Pages -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-4">Explore Store</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="index.html" class="hover:text-sky-400 transition">Urban Commute</a></li>
+            <li><a href="home-2.html" class="hover:text-sky-400 transition">Cyclone & Storms</a></li>
+            <li><a href="products-umbrellas.html" class="hover:text-sky-400 transition">Umbrella Catalog</a></li>
+            <li><a href="products-raincoats.html" class="hover:text-sky-400 transition">Raincoats & Outerwear</a></li>
+            <li><a href="products-boots.html" class="hover:text-sky-400 transition">Rain Boots & Footwear</a></li>
+            <li><a href="pricing.html" class="hover:text-sky-400 transition">Pricing & Family Bundles</a></li>
+            <li><a href="blog.html" class="hover:text-sky-400 transition">Monsoon Journal & Blog</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Customer Care & Warranty -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-4">Support & Trust</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="warranty.html" class="hover:text-sky-400 transition">2-Year Monsoon Warranty</a></li>
+            <li><a href="warranty.html#claim-form" class="hover:text-sky-400 transition">Submit Warranty Claim</a></li>
+            <li><a href="about.html" class="hover:text-sky-400 transition">Our Wind Testing Lab</a></li>
+            <li><a href="contact.html" class="hover:text-sky-400 transition">Contact Us & Stores</a></li>
+            <li><a href="cart.html" class="hover:text-sky-400 transition">Shopping Cart & Checkout</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Store Contact -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-4">Flagship Headquarters</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Inner Circle, Block B, Connaught Place (Near Barakhamba Metro)<br>
+            New Delhi, Delhi 110001<br>
+            <span class="text-sky-400 font-semibold">support@umbrellazone.com</span><br>
+            Toll Free: 1800-266-RAIN<br>
+            Mon-Sat: 9:00 AM - 7:00 PM
+          </p>
+        </div>
+
+      </div>
+
+      <div class="pt-8 text-center text-xs text-slate-500">
+        © 2026 UmbrellaZone™ Store. All rights reserved. Built for the heaviest downpours.
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==================== SLIDE-OVER MOBILE DRAWER (IMAGE 2 REFERENCE) ==================== -->
+  <div id="umbrella-mobile-drawer" class="hidden fixed inset-0 z-50 overflow-hidden">
+    <div id="mobile-menu-backdrop" class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-50 duration-300 opacity-0 transition-opacity"></div>
+    <div id="mobile-menu-panel" class="fixed top-0 right-0 bottom-0 w-80 max-w-[88vw] bg-[#fdfcfb] dark:bg-slate-900 border-l border-slate-200/90 dark:border-slate-800 text-slate-900 dark:text-white z-50 shadow-2xl flex flex-col p-6 transition-transform duration-300 transform translate-x-full drawer-content">
+      
+      <!-- Top Drawer Header: Brand Logo + Brand Name (Navigates to Home 1 index.html), Close X on Right -->
+      <div class="flex items-center justify-between pb-4 border-b border-slate-200/80 dark:border-slate-800 shrink-0">
+        <a href="index.html" class="flex items-center gap-2.5 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-600 to-cyan-500 flex items-center justify-center text-white font-bold shadow-sm shrink-0 group-hover:scale-105 transition-transform">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 2C6.48 2 2 6.48 2 12c0 1.25.23 2.45.65 3.55.15.39.54.64.96.61h16.78c.42.03.81-.22.96-.61.42-1.1.65-2.3.65-3.55 0-5.52-4.48-10-10-10z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 12v7a2 2 0 104 0"></path></svg>
+          </div>
+          <span class="font-display font-extrabold text-xl tracking-tight text-slate-900 dark:text-white group-hover:text-sky-600 transition whitespace-nowrap">
+            Umbrella<span class="text-sky-600">Zone</span>
+          </span>
+        </a>
+        <button type="button" id="mobile-menu-close" onclick="closeUmbrellaDrawer(event)" class="w-9 h-9 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 flex items-center justify-center transition cursor-pointer" aria-label="Close menu">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+
+      <!-- Drawer Body (Scrollable Middle - Image 2 Reference) -->
+      <div class="flex-1 overflow-y-auto no-scrollbar py-4 space-y-1">
+        
+        <!-- 1. Home Variations ⌄ Accordion -->
+        <div>
+          <button type="button" class="mobile-accordion-btn w-full min-h-[44px] flex items-center justify-between text-left text-sm font-bold text-slate-900 dark:text-white hover:text-sky-600 dark:hover:text-sky-400 transition cursor-pointer" aria-expanded="false" data-target="drawer-home-submenu">
+            <span>Home Variations</span>
+            <svg class="accordion-chevron w-4 h-4 text-slate-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div id="drawer-home-submenu" class="hidden border-l-2 border-sky-500/30 pl-4 ml-2 my-1 space-y-1.5">
+            <a href="index.html" class="min-h-[38px] flex items-center text-xs font-semibold text-slate-600 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 transition">
+              <span class="mr-2">🏙️</span> Urban Commute
+            </a>
+            <a href="home-2.html" class="min-h-[38px] flex items-center text-xs font-semibold text-slate-600 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 transition">
+              <span class="mr-2">🌪️</span> Cyclone & Storms
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. Products & Gear ⌄ Accordion -->
+        <div>
+          <button type="button" class="mobile-accordion-btn w-full min-h-[44px] flex items-center justify-between text-left text-sm font-bold text-slate-900 dark:text-white hover:text-sky-600 dark:hover:text-sky-400 transition cursor-pointer" aria-expanded="false" data-target="drawer-products-submenu">
+            <span>Products & Gear</span>
+            <svg class="accordion-chevron w-4 h-4 text-slate-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div id="drawer-products-submenu" class="hidden border-l-2 border-sky-500/30 pl-4 ml-2 my-1 space-y-1.5">
+            <a href="products-umbrellas.html" class="min-h-[38px] flex items-center text-xs font-semibold text-slate-600 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 transition">
+              <span class="mr-2">☂️</span> Umbrellas
+            </a>
+            <a href="products-raincoats.html" class="min-h-[38px] flex items-center text-xs font-semibold text-slate-600 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 transition">
+              <span class="mr-2">🧥</span> Raincoats & Suits
+            </a>
+            <a href="products-boots.html" class="min-h-[38px] flex items-center text-xs font-semibold text-slate-600 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 transition">
+              <span class="mr-2">👢</span> Rain Boots
+            </a>
+          </div>
+        </div>
+
+        <!-- 3. Direct Navigation Links (Image 2 sequence) -->
+        <a href="warranty.html" class="min-h-[44px] flex items-center text-sm font-bold text-slate-900 dark:text-white hover:text-sky-600 dark:hover:text-sky-400 transition">
+          Warranty
+        </a>
+        <a href="about.html" class="min-h-[44px] flex items-center text-sm font-bold text-slate-900 dark:text-white hover:text-sky-600 dark:hover:text-sky-400 transition">
+          About Us
+        </a>
+        <a href="blog.html" class="min-h-[44px] flex items-center text-sm font-bold text-slate-900 dark:text-white hover:text-sky-600 dark:hover:text-sky-400 transition">
+          Blog
+        </a>
+        <a href="contact.html" class="min-h-[44px] flex items-center text-sm font-bold text-slate-900 dark:text-white hover:text-sky-600 dark:hover:text-sky-400 transition">
+          Contact
+        </a>
+
+        <!-- 4. Special Accent Booking Link (Image 2: Book Fitting) -->
+        <a href="contact.html#wind-rig-booking" class="min-h-[44px] flex items-center gap-2 text-sm font-bold text-sky-600 dark:text-sky-400 hover:text-sky-700 transition">
+          <span>📅</span>
+          <span>Wind Rig Demo</span>
+        </a>
+
+        <!-- Divider Line (Image 2) -->
+        <div class="border-t border-slate-200/80 dark:border-slate-800 my-3"></div>
+
+        <!-- 5. Saved Wishlist (Image 2: Saved Wishlist with Red Badge on Right) -->
+        <a href="favorites.html" class="min-h-[44px] flex items-center justify-between text-sm font-bold text-slate-900 dark:text-white hover:text-rose-500 transition">
+          <span>Saved Wishlist</span>
+          <span class="wishlist-badge-count w-6 h-6 rounded-full bg-rose-500 text-white font-bold text-xs flex items-center justify-center shadow-xs">0</span>
+        </a>
+
+        <!-- 6. Cart -->
+        <a href="cart.html" class="min-h-[44px] flex items-center justify-between text-sm font-bold text-slate-900 dark:text-white hover:text-sky-600 transition">
+          <span>Cart</span>
+          <span class="cart-badge-count w-6 h-6 rounded-full bg-sky-600 text-white font-bold text-xs flex items-center justify-center shadow-xs">0</span>
+        </a>
+
+        <!-- Divider Line (Image 2) -->
+        <div class="border-t border-slate-200/80 dark:border-slate-800 my-3"></div>
+
+        <!-- 7. Bottom Settings: Row (Image 2 Reference with Rounded Moon & RTL Squircles) -->
+        <div class="flex items-center justify-between pt-2">
+          <span class="text-sm font-bold text-slate-900 dark:text-white">Settings:</span>
+          <div class="flex items-center gap-2.5">
+            <!-- Theme Toggle Squircle -->
+            <button type="button" class="theme-toggle-btn w-10 h-10 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-200 transition cursor-pointer shadow-xs" title="Toggle Dark/Light Mode" aria-label="Toggle Theme">
+              <span class="theme-toggle-icon text-base"></span>
+            </button>
+
+            <!-- RTL Toggle Button (Image 3) -->
+            <button type="button" class="rtl-toggle-btn px-3 h-10 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-bold transition items-center gap-1.5 cursor-pointer shadow-xs flex" title="Switch to RTL Layout" aria-label="Toggle RTL">
+              <span class="rtl-arrow-icon text-sm font-bold">←</span>
+              <span class="rtl-label-text font-bold">RTL</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/products-data.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    let currentProduct = null;
+    let selectedColor = null;
+    let selectedSize = null;
+    let selectedQty = 1;
+
+    document.addEventListener('DOMContentLoaded', () => {
+      loadProductDetails();
+    });
+
+    function loadProductDetails() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const prodId = urlParams.get('id') || 'vortex-9-compact';
+      currentProduct = getProductById(prodId);
+
+      if (!currentProduct) {
+        currentProduct = PRODUCTS_DATA[0];
+      }
+
+      selectedColor = currentProduct.colors && currentProduct.colors[0]?.name;
+      selectedSize = currentProduct.sizes && currentProduct.sizes[0];
+      selectedQty = 1;
+
+      // Populate UI
+      document.title = `${currentProduct.name} | UmbrellaZone Store`;
+      document.getElementById('pd-bc-name').textContent = currentProduct.name;
+      
+      const catLink = document.getElementById('pd-bc-cat-link');
+      if (currentProduct.category === 'umbrellas') {
+        catLink.href = 'products-umbrellas.html';
+        catLink.textContent = 'Umbrellas';
+      } else if (currentProduct.category === 'raincoats') {
+        catLink.href = 'products-raincoats.html';
+        catLink.textContent = 'Raincoats';
+      } else {
+        catLink.href = 'products-boots.html';
+        catLink.textContent = 'Rain Boots';
+      }
+
+      // Title & Tags
+      document.getElementById('pd-title').textContent = currentProduct.name;
+      document.getElementById('pd-tagline').textContent = currentProduct.tagline;
+      document.getElementById('pd-subcategory').textContent = currentProduct.subCategory;
+      document.getElementById('pd-badge').textContent = currentProduct.badge || 'Storm Rated';
+      document.getElementById('pd-desc').textContent = currentProduct.shortDesc;
+      if (document.getElementById('pd-long-desc')) {
+        document.getElementById('pd-long-desc').textContent = currentProduct.longDesc || '';
+      }
+
+      // Populate Quick Specs Badges Grid
+      const quickSpecs = document.getElementById('pd-quick-specs');
+      if (quickSpecs && currentProduct.specs) {
+        quickSpecs.innerHTML = Object.entries(currentProduct.specs).map(([k, v]) => `
+          <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700">
+            <span class="text-[10px] uppercase font-bold text-slate-400 dark:text-slate-400 block tracking-wider">${k}</span>
+            <span class="text-xs font-bold text-slate-800 dark:text-slate-200 line-clamp-1 mt-0.5" title="${v}">${v}</span>
+          </div>
+        `).join('');
+      }
+
+      // Populate Quick Features Checklist
+      const quickFeatures = document.getElementById('pd-quick-features');
+      if (quickFeatures && currentProduct.features) {
+        quickFeatures.innerHTML = currentProduct.features.map(f => `
+          <li class="flex items-start gap-2">
+            <span class="text-emerald-500 font-bold flex-shrink-0 mt-0.5">✓</span>
+            <span>${f}</span>
+          </li>
+        `).join('');
+      }
+      document.getElementById('pd-price').textContent = `₹${currentProduct.price.toLocaleString('en-IN')}`;
+      
+      if (currentProduct.originalPrice) {
+        document.getElementById('pd-original-price').textContent = `₹${currentProduct.originalPrice.toLocaleString('en-IN')}`;
+        document.getElementById('pd-save-badge').textContent = `Save ₹${(currentProduct.originalPrice - currentProduct.price).toLocaleString('en-IN')}`;
+        document.getElementById('pd-original-price').classList.remove('hidden');
+        document.getElementById('pd-save-badge').classList.remove('hidden');
+      } else {
+        document.getElementById('pd-original-price').classList.add('hidden');
+        document.getElementById('pd-save-badge').classList.add('hidden');
+      }
+
+      document.getElementById('pd-rating').textContent = `★ ${currentProduct.rating}`;
+      document.getElementById('pd-review-count').textContent = currentProduct.reviewCount;
+      document.getElementById('pd-tab-review-count').textContent = currentProduct.reviewCount;
+      document.getElementById('pd-stock').textContent = currentProduct.stockStatus || 'In Stock (Ready to dispatch)';
+
+      // Images
+      const mainImg = document.getElementById('pd-main-img');
+      mainImg.src = currentProduct.images[0];
+      mainImg.alt = currentProduct.name;
+
+      const thumbs = document.getElementById('pd-thumbnails');
+      thumbs.innerHTML = currentProduct.images.map((img, idx) => `
+        <button onclick="changeMainImage('${img}')" class="w-20 h-20 rounded-xl overflow-hidden border-2 ${idx === 0 ? 'border-sky-500' : 'border-transparent'} hover:border-sky-400 transition flex-shrink-0">
+          <img src="${img}" alt="Thumbnail ${idx+1}" class="w-full h-full object-cover">
+        </button>
+      `).join('');
+
+      // Colors
+      const colorsContainer = document.getElementById('pd-colors-container');
+      const colorsWrapper = document.getElementById('pd-colors-wrapper');
+      if (currentProduct.colors && currentProduct.colors.length > 0) {
+        colorsWrapper.classList.remove('hidden');
+        document.getElementById('pd-selected-color-name').textContent = selectedColor;
+        colorsContainer.innerHTML = currentProduct.colors.map((c, idx) => `
+          <button onclick="setPdColor('${c.name}')" class="w-8 h-8 rounded-full border-2 border-white ring-2 ${idx === 0 ? 'ring-sky-600 scale-110' : 'ring-slate-300 dark:ring-slate-600'} hover:ring-sky-500 transition" style="background-color: ${c.hex}" title="${c.name}"></button>
+        `).join('');
+      } else {
+        colorsWrapper.classList.add('hidden');
+      }
+
+      // Sizes
+      const sizesContainer = document.getElementById('pd-sizes-container');
+      const sizesWrapper = document.getElementById('pd-sizes-wrapper');
+      if (currentProduct.sizes && currentProduct.sizes.length > 0) {
+        sizesWrapper.classList.remove('hidden');
+        document.getElementById('pd-selected-size-name').textContent = selectedSize;
+        sizesContainer.innerHTML = currentProduct.sizes.map((s, idx) => `
+          <button onclick="setPdSize('${s}')" class="pd-size-pill text-xs px-4 py-2 rounded-xl border ${idx === 0 ? 'border-sky-600 bg-sky-50 dark:bg-sky-950/80 text-sky-700 dark:text-sky-300 font-bold' : 'border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:border-slate-400'} transition font-medium">
+            ${s}
+          </button>
+        `).join('');
+      } else {
+        sizesWrapper.classList.add('hidden');
+      }
+
+      // Specs Table - Rendered as Modern Dual-Mode High-Contrast Rows
+      const specsTable = document.getElementById('pd-specs-table').querySelector('tbody');
+      if (currentProduct.specs) {
+        specsTable.innerHTML = Object.entries(currentProduct.specs).map(([key, val], idx) => `
+          <tr class="${idx % 2 === 0 ? 'bg-slate-50/70 dark:bg-slate-800/40' : 'bg-white dark:bg-slate-900/60'} hover:bg-sky-50/60 dark:hover:bg-slate-800/80 transition-colors">
+            <td class="py-3.5 px-4 sm:px-5 font-bold text-slate-700 dark:text-slate-300 w-2/5 border-r border-slate-100 dark:border-slate-800/80 text-xs sm:text-sm">
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-sky-500 shrink-0"></span>
+                <span>${key}</span>
+              </div>
+            </td>
+            <td class="py-3.5 px-4 sm:px-5 font-black text-slate-950 dark:text-white text-xs sm:text-sm">
+              ${val}
+            </td>
+          </tr>
+        `).join('');
+      }
+
+      // Features List - Rendered as Modern 2-Column Checked Cards
+      const featuresList = document.getElementById('pd-features-list');
+      if (currentProduct.features) {
+        featuresList.innerHTML = currentProduct.features.map(f => `
+          <li class="flex items-start gap-3 p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700/60 shadow-xs">
+            <span class="w-5 h-5 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
+            <span class="font-semibold text-slate-900 dark:text-slate-100 leading-relaxed">${f}</span>
+          </li>
+        `).join('');
+      }
+
+      // Related Products
+      renderRelatedProducts();
+
+      // Sync Wishlist Button state with solid heart
+      const pdBtn = document.getElementById('pd-wishlist-btn');
+      if (pdBtn && typeof isInWishlist === 'function') {
+        const isFav = isInWishlist(currentProduct.id);
+        pdBtn.setAttribute('data-wishlist-id', currentProduct.id);
+        if (typeof getHeartSvg === 'function') {
+          pdBtn.innerHTML = getHeartSvg(isFav);
+        }
+        if (isFav) {
+          pdBtn.classList.add('text-rose-500', 'border-rose-300');
+        } else {
+          pdBtn.classList.remove('text-rose-500', 'border-rose-300');
+        }
+      }
+    }
+
+    function changeMainImage(url) {
+      document.getElementById('pd-main-img').src = url;
+      const buttons = document.getElementById('pd-thumbnails').querySelectorAll('button');
+      buttons.forEach(b => {
+        const imgEl = b.querySelector('img');
+        if (imgEl && (imgEl.src === url || imgEl.getAttribute('src') === url || imgEl.src.endsWith(url) || (imgEl.getAttribute('src') && url.endsWith(imgEl.getAttribute('src'))))) {
+          b.className = 'w-20 h-20 rounded-xl overflow-hidden border-2 border-sky-500 transition flex-shrink-0';
+        } else {
+          b.className = 'w-20 h-20 rounded-xl overflow-hidden border-2 border-transparent hover:border-sky-400 transition flex-shrink-0';
+        }
+      });
+
+      // Synchronize color selector when user clicks a gallery thumbnail
+      if (currentProduct && currentProduct.images && currentProduct.colors) {
+        const imgIdx = currentProduct.images.findIndex(img => img === url || url.endsWith(img) || (img.includes('/') && url.includes(img.split('/').pop())));
+        if (imgIdx !== -1 && currentProduct.colors[imgIdx] && currentProduct.colors[imgIdx].name !== selectedColor) {
+          const matchedColor = currentProduct.colors[imgIdx].name;
+          selectedColor = matchedColor;
+          document.getElementById('pd-selected-color-name').textContent = matchedColor;
+          const colorBtns = document.getElementById('pd-colors-container').querySelectorAll('button');
+          colorBtns.forEach(b => {
+            if (b.title === matchedColor) {
+              b.classList.add('ring-sky-600', 'scale-110');
+              b.classList.remove('ring-slate-300');
+            } else {
+              b.classList.remove('ring-sky-600', 'scale-110');
+              b.classList.add('ring-slate-300');
+            }
+          });
+        }
+      }
+    }
+
+    function setPdColor(colorName) {
+      selectedColor = colorName;
+      document.getElementById('pd-selected-color-name').textContent = colorName;
+      const buttons = document.getElementById('pd-colors-container').querySelectorAll('button');
+      buttons.forEach(b => {
+        if (b.title === colorName) {
+          b.classList.add('ring-sky-600', 'scale-110');
+          b.classList.remove('ring-slate-300');
+        } else {
+          b.classList.remove('ring-sky-600', 'scale-110');
+          b.classList.add('ring-slate-300');
+        }
+      });
+
+      // Synchronize preview image with selected colorway if a matching image is in the gallery
+      if (currentProduct && currentProduct.images) {
+        const lowerColor = colorName.toLowerCase();
+        let matchedImg = currentProduct.images.find(img => {
+          const lImg = img.toLowerCase();
+          if (lowerColor.includes('sand') || lowerColor.includes('beige')) return lImg.includes('beige') || lImg.includes('sand');
+          if (lowerColor.includes('black') || lowerColor.includes('obsidian') || lowerColor.includes('charcoal')) return lImg.includes('black') || lImg.includes('charcoal') || lImg.includes('85f476') || (currentProduct.colors && currentProduct.colors[0]?.name === colorName && img === currentProduct.images[0]);
+          if (lowerColor.includes('olive')) return lImg.includes('olive');
+          if (lowerColor.includes('green')) return lImg.includes('green');
+          if (lowerColor.includes('yellow')) return lImg.includes('yellow') || lImg.includes('68958b');
+          if (lowerColor.includes('pink') || lowerColor.includes('rose')) return lImg.includes('pink') || lImg.includes('rose');
+          if (lowerColor.includes('amber')) return lImg.includes('amber');
+          if (lowerColor.includes('blue') || lowerColor.includes('navy')) return lImg.includes('blue') || lImg.includes('navy');
+          if (lowerColor.includes('brown') || lowerColor.includes('chestnut') || lowerColor.includes('tan')) return lImg.includes('brown') || lImg.includes('tan');
+          if (lowerColor.includes('grey') || lowerColor.includes('gray') || lowerColor.includes('steel')) return lImg.includes('grey') || lImg.includes('gray');
+          if (lowerColor.includes('teal')) return lImg.includes('teal');
+          if (lowerColor.includes('orange') || lowerColor.includes('neon')) return lImg.includes('orange') || lImg.includes('neon');
+          if (lowerColor.includes('burgundy') || lowerColor.includes('maroon') || lowerColor.includes('wine') || lowerColor.includes('red')) return lImg.includes('burgundy') || lImg.includes('maroon') || lImg.includes('red') || lImg.includes('wine');
+          if (lowerColor.includes('magenta') || lowerColor.includes('purple') || lowerColor.includes('violet') || lowerColor.includes('berry')) return lImg.includes('magenta') || lImg.includes('purple') || lImg.includes('violet') || lImg.includes('berry');
+          return false;
+        });
+
+        // Index-based fallback for colorways that correspond 1:1 with gallery images
+        if (!matchedImg && currentProduct.colors) {
+          const colorIdx = currentProduct.colors.findIndex(c => c.name === colorName);
+          if (colorIdx !== -1 && currentProduct.images[colorIdx]) {
+            matchedImg = currentProduct.images[colorIdx];
+          }
+        }
+
+        if (matchedImg) {
+          changeMainImage(matchedImg);
+        }
+      }
+    }
+
+    function setPdSize(sizeName) {
+      selectedSize = sizeName;
+      document.getElementById('pd-selected-size-name').textContent = sizeName;
+      const buttons = document.querySelectorAll('.pd-size-pill');
+      buttons.forEach(b => {
+        if (b.textContent.trim() === sizeName) {
+          b.className = 'pd-size-pill text-xs px-4 py-2 rounded-xl border border-sky-600 bg-sky-50 dark:bg-sky-950/80 text-sky-700 dark:text-sky-300 font-bold transition font-medium';
+        } else {
+          b.className = 'pd-size-pill text-xs px-4 py-2 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:border-slate-400 dark:hover:border-slate-500 transition font-medium';
+        }
+      });
+    }
+
+    function changePdQty(delta) {
+      selectedQty = Math.max(1, selectedQty + delta);
+      document.getElementById('pd-qty-display').textContent = selectedQty;
+    }
+
+    function handlePdAddToCart() {
+      if (currentProduct) {
+        addToCart(currentProduct.id, selectedQty, selectedColor, selectedSize);
+      }
+    }
+
+    function handlePdBuyNow() {
+      if (currentProduct) {
+        addToCart(currentProduct.id, selectedQty, selectedColor, selectedSize);
+        window.location.href = 'cart.html';
+      }
+    }
+
+    function handlePdWishlistToggle() {
+      if (currentProduct) {
+        toggleWishlist(currentProduct.id);
+        const isFav = isInWishlist(currentProduct.id);
+        const btn = document.getElementById('pd-wishlist-btn');
+        if (btn) {
+          if (typeof getHeartSvg === 'function') {
+            btn.innerHTML = getHeartSvg(isFav);
+          }
+          if (isFav) {
+            btn.classList.add('text-rose-500', 'border-rose-300');
+          } else {
+            btn.classList.remove('text-rose-500', 'border-rose-300');
+          }
+        }
+      }
+    }
+
+    function switchTab(tabId) {
+      const contents = ['specs', 'features', 'care', 'reviews'];
+      contents.forEach(t => {
+        const content = document.getElementById(`tab-content-${t}`);
+        const btn = document.getElementById(`tab-btn-${t}`);
+        if (t === tabId) {
+          content.classList.remove('hidden');
+          btn.className = 'pd-tab-btn px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition flex items-center gap-2 whitespace-nowrap bg-sky-600 text-white shadow-md shadow-sky-600/20';
+        } else {
+          content.classList.add('hidden');
+          btn.className = 'pd-tab-btn px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center gap-2 whitespace-nowrap text-slate-600 dark:text-slate-300 hover:text-slate-950 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800';
+        }
+      });
+    }
+
+    function renderRelatedProducts() {
+      const container = document.getElementById('pd-related-grid');
+      if (!container) return;
+
+      // Filter out current product, prioritize items from the same category
+      let others = PRODUCTS_DATA.filter(p => p.id !== currentProduct.id && p.category === currentProduct.category);
+      if (others.length < 3) {
+        const fallbacks = PRODUCTS_DATA.filter(p => p.id !== currentProduct.id && p.category !== currentProduct.category);
+        others = others.concat(fallbacks);
+      }
+      others = others.slice(0, 3);
+      container.innerHTML = others.map(prod => `
+        <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/80 dark:border-slate-800 overflow-hidden shadow-xs hover:shadow-lg transition p-5 flex flex-col justify-between group">
+          <div class="flex gap-4 items-center">
+            <img src="${prod.images[0]}" alt="${prod.name}" class="w-20 h-20 rounded-2xl object-cover bg-slate-100 dark:bg-slate-800 flex-shrink-0 group-hover:scale-105 transition">
+            <div class="min-w-0 flex-1">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950/80 px-2 py-0.5 rounded-full border border-sky-100 dark:border-sky-900">${prod.category}</span>
+              <h4 class="font-bold text-sm text-slate-900 dark:text-white truncate mt-1 group-hover:text-sky-600 dark:group-hover:text-sky-400 transition">
+                <a href="product-detail.html?id=${prod.id}">${prod.name}</a>
+              </h4>
+              <div class="text-xs font-bold text-slate-900 dark:text-white mt-1">₹${prod.price.toLocaleString('en-IN')}</div>
+            </div>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+            <a href="product-detail.html?id=${prod.id}" class="text-xs font-bold text-sky-600 dark:text-sky-400 hover:underline">View Pairing →</a>
+            <button onclick="addToCart('${prod.id}', 1)" class="px-3 py-1.5 bg-slate-100 dark:bg-slate-800 hover:bg-sky-600 hover:text-white dark:hover:bg-sky-600 text-slate-800 dark:text-slate-200 rounded-lg text-xs font-bold transition">Add +</button>
+          </div>
+        </div>
+      `).join('');
+    }
+  </script>
+</body>
+</html>

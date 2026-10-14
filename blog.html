@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Monsoon Journal | Severe Weather Engineering & Field Notes - UmbrellaZone™</title>
+  <meta name="description" content="Explore research field notes, fabric hydrostatics, storm aerodynamic tests, and urban monsoon commute strategies from the UmbrellaZone engineering laboratory.">
+  
+  <!-- Instant Dark Mode & RTL Theme Initializer (Prevents Theme Flash / Glitch on Navigation) -->
+  <script>
+    (function() {
+      try {
+        var theme = localStorage.getItem('umbrellaZone_theme_v1');
+        if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+        var dir = localStorage.getItem('umbrellaZone_dir_v1');
+        if (dir === 'rtl') {
+          document.documentElement.setAttribute('dir', 'rtl');
+          document.documentElement.setAttribute('lang', 'ar');
+        } else {
+          document.documentElement.setAttribute('dir', 'ltr');
+          document.documentElement.setAttribute('lang', 'en');
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50: '#f0f9ff', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1', dark: '#090e17' }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            display: ['"Space Grotesk"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="shortcut icon" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans antialiased selection:bg-sky-500 selection:text-white">
+
+  <!-- ==================== MAIN HEADER ==================== -->
+  <header class="sticky top-0 z-40 glass-nav transition-all duration-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-600 to-cyan-500 flex items-center justify-center text-white font-bold shadow-md shadow-sky-600/30 group-hover:scale-105 transition shrink-0">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 2C6.48 2 2 6.48 2 12c0 1.25.23 2.45.65 3.55.15.39.54.64.96.61h16.78c.42.03.81-.22.96-.61.42-1.1.65-2.3.65-3.55 0-5.52-4.48-10-10-10z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 12v7a2 2 0 104 0"></path></svg>
+          </div>
+          <span class="font-display font-extrabold text-2xl tracking-tight text-slate-900 dark:text-white group-hover:text-sky-600 transition whitespace-nowrap">
+            Umbrella<span class="text-sky-600">Zone</span>
+          </span>
+        </a>
+
+        <!-- Desktop Navigation Links (Requested Nav Order: Home -> Products -> Pricing -> Warranty -> About Us -> Blog -> Contact Us) -->
+        <nav class="hidden lg:flex items-center gap-6 xl:gap-8 flex-nowrap shrink-0 nav-container">
+          
+          <!-- HOME DROPDOWN -->
+          <div class="relative dropdown-group">
+            <button id="nav-parent-home" class="nav-link whitespace-nowrap flex items-center gap-1.5 py-2 px-1 text-[14px] font-semibold text-slate-700 dark:text-slate-200 hover:text-sky-600 dark:hover:text-sky-400 transition focus:outline-none">
+              <span>Home</span>
+              <svg class="dropdown-chevron w-4 h-4 text-slate-400 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="dropdown-menu absolute top-full left-0 w-72 bg-white dark:bg-slate-900 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-800 p-2 z-50">
+              <a href="index.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-sky-50 dark:hover:bg-slate-800 transition group">
+                <div class="w-8 h-8 rounded-lg bg-sky-100 dark:bg-sky-950/80 text-sky-600 dark:text-sky-400 flex items-center justify-center text-sm mt-0.5 shrink-0">🏙️</div>
+                <div>
+                  <div class="text-sm font-bold text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400">Urban Commute</div>
+                  <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Everyday city commute rainwear & compact umbrellas</div>
+                </div>
+              </a>
+              <a href="home-2.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-sky-50 dark:hover:bg-slate-800 transition group">
+                <div class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 flex items-center justify-center text-sm mt-0.5 shrink-0">🌪️</div>
+                <div>
+                  <div class="text-sm font-bold text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400">Cyclone & Storms</div>
+                  <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Heavy-duty gale umbrellas, mud boots & rain parkas</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- PRODUCTS DROPDOWN -->
+          <div class="relative dropdown-group">
+            <button id="nav-parent-products" class="nav-link whitespace-nowrap flex items-center gap-1.5 py-2 px-1 text-[14px] font-semibold text-slate-700 dark:text-slate-200 hover:text-sky-600 dark:hover:text-sky-400 transition focus:outline-none">
+              <span>Products</span>
+              <svg class="dropdown-chevron w-4 h-4 text-slate-400 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="dropdown-menu absolute top-full left-0 w-72 bg-white dark:bg-slate-900 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-800 p-3 z-50">
+              <a href="products-umbrellas.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm font-medium transition"><span>☂️</span> Umbrellas</a>
+              <a href="products-raincoats.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm font-medium transition"><span>🧥</span> Raincoats</a>
+              <a href="products-boots.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm font-medium transition"><span>👢</span> Rain Boots</a>
+            </div>
+          </div>
+
+          <a href="pricing.html" class="nav-link whitespace-nowrap text-[14px] font-semibold text-slate-700 dark:text-slate-200 hover:text-sky-600 dark:hover:text-sky-400 py-2 px-1 transition">Pricing</a>
+          <a href="warranty.html" class="nav-link whitespace-nowrap text-[14px] font-semibold text-slate-700 dark:text-slate-200 hover:text-sky-600 dark:hover:text-sky-400 py-2 px-1 transition">Warranty</a>
+          <a href="about.html" class="nav-link whitespace-nowrap text-[14px] font-semibold text-slate-700 dark:text-slate-200 hover:text-sky-600 dark:hover:text-sky-400 py-2 px-1 transition">About Us</a>
+          <a href="blog.html" class="nav-link active whitespace-nowrap text-[14px] font-bold text-sky-600 dark:text-sky-400 py-2 px-1 transition">Blog</a>
+          <a href="contact.html" class="nav-link whitespace-nowrap text-[14px] font-semibold text-slate-700 dark:text-slate-200 hover:text-sky-600 dark:hover:text-sky-400 py-2 px-1 transition">Contact Us</a>
+        </nav>
+
+        <!-- Right Action Controls (Dark Mode + RTL + Search + Wishlist + Cart + Hamburger) -->
+        <div class="flex items-center gap-2 sm:gap-3">
+          <!-- Dark Mode: Hidden on mobile & tablet (<1024px, inside drawer), visible on desktop -->
+          <button type="button" class="theme-toggle-btn hidden lg:inline-flex w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 items-center justify-center transition cursor-pointer" title="Toggle Dark/Light Mode">
+            <span class="theme-toggle-icon"></span>
+          </button>
+
+          <!-- RTL: Hidden on mobile & tablet (<1024px, inside drawer), visible on desktop -->
+          <button type="button" class="rtl-toggle-btn hidden lg:inline-flex px-2.5 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs font-bold transition items-center gap-1.5 cursor-pointer" title="Switch to RTL Layout">
+            <span class="rtl-arrow-icon text-sm font-bold">←</span>
+            <span class="rtl-label-text font-bold">RTL</span>
+          </button>
+
+          <!-- Search: Visible on Mobile, Tablet & Desktop -->
+          <button type="button" class="search-modal-trigger w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 flex items-center justify-center transition cursor-pointer" aria-label="Search rain gear" title="Search Store">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+          </button>
+
+          <!-- Wishlist: Hidden on mobile & tablet (<1024px, accessed via drawer Saved Wishlist), visible on desktop -->
+          <a href="favorites.html" class="hidden lg:inline-flex relative w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-200 items-center justify-center transition" aria-label="Monsoon Favorites" title="Monsoon Favorites">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+            </svg>
+            <span class="wishlist-badge-count absolute -top-1 -right-1 w-5 h-5 bg-rose-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center shadow-xs">0</span>
+          </a>
+
+          <!-- Cart: Visible on Mobile, Tablet & Desktop with badge -->
+          <a href="cart.html" class="relative w-10 h-10 rounded-xl bg-sky-600 hover:bg-sky-700 text-white flex items-center justify-center transition shadow-md shadow-sky-600/20 active:scale-95" aria-label="Open Shopping Cart" title="View Cart">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+            </svg>
+            <span class="cart-badge-count absolute -top-1.5 -right-1.5 w-5 h-5 bg-sky-400 text-slate-900 text-[11px] font-black rounded-full flex items-center justify-center ring-2 ring-white dark:ring-slate-900 shadow-xs">0</span>
+          </a>
+
+          <!-- Hamburger: Visible on Mobile & Tablet -->
+          <button type="button" id="mobile-menu-btn" onclick="openUmbrellaDrawer(event)" class="lg:hidden w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 flex items-center justify-center transition active:scale-95 cursor-pointer" aria-label="Open mobile navigation menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== BLOG HERO HEADER ==================== -->
+  <section class="relative overflow-hidden border-b border-slate-200/80 dark:border-slate-800 py-16 sm:py-24 bg-slate-50 dark:bg-slate-950">
+    <!-- Background Blueprint Image Layer (Technical Specs, Stick Umbrella, Trench Coat & Boots) -->
+    <div class="hero-bg-blueprint absolute inset-0 bg-cover bg-no-repeat bg-center transition-all duration-300" style="background-image: url('assets/images/bg-blog-hero.png');"></div>
+    <!-- Bright Mode Mask: clean high-contrast backing so text color stands out bold and crisp on left -->
+    <div class="dark:hidden absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-white/30 pointer-events-none transition-colors duration-300"></div>
+    <!-- Dark Mode Mask: soft gradient allowing the boosted blueprint schematics to shine through vividly -->
+    <div class="hidden dark:block absolute inset-0 bg-gradient-to-r from-slate-950/85 via-slate-950/45 to-transparent pointer-events-none transition-colors duration-300"></div>
+    <div class="rain-container pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-100 dark:bg-sky-950/90 text-sky-900 dark:text-sky-300 border border-sky-300 dark:border-sky-500/60 text-xs font-extrabold tracking-wide uppercase shadow-xs">
+          <span>🔬</span> Field Research & Engineering Journal
+        </div>
+        <h1 class="font-display font-black text-3xl sm:text-5xl tracking-tight text-slate-950 dark:text-white mt-4 leading-tight dark:drop-shadow-[0_2px_12px_rgba(0,0,0,0.95)]">
+          The UmbrellaZone <span class="text-sky-600 dark:text-sky-400">Journal</span>
+        </h1>
+        <p class="text-base sm:text-lg text-slate-950 dark:text-slate-100 mt-4 leading-relaxed font-bold dark:drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+          Severe weather aerodynamics, hydrostatic membrane science, and real-world urban commuting strategies from our wind tunnel engineers and coastal test crews.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FEATURED EDITORIAL ARTICLE ==================== -->
+  <section class="py-10 sm:py-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div id="featured-article-card" class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/90 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group grid grid-cols-1 lg:grid-cols-12">
+      
+      <!-- Left Column: Technical Telemetry & Key Finding Brief (Dual-theme Light & Dark) -->
+      <div class="lg:col-span-5 p-6 sm:p-8 bg-slate-50 dark:bg-gradient-to-br dark:from-slate-900 dark:via-slate-950 dark:to-sky-950 text-slate-900 dark:text-white flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-slate-200 dark:border-slate-800">
+        <div class="space-y-5">
+          <div class="flex items-center justify-between">
+            <span class="px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider bg-sky-600 text-white shadow-xs">
+              Lead Editorial
+            </span>
+            <span class="text-[11px] font-bold text-sky-700 dark:text-sky-400 bg-sky-100 dark:bg-sky-950/80 px-2.5 py-1 rounded-full border border-sky-200 dark:border-sky-800">
+              Run #14 Telemetry Brief
+            </span>
+          </div>
+
+          <div>
+            <div class="text-[11px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest">Lab Data Sheet</div>
+            <h3 class="font-display font-extrabold text-xl text-slate-900 dark:text-white mt-1">Wind Tunnel Stress Analysis</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+              Aerodynamic boundary layer telemetry measured during sustained 85 km/h cyclonic gale runs.
+            </p>
+          </div>
+
+          <!-- Data Grid -->
+          <div class="grid grid-cols-2 gap-3 pt-2">
+            <div class="p-3.5 rounded-2xl bg-white dark:bg-white/5 border border-slate-200/90 dark:border-white/10 shadow-xs dark:shadow-none">
+              <div class="text-[10px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Peak Wind Vel.</div>
+              <div class="font-display font-black text-xl text-sky-600 dark:text-sky-400 mt-0.5">85 km/h</div>
+              <div class="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Force 9 Gale squall</div>
+            </div>
+            <div class="p-3.5 rounded-2xl bg-white dark:bg-white/5 border border-slate-200/90 dark:border-white/10 shadow-xs dark:shadow-none">
+              <div class="text-[10px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Rib Deflection</div>
+              <div class="font-display font-black text-xl text-sky-600 dark:text-sky-400 mt-0.5">48° Flex</div>
+              <div class="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Zero permanent bend</div>
+            </div>
+            <div class="p-3.5 rounded-2xl bg-white dark:bg-white/5 border border-slate-200/90 dark:border-white/10 shadow-xs dark:shadow-none">
+              <div class="text-[10px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Canopy Inversion</div>
+              <div class="font-display font-black text-xl text-emerald-600 dark:text-emerald-400 mt-0.5">0.0%</div>
+              <div class="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Across 3,000 cycles</div>
+            </div>
+            <div class="p-3.5 rounded-2xl bg-white dark:bg-white/5 border border-slate-200/90 dark:border-white/10 shadow-xs dark:shadow-none">
+              <div class="text-[10px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Lotus Nano Repel</div>
+              <div class="font-display font-black text-xl text-cyan-600 dark:text-cyan-400 mt-0.5">&gt; 150°</div>
+              <div class="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">Water contact angle</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-5 mt-5 border-t border-slate-200 dark:border-slate-800/80 text-[11px] text-slate-600 dark:text-slate-400 italic">
+          "Stiff metal frames snap because they resist force rigidly. Memory-tempered fiberglass flexes and sheds wind pressure harmlessly."
+        </div>
+      </div>
+
+      <!-- Right Column: Editorial Article Text & CTA -->
+      <div class="lg:col-span-7 p-6 sm:p-10 flex flex-col justify-between">
+        <div class="space-y-4">
+          <div class="flex items-center gap-3 text-xs text-slate-500 dark:text-slate-400">
+            <span class="font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400">Aerodynamics & Structural</span>
+            <span>•</span>
+            <span>Oct 10, 2026</span>
+            <span>•</span>
+            <span>7 min read</span>
+          </div>
+
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition leading-snug">
+            Aeroelastic Rib Flexing: How We Engineered Umbrellas for 85 km/h Coastal Gale Vortices
+          </h2>
+
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+            Conventional umbrellas snap because stiff aluminum cannot dissipate dynamic gust energy. Discover how memory-tempered fiberglass tension loops absorb sudden cyclonic updrafts without flipping inside out.
+          </p>
+
+          <!-- Core Research Takeaways -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-3 border-t border-slate-100 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300">
+            <div class="flex items-center gap-2">
+              <span class="text-sky-500 font-bold">✓</span> Dual-canopy pressure release vents
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-sky-500 font-bold">✓</span> 3,000-cycle high-speed fatigue testing
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-sky-500 font-bold">✓</span> 9-rib radial stress distribution
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-sky-500 font-bold">✓</span> Dielectric non-metallic lightning safety
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-6 mt-6 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <img src="assets/images/avatars/avatar-amit.jpg" alt="Dr. Arvind Patel" class="w-10 h-10 rounded-full object-cover ring-2 ring-sky-500/30">
+            <div>
+              <div class="text-xs font-bold text-slate-900 dark:text-white">Dr. Arvind Patel</div>
+              <div class="text-[11px] text-slate-400">Lead Aeroelastic Engineer</div>
+            </div>
+          </div>
+
+          <button onclick="openArticleModal('gale-rib-flex')" class="px-5 py-2.5 bg-sky-600 hover:bg-sky-700 text-white text-xs font-bold rounded-xl transition shadow-md shadow-sky-600/30 flex items-center gap-1.5 active:scale-95">
+            <span>Read Complete Report</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== ARTICLE ARCHIVE GRID ==================== -->
+  <section class="py-12 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between mb-8 pb-4 border-b border-slate-200 dark:border-slate-800">
+        <div>
+          <h3 class="font-display font-extrabold text-xl sm:text-2xl text-slate-900 dark:text-white">
+          Latest Field Notes & Guides
+        </h3>
+        <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
+          Technical specifications, maintenance protocols, and commuter test results.
+        </p>
+      </div>
+      <div id="blog-counter" class="text-xs font-bold px-3 py-1.5 rounded-lg bg-sky-50 dark:bg-sky-950/80 text-sky-600 dark:text-sky-400">
+        Showing 6 Dispatches
+      </div>
+    </div>
+
+    <!-- Grid Container -->
+    <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Article 1: Inverted Folding Mechanics -->
+      <article class="blog-card card-align-content h-full bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/80 dark:border-slate-800 overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col group" data-category="aerodynamics">
+        <div class="relative aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800">
+          <img src="assets/images/blog-inverted-folding.png" alt="Why Inverted Folding Keeps Car Interiors Dry During Downpours" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <span class="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider text-slate-900 bg-white/90 dark:bg-slate-900/90 dark:text-white backdrop-blur-md px-2.5 py-1 rounded-full shadow-xs">
+            Innovation
+          </span>
+          <span class="absolute bottom-3 right-3 text-[10px] font-semibold text-white bg-slate-900/80 backdrop-blur-md px-2 py-0.5 rounded-md">
+            5 min read
+          </span>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div class="card-top-content flex-1 flex flex-col space-y-2.5">
+            <div class="text-[11px] font-bold text-sky-600 dark:text-sky-400 uppercase tracking-wider">Kinematic Design</div>
+            <h4 class="card-title-aligned font-display font-bold text-lg text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition leading-snug min-h-[3.75rem] flex items-center">
+              Why Inverted Folding Keeps Car Interiors Dry During Downpours
+            </h4>
+            <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-3 flex-1">
+              Standard umbrellas trap water against your clothes the moment they are folded shut. Discover the reverse mechanical linkages that trap water inside a dry cocoon when slipping into car doors.
+            </p>
+          </div>
+          <div class="card-bottom-line mt-auto pt-5 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+              <img src="assets/images/avatars/avatar-arjun.jpg" alt="Rahul Verma" class="w-8 h-8 rounded-full object-cover ring-1 ring-slate-200 dark:ring-slate-700">
+              <span class="text-xs font-bold text-slate-700 dark:text-slate-300">Rahul Verma</span>
+            </div>
+            <button onclick="openArticleModal('inverted-folding-mechanics')" class="text-xs font-bold text-sky-600 dark:text-sky-400 hover:underline flex items-center gap-1">
+              <span>Read</span> →
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 2: Hot-Air Seam Sealing Chemistry -->
+      <article class="blog-card card-align-content h-full bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/80 dark:border-slate-800 overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col group" data-category="membranes">
+        <div class="relative aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800">
+          <img src="assets/images/blog-seam-sealing.jpg" alt="Hot-Air Seam Sealing Chemistry" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <span class="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider text-slate-900 bg-white/90 dark:bg-slate-900/90 dark:text-white backdrop-blur-md px-2.5 py-1 rounded-full shadow-xs">
+            Material Science
+          </span>
+          <span class="absolute bottom-3 right-3 text-[10px] font-semibold text-white bg-slate-900/80 backdrop-blur-md px-2 py-0.5 rounded-md">
+            6 min read
+          </span>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div class="card-top-content flex-1 flex flex-col space-y-2.5">
+            <div class="text-[11px] font-bold text-sky-600 dark:text-sky-400 uppercase tracking-wider">Welded Polyurethane</div>
+            <h4 class="card-title-aligned font-display font-bold text-lg text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition leading-snug min-h-[3.75rem] flex items-center">
+              Hot-Air Seam Sealing: Why Stitched Needles Leak and How Polyurethane Tape Fixes It
+            </h4>
+            <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-3 flex-1">
+              Every sewing needle creates thousands of microscopic holes in waterproof fabric. Discover how our triple-barrier hot-air welded thermoplastic seam tape creates a 100% molecular seal against driving monsoon rain.
+            </p>
+          </div>
+          <div class="card-bottom-line mt-auto pt-5 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+              <img src="assets/images/avatars/avatar-amit.jpg" alt="Dr. K. N. Sunder" class="w-8 h-8 rounded-full object-cover ring-1 ring-slate-200 dark:ring-slate-700">
+              <span class="text-xs font-bold text-slate-700 dark:text-slate-300">Dr. K. N. Sunder</span>
+            </div>
+            <button onclick="openArticleModal('hot-air-seam-tape')" class="text-xs font-bold text-sky-600 dark:text-sky-400 hover:underline flex items-center gap-1">
+              <span>Read</span> →
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 3: Hydrostatic Head -->
+      <article class="blog-card card-align-content h-full bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/80 dark:border-slate-800 overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col group" data-category="membranes">
+        <div class="relative aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800">
+          <img src="assets/images/blog-hydrostatic-head.jpg" alt="25,000mm Membrane Hydrostatic Head" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <span class="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider text-slate-900 bg-white/90 dark:bg-slate-900/90 dark:text-white backdrop-blur-md px-2.5 py-1 rounded-full shadow-xs">
+            Material Science
+          </span>
+          <span class="absolute bottom-3 right-3 text-[10px] font-semibold text-white bg-slate-900/80 backdrop-blur-md px-2 py-0.5 rounded-md">
+            6 min read
+          </span>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div class="card-top-content flex-1 flex flex-col space-y-2.5">
+            <div class="text-[11px] font-bold text-sky-600 dark:text-sky-400 uppercase tracking-wider">Fabric Hydrostatics</div>
+            <h4 class="card-title-aligned font-display font-bold text-lg text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition leading-snug min-h-[3.75rem] flex items-center">
+              25,000mm Hydrostatic Head: What Waterproof Column Ratings Mean
+            </h4>
+            <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-3 flex-1">
+              Most commercial rain jackets leak at 5,000mm during driving rains. Here is how microporous ePTFE dual-laminate membranes withstand hydraulic cloudburst pressure without trapping internal body perspiration.
+            </p>
+          </div>
+          <div class="card-bottom-line mt-auto pt-5 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+              <img src="assets/images/avatars/avatar-priya.jpg" alt="Priya Iyer" class="w-8 h-8 rounded-full object-cover ring-1 ring-slate-200 dark:ring-slate-700">
+              <span class="text-xs font-bold text-slate-700 dark:text-slate-300">Priya Iyer</span>
+            </div>
+            <button onclick="openArticleModal('hydrostatic-25k')" class="text-xs font-bold text-sky-600 dark:text-sky-400 hover:underline flex items-center gap-1">
+              <span>Read</span> →
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 4: Vulcanized Rubber Boots -->
+      <article class="blog-card card-align-content h-full bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/80 dark:border-slate-800 overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col group" data-category="membranes">
+        <div class="relative aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800">
+          <img src="assets/images/blog-vulcanized-rubber.jpg" alt="FSC Natural Vulcanized Rubber Footwear" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <span class="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider text-slate-900 bg-white/90 dark:bg-slate-900/90 dark:text-white backdrop-blur-md px-2.5 py-1 rounded-full shadow-xs">
+            Footwear Science
+          </span>
+          <span class="absolute bottom-3 right-3 text-[10px] font-semibold text-white bg-slate-900/80 backdrop-blur-md px-2 py-0.5 rounded-md">
+            6 min read
+          </span>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div class="card-top-content flex-1 flex flex-col space-y-2.5">
+            <div class="text-[11px] font-bold text-sky-600 dark:text-sky-400 uppercase tracking-wider">Natural Elastomers</div>
+            <h4 class="card-title-aligned font-display font-bold text-lg text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition leading-snug min-h-[3.75rem] flex items-center">
+              FSC Vulcanized Rubber vs Synthetic PVC: Why Quality Wellies Don't Crack
+            </h4>
+            <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-3 flex-1">
+              Petrochemical PVC boots become brittle in cold rainwater. Examine how sulfur-heat vulcanization bonds sustainably-harvested tree rubber into seamless, 100% waterproof boots that flex indefinitely.
+            </p>
+          </div>
+          <div class="card-bottom-line mt-auto pt-5 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+              <img src="assets/images/avatars/avatar-vikram.jpg" alt="Vikram Malhotra" class="w-8 h-8 rounded-full object-cover ring-1 ring-slate-200 dark:ring-slate-700">
+              <span class="text-xs font-bold text-slate-700 dark:text-slate-300">Vikram Malhotra</span>
+            </div>
+            <button onclick="openArticleModal('rubber-vulcanization')" class="text-xs font-bold text-sky-600 dark:text-sky-400 hover:underline flex items-center gap-1">
+              <span>Read</span> →
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 5: Urban Transit Strategies -->
+      <article class="blog-card card-align-content h-full bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/80 dark:border-slate-800 overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col group" data-category="commuting">
+        <div class="relative aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800">
+          <img src="assets/images/blog-monsoon-transit.png" alt="Urban Monsoon Commute" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <span class="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider text-slate-900 bg-white/90 dark:bg-slate-900/90 dark:text-white backdrop-blur-md px-2.5 py-1 rounded-full shadow-xs">
+            Commuter Guide
+          </span>
+          <span class="absolute bottom-3 right-3 text-[10px] font-semibold text-white bg-slate-900/80 backdrop-blur-md px-2 py-0.5 rounded-md">
+            5 min read
+          </span>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div class="card-top-content flex-1 flex flex-col space-y-2.5">
+            <div class="text-[11px] font-bold text-sky-600 dark:text-sky-400 uppercase tracking-wider">Urban Strategies</div>
+            <h4 class="card-title-aligned font-display font-bold text-lg text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition leading-snug min-h-[3.75rem] flex items-center">
+              Surviving The Monsoon Transit Rush: 7 Strategies for Trains & Metros
+            </h4>
+            <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-3 flex-1">
+              Stepping onto packed public transit with soaked outerwear ruins clothes and laptops. Our commuter team shares tested protocols for quick drip-shedding, compact stowing, and rapid ventilation.
+            </p>
+          </div>
+          <div class="card-bottom-line mt-auto pt-5 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+              <img src="assets/images/avatars/avatar-ananya.jpg" alt="Sneha Kulkarni" class="w-8 h-8 rounded-full object-cover ring-1 ring-slate-200 dark:ring-slate-700">
+              <span class="text-xs font-bold text-slate-700 dark:text-slate-300">Sneha Kulkarni</span>
+            </div>
+            <button onclick="openArticleModal('monsoon-commute-rush')" class="text-xs font-bold text-sky-600 dark:text-sky-400 hover:underline flex items-center gap-1">
+              <span>Read</span> →
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 6: DWR Nano Maintenance -->
+      <article class="blog-card card-align-content h-full bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/80 dark:border-slate-800 overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col group" data-category="commuting">
+        <div class="relative aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800">
+          <img src="assets/images/blog-dwr-beading.jpg" alt="DWR Nano-Coating Care & Maintenance" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <span class="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider text-slate-900 bg-white/90 dark:bg-slate-900/90 dark:text-white backdrop-blur-md px-2.5 py-1 rounded-full shadow-xs">
+            Care & Longevity
+          </span>
+          <span class="absolute bottom-3 right-3 text-[10px] font-semibold text-white bg-slate-900/80 backdrop-blur-md px-2 py-0.5 rounded-md">
+            5 min read
+          </span>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div class="card-top-content flex-1 flex flex-col space-y-2.5">
+            <div class="text-[11px] font-bold text-sky-600 dark:text-sky-400 uppercase tracking-wider">Maintenance Protocol</div>
+            <h4 class="card-title-aligned font-display font-bold text-lg text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition leading-snug min-h-[3.75rem] flex items-center">
+              Caring for DWR Nano-Coatings: Keeping Water Beading Season After Season
+            </h4>
+            <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-3 flex-1">
+              When raindrops stop beading and start soaking into the surface, your garment hasn't failed—its hydrophobic polymers just need heat reactivation. Follow our lab protocol to restore factory water-shedding.
+            </p>
+          </div>
+          <div class="card-bottom-line mt-auto pt-5 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+              <img src="assets/images/avatars/avatar-debashis.jpg" alt="Debashis Roy" class="w-8 h-8 rounded-full object-cover ring-1 ring-slate-200 dark:ring-slate-700">
+              <span class="text-xs font-bold text-slate-700 dark:text-slate-300">Debashis Roy</span>
+            </div>
+            <button onclick="openArticleModal('dwr-maintenance')" class="text-xs font-bold text-sky-600 dark:text-sky-400 hover:underline flex items-center gap-1">
+              <span>Read</span> →
+            </button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Empty State for Searches -->
+    <div id="blog-empty" class="hidden py-16 text-center bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-8 my-6">
+      <div class="text-4xl mb-3">🔍</div>
+      <h4 class="font-bold text-slate-800 dark:text-white text-base">No journal articles match your query</h4>
+      <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 max-w-md mx-auto">Try searching for broader terms like "wind", "boots", "raincoats", or reset your filters.</p>
+      <button onclick="resetBlogFilters()" class="mt-4 px-5 py-2.5 bg-sky-600 hover:bg-sky-700 text-white text-xs font-bold rounded-xl transition">
+        Reset Journal Search
+      </button>
+    </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== MONSOON FIELD PROTOCOLS & GUIDE ==================== -->
+  <section class="py-16 sm:py-20 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-100 dark:bg-sky-950/80 text-sky-700 dark:text-sky-300 text-xs font-bold border border-sky-200 dark:border-sky-800">
+          🌪️ Commuter Best Practices
+        </span>
+        <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-2">
+          Urban Monsoon Commuter Field Protocols
+        </h3>
+        <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-2">
+          Tested techniques from our storm laboratory to navigate torrential wind, crowded train stations, and sudden flash downpours.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Protocol 1 -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-xs hover:shadow-lg transition-all flex flex-col justify-between group">
+          <div class="space-y-3">
+            <div class="w-12 h-12 rounded-2xl bg-sky-50 dark:bg-sky-950/80 text-sky-600 dark:text-sky-400 flex items-center justify-center font-display font-extrabold text-lg border border-sky-100 dark:border-sky-800/80">
+              01
+            </div>
+            <h4 class="font-display font-bold text-base text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition">
+              Pre-Storm Rib Check
+            </h4>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+              Before heading out during Force 8 storm alerts, perform a 3-second radial flex test to ensure hinges are free of grit and tension loops slide freely along the shaft.
+            </p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-slate-100 dark:border-slate-800 text-[11px] font-semibold text-sky-600 dark:text-sky-400">
+            ✓ 3-Second Habit
+          </div>
+        </div>
+
+        <!-- Protocol 2 -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-xs hover:shadow-lg transition-all flex flex-col justify-between group">
+          <div class="space-y-3">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-50 dark:bg-emerald-950/80 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-display font-extrabold text-lg border border-emerald-100 dark:border-emerald-800/80">
+              02
+            </div>
+            <h4 class="font-display font-bold text-base text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition">
+              45° Pitch In Gale Winds
+            </h4>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+              Never fight high winds directly upright. Tilt your umbrella forward at 45° directly into the prevailing gust to allow dual-canopy chimneys to bleed sudden updraft turbulence.
+            </p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-slate-100 dark:border-slate-800 text-[11px] font-semibold text-emerald-600 dark:text-emerald-400">
+            ✓ Prevents Inversion
+          </div>
+        </div>
+
+        <!-- Protocol 3 -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-xs hover:shadow-lg transition-all flex flex-col justify-between group">
+          <div class="space-y-3">
+            <div class="w-12 h-12 rounded-2xl bg-cyan-50 dark:bg-cyan-950/80 text-cyan-600 dark:text-cyan-400 flex items-center justify-center font-display font-extrabold text-lg border border-cyan-100 dark:border-cyan-800/80">
+              03
+            </div>
+            <h4 class="font-display font-bold text-base text-slate-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition">
+              The Two-Snap Dry Shed
+            </h4>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+              Before boarding buses, metro carriages, or slipping into rideshares, execute two downward wrist snaps to shed 95% of water beads, leaving the canopy dry to touch.
+            </p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-slate-100 dark:border-slate-800 text-[11px] font-semibold text-cyan-600 dark:text-cyan-400">
+            ✓ Keeps Interiors Dry
+          </div>
+        </div>
+
+        <!-- Protocol 4 -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-xs hover:shadow-lg transition-all flex flex-col justify-between group">
+          <div class="space-y-3">
+            <div class="w-12 h-12 rounded-2xl bg-indigo-50 dark:bg-indigo-950/80 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-display font-extrabold text-lg border border-indigo-100 dark:border-indigo-800/80">
+              04
+            </div>
+            <h4 class="font-display font-bold text-base text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition">
+              Open-Air Drying Ritual
+            </h4>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+              Never store damp umbrellas locked in tight sleeves. Open the canopy fully indoors for 15 minutes to allow internal zinc-plated tension springs and ripstop fabric to air-dry completely.
+            </p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-slate-100 dark:border-slate-800 text-[11px] font-semibold text-indigo-600 dark:text-indigo-400">
+            ✓ Multi-Season Longevity
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== BLOG FAQ ACCORDION SECTION ==================== -->
+  <section class="py-16 sm:py-24 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 transition-colors">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-14">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-100 dark:bg-sky-950/80 text-sky-700 dark:text-sky-300 text-xs font-bold border border-sky-200 dark:border-sky-800">
+          💡 Engineering & Science Answers
+        </span>
+        <h3 class="font-display text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mt-2">
+          Monsoon Gear Science & Engineering FAQ
+        </h3>
+        <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-2">
+          Clear answers to common questions about fabric hydrostatics, gale aerodynamics, and gear maintenance.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        
+        <details class="p-6 rounded-3xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/90 dark:border-slate-700/80 cursor-pointer group transition">
+          <summary class="font-bold text-sm sm:text-base text-slate-900 dark:text-white flex justify-between items-center">
+            <span>Why do fiberglass umbrella ribs survive 75+ km/h gales while metal ribs snap?</span>
+            <span class="w-7 h-7 rounded-full bg-white dark:bg-slate-700 flex items-center justify-center text-sky-600 dark:text-sky-400 text-base font-bold shadow-xs transition-transform group-open:rotate-45">+</span>
+          </summary>
+          <div class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-4 leading-relaxed border-t border-slate-200/60 dark:border-slate-700/60 pt-4">
+            Rigid metals like cheap stamped aluminum or brittle iron alloy have very low elasticity. When gust pressure exceeds their yield point, they undergo permanent plastic deformation and snap. In contrast, UmbrellaZone uses aeronautical-grade pultruded fiberglass ribs that can flex over 45 degrees without taking a permanent bend, absorbing and shedding sudden aerodynamic energy harmlessly.
+          </div>
+        </details>
+
+        <details class="p-6 rounded-3xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/90 dark:border-slate-700/80 cursor-pointer group transition">
+          <summary class="font-bold text-sm sm:text-base text-slate-900 dark:text-white flex justify-between items-center">
+            <span>What does a 25,000mm Hydrostatic Head rating mean during severe monsoons?</span>
+            <span class="w-7 h-7 rounded-full bg-white dark:bg-slate-700 flex items-center justify-center text-sky-600 dark:text-sky-400 text-base font-bold shadow-xs transition-transform group-open:rotate-45">+</span>
+          </summary>
+          <div class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-4 leading-relaxed border-t border-slate-200/60 dark:border-slate-700/60 pt-4">
+            Hydrostatic head measures the height of a vertical column of water (in millimeters) that a fabric can withstand before three droplets seep through the weave. Light city drizzle creates roughly 2,000mm of hydraulic pressure, but high-speed motorcycle rides or driving gale squalls generate localized impact pressures exceeding 15,000mm. Our 25,000mm ePTFE dual-membrane ensures zero moisture penetration even under extreme hydraulic cloudburst force.
+          </div>
+        </details>
+
+        <details class="p-6 rounded-3xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/90 dark:border-slate-700/80 cursor-pointer group transition">
+          <summary class="font-bold text-sm sm:text-base text-slate-900 dark:text-white flex justify-between items-center">
+            <span>Why does hot-air polyurethane seam tape prevent needle leaks?</span>
+            <span class="w-7 h-7 rounded-full bg-white dark:bg-slate-700 flex items-center justify-center text-sky-600 dark:text-sky-400 text-base font-bold shadow-xs transition-transform group-open:rotate-45">+</span>
+          </summary>
+          <div class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-4 leading-relaxed border-t border-slate-200/60 dark:border-slate-700/60 pt-4">
+            Sewing needles puncture thousands of tiny microscopic perforations through technical waterproof fabric. In heavy continuous downpours, water tracks through needle holes via capillary action. By applying thermoplastic polyurethane (TPU) tape under 240°C pressurized hot air, the tape melts into the yarn weave, permanently sealing each needle hole with an impenetrable molecular barrier.
+          </div>
+        </details>
+
+        <details class="p-6 rounded-3xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/90 dark:border-slate-700/80 cursor-pointer group transition">
+          <summary class="font-bold text-sm sm:text-base text-slate-900 dark:text-white flex justify-between items-center">
+            <span>How does inverted reverse-folding keep car seats and clothes completely dry?</span>
+            <span class="w-7 h-7 rounded-full bg-white dark:bg-slate-700 flex items-center justify-center text-sky-600 dark:text-sky-400 text-base font-bold shadow-xs transition-transform group-open:rotate-45">+</span>
+          </summary>
+          <div class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-4 leading-relaxed border-t border-slate-200/60 dark:border-slate-700/60 pt-4">
+            Traditional umbrellas collapse inward, placing the wet outer surface directly against your hands, clothing, and car upholstery. Inverted folding mechanisms turn inside out when collapsing, trapping standing water inside the inner fold. When you slide into a car door through a tiny crack, the dry underside remains facing outwards, preventing water from dripping onto seats or trousers.
+          </div>
+        </details>
+
+        <details class="p-6 rounded-3xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/90 dark:border-slate-700/80 cursor-pointer group transition">
+          <summary class="font-bold text-sm sm:text-base text-slate-900 dark:text-white flex justify-between items-center">
+            <span>Can I restore DWR water-beading performance if water stops rolling off?</span>
+            <span class="w-7 h-7 rounded-full bg-white dark:bg-slate-700 flex items-center justify-center text-sky-600 dark:text-sky-400 text-base font-bold shadow-xs transition-transform group-open:rotate-45">+</span>
+          </summary>
+          <div class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-4 leading-relaxed border-t border-slate-200/60 dark:border-slate-700/60 pt-4">
+            Yes! When water stops beading, the underlying waterproof membrane is still 100% intact—the microscopic surface polymer spikes have simply flattened due to road dust and body oils. Wash the jacket with residue-free technical cleanser, then tumble dry on low heat for 15-20 minutes (or gently iron over a clean towel). Mild heat restores the polymer memory, making raindrops bead and roll off like new.
+          </div>
+        </details>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== DISPATCH NEWSLETTER CTA ==================== -->
+  <section class="py-16 bg-gradient-to-r from-sky-50 via-slate-50 to-sky-100 dark:from-slate-900 dark:via-slate-950 dark:to-slate-900 text-slate-900 dark:text-white relative overflow-hidden border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-5">
+      <span class="text-sky-600 dark:text-sky-400 text-xs font-bold uppercase tracking-wider bg-white/90 dark:bg-sky-950/80 border border-slate-200 dark:border-sky-800 px-3 py-1 rounded-full inline-block shadow-xs">
+        Quarterly Monsoon Dispatch
+      </span>
+      <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-slate-900 dark:text-white">
+        Receive Severe Weather Reports & Engineering Insights
+      </h2>
+      <p class="text-slate-600 dark:text-slate-300 text-sm max-w-xl mx-auto leading-relaxed">
+        Get deep dives into upcoming weather patterns, fabric lab breakthroughs, and early access to limited seasonal runs directly in your inbox.
+      </p>
+      <form onsubmit="handleDispatchSubscribe(event)" class="max-w-md mx-auto flex flex-col sm:flex-row gap-2.5 pt-2 items-start">
+        <div class="flex-1 min-w-0 flex flex-col w-full sm:w-auto">
+          <input type="email" required placeholder="Enter your email address" class="w-full px-4 py-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 shadow-xs">
+        </div>
+        <button type="submit" class="w-full sm:w-auto px-6 py-3 bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs rounded-xl transition shrink-0 shadow-md shadow-sky-600/20 active:scale-95">
+          Subscribe
+        </button>
+      </form>
+      <p id="dispatch-msg" class="hidden text-xs text-emerald-600 dark:text-emerald-400 font-bold pt-2">✓ Thank you for subscribing to Monsoon Dispatches!</p>
+    </div>
+  </section>
+
+  <!-- ==================== ARTICLE READER MODAL ==================== -->
+  <div id="article-modal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
+    <div class="bg-white dark:bg-slate-900 w-full max-w-3xl rounded-3xl border border-slate-200 dark:border-slate-800 shadow-2xl overflow-hidden my-8 max-h-[90vh] flex flex-col">
+      
+      <!-- Modal Header -->
+      <div class="p-6 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between shrink-0 bg-slate-50/50 dark:bg-slate-900/50">
+        <div class="flex items-center gap-2">
+          <span id="modal-cat" class="text-xs font-bold uppercase text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950/80 px-2.5 py-1 rounded-full">Engineering Dispatch</span>
+          <span id="modal-readtime" class="text-xs text-slate-400">7 min read</span>
+        </div>
+        <button onclick="closeArticleModal()" class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 text-slate-600 dark:text-slate-300 flex items-center justify-center transition" title="Close Reader">
+          ✕
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-6 sm:p-8 overflow-y-auto space-y-6 text-slate-700 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
+        <h2 id="modal-title" class="font-display font-extrabold text-2xl sm:text-3xl text-slate-900 dark:text-white leading-tight"></h2>
+        
+        <div class="flex items-center gap-3 pb-4 border-b border-slate-100 dark:border-slate-800 text-xs text-slate-500">
+          <span id="modal-author" class="font-bold text-slate-800 dark:text-slate-200"></span>
+          <span>•</span>
+          <span id="modal-date"></span>
+        </div>
+
+        <!-- Featured Modal Article Image -->
+        <div class="rounded-2xl overflow-hidden aspect-[16/9] max-h-80 w-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-800 shadow-xs">
+          <img id="modal-image" src="" alt="" class="w-full h-full object-cover">
+        </div>
+
+        <div id="modal-content" class="space-y-4">
+          <!-- Populated by JS -->
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-950/50 p-4 rounded-2xl flex items-center justify-between">
+          <div class="text-xs text-slate-500">
+            Enjoyed this report? Explore our wind-engineered products.
+          </div>
+          <a href="products-umbrellas.html" class="px-4 py-2 bg-sky-600 hover:bg-sky-700 text-white font-bold text-xs rounded-xl transition">
+            View Umbrellas
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==================== MAIN FOOTER ==================== -->
+  <footer class="bg-slate-900 text-slate-300 pt-16 pb-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
+        
+        <div class="lg:col-span-2 space-y-4">
+          <a href="index.html" class="flex items-center gap-3 group cursor-pointer inline-flex" title="UmbrellaZone Home">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-600 to-cyan-500 flex items-center justify-center text-white font-bold shadow-md shadow-sky-600/30 shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 2C6.48 2 2 6.48 2 12c0 1.25.23 2.45.65 3.55.15.39.54.64.96.61h16.78c.42.03.81-.22.96-.61.42-1.1.65-2.3.65-3.55 0-5.52-4.48-10-10-10z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 12v7a2 2 0 104 0"></path></svg>
+            </div>
+            <span class="font-display font-extrabold text-2xl tracking-tight text-white whitespace-nowrap">Umbrella<span class="text-sky-600">Zone</span></span>
+          </a>
+          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed max-w-sm">
+            Engineered storm gear for torrential monsoons. Tested to 85 km/h winds with aeronautical fiberglass and seamless vulcanized rubber.
+          </p>
+          <div class="flex items-center gap-3 text-xs text-slate-400 pt-1">
+            <span>🛡️ 2-Year Full Replacement Guarantee</span>
+          </div>
+
+          <!-- Social Media Icons Redirecting Properly -->
+          <div class="flex items-center gap-2.5 pt-2">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-sky-600 text-slate-400 hover:text-white border border-slate-700 flex items-center justify-center transition shadow-xs" title="Facebook" aria-label="UmbrellaZone on Facebook">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.704 0-1.07.132-1.341.38-.344.316-.479.897-.479 2.008v1.599h3.805l-.545 3.667h-3.26v7.98c5.441-.837 9.596-5.549 9.596-11.238C23.693 5.488 18.455.25 12 .25S.307 5.488.307 11.953c0 5.689 4.155 10.401 9.794 11.238z"/></svg>
+            </a>
+            <a href="https://x.com/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-sky-600 text-slate-400 hover:text-white border border-slate-700 flex items-center justify-center transition shadow-xs" title="X / Twitter" aria-label="UmbrellaZone on X / Twitter">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-sky-600 text-slate-400 hover:text-white border border-slate-700 flex items-center justify-center transition shadow-xs" title="Instagram" aria-label="UmbrellaZone on Instagram">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-sky-600 text-slate-400 hover:text-white border border-slate-700 flex items-center justify-center transition shadow-xs" title="LinkedIn" aria-label="UmbrellaZone on LinkedIn">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-4">Collections</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="products-umbrellas.html" class="hover:text-sky-400 transition">Windproof Umbrellas</a></li>
+            <li><a href="products-raincoats.html" class="hover:text-sky-400 transition">Hydroshield Raincoats</a></li>
+            <li><a href="products-boots.html" class="hover:text-sky-400 transition">Vulcanized Rain Boots</a></li>
+            <li><a href="pricing.html" class="hover:text-sky-400 transition">Pricing & Family Bundles</a></li>
+            <li><a href="blog.html" class="text-sky-400 font-bold transition">Monsoon Journal & Blog</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-4">Engineering & Help</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="warranty.html" class="hover:text-sky-400 transition">Doorstep Warranty Claim</a></li>
+            <li><a href="about.html" class="hover:text-sky-400 transition">About Our Wind Tunnel</a></li>
+            <li><a href="contact.html" class="hover:text-sky-400 transition">Store Locations & Support</a></li>
+            <li><a href="cart.html" class="hover:text-sky-400 transition">Your Shopping Cart</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-4">Flagship Headquarters</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Inner Circle, Block B, Connaught Place (Near Barakhamba Metro)<br>
+            New Delhi, Delhi 110001<br>
+            <span class="text-sky-400 font-semibold">support@umbrellazone.com</span><br>
+            Toll Free: 1800-266-RAIN<br>
+            Mon-Sat: 9:00 AM - 7:00 PM
+          </p>
+        </div>
+
+      </div>
+
+      <div class="pt-8 text-center text-xs text-slate-500">
+        © 2026 UmbrellaZone™ Store. All rights reserved. Built for the heaviest downpours.
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==================== SLIDE-OVER MOBILE DRAWER (#umbrella-mobile-drawer) ==================== -->
+  <!-- ==================== SLIDE-OVER MOBILE DRAWER (IMAGE 2 REFERENCE) ==================== -->
+  <div id="umbrella-mobile-drawer" class="hidden fixed inset-0 z-50 overflow-hidden">
+    <div id="mobile-menu-backdrop" class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-50 duration-300 opacity-0 transition-opacity"></div>
+    <div id="mobile-menu-panel" class="fixed top-0 right-0 bottom-0 w-80 max-w-[88vw] bg-[#fdfcfb] dark:bg-slate-900 border-l border-slate-200/90 dark:border-slate-800 text-slate-900 dark:text-white z-50 shadow-2xl flex flex-col p-6 transition-transform duration-300 transform translate-x-full drawer-content">
+      
+      <!-- Top Drawer Header: Brand Logo + Brand Name (Navigates to Home 1 index.html), Close X on Right -->
+      <div class="flex items-center justify-between pb-4 border-b border-slate-200/80 dark:border-slate-800 shrink-0">
+        <a href="index.html" class="flex items-center gap-2.5 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-600 to-cyan-500 flex items-center justify-center text-white font-bold shadow-sm shrink-0 group-hover:scale-105 transition-transform">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 2C6.48 2 2 6.48 2 12c0 1.25.23 2.45.65 3.55.15.39.54.64.96.61h16.78c.42.03.81-.22.96-.61.42-1.1.65-2.3.65-3.55 0-5.52-4.48-10-10-10z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 12v7a2 2 0 104 0"></path></svg>
+          </div>
+          <span class="font-display font-extrabold text-xl tracking-tight text-slate-900 dark:text-white group-hover:text-sky-600 transition whitespace-nowrap">
+            Umbrella<span class="text-sky-600">Zone</span>
+          </span>
+        </a>
+        <button type="button" id="mobile-menu-close" onclick="closeUmbrellaDrawer(event)" class="w-9 h-9 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 flex items-center justify-center transition cursor-pointer" aria-label="Close menu">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+
+      <!-- Drawer Body (Scrollable Middle - Image 2 Reference) -->
+      <div class="flex-1 overflow-y-auto no-scrollbar py-4 space-y-1">
+        
+        <!-- 1. Home Variations ⌄ Accordion -->
+        <div>
+          <button type="button" class="mobile-accordion-btn w-full min-h-[44px] flex items-center justify-between text-left text-sm font-bold text-slate-900 dark:text-white hover:text-sky-600 dark:hover:text-sky-400 transition cursor-pointer" aria-expanded="false" data-target="drawer-home-submenu">
+            <span>Home Variations</span>
+            <svg class="accordion-chevron w-4 h-4 text-slate-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div id="drawer-home-submenu" class="hidden border-l-2 border-sky-500/30 pl-4 ml-2 my-1 space-y-1.5">
+            <a href="index.html" class="min-h-[38px] flex items-center text-xs font-semibold text-slate-600 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 transition">
+              <span class="mr-2">🏙️</span> Urban Commute
+            </a>
+            <a href="home-2.html" class="min-h-[38px] flex items-center text-xs font-semibold text-slate-600 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 transition">
+              <span class="mr-2">🌪️</span> Cyclone & Storms
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. Products & Gear ⌄ Accordion -->
+        <div>
+          <button type="button" class="mobile-accordion-btn w-full min-h-[44px] flex items-center justify-between text-left text-sm font-bold text-slate-900 dark:text-white hover:text-sky-600 dark:hover:text-sky-400 transition cursor-pointer" aria-expanded="false" data-target="drawer-products-submenu">
+            <span>Products & Gear</span>
+            <svg class="accordion-chevron w-4 h-4 text-slate-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div id="drawer-products-submenu" class="hidden border-l-2 border-sky-500/30 pl-4 ml-2 my-1 space-y-1.5">
+            <a href="products-umbrellas.html" class="min-h-[38px] flex items-center text-xs font-semibold text-slate-600 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 transition">
+              <span class="mr-2">☂️</span> Umbrellas
+            </a>
+            <a href="products-raincoats.html" class="min-h-[38px] flex items-center text-xs font-semibold text-slate-600 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 transition">
+              <span class="mr-2">🧥</span> Raincoats & Suits
+            </a>
+            <a href="products-boots.html" class="min-h-[38px] flex items-center text-xs font-semibold text-slate-600 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 transition">
+              <span class="mr-2">👢</span> Rain Boots
+            </a>
+          </div>
+        </div>
+
+        <!-- 3. Direct Navigation Links (Image 2 sequence) -->
+        <a href="warranty.html" class="min-h-[44px] flex items-center text-sm font-bold text-slate-900 dark:text-white hover:text-sky-600 dark:hover:text-sky-400 transition">
+          Warranty
+        </a>
+        <a href="about.html" class="min-h-[44px] flex items-center text-sm font-bold text-slate-900 dark:text-white hover:text-sky-600 dark:hover:text-sky-400 transition">
+          About Us
+        </a>
+        <a href="blog.html" class="min-h-[44px] flex items-center text-sm font-bold text-slate-900 dark:text-white hover:text-sky-600 dark:hover:text-sky-400 transition">
+          Blog
+        </a>
+        <a href="contact.html" class="min-h-[44px] flex items-center text-sm font-bold text-slate-900 dark:text-white hover:text-sky-600 dark:hover:text-sky-400 transition">
+          Contact
+        </a>
+
+        <!-- 4. Special Accent Booking Link (Image 2: Book Fitting) -->
+        <a href="contact.html#wind-rig-booking" class="min-h-[44px] flex items-center gap-2 text-sm font-bold text-sky-600 dark:text-sky-400 hover:text-sky-700 transition">
+          <span>📅</span>
+          <span>Wind Rig Demo</span>
+        </a>
+
+        <!-- Divider Line (Image 2) -->
+        <div class="border-t border-slate-200/80 dark:border-slate-800 my-3"></div>
+
+        <!-- 5. Saved Wishlist (Image 2: Saved Wishlist with Red Badge on Right) -->
+        <a href="favorites.html" class="min-h-[44px] flex items-center justify-between text-sm font-bold text-slate-900 dark:text-white hover:text-rose-500 transition">
+          <span>Saved Wishlist</span>
+          <span class="wishlist-badge-count w-6 h-6 rounded-full bg-rose-500 text-white font-bold text-xs flex items-center justify-center shadow-xs">0</span>
+        </a>
+
+        <!-- 6. Cart -->
+        <a href="cart.html" class="min-h-[44px] flex items-center justify-between text-sm font-bold text-slate-900 dark:text-white hover:text-sky-600 transition">
+          <span>Cart</span>
+          <span class="cart-badge-count w-6 h-6 rounded-full bg-sky-600 text-white font-bold text-xs flex items-center justify-center shadow-xs">0</span>
+        </a>
+
+        <!-- Divider Line (Image 2) -->
+        <div class="border-t border-slate-200/80 dark:border-slate-800 my-3"></div>
+
+        <!-- 7. Bottom Settings: Row (Image 2 Reference with Rounded Moon & RTL Squircles) -->
+        <div class="flex items-center justify-between pt-2">
+          <span class="text-sm font-bold text-slate-900 dark:text-white">Settings:</span>
+          <div class="flex items-center gap-2.5">
+            <!-- Theme Toggle Squircle -->
+            <button type="button" class="theme-toggle-btn w-10 h-10 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-200 transition cursor-pointer shadow-xs" title="Toggle Dark/Light Mode" aria-label="Toggle Theme">
+              <span class="theme-toggle-icon text-base"></span>
+            </button>
+
+            <!-- RTL Toggle Button (Image 3) -->
+            <button type="button" class="rtl-toggle-btn px-3 h-10 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-bold transition items-center gap-1.5 cursor-pointer shadow-xs flex" title="Switch to RTL Layout" aria-label="Toggle RTL">
+              <span class="rtl-arrow-icon text-sm font-bold">←</span>
+              <span class="rtl-label-text font-bold">RTL</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/products-data.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Blog Data & Article Content
+    const BLOG_ARTICLES = {
+      'gale-rib-flex': {
+        title: 'Aeroelastic Rib Flexing: How We Engineered Umbrellas for 85 km/h Coastal Gale Vortices',
+        image: 'assets/images/wind-tunnel-testing-lab.jpg',
+        category: 'Aerodynamics & Structural',
+        author: 'Dr. Arvind Patel (Lead Aeroelastic Engineer)',
+        date: 'October 10, 2026',
+        readTime: '7 min read',
+        content: `
+          <p class="font-medium text-slate-900 dark:text-white leading-relaxed">During high-speed coastal cyclonic squalls, wind velocity doesn't exert a continuous, static pressure. Instead, turbulent air creates pulsating vortex sheddings that rapidly invert or buckle standard umbrella frames within fractions of a second.</p>
+          <h4 class="font-bold text-base text-slate-900 dark:text-white mt-4">1. The Inadequacy of Stiff Metals</h4>
+          <p class="leading-relaxed">Traditional umbrellas utilize rigid steel or hollow aluminum ribs. When gust velocity exceeds 45 km/h, the static rigidity of these ribs becomes their fatal weakness: with no elasticity to deform and shed aerodynamic drag, shear stress concentrates at rib pivot pins, leading to catastrophic snap failure. The moment metal bends past its yield point, plastic deformation occurs and the umbrella is permanently ruined.</p>
+          <h4 class="font-bold text-base text-slate-900 dark:text-white mt-4">2. Aeronautical Poly-Fiber Matrix</h4>
+          <p class="leading-relaxed">Our Vortex-9 and StormGuard series implement military-grade pultruded fiberglass struts. The matrix flexes up to 90 degrees under sudden 85 km/h updrafts and immediately returns to its parabolic dome curvature without plastic deformation. In our cyclic fatigue testing, these tension-tempered ribs underwent 3,000 consecutive full inversions at hurricane wind speeds with zero structural fracture.</p>
+          <h4 class="font-bold text-base text-slate-900 dark:text-white mt-4">3. Dual-Vented Pressure Equilibrium</h4>
+          <p class="leading-relaxed">By pairing elastic ribs with an overlapping dual-canopy ventilation channel, positive pressure under the canopy escapes upward through specialized vents, cutting lift force by 42% in wind tunnel testing. This chimney vent allows sudden 80+ km/h updrafts to blow harmlessly through the canopy rather than turning your umbrella into a runaway parachute.</p>
+        `
+      },
+      'inverted-folding-mechanics': {
+        title: 'Why Inverted Folding Keeps Car Interiors Dry During Downpours',
+        image: 'assets/images/blog-inverted-folding.png',
+        category: 'Innovation & Kinematics',
+        author: 'Rahul Verma (Product Design Lead)',
+        date: 'October 11, 2026',
+        readTime: '5 min read',
+        content: `
+          <p class="font-medium text-slate-900 dark:text-white leading-relaxed">Every driver and daily commuter knows the frustrating ritual of getting into a car during a heavy monsoon cloudburst. With a traditional umbrella, you are forced to stand half-outside in the pouring rain with the car door wide open while struggling to pull the wet slider down. By the time you get inside, your clothes are drenched, the car door panel is soaked, and pulling the dripping wet umbrella inside leaves standing puddles all over your leather seats, dashboard, and floor mats.</p>
+          <h4 class="font-bold text-base text-slate-900 dark:text-white mt-4">1. Reverse Kinematic Linkage Engineering</h4>
+          <p class="leading-relaxed">Inverted (reverse) folding mechanisms completely re-engineer this mechanical relationship from first principles. By mounting the structural pivot hinges on specialized reverse-tension articulated linkages, the umbrella collapses upwards and inwards instead of downwards. As you slide the runner shut, the wet outer canopy is pulled directly into the inner core, folding inside-out so that only the completely dry underside remains exposed on the outside.</p>
+          <h4 class="font-bold text-base text-slate-900 dark:text-white mt-4">2. The 2-Inch Car Door Ingress Protocol</h4>
+          <p class="leading-relaxed">Because the inverted canopy pulls inward towards the central shaft rather than flaring outwards, you only need to crack your car door open a mere 2 to 3 inches. You can sit comfortably and securely inside the dry vehicle cabin, slide the umbrella through the tiny crack, press the automatic retraction button, and pull it in. Not a single drop of driving rain enters your vehicle, and your shoulders remain completely sheltered.</p>
+          <h4 class="font-bold text-base text-slate-900 dark:text-white mt-4">3. Self-Standing Drip Catchment Architecture</h4>
+          <p class="leading-relaxed">Once folded, the dry outer surface traps all rainwater securely inside the inverted cocoon. You can place the umbrella directly onto car upholstery, office leather armchairs, or legal paperwork without leaving a single wet mark. Furthermore, the specialized eight-point flat base design allows the closed umbrella to stand vertically on its own on the floor, allowing moisture to collect cleanly at the bottom until you are ready to drain it.</p>
+        `
+      },
+      'hot-air-seam-tape': {
+        title: 'Hot-Air Seam Sealing: Why Stitched Needles Leak and How Polyurethane Tape Fixes It',
+        image: 'assets/images/blog-seam-sealing.jpg',
+        category: 'Material Science & Chemistry',
+        author: 'Dr. K. N. Sunder (Polymer Chemist)',
+        date: 'October 12, 2026',
+        readTime: '6 min read',
+        content: `
+          <p class="font-medium text-slate-900 dark:text-white leading-relaxed">A waterproof jacket or heavy technical rain suit is only as impenetrable as its weakest seam. Even if a membrane boasts a certified 25,000mm hydrostatic head rating, the very process of tailoring the garment creates its greatest structural flaw: when industrial sewing machines join panels together, steel needles puncture over 1,500 microscopic holes per linear meter of stitch line.</p>
+          <h4 class="font-bold text-base text-slate-900 dark:text-white mt-4">1. Hydraulic Pressure & Capillary Wicking</h4>
+          <p class="leading-relaxed">Under light misty showers, water surface tension can occasionally bridge small needle holes. However, during high-velocity wind-driven monsoon squalls or when wearing a heavy commuter backpack over shoulders, hydraulic pressure instantly overwhelms surface tension. Water molecules are drawn through the needle perforations via capillary wicking, saturating inner fabric backings and soaking your base layers within minutes.</p>
+          <h4 class="font-bold text-base text-slate-900 dark:text-white mt-4">2. 420°C Robotic Hot-Air Molecular Fusion</h4>
+          <p class="leading-relaxed">To eliminate this vulnerability, UmbrellaZone applies multi-layer thermoplastic polyurethane (TPU) sealing tape using computer-controlled robotic hot-air welding arms. Superheated air precisely calibrated to 420°C liquefies the thermoplastic adhesive in fractions of a second, while high-pressure pneumatic rollers press the tape directly into the porous micro-structure of the fabric backing. This creates an airtight, molecularly fused barrier that cannot peel, delaminate, or lift.</p>
+          <h4 class="font-bold text-base text-slate-900 dark:text-white mt-4">3. Tropical Humidity & Hydrolysis Resistance</h4>
+          <p class="leading-relaxed">Many cheaper commercial raincoats use low-grade solvent glues that dissolve after two months of exposure to tropical humidity, body heat, and saline sweat. Our proprietary cross-linked TPU formulation resists hydrolytic breakdown, withstanding over 50 rigorous machine washes and relentless monsoon cloudbursts while maintaining the exact same 25,000mm waterproof barrier as the uncut membrane.</p>
+        `
+      },
+      'hydrostatic-25k': {
+        title: '25,000mm Hydrostatic Head: What Waterproof Column Ratings Mean',
+        image: 'assets/images/blog-hydrostatic-head.jpg',
+        category: 'Material Science & Testing',
+        author: 'Priya Iyer (Textile Chemist)',
+        date: 'October 08, 2026',
+        readTime: '6 min read',
+        content: `
+          <p class="font-medium text-slate-900 dark:text-white leading-relaxed">When comparing technical rainwear, garments display ratings ranging from 5,000mm to 25,000mm. But what do these numbers actually mean when you are trapped in a torrential monsoon downpour? Understanding hydrostatic head ratings is the difference between staying dry all day and ending up soaked through to your skin within fifteen minutes of commuting.</p>
+          <h4 class="font-bold text-base text-slate-900 dark:text-white mt-4">1. The Physics of the ISO 811 Column Test</h4>
+          <p class="leading-relaxed">Hydrostatic head is measured in international textile testing facilities (ISO 811 protocol) by clamping fabric beneath a 1-inch diameter transparent vertical column. Water is steadily pumped into the cylinder at a rate of 60 cm/min, increasing downward hydraulic pressure until three microscopic water droplets penetrate through the fabric weave. A 25,000mm rating means the fabric successfully held back a column of water 25 meters (82 feet) high before any moisture seeped through.</p>
+          <h4 class="font-bold text-base text-slate-900 dark:text-white mt-4">2. Static Rain vs. Dynamic Monsoon Forces</h4>
+          <p class="leading-relaxed">While ordinary falling rain exerts a gentle static pressure equivalent to 1,500mm to 3,000mm, real-world human movement alters the physical equations dramatically. Walking briskly into a 50 km/h wind squall drives dynamic impact pressure above 10,000mm. Kneeling on wet ground generates over 16,000mm of localized hydraulic force, and carrying a 10kg commuter backpack compresses jacket shoulder seams with upwards of 20,000mm of localized pressure.</p>
+          <h4 class="font-bold text-base text-slate-900 dark:text-white mt-4">3. Dual-Laminate Microporous Breathability</h4>
+          <p class="leading-relaxed">Non-breathable plastic sheets and cheap PVC ponchos can achieve high waterproofing, but they trap body moisture, transforming the interior into an intolerable sweat sauna. Our HydroShield 25,000mm dual-laminate membrane features over 9 billion microscopic pores per square inch. Each pore is 20,000 times smaller than a water droplet—blocking external cloudbursts completely—yet 700 times larger than water vapor molecules, allowing body perspiration to vent freely.</p>
+        `
+      },
+      'rubber-vulcanization': {
+        title: 'FSC Vulcanized Rubber vs Synthetic PVC: Why Quality Wellies Don\'t Crack',
+        image: 'assets/images/blog-vulcanized-rubber.jpg',
+        category: 'Footwear Science & Elastomers',
+        author: 'Vikram Malhotra (Footwear Architect)',
+        date: 'October 05, 2026',
+        readTime: '6 min read',
+        content: `
+          <p class="font-medium text-slate-900 dark:text-white leading-relaxed">After every heavy monsoon, millions of cracked, leaking plastic rain boots are tossed into garbage bins. Most consumers assume all waterproof boots are essentially identical, but the chemical and molecular distinction between synthetic PVC plastic and sustainably harvested vulcanized rubber determines whether footwear fails in two weeks or lasts for years.</p>
+          <h4 class="font-bold text-base text-slate-900 dark:text-white mt-4">1. Chemical Plasticizer Migration in PVC</h4>
+          <p class="leading-relaxed">Polyvinyl chloride (PVC) is naturally a rigid, brittle thermoplastic. To mold it into wearable boots, manufacturers mix in petrochemical plasticizers like phthalates. Under continuous UV sunlight exposure, temperature swings, and repetitive walking stress, these plasticizers leach out of the material. Within weeks, the plastic stiffens and develops microscopic spiderweb stress cracks across the ankle flexion crease, allowing muddy street water to pour inside.</p>
+          <h4 class="font-bold text-base text-slate-900 dark:text-white mt-4">2. Sulfur Heat-Crosslinking & Natural Latex Elasticity</h4>
+          <p class="leading-relaxed">In stark contrast, UmbrellaZone boots are handcrafted from FSC-certified natural Hevea tree rubber compounded with sulfur and cured under heat and steam in specialized autoclave chambers. This vulcanization process permanently bonds individual latex polymer chains into an interconnected 3D molecular elastic matrix. Even after 250,000 dynamic flexion cycles through muddy ditches and flooded gutters, the rubber retains 100% of its tensile elasticity without tearing or fatigue cracking.</p>
+          <h4 class="font-bold text-base text-slate-900 dark:text-white mt-4">3. Thermal Comfort & All-Day Ergonomic Support</h4>
+          <p class="leading-relaxed">Natural rubber possesses superior thermal regulation compared to synthetic plastics. Paired with 5mm flexible insulating neoprene collars and deep-lug self-cleaning cleat outsoles, our vulcanized boots mold comfortably around the foot, preventing blisters and providing dependable arch support during long walks through monsoon-flooded city streets and muddy countryside terrain.</p>
+        `
+      },
+      'monsoon-commute-rush': {
+        title: 'Surviving The Monsoon Transit Rush: 7 Strategies for Trains & Metros',
+        image: 'assets/images/blog-monsoon-transit.png',
+        category: 'Commuter Protocol & Urban Guide',
+        author: 'Sneha Kulkarni (Urban Commuter Lead)',
+        date: 'October 02, 2026',
+        readTime: '5 min read',
+        content: `
+          <p class="font-medium text-slate-900 dark:text-white leading-relaxed">Navigating crowded suburban railway platforms, packed metro escalators, and crowded bus terminals during a sudden torrential cloudburst is an intense endurance test. Boarding a packed train carriage with dripping wet gear ruins work clothing, risks water damage to laptops, and creates uncomfortable friction with fellow commuters.</p>
+          <h4 class="font-bold text-base text-slate-900 dark:text-white mt-4">1. The Two-Snap Moisture Shed Protocol</h4>
+          <p class="leading-relaxed">Never fold a wet umbrella immediately upon reaching shelter. Because our umbrellas utilize hydrophobic Teflon EcoElite 210T Pongee canopies, two sharp downward snaps before entering the station gate dislodges over 95% of standing water droplets. The umbrella can then be slipped into its waterproof carrying sleeve without wetting your briefcase or the commuters around you.</p>
+          <h4 class="font-bold text-base text-slate-900 dark:text-white mt-4">2. Dual Storm-Flap and Collar Cinch Sealing</h4>
+          <p class="leading-relaxed">Many commuters think water penetrates technical jacket fabrics, but rain almost always enters through open collar gaps when tilting your head up to read departure boards. Before walking out into wind tunnels between platforms, cinch your hood barrel toggles securely and verify that Velcro storm flaps are pressed flat over front zippers.</p>
+          <h4 class="font-bold text-base text-slate-900 dark:text-white mt-4">3. Vertical Tech Bag Stacking & Rapid Ventilation</h4>
+          <p class="leading-relaxed">Always attach a water-resistant cover to backpacks before commuting. When standing inside crowded train cars, keep your bag suspended between your knees rather than setting it on waterlogged carriage floors. Once aboard, open underarm pit-zips slightly to allow excess body heat to vent, preventing sweat condensation from dampening your work shirt from within.</p>
+        `
+      },
+      'dwr-maintenance': {
+        title: 'Caring for DWR Nano-Coatings: Keeping Water Beading Season After Season',
+        image: 'assets/images/blog-dwr-beading.jpg',
+        category: 'Care & Longevity',
+        author: 'Debashis Roy (Lab Testing Director)',
+        date: 'September 24, 2026',
+        readTime: '5 min read',
+        content: `
+          <p class="font-medium text-slate-900 dark:text-white leading-relaxed">After exposure to vehicular smog, road grease, and repeated monsoon cloudbursts, even premium Durable Water Repellent (DWR) surface treatments can begin to lose their beading efficacy, leading to surface saturation known as 'wetting out'.</p>
+          <h4 class="font-bold text-base text-slate-900 dark:text-white mt-4">1. Reactivating Microscopic Hydrophobic Polymers</h4>
+          <p class="leading-relaxed">Most commuters mistakenly believe their technical jacket has lost its waterproof barrier when water stops beading into droplets. In reality, the underlying membrane remains 100% waterproof; it is simply the microscopic fluorocarbon-free surface polymer spikes that have been flattened by dirt and body oils. A gentle wash with technical residue-free detergent removes contaminants completely.</p>
+          <h4 class="font-bold text-base text-slate-900 dark:text-white mt-4">2. The Low-Heat Restoration Protocol</h4>
+          <p class="leading-relaxed">Applying mild heat triggers molecular memory in the hydrophobic polymer chains, causing them to stand upright again. Tumble drying on low heat for 20 minutes, or gently running a warm iron over a clean towel placed on the jacket surface, restores factory-level water beading instantly without requiring chemical spray reapplications.</p>
+        `
+      }
+    };
+
+    let activeBlogCategory = 'all';
+
+    function setBlogCategory(category, btn) {
+      activeBlogCategory = category;
+      document.querySelectorAll('.blog-cat-pill').forEach(b => {
+        b.className = 'blog-cat-pill px-4 py-2.5 rounded-xl text-xs font-semibold bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-sky-500 transition shrink-0';
+      });
+      btn.className = 'blog-cat-pill active px-4 py-2.5 rounded-xl text-xs font-bold bg-sky-600 text-white transition shrink-0';
+      filterBlogArticles();
+    }
+
+    function filterBlogArticles() {
+      const search = (document.getElementById('blog-search-input')?.value || '').toLowerCase().trim();
+      const cards = document.querySelectorAll('.blog-card');
+      const counter = document.getElementById('blog-counter');
+      const emptyState = document.getElementById('blog-empty');
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-category');
+        const text = card.textContent.toLowerCase();
+
+        const matchCat = activeBlogCategory === 'all' || cat === activeBlogCategory;
+        const matchSearch = !search || text.includes(search);
+
+        if (matchCat && matchSearch) {
+          card.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      if (counter) counter.textContent = `Showing ${visibleCount} Dispatches`;
+      if (emptyState) {
+        if (visibleCount === 0) emptyState.classList.remove('hidden');
+        else emptyState.classList.add('hidden');
+      }
+    }
+
+    function resetBlogFilters() {
+      const sInput = document.getElementById('blog-search-input');
+      if (sInput) sInput.value = '';
+      const allBtn = document.querySelector('.blog-cat-pill');
+      if (allBtn) setBlogCategory('all', allBtn);
+    }
+
+    function openArticleModal(id) {
+      const article = BLOG_ARTICLES[id];
+      if (!article) return;
+      document.getElementById('modal-title').textContent = article.title;
+      document.getElementById('modal-cat').textContent = article.category;
+      document.getElementById('modal-author').textContent = article.author;
+      document.getElementById('modal-date').textContent = article.date;
+      document.getElementById('modal-readtime').textContent = article.readTime;
+      const mImg = document.getElementById('modal-image');
+      if (mImg && article.image) {
+        mImg.src = article.image;
+        mImg.alt = article.title;
+      }
+      document.getElementById('modal-content').innerHTML = article.content;
+      document.getElementById('article-modal').classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function closeArticleModal() {
+      document.getElementById('article-modal').classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    function handleDispatchSubscribe(e) {
+      e.preventDefault();
+      const form = e.target;
+      const input = form.querySelector('input[type="email"]');
+      if (input) {
+        const isValid = validateField(input, true);
+        if (!isValid) {
+          const msg = input.dataset.lastError || 'Please enter a valid email address (e.g. name@gmail.com).';
+          const title = input.dataset.lastErrorTitle || 'Invalid Email Address';
+          showFormAlertToast(msg, title);
+          return;
+        }
+      }
+      const msg = document.getElementById('dispatch-msg');
+      if (msg) msg.classList.remove('hidden');
+      showToast('✓ Subscribed to Quarterly Monsoon Dispatches! 🌧️', 'success');
+      form.reset();
+      if (input) clearFieldError(input);
+    }
+
+    // Close reader modal on Escape key
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeArticleModal();
+    });
+  </script>
+</body>
+</html>
