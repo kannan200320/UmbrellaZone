@@ -671,27 +671,105 @@ function initNewsletter() {
 // ==================== GLOBAL FORM VALIDATION & AUTHENTICATION ====================
 function isPhoneField(el) {
   if (!el || !el.tagName || el.tagName.toLowerCase() !== 'input') return false;
+  if (isNameField(el) || isCityRegionField(el)) return false;
   const type = (el.type || '').toLowerCase();
+  if (type === 'tel') return true;
   const idName = ((el.id || '') + ' ' + (el.name || '') + ' ' + (el.placeholder || '')).toLowerCase();
-  return type === 'tel' || idName.includes('phone') || idName.includes('mobile') || idName.includes('contact');
+  const parentContainer = el.closest('div');
+  const labelEl = parentContainer ? parentContainer.querySelector('label') : null;
+  const labelText = (labelEl ? labelEl.textContent : '').toLowerCase();
+  return idName.includes('phone') || idName.includes('mobile') || idName.includes('whatsapp') || labelText.includes('phone') || labelText.includes('mobile') || labelText.includes('whatsapp');
+}
+
+function isNameField(el) {
+  if (!el || !el.tagName || el.tagName.toLowerCase() !== 'input') return false;
+  const type = (el.type || '').toLowerCase();
+  if (type === 'email' || type === 'tel' || type === 'date' || type === 'checkbox' || type === 'radio' || type === 'submit') return false;
+  const idName = ((el.id || '') + ' ' + (el.name || '') + ' ' + (el.placeholder || '')).toLowerCase();
+  const parentContainer = el.closest('div');
+  const labelEl = parentContainer ? parentContainer.querySelector('label') : null;
+  const labelText = (labelEl ? labelEl.textContent : '').toLowerCase();
+
+  // Exclude company / hotel fields
+  if (idName.includes('company') || idName.includes('hotel') || idName.includes('corp') || labelText.includes('company') || labelText.includes('hotel')) {
+    return false;
+  }
+  return idName.includes('name') || idName.includes('recipient') || idName.includes('fname') || idName.includes('lname') || labelText.includes('name') || el.getAttribute('autocomplete') === 'name';
+}
+
+function isCityRegionField(el) {
+  if (!el || !el.tagName || el.tagName.toLowerCase() !== 'input') return false;
+  const idName = ((el.id || '') + ' ' + (el.name || '') + ' ' + (el.placeholder || '')).toLowerCase();
+  const parentContainer = el.closest('div');
+  const labelEl = parentContainer ? parentContainer.querySelector('label') : null;
+  const labelText = (labelEl ? labelEl.textContent : '').toLowerCase();
+  return idName.includes('city') || idName.includes('region') || labelText.includes('city') || labelText.includes('region');
+}
+
+function isPostalPinField(el) {
+  if (!el || !el.tagName || el.tagName.toLowerCase() !== 'input') return false;
+  const idName = ((el.id || '') + ' ' + (el.name || '') + ' ' + (el.placeholder || '')).toLowerCase();
+  const parentContainer = el.closest('div');
+  const labelEl = parentContainer ? parentContainer.querySelector('label') : null;
+  const labelText = (labelEl ? labelEl.textContent : '').toLowerCase();
+  return idName.includes('pin') || idName.includes('zip') || idName.includes('postal') || labelText.includes('pin') || labelText.includes('zip') || labelText.includes('postal');
+}
+
+function isInvoiceField(el) {
+  if (!el || !el.tagName || el.tagName.toLowerCase() !== 'input') return false;
+  const idName = ((el.id || '') + ' ' + (el.name || '') + ' ' + (el.placeholder || '')).toLowerCase();
+  const parentContainer = el.closest('div');
+  const labelEl = parentContainer ? parentContainer.querySelector('label') : null;
+  const labelText = (labelEl ? labelEl.textContent : '').toLowerCase();
+  return idName.includes('invoice') || labelText.includes('invoice') || idName.includes('order-id') || idName.includes('order_id');
 }
 
 function initGlobalFormValidation() {
-  // 1. Strict Phone Key Filtering: Alphabets and special characters are completely NOT typable
+  // 1. Strict Key Filtering on typing:
   document.addEventListener('keydown', (e) => {
     const el = e.target;
-    if (isPhoneField(el)) {
-      const allowedControlKeys = [
-        'Backspace', 'Tab', 'Enter', 'Escape', 'ArrowLeft', 'ArrowRight', 
-        'ArrowUp', 'ArrowDown', 'Delete', 'Home', 'End'
-      ];
-      if (allowedControlKeys.includes(e.key)) {
-        // Allowed navigation/control
-      } else if (e.ctrlKey || e.metaKey || e.altKey) {
-        // Allow copy/paste shortcuts
-      } else if (e.key.length === 1 && !/[0-9]/.test(e.key)) {
-        // Block all letters, symbols, punctuation, spaces
-        e.preventDefault();
+    const allowedControlKeys = [
+      'Backspace', 'Tab', 'Enter', 'Escape', 'ArrowLeft', 'ArrowRight', 
+      'ArrowUp', 'ArrowDown', 'Delete', 'Home', 'End'
+    ];
+    if (allowedControlKeys.includes(e.key)) {
+      // Allowed navigation/control
+    } else if (e.ctrlKey || e.metaKey || e.altKey) {
+      // Allow copy/paste shortcuts
+    } else if (e.key.length === 1) {
+      // Rule 1: Full name field should accept ONLY alphabet letters and spaces
+      if (isNameField(el)) {
+        if (!/^[a-zA-Z\s]$/.test(e.key)) {
+          e.preventDefault();
+        }
+        return;
+      }
+      // Rule 2: City / Region should accept ONLY alphabet letters and spaces
+      if (isCityRegionField(el)) {
+        if (!/^[a-zA-Z\s]$/.test(e.key)) {
+          e.preventDefault();
+        }
+        return;
+      }
+      // Rule 3: Postal / PIN Code should not accept alphabet letters
+      if (isPostalPinField(el)) {
+        if (/[a-zA-Z]/.test(e.key)) {
+          e.preventDefault();
+        }
+        return;
+      }
+      // Rule 4: Invoice Number should not accept alphabet letters (numbers only)
+      if (isInvoiceField(el)) {
+        if (/[a-zA-Z]/.test(e.key) || !/[0-9]/.test(e.key)) {
+          e.preventDefault();
+        }
+        return;
+      }
+      // Phone: digits only
+      if (isPhoneField(el)) {
+        if (!/[0-9]/.test(e.key)) {
+          e.preventDefault();
+        }
         return;
       }
     }
@@ -717,24 +795,79 @@ function initGlobalFormValidation() {
     }
   });
 
-  // Strict Phone Keypress fallback
+  // Strict Keypress fallback
   document.addEventListener('keypress', (e) => {
     const el = e.target;
-    if (isPhoneField(el)) {
-      if (e.key !== 'Enter' && !/[0-9]/.test(e.key)) {
+    if (e.key === 'Enter') return;
+    if (isNameField(el)) {
+      if (!/^[a-zA-Z\s]$/.test(e.key)) {
         e.preventDefault();
       }
+      return;
+    }
+    if (isCityRegionField(el)) {
+      if (!/^[a-zA-Z\s]$/.test(e.key)) {
+        e.preventDefault();
+      }
+      return;
+    }
+    if (isPostalPinField(el)) {
+      if (/[a-zA-Z]/.test(e.key)) {
+        e.preventDefault();
+      }
+      return;
+    }
+    if (isInvoiceField(el)) {
+      if (/[a-zA-Z]/.test(e.key) || !/[0-9]/.test(e.key)) {
+        e.preventDefault();
+      }
+      return;
+    }
+    if (isPhoneField(el)) {
+      if (!/[0-9]/.test(e.key)) {
+        e.preventDefault();
+      }
+      return;
     }
   });
 
-  // Strict Phone Input & Paste sanitization (ensures no letters or symbols slip in via paste/IME)
+  // Strict Input & Paste sanitization (ensures no forbidden characters slip in via paste/IME)
   document.addEventListener('input', (e) => {
     const el = e.target;
+    if (isNameField(el)) {
+      const sanitized = el.value.replace(/[^a-zA-Z\s]/g, '');
+      if (el.value !== sanitized) {
+        el.value = sanitized;
+      }
+      return;
+    }
+    if (isCityRegionField(el)) {
+      const sanitized = el.value.replace(/[^a-zA-Z\s]/g, '');
+      if (el.value !== sanitized) {
+        el.value = sanitized;
+      }
+      return;
+    }
+    if (isPostalPinField(el)) {
+      const sanitized = el.value.replace(/[a-zA-Z]/g, '').replace(/[^0-9]/g, '');
+      if (el.value !== sanitized) {
+        el.value = sanitized;
+      }
+      return;
+    }
+    if (isInvoiceField(el)) {
+      const sanitized = el.value.replace(/[a-zA-Z]/g, '').replace(/\D/g, '');
+      if (el.value !== sanitized) {
+        el.value = sanitized;
+      }
+      return;
+    }
     if (isPhoneField(el)) {
       const sanitized = el.value.replace(/[^0-9]/g, '');
       if (el.value !== sanitized) {
         el.value = sanitized;
       }
+      return;
     }
 
     if (el && (el.matches('input, textarea') || el.classList.contains('is-invalid'))) {
@@ -815,16 +948,17 @@ function validateField(field, isSubmitting = true) {
                          labelText.includes('company') || 
                          labelText.includes('hotel');
 
-  // 1B. Personal Name rule: Must be strictly greater than 3 letters (minimum 4 characters)
-  const isPersonNameField = !isCompanyField && (
-    idName.includes('name') || 
-    idName.includes('recipient') || 
-    idName.includes('fname') || 
-    idName.includes('lname') || 
-    idName.includes('alex morgan') ||
-    labelText.includes('name') || 
-    field.getAttribute('autocomplete') === 'name'
-  );
+  // 1B. Personal Name rule: Must accept only alphabet letters and spaces
+  const isPersonNameField = !isCompanyField && isNameField(field);
+
+  // 1C. Invoice Number rule: Must not contain alphabet letters, numbers only
+  const isInvoiceNumField = isInvoiceField(field);
+
+  // 1D. City / Region rule: Must accept only alphabet letters and spaces
+  const isCityField = isCityRegionField(field);
+
+  // 1E. Postal / PIN Code rule: Must not contain alphabet letters
+  const isPinField = isPostalPinField(field);
 
   if (isCompanyField) {
     if (isRequired && val.length === 0) {
@@ -839,17 +973,60 @@ function validateField(field, isSubmitting = true) {
     }
   } else if (isPersonNameField) {
     if (isRequired && val.length === 0) {
-      errorMessage = 'Name must be at least 2 characters.';
+      errorMessage = 'Please enter your full name.';
       errorTitle = 'Name Required';
-    } else if (val.length > 0 && val.length < 2) {
+    } else if (!/^[a-zA-Z\s]+$/.test(val)) {
+      errorMessage = 'Full name should accept only alphabet letters.';
+      errorTitle = 'Invalid Name Format';
+    } else if (val.trim().length < 2) {
       errorMessage = 'Name must be at least 2 characters.';
       errorTitle = 'Name Too Short';
-    } else if (val.length >= 2 && !/[a-zA-Z]/.test(val)) {
-      errorMessage = 'Please enter a valid name containing alphabetical letters.';
-      errorTitle = 'Invalid Name Format';
     }
   }
-  // 1C. Date rule: Past date should not be accepted
+  // Invoice Number rule: should not accept alphabet letters
+  else if (isInvoiceNumField) {
+    if (isRequired && val.length === 0) {
+      errorMessage = 'Please enter your invoice number.';
+      errorTitle = 'Invoice Number Required';
+    } else if (/[a-zA-Z]/.test(val)) {
+      errorMessage = 'Invoice Number should not accept alphabet letters.';
+      errorTitle = 'Invalid Invoice Number';
+    } else if (!/^\d+$/.test(val)) {
+      errorMessage = 'Invoice Number must contain numbers only.';
+      errorTitle = 'Invalid Invoice Number';
+    }
+  }
+  // City / Region rule: should accept only alphabet letters
+  else if (isCityField) {
+    if (isRequired && val.length === 0) {
+      errorMessage = 'Please enter your city / region.';
+      errorTitle = 'City Required';
+    } else if (!/^[a-zA-Z\s]+$/.test(val)) {
+      errorMessage = 'City / Region should accept only alphabet letters.';
+      errorTitle = 'Invalid City / Region';
+    } else if (val.trim().length < 2) {
+      errorMessage = 'City / Region must be at least 2 characters.';
+      errorTitle = 'Invalid City / Region';
+    }
+  }
+  // Postal / PIN Code rule: should not accept alphabet letters
+  else if (isPinField) {
+    const cleanedPin = val.replace(/\s|-/g, '');
+    if (isRequired && val.length === 0) {
+      errorMessage = 'Please enter your postal / PIN code.';
+      errorTitle = 'Postal Code Required';
+    } else if (/[a-zA-Z]/.test(val)) {
+      errorMessage = 'Postal / PIN Code should not accept alphabet letters.';
+      errorTitle = 'Invalid PIN Code';
+    } else if (!/^\d+$/.test(cleanedPin)) {
+      errorMessage = 'Postal / PIN Code must contain numbers only.';
+      errorTitle = 'Invalid Postal Code';
+    } else if (cleanedPin.length < 5) {
+      errorMessage = 'Please enter a valid 5-to-6 digit postal / PIN code.';
+      errorTitle = 'Invalid Postal Code';
+    }
+  }
+  // Date rule: Past date should not be accepted
   else if (type === 'date' || idName.includes('date') || labelText.includes('date')) {
     if (isRequired && val.length === 0) {
       errorMessage = 'Please select your preferred date.';
@@ -868,7 +1045,7 @@ function validateField(field, isSubmitting = true) {
       }
     }
   }
-  // 2. Email rule: Must be valid email with domain extension (e.g. name@gmail.com)
+  // Email rule: Must be valid email with domain extension (e.g. name@gmail.com)
   else if (type === 'email' || idName.includes('email')) {
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (isRequired && val.length === 0) {
@@ -879,7 +1056,7 @@ function validateField(field, isSubmitting = true) {
       errorTitle = 'Invalid Email Address';
     }
   }
-  // 3. Phone / Mobile rule: Numbers only, no letters/symbols, minimum 10 digits
+  // Phone / Mobile rule: Numbers only, no letters/symbols, minimum 10 digits
   else if (isPhoneField(field)) {
     if (isRequired && val.length === 0) {
       errorMessage = 'Please enter your 10-digit mobile number.';
@@ -892,35 +1069,18 @@ function validateField(field, isSubmitting = true) {
       errorTitle = 'Incomplete Phone Number';
     }
   }
-  // 4. Dropdown / Select rule: Must select a valid non-empty option
+  // Dropdown / Select rule: Must select a valid non-empty option
   else if (tag === 'select') {
     if (isRequired && (!val || val === '' || val.toLowerCase().includes('select'))) {
       errorMessage = 'Please select a valid option from the dropdown.';
       errorTitle = 'Selection Required';
     }
   }
-  // 5. Postal / PIN code rule
-  else if (idName.includes('pin') || idName.includes('zip') || idName.includes('postal')) {
-    if (isRequired && val.length === 0) {
-      errorMessage = 'Please enter your postal / PIN code.';
-      errorTitle = 'Postal Code Required';
-    } else if (isRequired && val.length < 5) {
-      errorMessage = 'Please enter a valid 5-to-6 digit postal / PIN code.';
-      errorTitle = 'Invalid Postal Code';
-    }
-  }
-  // 6. Address rule
+  // Address rule
   else if (idName.includes('address') || idName.includes('addr')) {
     if (isRequired && val.length === 0) {
       errorMessage = 'Please enter your street / delivery address.';
       errorTitle = 'Address Required';
-    }
-  }
-  // 7. City / Region rule
-  else if (idName.includes('city') || idName.includes('region')) {
-    if (isRequired && val.length === 0) {
-      errorMessage = 'Please enter your city / region.';
-      errorTitle = 'City Required';
     }
   }
   // 8. Textarea / Message rule

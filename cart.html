@@ -228,8 +228,8 @@
             </div>
           </div>
 
-          <!-- Checkout Trigger Button -->
-          <button onclick="openCheckoutModal()" id="cp-checkout-btn" class="w-full py-4 bg-sky-600 hover:bg-sky-700 active:scale-98 text-white font-bold text-sm rounded-xl shadow-lg shadow-sky-600/25 transition flex items-center justify-center gap-2">
+          <!-- Checkout Trigger Button (Opens Order Confirmation Modal directly) -->
+          <button onclick="openConfirmationModal()" id="cp-checkout-btn" class="w-full py-4 bg-sky-600 hover:bg-sky-700 active:scale-98 text-white font-bold text-sm rounded-xl shadow-lg shadow-sky-600/25 transition flex items-center justify-center gap-2">
             <span>Proceed to Express Checkout</span>
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
           </button>
@@ -251,8 +251,8 @@
   </section>
 
   <!-- ==================== ORDER BOOKING CONFIRMATION MODAL ==================== -->
-  <div id="confirmation-modal" class="hidden fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto">
-    <div class="bg-white dark:bg-slate-900 w-full max-w-lg rounded-3xl sm:rounded-[32px] border border-slate-100 dark:border-slate-800 shadow-2xl p-6 sm:p-10 my-8 relative animate-in fade-in zoom-in-95 duration-200 text-slate-900 dark:text-slate-100">
+  <div id="confirmation-modal" class="hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto overscroll-contain select-none">
+    <div class="bg-white dark:bg-slate-900 w-full max-w-md sm:max-w-lg rounded-3xl sm:rounded-[32px] border border-slate-100 dark:border-slate-800 shadow-2xl p-6 sm:p-9 my-8 relative animate-in fade-in zoom-in-95 duration-200 text-slate-900 dark:text-slate-100">
       
       <!-- Mint Green Circle Checkmark -->
       <div class="w-16 h-16 rounded-full bg-emerald-50 dark:bg-emerald-950/80 flex items-center justify-center mx-auto mb-4 border border-emerald-200 dark:border-emerald-800/80 shadow-sm">
@@ -261,163 +261,53 @@
         </svg>
       </div>
 
-      <!-- Title in Project Relevant Colors -->
+      <!-- Title in Project Sky-600/Sky-400 -->
       <h3 class="font-display font-extrabold text-2xl sm:text-3xl text-sky-600 dark:text-sky-400 text-center tracking-tight">
         Order Booking Confirmed!
       </h3>
       
       <!-- Booking Reference -->
-      <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 text-center mt-2 font-medium">
-        Booking Reference: <span id="conf-ref-num" class="font-bold text-sky-700 dark:text-sky-300 font-mono bg-sky-50 dark:bg-sky-950/80 px-2.5 py-0.5 rounded-lg border border-sky-100 dark:border-sky-900">#RNT-6271</span>
+      <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 text-center mt-2 font-medium flex items-center justify-center gap-1.5">
+        <span>Booking Reference:</span>
+        <span id="conf-ref-num" class="font-bold text-sky-600 dark:text-sky-300 font-mono bg-sky-50 dark:bg-sky-950/80 px-2.5 py-0.5 rounded-lg border border-sky-200/80 dark:border-sky-800/80">#UZ-3313</span>
       </p>
 
-      <!-- Details Box in Project Relevant Colors (Bright: Sky/Slate-50, Dark: Slate-800) -->
-      <div class="mt-6 p-5 sm:p-6 rounded-2xl bg-sky-50/50 dark:bg-slate-800/70 border border-sky-100 dark:border-slate-700/80 space-y-3.5 text-xs sm:text-sm">
-        <div class="flex justify-between items-center">
-          <span class="text-slate-600 dark:text-slate-400">Status:</span>
-          <span class="font-bold text-emerald-600 dark:text-emerald-400 flex items-center gap-1.5">
+      <!-- Details Box with Proper Alignment (Each row is cleanly balanced without awkward wrapping) -->
+      <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 space-y-3 text-xs sm:text-sm">
+        <div class="flex items-center justify-between gap-3">
+          <span class="text-slate-500 dark:text-slate-400 font-medium">Status:</span>
+          <span class="font-bold text-emerald-600 dark:text-emerald-400 flex items-center gap-1.5 shrink-0">
             <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
             Reserved &amp; Queue Locked
           </span>
         </div>
-        <div class="flex justify-between items-center">
-          <span class="text-slate-600 dark:text-slate-400">Delivery / Start Date:</span>
-          <span class="font-bold text-slate-900 dark:text-white" id="conf-date-val">2026-10-12</span>
+        <div class="flex items-center justify-between gap-3">
+          <span class="text-slate-500 dark:text-slate-400 font-medium">Delivery / Start Date:</span>
+          <span class="font-bold text-slate-900 dark:text-white shrink-0" id="conf-date-val">2026-10-15</span>
         </div>
-        <div class="flex justify-between items-center">
-          <span class="text-slate-600 dark:text-slate-400">Total Charged:</span>
-          <span class="font-bold text-slate-900 dark:text-white font-display text-base sm:text-lg" id="conf-total-val">₹899.00</span>
+        <div class="flex items-center justify-between gap-3">
+          <span class="text-slate-500 dark:text-slate-400 font-medium">Total Charged:</span>
+          <span class="font-bold text-slate-900 dark:text-white font-display text-base sm:text-lg shrink-0" id="conf-total-val">₹1,699</span>
         </div>
-        <div class="flex justify-between items-center">
-          <span class="text-sky-700 dark:text-sky-300 font-semibold">2-Year Monsoon Guarantee:</span>
-          <span class="font-bold text-emerald-600 dark:text-emerald-400" id="conf-deposit-val">Active (Full Coverage)</span>
+        <div class="flex items-center justify-between gap-3 pt-2 border-t border-slate-200/60 dark:border-slate-700/60">
+          <span class="text-slate-500 dark:text-slate-400 font-medium">2-Year Guarantee:</span>
+          <span class="font-bold text-emerald-600 dark:text-emerald-400 shrink-0" id="conf-deposit-val">Active (Full Coverage)</span>
         </div>
       </div>
 
-      <!-- Descriptive Notice Matching Project -->
-      <p class="text-xs text-slate-500 dark:text-slate-400 text-center mt-6 leading-relaxed">
+      <!-- Descriptive Notice Matching Screenshot -->
+      <p class="text-xs text-slate-500 dark:text-slate-400 text-center mt-5 leading-relaxed">
         A confirmation email with express storm gear tracking details and doorstep replacement warranty has been generated.
       </p>
 
-      <!-- Close Button in UmbrellaZone Sky-600 -->
-      <button onclick="closeConfirmationModal()" class="mt-6 w-full py-3.5 px-6 rounded-2xl bg-sky-600 hover:bg-sky-700 active:scale-98 text-white font-bold text-sm sm:text-base shadow-lg shadow-sky-600/30 transition">
+      <!-- Close Button Matching Screenshot (Sky-Blue Pill) -->
+      <button onclick="closeConfirmationModal()" class="mt-6 w-full py-3.5 px-6 rounded-2xl bg-sky-600 hover:bg-sky-500 active:scale-98 text-white font-bold text-sm sm:text-base shadow-lg shadow-sky-600/30 transition cursor-pointer">
         Close
       </button>
 
     </div>
   </div>
 
-  <!-- ==================== EXPRESS STORM CHECKOUT MODAL ==================== -->
-  <div id="checkout-modal" class="hidden fixed inset-0 z-50 bg-slate-900/70 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 rounded-3xl max-w-2xl w-full shadow-2xl border border-slate-100 dark:border-slate-800 overflow-hidden relative max-h-[90vh] flex flex-col">
-      
-      <!-- Modal Header -->
-      <div class="p-6 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-slate-800/60">
-        <div class="flex items-center gap-2">
-          <div class="w-8 h-8 rounded-lg bg-sky-600 text-white flex items-center justify-center font-bold text-xs">🔒</div>
-          <div>
-            <h3 class="font-bold text-slate-900 dark:text-white text-base">Express Storm-Shield Checkout</h3>
-            <p class="text-[11px] text-slate-400">Order Total: <span id="checkout-modal-total" class="font-bold text-sky-600 dark:text-sky-400">₹0</span></p>
-          </div>
-        </div>
-        <button onclick="closeCheckoutModal()" class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 p-2 rounded-lg">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-        </button>
-      </div>
-
-      <!-- Modal Body (Form Steps) -->
-      <div class="p-6 sm:p-8 overflow-y-auto space-y-6 flex-1">
-        
-        <!-- Step 1: Shipping Address -->
-        <div>
-          <h4 class="font-bold text-xs uppercase tracking-wider text-slate-400 mb-3">1. Delivery Address</h4>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
-            <div>
-              <input type="text" id="chk-name" required placeholder="Full Recipient Name *" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-xs focus:ring-2 focus:ring-sky-500 focus:outline-none">
-            </div>
-            <div>
-              <input type="tel" id="chk-phone" required placeholder="Phone Number (SMS Updates) *" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-xs focus:ring-2 focus:ring-sky-500 focus:outline-none">
-            </div>
-            <div class="sm:col-span-2">
-              <input type="email" id="chk-email" required placeholder="Email Address for Invoice *" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-xs focus:ring-2 focus:ring-sky-500 focus:outline-none">
-            </div>
-            <div class="sm:col-span-2">
-              <input type="text" id="chk-address" required placeholder="Flat / House No., Street, Landmark *" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-xs focus:ring-2 focus:ring-sky-500 focus:outline-none">
-            </div>
-            <div>
-              <input type="text" id="chk-city" required placeholder="City *" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-xs focus:ring-2 focus:ring-sky-500 focus:outline-none">
-            </div>
-            <div>
-              <input type="text" id="chk-zip" required placeholder="Postal / ZIP Code *" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-xs focus:ring-2 focus:ring-sky-500 focus:outline-none">
-            </div>
-          </div>
-        </div>
-
-        <!-- Step 2: Shipping Tier -->
-        <div>
-          <h4 class="font-bold text-xs uppercase tracking-wider text-slate-400 mb-3">2. Delivery Speed</h4>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-            <label class="p-3 rounded-xl border border-sky-500 bg-sky-50/50 dark:bg-sky-950/40 flex items-center justify-between cursor-pointer">
-              <div class="flex items-center gap-2">
-                <input type="radio" name="shipping_tier" checked class="text-sky-600">
-                <span class="font-bold text-slate-800 dark:text-slate-200">Express Air Delivery (2-3 Days)</span>
-              </div>
-              <span class="text-emerald-600 dark:text-emerald-400 font-bold">FREE on ₹999+</span>
-            </label>
-            <label class="p-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 flex items-center justify-between cursor-pointer">
-              <div class="flex items-center gap-2">
-                <input type="radio" name="shipping_tier" class="text-sky-600">
-                <span class="font-bold text-slate-800 dark:text-slate-200">Same-Day Priority Courier</span>
-              </div>
-              <span class="font-bold text-slate-900 dark:text-white">₹149</span>
-            </label>
-          </div>
-        </div>
-
-        <!-- Step 3: Payment Method -->
-        <div>
-          <h4 class="font-bold text-xs uppercase tracking-wider text-slate-400 mb-3">3. Payment Method</h4>
-          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 space-y-3">
-            <div class="grid grid-cols-3 gap-2">
-              <label class="p-2.5 rounded-xl border border-sky-500 bg-white dark:bg-slate-800 text-center cursor-pointer">
-                <input type="radio" name="pay_method" checked class="hidden">
-                <div class="text-base mb-1">📱</div>
-                <div class="font-bold text-[11px] text-slate-900 dark:text-white">Instant UPI</div>
-                <div class="text-[9px] text-slate-400">Digital Pay</div>
-              </label>
-              <label class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-center cursor-pointer">
-                <input type="radio" name="pay_method" class="hidden">
-                <div class="text-base mb-1">💳</div>
-                <div class="font-bold text-[11px] text-slate-900 dark:text-white">Cards / Bank</div>
-                <div class="text-[9px] text-slate-400">Visa / MC / Net</div>
-              </label>
-              <label class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-center cursor-pointer">
-                <input type="radio" name="pay_method" class="hidden">
-                <div class="text-base mb-1">💵</div>
-                <div class="font-bold text-[11px] text-slate-900 dark:text-white">Pay on Delivery</div>
-                <div class="text-[9px] text-slate-400">Cash / QR at door</div>
-              </label>
-            </div>
-            <div class="pt-2">
-              <input type="text" placeholder="Enter Digital Wallet ID or select payment options" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white text-xs font-mono" value="alex@walletpay">
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Modal Footer -->
-      <div class="p-6 border-t border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/60 flex items-center justify-between gap-4">
-        <button onclick="closeCheckoutModal()" class="px-5 py-3 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 rounded-xl text-xs font-bold hover:bg-slate-100 dark:hover:bg-slate-800 transition">
-          Back
-        </button>
-        <button onclick="simulateOrderPlacement()" class="flex-1 py-3.5 bg-sky-600 hover:bg-sky-700 active:scale-98 text-white font-bold text-sm rounded-xl shadow-lg shadow-sky-600/25 transition">
-          Confirm & Place Order →
-        </button>
-      </div>
-
-    </div>
-  </div>
 
 
 
@@ -853,7 +743,7 @@
       if (!modal) return;
       const totals = getCartTotals();
       
-      // Dynamic reference e.g. #UZ-7241
+      // Dynamic reference matching #UZ-XXXX
       const refNum = '#UZ-' + Math.floor(1000 + Math.random() * 9000);
       document.getElementById('conf-ref-num').textContent = refNum;
       
@@ -865,11 +755,11 @@
       document.getElementById('conf-date-val').textContent = `${yyyy}-${mm}-${dd}`;
       
       // Total charged & guarantee status
-      const totalCharged = totals.total > 0 ? totals.total : 899;
+      const totalCharged = totals.total > 0 ? totals.total : 1699;
       document.getElementById('conf-total-val').textContent = formatPrice(totalCharged);
       const guaranteeEl = document.getElementById('conf-deposit-val');
       if (guaranteeEl) {
-        guaranteeEl.textContent = 'Active (Full Replacement Coverage)';
+        guaranteeEl.textContent = 'Active (Full Coverage)';
       }
       
       // Mark applied coupon as used (single-use constraint)
@@ -878,13 +768,23 @@
       }
       
       modal.classList.remove('hidden');
-      document.body.classList.add('overflow-hidden');
+      
+      // 100% Lock background contents from scrolling on mobile, tablet & desktop
+      document.documentElement.classList.add('overflow-hidden', 'modal-open');
+      document.body.classList.add('overflow-hidden', 'modal-open');
+      document.documentElement.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden';
     }
 
     function closeConfirmationModal() {
       const modal = document.getElementById('confirmation-modal');
       if (modal) modal.classList.add('hidden');
-      document.body.classList.remove('overflow-hidden');
+      
+      // Restore background scrolling
+      document.documentElement.classList.remove('overflow-hidden', 'modal-open');
+      document.body.classList.remove('overflow-hidden', 'modal-open');
+      document.documentElement.style.overflow = '';
+      document.body.style.overflow = '';
 
       // Clear applied promo and empty cart
       localStorage.removeItem(PROMO_STORAGE_KEY);
@@ -897,56 +797,11 @@
     }
 
     function openCheckoutModal() {
-      const modal = document.getElementById('checkout-modal');
-      if (!modal) return;
-      const totals = getCartTotals();
-      const totalCharged = totals.total > 0 ? totals.total : 899;
-      const totalEl = document.getElementById('checkout-modal-total');
-      if (totalEl) totalEl.textContent = formatPrice(totalCharged);
-      modal.classList.remove('hidden');
-      document.body.classList.add('overflow-hidden');
+      openConfirmationModal();
     }
 
     function closeCheckoutModal() {
-      const modal = document.getElementById('checkout-modal');
-      if (modal) modal.classList.add('hidden');
-      document.body.classList.remove('overflow-hidden');
-    }
-
-    function simulateOrderPlacement() {
-      // Authenticate checkout address form
-      const nameEl = document.getElementById('chk-name');
-      const phoneEl = document.getElementById('chk-phone');
-      const emailEl = document.getElementById('chk-email');
-      const addrEl = document.getElementById('chk-address');
-      const cityEl = document.getElementById('chk-city');
-      const zipEl = document.getElementById('chk-zip');
-
-      let hasError = false;
-      let firstInvalid = null;
-      [nameEl, phoneEl, emailEl, addrEl, cityEl, zipEl].forEach(el => {
-        if (el) {
-          el.setAttribute('required', 'true');
-          const valid = validateField(el, true);
-          if (!valid) {
-            hasError = true;
-            if (!firstInvalid) firstInvalid = el;
-          }
-        }
-      });
-
-      if (hasError) {
-        if (firstInvalid) {
-          firstInvalid.focus();
-          const msg = firstInvalid.dataset.lastError || 'Please fill in all required delivery details.';
-          const title = firstInvalid.dataset.lastErrorTitle || 'Delivery Information Required';
-          showFormAlertToast(msg, title);
-        }
-        return;
-      }
-
-      closeCheckoutModal();
-      openConfirmationModal();
+      closeConfirmationModal();
     }
   </script>
 </body>

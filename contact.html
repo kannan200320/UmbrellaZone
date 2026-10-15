@@ -259,7 +259,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div>
                 <label class="block text-sm font-bold text-slate-900 dark:text-slate-200 uppercase tracking-wide mb-2">Full Name *</label>
-                <input type="text" required placeholder="e.g. Alex Morgan" class="w-full px-4 py-3.5 rounded-xl border-2 border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-base font-semibold focus:ring-2 focus:ring-sky-500 focus:outline-none text-slate-950 dark:text-white placeholder:text-slate-500 dark:placeholder:text-slate-400 shadow-xs">
+                <input type="text" id="contact-name" name="contact_name" required placeholder="e.g. Alex Morgan" oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '')" class="w-full px-4 py-3.5 rounded-xl border-2 border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-base font-semibold focus:ring-2 focus:ring-sky-500 focus:outline-none text-slate-950 dark:text-white placeholder:text-slate-500 dark:placeholder:text-slate-400 shadow-xs">
               </div>
               <div>
                 <label class="block text-sm font-bold text-slate-900 dark:text-slate-200 uppercase tracking-wide mb-2">Email Address *</label>
@@ -274,7 +274,7 @@
               </div>
               <div>
                 <label class="block text-sm font-bold text-slate-900 dark:text-slate-200 uppercase tracking-wide mb-2">City / Region *</label>
-                <input type="text" required placeholder="e.g. Metro Central District" class="w-full px-4 py-3.5 rounded-xl border-2 border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-base font-semibold focus:ring-2 focus:ring-sky-500 focus:outline-none text-slate-950 dark:text-white placeholder:text-slate-500 dark:placeholder:text-slate-400 shadow-xs">
+                <input type="text" id="contact-city" name="contact_city" required placeholder="e.g. Metro Central District" oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '')" class="w-full px-4 py-3.5 rounded-xl border-2 border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-base font-semibold focus:ring-2 focus:ring-sky-500 focus:outline-none text-slate-950 dark:text-white placeholder:text-slate-500 dark:placeholder:text-slate-400 shadow-xs">
               </div>
             </div>
 
@@ -444,8 +444,8 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label for="wind-rig-name" class="block text-[11px] font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Full Name * (Min 2 characters)</label>
-                <input type="text" id="wind-rig-name" name="full_name" required minlength="2" placeholder="e.g. Alex Morgan" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-xs text-slate-900 dark:text-white focus:ring-2 focus:ring-sky-500">
+                <label for="wind-rig-name" class="block text-[11px] font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Full Name</label>
+                <input type="text" id="wind-rig-name" name="full_name" required minlength="2" placeholder="e.g. Alex Morgan" oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '')" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-xs text-slate-900 dark:text-white focus:ring-2 focus:ring-sky-500">
               </div>
               <div>
                 <label for="wind-rig-visitors" class="block text-[11px] font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Visitors Count *</label>
@@ -459,7 +459,7 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label for="wind-rig-phone" class="block text-[11px] font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Phone Number * (10 Digits)</label>
+                <label for="wind-rig-phone" class="block text-[11px] font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Phone Number</label>
                 <input type="tel" id="wind-rig-phone" name="phone_number" required placeholder="10-digit mobile number" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-xs text-slate-900 dark:text-white focus:ring-2 focus:ring-sky-500">
               </div>
               <div>
@@ -546,67 +546,7 @@
     </div>
   </section>
 
-  <!-- ==================== SECTION 7: CORPORATE GIFTING & COMMERCIAL WHOLESALE ==================== -->
-  <section class="py-16 sm:py-24 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 transition-colors">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-gradient-to-br from-sky-50 via-slate-50 to-indigo-50 dark:from-slate-950 dark:via-slate-900 dark:to-sky-950 rounded-3xl p-8 sm:p-14 text-slate-900 dark:text-white relative overflow-hidden shadow-xl dark:shadow-2xl border border-sky-200/80 dark:border-slate-800">
-        <div class="absolute -right-16 -top-16 w-80 h-80 bg-sky-500/10 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
-          <div class="lg:col-span-7 space-y-4">
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-100 dark:bg-sky-500/20 text-sky-800 dark:text-sky-300 text-xs font-bold border border-sky-200 dark:border-sky-400/30">
-              🏢 Commercial & Corporate Fleet
-            </span>
-            <h3 class="font-display text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
-              Custom Laser-Engraved Umbrellas for Organizations & Teams
-            </h3>
-            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
-              Equip your corporate staff, campus teams, or hospitality guests with custom-branded UmbrellaZone gear. We provide precision laser engraving on the metal handle ring, Pantone-matched canopy panels, and premium gift packaging.
-            </p>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-3">
-              <div class="p-4 rounded-2xl bg-white/90 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/80 hover:border-sky-500/40 transition shadow-xs dark:shadow-sm">
-                <div class="text-xl font-black text-sky-600 dark:text-sky-400">25 Units</div>
-                <div class="text-xs text-slate-600 dark:text-slate-300 mt-1 font-medium">Low Minimum Order Quantity</div>
-              </div>
-              <div class="p-4 rounded-2xl bg-white/90 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/80 hover:border-sky-500/40 transition shadow-xs dark:shadow-sm">
-                <div class="text-xl font-black text-sky-600 dark:text-sky-400">48 Hours</div>
-                <div class="text-xs text-slate-600 dark:text-slate-300 mt-1 font-medium">Digital 3D Design Proofing</div>
-              </div>
-              <div class="p-4 rounded-2xl bg-white/90 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/80 hover:border-sky-500/40 transition shadow-xs dark:shadow-sm">
-                <div class="text-xl font-black text-sky-600 dark:text-sky-400">Up to 45%</div>
-                <div class="text-xs text-slate-600 dark:text-slate-300 mt-1 font-medium">Tiered Bulk Savings</div>
-              </div>
-            </div>
-          </div>
-          <div class="lg:col-span-5 flex justify-center">
-            <div class="p-6 sm:p-7 rounded-3xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-700/90 backdrop-blur-md max-w-sm w-full space-y-4 shadow-xl">
-              <div>
-                <h4 class="font-bold text-base text-slate-900 dark:text-white">Request Corporate Catalog & Sample</h4>
-                <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Direct response from our fleet desk within 24 hours.</p>
-              </div>
-              <form id="corporate-catalog-form" onsubmit="handleCorporateCatalogSubmit(event)" class="space-y-3">
-                <div>
-                  <input type="text" id="corporate-company-name" name="company_name" placeholder="Company / Hotel Name" required minlength="3" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/90 border border-slate-300 dark:border-slate-700 text-xs text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition">
-                </div>
-                <div>
-                  <input type="email" id="corporate-work-email" name="corporate_email" placeholder="Corporate Work Email" required class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/90 border border-slate-300 dark:border-slate-700 text-xs text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition">
-                </div>
-                <div>
-                  <select id="corporate-qty" name="estimated_qty" required class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/90 border border-slate-300 dark:border-slate-700 text-xs text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition">
-                    <option value="25-50">Estimated Qty: 25 – 50 Units</option>
-                    <option value="51-200">Estimated Qty: 51 – 200 Units</option>
-                    <option value="200+">Estimated Qty: 200+ Units (Enterprise Fleet)</option>
-                  </select>
-                </div>
-                <button type="submit" class="w-full py-3 bg-sky-600 hover:bg-sky-700 dark:bg-sky-500 dark:hover:bg-sky-400 text-white dark:text-slate-950 font-extrabold text-xs rounded-xl transition shadow-lg shadow-sky-600/25 dark:shadow-sky-500/25 active:scale-98 cursor-pointer">
-                  Request Commercial Pricing Kit →
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+
 
   <!-- ==================== SECTION 8: CUSTOMER SUPPORT & FAQ ==================== -->
   <section class="py-16 sm:py-24 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 transition-colors">
@@ -1063,30 +1003,7 @@
       form.querySelectorAll('input, select, textarea').forEach(el => clearFieldError(el));
     }
 
-    function handleCorporateCatalogSubmit(e) {
-      e.preventDefault();
-      const form = e.target;
-      const isValid = validateForm(form);
-      if (!isValid) return;
 
-      const companyInput = document.getElementById('corporate-company-name');
-      const emailInput = document.getElementById('corporate-work-email');
-
-      const companyVal = (companyInput ? companyInput.value : '').trim();
-      if (companyVal.length <= 2) {
-        applyFieldError(companyInput, 'Company / Hotel name must be greater than 2 letters (minimum 3 characters).');
-        showFormAlertToast('Company / Hotel name must be greater than 2 letters (minimum 3 characters).', 'Name Too Short');
-        if (companyInput) companyInput.focus();
-        return;
-      }
-
-      const quoteId = 'CORP-' + Math.floor(10000 + Math.random() * 90000);
-      const emailVal = emailInput ? emailInput.value : 'your email';
-
-      showToast(`🎉 Corporate Inquiry #${quoteId} confirmed for "${companyVal}"! Commercial pricing kit sent to ${emailVal}. 🏢`, 'success');
-      form.reset();
-      form.querySelectorAll('input, select, textarea').forEach(el => clearFieldError(el));
-    }
 
     document.addEventListener('DOMContentLoaded', () => {
       const rigDate = document.getElementById('wind-rig-date');
