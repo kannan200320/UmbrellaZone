@@ -902,6 +902,74 @@ html.dark .divide-slate-200 > :not([hidden]) ~ :not([hidden]) {
   border-color: #1e293b !important;
 }
 
+/* ==================== FOOTER PERMANENT VISIBILITY (BRIGHT & DARK MODES) ==================== */
+footer,
+html:not(.dark) footer,
+html.dark footer {
+  background-color: #020617 !important;
+  color: #94a3b8 !important;
+}
+
+footer a,
+html:not(.dark) footer a,
+html.dark footer a {
+  color: #cbd5e1 !important;
+  transition: color 0.2s ease !important;
+}
+
+footer a:hover,
+html:not(.dark) footer a:hover,
+html.dark footer a:hover {
+  color: #38bdf8 !important;
+}
+
+footer h4,
+footer h1, footer h2, footer h3,
+footer .font-display,
+html:not(.dark) footer h4,
+html:not(.dark) footer h1,
+html:not(.dark) footer h2,
+html:not(.dark) footer h3,
+html:not(.dark) footer .font-display {
+  color: #ffffff !important;
+}
+
+footer p,
+html:not(.dark) footer p,
+html.dark footer p {
+  color: #94a3b8 !important;
+}
+
+footer span:not([class*="text-sky"]):not([class*="text-cyan"]),
+html:not(.dark) footer span:not([class*="text-sky"]):not([class*="text-cyan"]) {
+  color: #94a3b8 !important;
+}
+
+footer .text-sky-400,
+footer .text-sky-500,
+footer .text-sky-600,
+html:not(.dark) footer .text-sky-400,
+html:not(.dark) footer .text-sky-500,
+html:not(.dark) footer .text-sky-600 {
+  color: #38bdf8 !important;
+}
+
+footer .text-slate-400,
+footer .text-slate-500,
+footer .text-slate-300,
+footer div.text-slate-500,
+html:not(.dark) footer .text-slate-400,
+html:not(.dark) footer .text-slate-500,
+html:not(.dark) footer .text-slate-300,
+html:not(.dark) footer div.text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+footer .text-white,
+html:not(.dark) footer .text-white {
+  color: #ffffff !important;
+}
+
 /* ==================== BRIGHT MODE: NORMAL TEXT COLOR IS SOLID BLACK ==================== */
 html:not(.dark) {
   color: #000000;
@@ -911,41 +979,41 @@ html:not(.dark) body {
   color: #000000 !important;
 }
 
-/* Force all slate, gray, and zinc text colors to solid black in bright mode across all pages */
-html:not(.dark) .text-slate-300:not(footer *):not(.text-white):not([class*="text-white"]):not([class*="text-sky"]):not([class*="text-emerald"]):not([class*="text-rose"]):not([class*="text-amber"]):not([class*="text-cyan"]),
-html:not(.dark) .text-slate-400:not(footer *):not(.text-white):not([class*="text-white"]):not([class*="text-sky"]):not([class*="text-emerald"]):not([class*="text-rose"]):not([class*="text-amber"]):not([class*="text-cyan"]),
-html:not(.dark) .text-slate-500:not(footer *):not(.text-white):not([class*="text-white"]):not([class*="text-sky"]):not([class*="text-emerald"]):not([class*="text-rose"]):not([class*="text-amber"]):not([class*="text-cyan"]),
-html:not(.dark) .text-slate-600:not(footer *):not(.text-white):not([class*="text-white"]):not([class*="text-sky"]):not([class*="text-emerald"]):not([class*="text-rose"]):not([class*="text-amber"]):not([class*="text-cyan"]),
-html:not(.dark) .text-slate-700:not(footer *):not(.text-white):not([class*="text-white"]):not([class*="text-sky"]):not([class*="text-emerald"]):not([class*="text-rose"]):not([class*="text-amber"]):not([class*="text-cyan"]),
-html:not(.dark) .text-slate-800:not(footer *):not(.text-white):not([class*="text-white"]):not([class*="text-sky"]):not([class*="text-emerald"]):not([class*="text-rose"]):not([class*="text-amber"]):not([class*="text-cyan"]),
-html:not(.dark) .text-slate-900:not(footer *):not(.text-white):not([class*="text-white"]):not([class*="text-sky"]):not([class*="text-emerald"]):not([class*="text-rose"]):not([class*="text-amber"]):not([class*="text-cyan"]),
-html:not(.dark) .text-gray-300:not(footer *):not(.text-white):not([class*="text-white"]):not([class*="text-sky"]):not([class*="text-emerald"]):not([class*="text-rose"]):not([class*="text-amber"]):not([class*="text-cyan"]),
-html:not(.dark) .text-gray-400:not(footer *):not(.text-white):not([class*="text-white"]):not([class*="text-sky"]):not([class*="text-emerald"]):not([class*="text-rose"]):not([class*="text-amber"]):not([class*="text-cyan"]),
-html:not(.dark) .text-gray-500:not(footer *):not(.text-white):not([class*="text-white"]):not([class*="text-sky"]):not([class*="text-emerald"]):not([class*="text-rose"]):not([class*="text-amber"]):not([class*="text-cyan"]),
-html:not(.dark) .text-gray-600:not(footer *):not(.text-white):not([class*="text-white"]):not([class*="text-sky"]):not([class*="text-emerald"]):not([class*="text-rose"]):not([class*="text-amber"]):not([class*="text-cyan"]),
-html:not(.dark) .text-gray-700:not(footer *):not(.text-white):not([class*="text-white"]):not([class*="text-sky"]):not([class*="text-emerald"]):not([class*="text-rose"]):not([class*="text-amber"]):not([class*="text-cyan"]),
-html:not(.dark) .text-gray-800:not(footer *):not(.text-white):not([class*="text-white"]):not([class*="text-sky"]):not([class*="text-emerald"]):not([class*="text-rose"]):not([class*="text-amber"]):not([class*="text-cyan"]),
-html:not(.dark) .text-gray-900:not(footer *):not(.text-white):not([class*="text-white"]):not([class*="text-sky"]):not([class*="text-emerald"]):not([class*="text-rose"]):not([class*="text-amber"]):not([class*="text-cyan"]),
-html:not(.dark) .text-zinc-400:not(footer *):not(.text-white):not([class*="text-white"]),
-html:not(.dark) .text-zinc-500:not(footer *):not(.text-white):not([class*="text-white"]),
-html:not(.dark) .text-zinc-600:not(footer *):not(.text-white):not([class*="text-white"]),
-html:not(.dark) .text-neutral-400:not(footer *):not(.text-white):not([class*="text-white"]),
-html:not(.dark) .text-neutral-500:not(footer *):not(.text-white):not([class*="text-white"]),
-html:not(.dark) .text-neutral-600:not(footer *):not(.text-white):not([class*="text-white"]) {
+/* Force all slate, gray, and zinc text colors to solid black in bright mode across all pages (excluding footer) */
+html:not(.dark) .text-slate-300:not(footer):not(footer *):not(.text-white):not([class*="text-white"]):not([class*="text-sky"]):not([class*="text-emerald"]):not([class*="text-rose"]):not([class*="text-amber"]):not([class*="text-cyan"]),
+html:not(.dark) .text-slate-400:not(footer):not(footer *):not(.text-white):not([class*="text-white"]):not([class*="text-sky"]):not([class*="text-emerald"]):not([class*="text-rose"]):not([class*="text-amber"]):not([class*="text-cyan"]),
+html:not(.dark) .text-slate-500:not(footer):not(footer *):not(.text-white):not([class*="text-white"]):not([class*="text-sky"]):not([class*="text-emerald"]):not([class*="text-rose"]):not([class*="text-amber"]):not([class*="text-cyan"]),
+html:not(.dark) .text-slate-600:not(footer):not(footer *):not(.text-white):not([class*="text-white"]):not([class*="text-sky"]):not([class*="text-emerald"]):not([class*="text-rose"]):not([class*="text-amber"]):not([class*="text-cyan"]),
+html:not(.dark) .text-slate-700:not(footer):not(footer *):not(.text-white):not([class*="text-white"]):not([class*="text-sky"]):not([class*="text-emerald"]):not([class*="text-rose"]):not([class*="text-amber"]):not([class*="text-cyan"]),
+html:not(.dark) .text-slate-800:not(footer):not(footer *):not(.text-white):not([class*="text-white"]):not([class*="text-sky"]):not([class*="text-emerald"]):not([class*="text-rose"]):not([class*="text-amber"]):not([class*="text-cyan"]),
+html:not(.dark) .text-slate-900:not(footer):not(footer *):not(.text-white):not([class*="text-white"]):not([class*="text-sky"]):not([class*="text-emerald"]):not([class*="text-rose"]):not([class*="text-amber"]):not([class*="text-cyan"]),
+html:not(.dark) .text-gray-300:not(footer):not(footer *):not(.text-white):not([class*="text-white"]):not([class*="text-sky"]):not([class*="text-emerald"]):not([class*="text-rose"]):not([class*="text-amber"]):not([class*="text-cyan"]),
+html:not(.dark) .text-gray-400:not(footer):not(footer *):not(.text-white):not([class*="text-white"]):not([class*="text-sky"]):not([class*="text-emerald"]):not([class*="text-rose"]):not([class*="text-amber"]):not([class*="text-cyan"]),
+html:not(.dark) .text-gray-500:not(footer):not(footer *):not(.text-white):not([class*="text-white"]):not([class*="text-sky"]):not([class*="text-emerald"]):not([class*="text-rose"]):not([class*="text-amber"]):not([class*="text-cyan"]),
+html:not(.dark) .text-gray-600:not(footer):not(footer *):not(.text-white):not([class*="text-white"]):not([class*="text-sky"]):not([class*="text-emerald"]):not([class*="text-rose"]):not([class*="text-amber"]):not([class*="text-cyan"]),
+html:not(.dark) .text-gray-700:not(footer):not(footer *):not(.text-white):not([class*="text-white"]):not([class*="text-sky"]):not([class*="text-emerald"]):not([class*="text-rose"]):not([class*="text-amber"]):not([class*="text-cyan"]),
+html:not(.dark) .text-gray-800:not(footer):not(footer *):not(.text-white):not([class*="text-white"]):not([class*="text-sky"]):not([class*="text-emerald"]):not([class*="text-rose"]):not([class*="text-amber"]):not([class*="text-cyan"]),
+html:not(.dark) .text-gray-900:not(footer):not(footer *):not(.text-white):not([class*="text-white"]):not([class*="text-sky"]):not([class*="text-emerald"]):not([class*="text-rose"]):not([class*="text-amber"]):not([class*="text-cyan"]),
+html:not(.dark) .text-zinc-400:not(footer):not(footer *):not(.text-white):not([class*="text-white"]),
+html:not(.dark) .text-zinc-500:not(footer):not(footer *):not(.text-white):not([class*="text-white"]),
+html:not(.dark) .text-zinc-600:not(footer):not(footer *):not(.text-white):not([class*="text-white"]),
+html:not(.dark) .text-neutral-400:not(footer):not(footer *):not(.text-white):not([class*="text-white"]),
+html:not(.dark) .text-neutral-500:not(footer):not(footer *):not(.text-white):not([class*="text-white"]),
+html:not(.dark) .text-neutral-600:not(footer):not(footer *):not(.text-white):not([class*="text-white"]) {
   color: #000000 !important;
 }
 
-/* Ensure all semantic normal content tags render in solid black in bright mode */
-html:not(.dark) p:not(footer *):not(.text-white):not([class*="text-white"]):not([class*="text-sky"]):not([class*="text-emerald"]):not([class*="text-rose"]):not([class*="text-amber"]):not([class*="text-cyan"]),
-html:not(.dark) li:not(footer *):not(.text-white):not([class*="text-white"]):not([class*="text-sky"]):not([class*="text-emerald"]):not([class*="text-rose"]):not([class*="text-amber"]):not([class*="text-cyan"]),
-html:not(.dark) td:not(footer *):not(.text-white):not([class*="text-white"]):not([class*="text-sky"]):not([class*="text-emerald"]):not([class*="text-rose"]):not([class*="text-amber"]):not([class*="text-cyan"]),
-html:not(.dark) th:not(footer *):not(.text-white):not([class*="text-white"]),
-html:not(.dark) label:not(footer *):not(.text-white):not([class*="text-white"]),
-html:not(.dark) dt:not(footer *):not(.text-white):not([class*="text-white"]),
-html:not(.dark) dd:not(footer *):not(.text-white):not([class*="text-white"]),
-html:not(.dark) blockquote:not(footer *):not(.text-white):not([class*="text-white"]),
-html:not(.dark) q:not(footer *):not(.text-white):not([class*="text-white"]),
-html:not(.dark) small:not(footer *):not(.text-white):not([class*="text-white"]):not([class*="text-sky"]):not([class*="text-emerald"]):not([class*="text-rose"]):not([class*="text-amber"]):not([class*="text-cyan"]) {
+/* Ensure all semantic normal content tags render in solid black in bright mode (excluding footer) */
+html:not(.dark) p:not(footer):not(footer *):not(.text-white):not([class*="text-white"]):not([class*="text-sky"]):not([class*="text-emerald"]):not([class*="text-rose"]):not([class*="text-amber"]):not([class*="text-cyan"]),
+html:not(.dark) li:not(footer):not(footer *):not(.text-white):not([class*="text-white"]):not([class*="text-sky"]):not([class*="text-emerald"]):not([class*="text-rose"]):not([class*="text-amber"]):not([class*="text-cyan"]),
+html:not(.dark) td:not(footer):not(footer *):not(.text-white):not([class*="text-white"]):not([class*="text-sky"]):not([class*="text-emerald"]):not([class*="text-rose"]):not([class*="text-amber"]):not([class*="text-cyan"]),
+html:not(.dark) th:not(footer):not(footer *):not(.text-white):not([class*="text-white"]),
+html:not(.dark) label:not(footer):not(footer *):not(.text-white):not([class*="text-white"]),
+html:not(.dark) dt:not(footer):not(footer *):not(.text-white):not([class*="text-white"]),
+html:not(.dark) dd:not(footer):not(footer *):not(.text-white):not([class*="text-white"]),
+html:not(.dark) blockquote:not(footer):not(footer *):not(.text-white):not([class*="text-white"]),
+html:not(.dark) q:not(footer):not(footer *):not(.text-white):not([class*="text-white"]),
+html:not(.dark) small:not(footer):not(footer *):not(.text-white):not([class*="text-white"]):not([class*="text-sky"]):not([class*="text-emerald"]):not([class*="text-rose"]):not([class*="text-amber"]):not([class*="text-cyan"]) {
   color: #000000 !important;
 }
 
