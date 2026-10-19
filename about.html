@@ -124,13 +124,6 @@
             <span class="rtl-label-text font-bold">RTL</span>
           </button>
 
-          <!-- Search: Visible on Mobile, Tablet & Desktop -->
-          <button type="button" class="search-modal-trigger w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 flex items-center justify-center transition cursor-pointer" aria-label="Search rain gear" title="Search Store">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-            </svg>
-          </button>
-
           <!-- Wishlist: Hidden on mobile & tablet (<1024px, accessed via drawer Saved Wishlist), visible on desktop -->
           <a href="favorites.html" class="hidden lg:inline-flex relative w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-200 items-center justify-center transition" aria-label="Monsoon Favorites" title="Monsoon Favorites">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -139,8 +132,8 @@
             <span class="wishlist-badge-count absolute -top-1 -right-1 w-5 h-5 bg-rose-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center shadow-xs">0</span>
           </a>
 
-          <!-- Cart: Visible on Mobile, Tablet & Desktop with badge -->
-          <a href="cart.html" class="relative w-10 h-10 rounded-xl bg-sky-600 hover:bg-sky-700 text-white flex items-center justify-center transition shadow-md shadow-sky-600/20 active:scale-95" aria-label="Open Shopping Cart" title="View Cart">
+          <!-- Cart: Hidden on mobile & tablet (<1024px, accessed via hamburger menu drawer), visible on desktop -->
+          <a href="cart.html" class="hidden lg:flex relative w-10 h-10 rounded-xl bg-sky-600 hover:bg-sky-700 text-white items-center justify-center transition shadow-md shadow-sky-600/20 active:scale-95" aria-label="Open Shopping Cart" title="View Cart">
             <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
             </svg>
@@ -164,9 +157,9 @@
     <!-- Brightness & Contrast Boosted Background Image Layer (Aerodynamic Storm Testing Lab) -->
     <div class="hero-bg-enhanced absolute inset-0 bg-cover bg-no-repeat bg-center transition-all duration-300" style="background-image: url('assets/images/bg-about-hero.jpg');"></div>
     <!-- Bright Mode Subtle Overlay: keeps laboratory machinery & water jets vivid & visible -->
-    <div class="dark:hidden absolute inset-0 bg-white/15 pointer-events-none transition-colors duration-300"></div>
+    <div class="absolute inset-0 bg-white/15 pointer-events-none opacity-100 dark:opacity-0 transition-opacity duration-300"></div>
     <!-- Dark Mode Deep Atmospheric Overlay -->
-    <div class="hidden dark:block absolute inset-0 bg-slate-950/40 pointer-events-none transition-colors duration-300"></div>
+    <div class="absolute inset-0 bg-slate-950/40 pointer-events-none opacity-0 dark:opacity-100 transition-opacity duration-300"></div>
     <div class="rain-container pointer-events-none"></div>
 
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
@@ -537,6 +530,227 @@
     </div>
   </section>
 
+  <!-- ==================== NEW SECTION: VIRTUAL WIND TUNNEL LAB & INSTRUMENTATION ==================== -->
+  <section class="py-16 sm:py-20 bg-slate-50 dark:bg-slate-900/60 border-t border-slate-200/80 dark:border-slate-800 reveal-on-scroll">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-bold uppercase tracking-widest text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950/80 px-3 py-1 rounded-full border border-sky-200 dark:border-sky-800 inline-block mb-3">Facility Walkthrough</span>
+        <h2 class="font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white">
+          Our Aerodynamic Wind Tunnel & Testing Rig
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mt-3 leading-relaxed">
+          Inside our 4,500 sq. ft. research laboratory in New Delhi, where monsoon chaos is mathematically replicated and defeated.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Lab 1 -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift h-full flex flex-col justify-between">
+          <div class="card-top-content">
+            <div class="w-12 h-12 rounded-2xl bg-sky-100 dark:bg-sky-900/60 text-sky-600 dark:text-sky-400 flex items-center justify-center text-xl mb-4 font-bold">
+              🌪️
+            </div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950/80 px-2 py-0.5 rounded-full">Aerodynamics</span>
+              <span class="text-xs font-mono font-bold text-slate-400">120 km/h Turbine</span>
+            </div>
+            <h4 class="card-title-aligned font-bold text-base sm:text-lg text-slate-900 dark:text-white">Sub-Sonic Wind Turbine Chamber</h4>
+            <p class="card-desc-aligned text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
+              Equipped with a 45kW variable-frequency industrial turbine that replicates Category 1 cyclonic gusts. Laser Doppler anemometry records rib deflection angles down to 0.1mm tolerances.
+            </p>
+          </div>
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-100 dark:border-slate-700 flex items-center justify-between text-xs">
+            <span class="font-bold text-slate-500">Max Air Velocity:</span>
+            <span class="font-bold text-sky-600 dark:text-sky-400">120 km/h Gale Rig</span>
+          </div>
+        </div>
+
+        <!-- Lab 2 -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift h-full flex flex-col justify-between">
+          <div class="card-top-content">
+            <div class="w-12 h-12 rounded-2xl bg-cyan-100 dark:bg-cyan-900/60 text-cyan-600 dark:text-cyan-400 flex items-center justify-center text-xl mb-4 font-bold">
+              🌧️
+            </div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-cyan-600 dark:text-cyan-400 bg-cyan-50 dark:bg-cyan-950/80 px-2 py-0.5 rounded-full">Precipitation</span>
+              <span class="text-xs font-mono font-bold text-slate-400">180 mm/hr Torrent</span>
+            </div>
+            <h4 class="card-title-aligned font-bold text-base sm:text-lg text-slate-900 dark:text-white">Hydraulic Cloudburst Simulator</h4>
+            <p class="card-desc-aligned text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
+              36 pulsating high-pressure jet nozzles recreate the extreme rainfall intensity of Cherrapunji cloudbursts. Seam heat tape and fluoropolymer coatings must resist 4 hours of continuous onslaught.
+            </p>
+          </div>
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-100 dark:border-slate-700 flex items-center justify-between text-xs">
+            <span class="font-bold text-slate-500">Water Volume:</span>
+            <span class="font-bold text-cyan-600 dark:text-cyan-400">180 mm/hr Discharge</span>
+          </div>
+        </div>
+
+        <!-- Lab 3 -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift h-full flex flex-col justify-between">
+          <div class="card-top-content">
+            <div class="w-12 h-12 rounded-2xl bg-indigo-100 dark:bg-indigo-900/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-xl mb-4 font-bold">
+              ❄️
+            </div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/80 px-2 py-0.5 rounded-full">Thermal Chamber</span>
+              <span class="text-xs font-mono font-bold text-slate-400">-10°C to +55°C</span>
+            </div>
+            <h4 class="card-title-aligned font-bold text-base sm:text-lg text-slate-900 dark:text-white">Environmental Climate Cell</h4>
+            <p class="card-desc-aligned text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
+              From sub-zero Himalayan mountain sleet to 50°C coastal pre-monsoon heatwaves, our materials undergo rapid cyclic thermal shock to ensure fiberglass resin never turns brittle or sticky.
+            </p>
+          </div>
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-100 dark:border-slate-700 flex items-center justify-between text-xs">
+            <span class="font-bold text-slate-500">Thermal Span:</span>
+            <span class="font-bold text-indigo-600 dark:text-indigo-400">65°C Temperature Delta</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== NEW SECTION: COMMUNITY MONSOON RELIEF INITIATIVE ==================== -->
+  <section class="py-16 sm:py-20 bg-white dark:bg-slate-900 border-t border-slate-200/80 dark:border-slate-800 reveal-on-scroll">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-5 space-y-4">
+          <span class="text-xs font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/80 px-3 py-1 rounded-full border border-emerald-200 dark:border-emerald-800 inline-block">Social Mission</span>
+          <h2 class="font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white">
+            The "Shelter Every Step" Community Program
+          </h2>
+          <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">
+            Severe rainfall impacts informal street vendors, traffic police, and open-air daily laborers hardest. For every 10 umbrellas sold, UmbrellaZone funds a reinforced waterproof storm cape for outdoor workers.
+          </p>
+          <div class="pt-2 space-y-3 text-xs sm:text-sm font-semibold text-slate-800 dark:text-slate-200">
+            <div class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-full bg-emerald-100 dark:bg-emerald-900/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-xs">✓</span>
+              <span>Over 8,400 storm capes distributed to street vendors across 12 cities</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-full bg-emerald-100 dark:bg-emerald-900/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-xs">✓</span>
+              <span>Fabric scrap upcycling creates waterproof tarpaulins for temporary shelters</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-full bg-emerald-100 dark:bg-emerald-900/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-xs">✓</span>
+              <span>Emergency rapid response kits supplied to coastal volunteer relief units</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="p-6 rounded-3xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift flex flex-col justify-between">
+            <div class="card-top-content">
+              <div class="text-3xl mb-3">🤝</div>
+              <h4 class="card-title-aligned font-bold text-base text-slate-900 dark:text-white">1 For 10 Pledge</h4>
+              <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+                A fixed portion of our annual proceeds is audited and directed toward protective rain gear for underprivileged commuter and transit labor forces.
+              </p>
+            </div>
+            <div class="card-bottom-line pt-3 mt-4 border-t border-slate-200/80 dark:border-slate-700 flex justify-between text-xs">
+              <span class="text-slate-500 font-medium">Impact:</span>
+              <span class="font-bold text-emerald-600 dark:text-emerald-400">8,400+ Workers Shielded</span>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-3xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift flex flex-col justify-between">
+            <div class="card-top-content">
+              <div class="text-3xl mb-3">🆘</div>
+              <h4 class="card-title-aligned font-bold text-base text-slate-900 dark:text-white">Emergency Flood Kits</h4>
+              <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+                During urban flash floods, our regional hubs deploy heavy-duty flotation kits, high-visibility boots, and thermal foil outer covers to first responders.
+              </p>
+            </div>
+            <div class="card-bottom-line pt-3 mt-4 border-t border-slate-200/80 dark:border-slate-700 flex justify-between text-xs">
+              <span class="text-slate-500 font-medium">Response:</span>
+              <span class="font-bold text-emerald-600 dark:text-emerald-400">Dispatched Within 6 Hrs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== NEW SECTION: PROPRIETARY PATENTS & MECHANICAL INNOVATIONS ==================== -->
+  <section class="py-16 sm:py-20 bg-slate-50 dark:bg-slate-900/60 border-t border-slate-200/80 dark:border-slate-800 reveal-on-scroll">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-bold uppercase tracking-widest text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/80 px-3 py-1 rounded-full border border-indigo-200 dark:border-indigo-800 inline-block mb-3">Intellectual Property</span>
+        <h2 class="font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white">
+          Proprietary Patents & Kinematic Inventions
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mt-3 leading-relaxed">
+          The engineering breakthroughs that separate UmbrellaZone from ordinary mass-market commodity imports.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Patent 1 -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift h-full flex flex-col justify-between">
+          <div class="card-top-content">
+            <div class="w-12 h-12 rounded-2xl bg-indigo-100 dark:bg-indigo-900/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-xl mb-4 font-bold">
+              🔄
+            </div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/80 px-2 py-0.5 rounded-full">Kinematics</span>
+              <span class="text-xs font-mono font-bold text-slate-400">Pat. Pending</span>
+            </div>
+            <h4 class="card-title-aligned font-bold text-base sm:text-lg text-slate-900 dark:text-white">Inverted Cocoon Auto-Dry Fold</h4>
+            <p class="card-desc-aligned text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
+              Collapses the wet external canopy inward, trapping all surface water droplets inside a sealed dry cocoon. Never drip water on your car upholstery or crowded train passenger knees again.
+            </p>
+          </div>
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-100 dark:border-slate-700 flex items-center justify-between text-xs">
+            <span class="font-bold text-slate-500">Innovation:</span>
+            <span class="font-bold text-indigo-600 dark:text-indigo-400">Bone-Dry Car Entry</span>
+          </div>
+        </div>
+
+        <!-- Patent 2 -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift h-full flex flex-col justify-between">
+          <div class="card-top-content">
+            <div class="w-12 h-12 rounded-2xl bg-sky-100 dark:bg-sky-900/60 text-sky-600 dark:text-sky-400 flex items-center justify-center text-xl mb-4 font-bold">
+              💨
+            </div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950/80 px-2 py-0.5 rounded-full">Aerodynamics</span>
+              <span class="text-xs font-mono font-bold text-slate-400">Bilateral Valve</span>
+            </div>
+            <h4 class="card-title-aligned font-bold text-base sm:text-lg text-slate-900 dark:text-white">Vortex Pressure-Relief Vents</h4>
+            <p class="card-desc-aligned text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
+              Overlapping dual canopies held by elastomeric tension bands allow violent 80 km/h gusts to vent through harmlessly from beneath, preventing the parachute lifting effect that flips standard frames.
+            </p>
+          </div>
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-100 dark:border-slate-700 flex items-center justify-between text-xs">
+            <span class="font-bold text-slate-500">Stability:</span>
+            <span class="font-bold text-sky-600 dark:text-sky-400">Anti-Inversion Valve</span>
+          </div>
+        </div>
+
+        <!-- Patent 3 -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift h-full flex flex-col justify-between">
+          <div class="card-top-content">
+            <div class="w-12 h-12 rounded-2xl bg-amber-100 dark:bg-amber-900/60 text-amber-600 dark:text-amber-400 flex items-center justify-center text-xl mb-4 font-bold">
+              ⚙️
+            </div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/80 px-2 py-0.5 rounded-full">Mechanics</span>
+              <span class="text-xs font-mono font-bold text-slate-400">CuBe Alloy</span>
+            </div>
+            <h4 class="card-title-aligned font-bold text-base sm:text-lg text-slate-900 dark:text-white">Beryllium-Copper Spindle Detent</h4>
+            <p class="card-desc-aligned text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
+              Standard umbrellas fail when their plastic trigger latch chips off. We machine our locking detents from aerospace beryllium-copper alloy, self-lubricating for over 20,000 smooth cycles.
+            </p>
+          </div>
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-100 dark:border-slate-700 flex items-center justify-between text-xs">
+            <span class="font-bold text-slate-500">Durability:</span>
+            <span class="font-bold text-amber-600 dark:text-amber-400">20,000 Click Certified</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ==================== SECTION 8: FLAGSHIP EXPERIENCE HUB ==================== -->
   <section class="py-16 sm:py-24 bg-white dark:bg-slate-900 transition-colors reveal-on-scroll">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -573,14 +787,14 @@
         
         <!-- Col 1: Brand Info & Social Media -->
         <div class="lg:col-span-2 space-y-4">
-          <a href="index.html" class="flex items-center gap-3 group cursor-pointer inline-flex" title="UmbrellaZone Home">
-            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-600 to-cyan-500 flex items-center justify-center text-white font-bold shadow-md shadow-sky-600/30 shrink-0 group-hover:scale-105 transition">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <a href="index.html" class="flex items-center gap-3 group cursor-pointer inline-flex footer-brand-link" title="UmbrellaZone Home">
+            <div class="footer-logo-box w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-600 to-cyan-500 flex items-center justify-center text-white font-bold shadow-md shadow-sky-600/30 shrink-0 group-hover:scale-105 transition">
+              <svg class="footer-logo-svg w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 2C6.48 2 2 6.48 2 12c0 1.25.23 2.45.65 3.55.15.39.54.64.96.61h16.78c.42.03.81-.22.96-.61.42-1.1.65-2.3.65-3.55 0-5.52-4.48-10-10-10z"></path>
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 12v7a2 2 0 104 0"></path>
               </svg>
             </div>
-            <span class="font-display font-extrabold text-2xl tracking-tight text-white whitespace-nowrap">Umbrella<span class="text-sky-600">Zone</span></span>
+            <span class="footer-brand-name font-display font-extrabold text-2xl tracking-tight text-white whitespace-nowrap">Umbrella<span class="text-sky-600 footer-brand-highlight">Zone</span></span>
           </a>
           <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
             Specialty windproof umbrellas, waterproof raincoats, and anti-slip rain boots engineered to survive the heaviest monsoons with complete 2-year warranty support.

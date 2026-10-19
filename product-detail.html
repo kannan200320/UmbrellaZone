@@ -124,13 +124,6 @@
             <span class="rtl-label-text font-bold">RTL</span>
           </button>
 
-          <!-- Search: Visible on Mobile, Tablet & Desktop -->
-          <button type="button" class="search-modal-trigger w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 flex items-center justify-center transition cursor-pointer" aria-label="Search rain gear" title="Search Store">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-            </svg>
-          </button>
-
           <!-- Wishlist: Hidden on mobile & tablet (<1024px, accessed via drawer Saved Wishlist), visible on desktop -->
           <a href="favorites.html" class="hidden lg:inline-flex relative w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-200 items-center justify-center transition" aria-label="Monsoon Favorites" title="Monsoon Favorites">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -139,8 +132,8 @@
             <span class="wishlist-badge-count absolute -top-1 -right-1 w-5 h-5 bg-rose-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center shadow-xs">0</span>
           </a>
 
-          <!-- Cart: Visible on Mobile, Tablet & Desktop with badge -->
-          <a href="cart.html" class="relative w-10 h-10 rounded-xl bg-sky-600 hover:bg-sky-700 text-white flex items-center justify-center transition shadow-md shadow-sky-600/20 active:scale-95" aria-label="Open Shopping Cart" title="View Cart">
+          <!-- Cart: Hidden on mobile & tablet (<1024px, accessed via hamburger menu drawer), visible on desktop -->
+          <a href="cart.html" class="hidden lg:flex relative w-10 h-10 rounded-xl bg-sky-600 hover:bg-sky-700 text-white items-center justify-center transition shadow-md shadow-sky-600/20 active:scale-95" aria-label="Open Shopping Cart" title="View Cart">
             <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
             </svg>
@@ -291,7 +284,7 @@
 
           <!-- Quantity & Purchase Actions -->
           <div class="pt-2 space-y-3">
-            <div class="flex items-center gap-3">
+            <div class="flex items-center gap-2 sm:gap-3">
               <!-- Quantity Spinner -->
               <div class="flex items-center border border-slate-300 dark:border-slate-700 rounded-xl bg-white dark:bg-slate-800 overflow-hidden shadow-xs h-12">
                 <button onclick="changePdQty(-1)" class="w-10 h-full flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 font-bold text-lg">−</button>
@@ -773,6 +766,226 @@
     </div>
   </section>
 
+  <!-- ==================== NEW SECTION: DESTRUCTIVE LOAD TESTING & ENGINEERING BENCHMARKS ==================== -->
+  <section class="py-16 sm:py-20 bg-white dark:bg-slate-900 border-t border-slate-200/80 dark:border-slate-800 reveal-on-scroll">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-bold uppercase tracking-widest text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950/80 px-3 py-1 rounded-full border border-sky-200 dark:border-sky-800 inline-block mb-3">Laboratory Certification</span>
+        <h2 class="font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white">
+          Destructive Load Benchmarks & Stress Limits
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mt-3 leading-relaxed">
+          We destroy hundreds of prototypes in our QA torture cells so your gear never fails during an emergency coastal cloudburst.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Benchmark 1 -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift h-full flex flex-col justify-between">
+          <div class="card-top-content">
+            <div class="w-12 h-12 rounded-2xl bg-sky-100 dark:bg-sky-900/60 text-sky-600 dark:text-sky-400 flex items-center justify-center text-xl mb-4 font-bold">
+              🏋️
+            </div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950/80 px-2 py-0.5 rounded-full">Tensile Load</span>
+              <span class="text-xs font-mono font-bold text-slate-400">15kg Proof</span>
+            </div>
+            <h4 class="card-title-aligned font-bold text-base sm:text-lg text-slate-900 dark:text-white">15kg Tip Deflection Loading</h4>
+            <p class="card-desc-aligned text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
+              Every fiberglass rib tip is subjected to a calibrated 15-kilogram downward deadweight pull. The composite flexes into an inverted arc and returns to true geometry with zero hairline fracturing.
+            </p>
+          </div>
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-200/80 dark:border-slate-700 flex items-center justify-between text-xs">
+            <span class="font-bold text-slate-500">Yield Limit:</span>
+            <span class="font-bold text-sky-600 dark:text-sky-400">100% Elastic Recovery</span>
+          </div>
+        </div>
+
+        <!-- Benchmark 2 -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift h-full flex flex-col justify-between">
+          <div class="card-top-content">
+            <div class="w-12 h-12 rounded-2xl bg-amber-100 dark:bg-amber-900/60 text-amber-600 dark:text-amber-400 flex items-center justify-center text-xl mb-4 font-bold">
+              🔁
+            </div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/80 px-2 py-0.5 rounded-full">Actuation</span>
+              <span class="text-xs font-mono font-bold text-slate-400">2,000 Cycles</span>
+            </div>
+            <h4 class="card-title-aligned font-bold text-base sm:text-lg text-slate-900 dark:text-white">2,000-Cycle Pneumatic Piston Fire</h4>
+            <p class="card-desc-aligned text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
+              Industrial pneumatic actuators fire the open-and-collapse mechanism continuously for 48 hours under artificial high-velocity spray. Zero spring tension degradation or trigger hesitation recorded.
+            </p>
+          </div>
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-200/80 dark:border-slate-700 flex items-center justify-between text-xs">
+            <span class="font-bold text-slate-500">Cycle Test:</span>
+            <span class="font-bold text-amber-600 dark:text-amber-400">Zero Mechanical Slag</span>
+          </div>
+        </div>
+
+        <!-- Benchmark 3 -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift h-full flex flex-col justify-between">
+          <div class="card-top-content">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-100 dark:bg-emerald-900/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl mb-4 font-bold">
+              🌊
+            </div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/80 px-2 py-0.5 rounded-full">Hydraulic Head</span>
+              <span class="text-xs font-mono font-bold text-slate-400">2,500mm H₂O</span>
+            </div>
+            <h4 class="card-title-aligned font-bold text-base sm:text-lg text-slate-900 dark:text-white">Hydrostatic Infiltration Resistance</h4>
+            <p class="card-desc-aligned text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
+              A pressurized 2,500mm water column is clamped against canopy seams. While ordinary umbrellas leak at 400mm, our 300T high-density pongee keeps the underside completely dry indefinitely.
+            </p>
+          </div>
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-200/80 dark:border-slate-700 flex items-center justify-between text-xs">
+            <span class="font-bold text-slate-500">Hydrostatic Head:</span>
+            <span class="font-bold text-emerald-600 dark:text-emerald-400">2,500mm Guaranteed</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== NEW SECTION: UNBOXING & INCLUDED ACCESSORIES ==================== -->
+  <section class="py-16 sm:py-20 bg-slate-50 dark:bg-slate-900/60 border-t border-slate-200/80 dark:border-slate-800 reveal-on-scroll">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-5 space-y-4">
+          <span class="text-xs font-bold uppercase tracking-widest text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/80 px-3 py-1 rounded-full border border-indigo-200 dark:border-indigo-800 inline-block">Complete Storm Kit</span>
+          <h2 class="font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white">
+            What Arrives In Your Protective Storm Box
+          </h2>
+          <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">
+            Every UmbrellaZone purchase is packaged in 100% recyclable heavy-duty kraft packaging equipped with professional care and carrying gear.
+          </p>
+          <div class="pt-2 space-y-3 text-xs sm:text-sm font-semibold text-slate-800 dark:text-slate-200">
+            <div class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-full bg-indigo-100 dark:bg-indigo-900/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold text-xs">✓</span>
+              <span>Heavy-duty travel sheath with ventilated moisture eyelets</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-full bg-indigo-100 dark:bg-indigo-900/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold text-xs">✓</span>
+              <span>Ultra-soft microfiber buffing towel to clear street grit</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-full bg-indigo-100 dark:bg-indigo-900/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold text-xs">✓</span>
+              <span>Laser-engraved serial card for instant 2-year warranty claims</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-5">
+          <div class="p-5 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift flex flex-col justify-between">
+            <div class="card-top-content">
+              <div class="text-2xl mb-3">🧳</div>
+              <h4 class="card-title-aligned font-bold text-sm text-slate-900 dark:text-white">Ventilated Sleeve</h4>
+              <p class="card-desc-aligned text-[11px] text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+                Dual YKK zippered carry sheath featuring breathable brass eyelets to prevent damp mildew odors.
+              </p>
+            </div>
+            <div class="card-bottom-line pt-3 mt-4 border-t border-slate-100 dark:border-slate-700 text-[10px] font-bold text-indigo-600 dark:text-indigo-400">
+              Included In Box
+            </div>
+          </div>
+
+          <div class="p-5 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift flex flex-col justify-between">
+            <div class="card-top-content">
+              <div class="text-2xl mb-3">🧼</div>
+              <h4 class="card-title-aligned font-bold text-sm text-slate-900 dark:text-white">Microfiber Towel</h4>
+              <p class="card-desc-aligned text-[11px] text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+                400 GSM fast-drying waffle microfiber cloth to wipe down shafts and grips after downpours.
+              </p>
+            </div>
+            <div class="card-bottom-line pt-3 mt-4 border-t border-slate-100 dark:border-slate-700 text-[10px] font-bold text-indigo-600 dark:text-indigo-400">
+              Included In Box
+            </div>
+          </div>
+
+          <div class="p-5 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift flex flex-col justify-between">
+            <div class="card-top-content">
+              <div class="text-2xl mb-3">🎫</div>
+              <h4 class="card-title-aligned font-bold text-sm text-slate-900 dark:text-white">Warranty Card</h4>
+              <p class="card-desc-aligned text-[11px] text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+                Anodized aluminum card with your unique QR code for 1-tap doorstep replacement dispatch.
+              </p>
+            </div>
+            <div class="card-bottom-line pt-3 mt-4 border-t border-slate-100 dark:border-slate-700 text-[10px] font-bold text-indigo-600 dark:text-indigo-400">
+              2-Year Coverage Active
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== NEW SECTION: TECHNICAL PRODUCT FAQ ACCORDION ==================== -->
+  <section class="py-16 sm:py-20 bg-white dark:bg-slate-900 border-t border-slate-200/80 dark:border-slate-800 reveal-on-scroll">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/80 px-3 py-1 rounded-full border border-emerald-200 dark:border-emerald-800 inline-block mb-3">Technical Inquiries</span>
+        <h2 class="font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mt-3 leading-relaxed">
+          Everything you need to know about flight carry-on rules, wet cleaning protocols, and warranty coverage.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- FAQ 1 -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift h-full flex flex-col justify-between">
+          <div class="card-top-content">
+            <div class="w-10 h-10 rounded-2xl bg-emerald-100 dark:bg-emerald-900/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-lg mb-4 font-bold">
+              ✈️
+            </div>
+            <h4 class="card-title-aligned font-bold text-base text-slate-900 dark:text-white">Can I carry this on commercial flights?</h4>
+            <p class="card-desc-aligned text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
+              Yes! All our folding umbrellas measure under 35cm collapsed, fully complying with TSA, DGCA, and international airline hand baggage regulations. Large golf stick models must be checked as standard baggage.
+            </p>
+          </div>
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-200/80 dark:border-slate-700 flex items-center justify-between text-xs">
+            <span class="font-bold text-slate-500">Compliance:</span>
+            <span class="font-bold text-emerald-600 dark:text-emerald-400">100% Cabin Approved</span>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift h-full flex flex-col justify-between">
+          <div class="card-top-content">
+            <div class="w-10 h-10 rounded-2xl bg-sky-100 dark:bg-sky-900/60 text-sky-600 dark:text-sky-400 flex items-center justify-center text-lg mb-4 font-bold">
+              💧
+            </div>
+            <h4 class="card-title-aligned font-bold text-base text-slate-900 dark:text-white">How should I clean road mud or grime?</h4>
+            <p class="card-desc-aligned text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
+              Rinse the exterior fabric with lukewarm water and wipe gently with a soft sponge. Never use harsh chemical bleach or alcohol wipes, as they dissolve the fluoropolymer hydrophobic molecular bond.
+            </p>
+          </div>
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-200/80 dark:border-slate-700 flex items-center justify-between text-xs">
+            <span class="font-bold text-slate-500">Care Type:</span>
+            <span class="font-bold text-sky-600 dark:text-sky-400">Mild Freshwater Rinse</span>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift h-full flex flex-col justify-between">
+          <div class="card-top-content">
+            <div class="w-10 h-10 rounded-2xl bg-purple-100 dark:bg-purple-900/60 text-purple-600 dark:text-purple-400 flex items-center justify-center text-lg mb-4 font-bold">
+              🛡️
+            </div>
+            <h4 class="card-title-aligned font-bold text-base text-slate-900 dark:text-white">How fast is the doorstep replacement?</h4>
+            <p class="card-desc-aligned text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
+              Submit your order number and a photo of the damaged gear on WhatsApp or our warranty portal. Our support leads approve claims within 2 hours, and replacement gear is couriered within 24 hours.
+            </p>
+          </div>
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-200/80 dark:border-slate-700 flex items-center justify-between text-xs">
+            <span class="font-bold text-slate-500">Turnaround:</span>
+            <span class="font-bold text-purple-600 dark:text-purple-400">&lt; 2 Hr Claim Approval</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ==================== SECTION 8: 2-YEAR MONSOON GUARANTEE PLEDGE & CLAIMS DESK ==================== -->
   <section class="py-16 bg-gradient-to-r from-sky-50 via-slate-50 to-sky-100 dark:from-slate-900 dark:via-sky-950 dark:to-slate-900 text-slate-900 dark:text-white border-t border-slate-200 dark:border-sky-800/50 relative overflow-hidden transition-colors">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -840,11 +1053,11 @@
         
         <!-- Col 1: Brand Info & Social Media -->
         <div class="lg:col-span-2 space-y-4">
-          <a href="index.html" class="flex items-center gap-3 group cursor-pointer inline-flex" title="UmbrellaZone Home">
-            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-600 to-cyan-500 flex items-center justify-center text-white font-bold shadow-md shadow-sky-600/30 shrink-0 group-hover:scale-105 transition">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 2C6.48 2 2 6.48 2 12c0 1.25.23 2.45.65 3.55.15.39.54.64.96.61h16.78c.42.03.81-.22.96-.61.42-1.1.65-2.3.65-3.55 0-5.52-4.48-10-10-10z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 12v7a2 2 0 104 0"></path></svg>
+          <a href="index.html" class="flex items-center gap-3 group cursor-pointer inline-flex footer-brand-link" title="UmbrellaZone Home">
+            <div class="footer-logo-box w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-600 to-cyan-500 flex items-center justify-center text-white font-bold shadow-md shadow-sky-600/30 shrink-0 group-hover:scale-105 transition">
+              <svg class="footer-logo-svg w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 2C6.48 2 2 6.48 2 12c0 1.25.23 2.45.65 3.55.15.39.54.64.96.61h16.78c.42.03.81-.22.96-.61.42-1.1.65-2.3.65-3.55 0-5.52-4.48-10-10-10z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 12v7a2 2 0 104 0"></path></svg>
             </div>
-            <span class="font-display font-extrabold text-2xl tracking-tight text-white whitespace-nowrap">Umbrella<span class="text-sky-600">Zone</span></span>
+            <span class="footer-brand-name font-display font-extrabold text-2xl tracking-tight text-white whitespace-nowrap">Umbrella<span class="text-sky-600 footer-brand-highlight">Zone</span></span>
           </a>
           <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
             Specialty windproof umbrellas, waterproof raincoats, and anti-slip rain boots engineered to survive the heaviest monsoons with complete 2-year warranty support.

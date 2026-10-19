@@ -5,7 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>404 - Page Blown Away by Monsoon Storm | UmbrellaZone™</title>
   <meta name="description" content="The monsoon storm blew this page off course. Let us get you back under dry shelter with UmbrellaZone.">
-  
+  <!-- Instant Dark Mode & RTL Theme Initializer (Prevents Theme Flash / Glitch on Navigation) -->
+  <script>
+    (function() {
+      try {
+        var theme = localStorage.getItem('umbrellaZone_theme_v1');
+        if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+        var dir = localStorage.getItem('umbrellaZone_dir_v1');
+        if (dir === 'rtl') {
+          document.documentElement.setAttribute('dir', 'rtl');
+          document.documentElement.setAttribute('lang', 'ar');
+        } else {
+          document.documentElement.setAttribute('dir', 'ltr');
+          document.documentElement.setAttribute('lang', 'en');
+        }
+      } catch (e) {}
+    })();
+  </script>
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {

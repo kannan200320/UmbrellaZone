@@ -134,13 +134,6 @@
             <span class="rtl-label-text font-bold">RTL</span>
           </button>
 
-          <!-- Search: Visible on Mobile, Tablet & Desktop -->
-          <button type="button" class="search-modal-trigger w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 flex items-center justify-center transition cursor-pointer" aria-label="Search rain gear" title="Search Store">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-            </svg>
-          </button>
-
           <!-- Wishlist: Hidden on mobile & tablet (<1024px, accessed via drawer Saved Wishlist), visible on desktop -->
           <a href="favorites.html" class="hidden lg:inline-flex relative w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-200 items-center justify-center transition" aria-label="Monsoon Favorites" title="Monsoon Favorites">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -149,8 +142,8 @@
             <span class="wishlist-badge-count absolute -top-1 -right-1 w-5 h-5 bg-rose-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center shadow-xs">0</span>
           </a>
 
-          <!-- Cart: Visible on Mobile, Tablet & Desktop with badge -->
-          <a href="cart.html" class="relative w-10 h-10 rounded-xl bg-sky-600 hover:bg-sky-700 text-white flex items-center justify-center transition shadow-md shadow-sky-600/20 active:scale-95" aria-label="Open Shopping Cart" title="View Cart">
+          <!-- Cart: Hidden on mobile & tablet (<1024px, accessed via hamburger menu drawer), visible on desktop -->
+          <a href="cart.html" class="hidden lg:flex relative w-10 h-10 rounded-xl bg-sky-600 hover:bg-sky-700 text-white items-center justify-center transition shadow-md shadow-sky-600/20 active:scale-95" aria-label="Open Shopping Cart" title="View Cart">
             <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
             </svg>
@@ -174,9 +167,9 @@
     <!-- Background Image Layer (Active in both Bright & Dark Modes) -->
     <div class="hero-bg-enhanced absolute inset-0 bg-cover bg-no-repeat bg-center sm:bg-right transition-all duration-300" style="background-image: url('assets/images/bg-raincoats-hero.png');"></div>
     <!-- Bright Mode Gradient Mask: ensures featured raincoat artwork is 100% visible on right while protecting text contrast on left -->
-    <div class="dark:hidden absolute inset-0 max-sm:bg-white/90 sm:bg-gradient-to-r sm:from-white/85 sm:via-white/40 sm:to-transparent pointer-events-none transition-colors duration-300"></div>
+    <div class="absolute inset-0 max-sm:bg-white/90 sm:bg-gradient-to-r sm:from-white/85 sm:via-white/40 sm:to-transparent pointer-events-none opacity-100 dark:opacity-0 transition-opacity duration-300"></div>
     <!-- Dark Mode Gradient Mask: deep dark contrast mask -->
-    <div class="hidden dark:block absolute inset-0 max-sm:bg-slate-950/90 sm:bg-gradient-to-r sm:from-slate-950 sm:via-slate-950/80 sm:to-transparent pointer-events-none transition-colors duration-300"></div>
+    <div class="absolute inset-0 max-sm:bg-slate-950/90 sm:bg-gradient-to-r sm:from-slate-950 sm:via-slate-950/80 sm:to-transparent pointer-events-none opacity-0 dark:opacity-100 transition-opacity duration-300"></div>
     <div class="rain-container"></div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="flex items-center gap-2 text-xs mb-3 font-semibold">
@@ -310,58 +303,58 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         
-        <div class="p-6 rounded-3xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 flex flex-col justify-between hover-lift">
-          <div>
+        <div class="card-align-content h-full p-6 rounded-3xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 flex flex-col justify-between hover-lift">
+          <div class="card-top-content flex-1 flex flex-col">
             <div class="w-12 h-12 rounded-2xl bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-400 flex items-center justify-center font-bold text-xl mb-4">💧</div>
-            <span class="text-[10px] font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950 px-2 py-0.5 rounded-full border border-sky-200 dark:border-sky-800">Hydrostatic Head</span>
-            <h4 class="font-display font-extrabold text-base text-slate-900 dark:text-white mt-2">25,000mm Water Barrier</h4>
-            <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950 px-2 py-0.5 rounded-full border border-sky-200 dark:border-sky-800 self-start">Hydrostatic Head</span>
+            <h4 class="card-title-aligned font-display font-extrabold text-base text-slate-900 dark:text-white mt-2">25,000mm Water Barrier</h4>
+            <p class="card-desc-aligned text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
               Standard retail raincoats fail at 3,000mm under heavy pressure. Our 25,000mm hydrostatic head withstands relentless highway downpours and torrential tropical cloudbursts without a drop penetrating.
             </p>
           </div>
-          <div class="pt-4 mt-4 border-t border-slate-200 dark:border-slate-700 text-xs font-bold text-sky-600 dark:text-sky-400">
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-200 dark:border-slate-700 text-xs font-bold text-sky-600 dark:text-sky-400">
             Torrential Storm Rated
           </div>
         </div>
 
-        <div class="p-6 rounded-3xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 flex flex-col justify-between hover-lift">
-          <div>
+        <div class="card-align-content h-full p-6 rounded-3xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 flex flex-col justify-between hover-lift">
+          <div class="card-top-content flex-1 flex flex-col">
             <div class="w-12 h-12 rounded-2xl bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-400 flex items-center justify-center font-bold text-xl mb-4">🌬️</div>
-            <span class="text-[10px] font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950 px-2 py-0.5 rounded-full border border-sky-200 dark:border-sky-800">Air Vapor Flow</span>
-            <h4 class="font-display font-extrabold text-base text-slate-900 dark:text-white mt-2">15,000 g/m² MVTR Breathability</h4>
-            <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950 px-2 py-0.5 rounded-full border border-sky-200 dark:border-sky-800 self-start">Air Vapor Flow</span>
+            <h4 class="card-title-aligned font-display font-extrabold text-base text-slate-900 dark:text-white mt-2">15,000 g/m² MVTR Breathability</h4>
+            <p class="card-desc-aligned text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
               Membrane micropores are 20,000 times smaller than liquid water droplets, but 700 times larger than water vapor molecules. Perspiration escapes continuously so you never feel clammy or overheated.
             </p>
           </div>
-          <div class="pt-4 mt-4 border-t border-slate-200 dark:border-slate-700 text-xs font-bold text-sky-600 dark:text-sky-400">
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-200 dark:border-slate-700 text-xs font-bold text-sky-600 dark:text-sky-400">
             Zero Sauna Effect
           </div>
         </div>
 
-        <div class="p-6 rounded-3xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 flex flex-col justify-between hover-lift">
-          <div>
+        <div class="card-align-content h-full p-6 rounded-3xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 flex flex-col justify-between hover-lift">
+          <div class="card-top-content flex-1 flex flex-col">
             <div class="w-12 h-12 rounded-2xl bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-400 flex items-center justify-center font-bold text-xl mb-4">🧵</div>
-            <span class="text-[10px] font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950 px-2 py-0.5 rounded-full border border-sky-200 dark:border-sky-800">Seam Welding</span>
-            <h4 class="font-display font-extrabold text-base text-slate-900 dark:text-white mt-2">380°C Thermo-Polyurethane Seam Tape</h4>
-            <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950 px-2 py-0.5 rounded-full border border-sky-200 dark:border-sky-800 self-start">Seam Welding</span>
+            <h4 class="card-title-aligned font-display font-extrabold text-base text-slate-900 dark:text-white mt-2">380°C Thermo-Polyurethane Seam Tape</h4>
+            <p class="card-desc-aligned text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
               Every needle puncture is hermetically sealed using robotic hot-air seam-welding machines. Even at high stress points like shoulders and hoods, water cannot seep through stitch holes.
             </p>
           </div>
-          <div class="pt-4 mt-4 border-t border-slate-200 dark:border-slate-700 text-xs font-bold text-sky-600 dark:text-sky-400">
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-200 dark:border-slate-700 text-xs font-bold text-sky-600 dark:text-sky-400">
             100% Sealed Seams
           </div>
         </div>
 
-        <div class="p-6 rounded-3xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 flex flex-col justify-between hover-lift">
-          <div>
+        <div class="card-align-content h-full p-6 rounded-3xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 flex flex-col justify-between hover-lift">
+          <div class="card-top-content flex-1 flex flex-col">
             <div class="w-12 h-12 rounded-2xl bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-400 flex items-center justify-center font-bold text-xl mb-4">🛡️</div>
-            <span class="text-[10px] font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950 px-2 py-0.5 rounded-full border border-sky-200 dark:border-sky-800">Mechanical Shield</span>
-            <h4 class="font-display font-extrabold text-base text-slate-900 dark:text-white mt-2">Dual Storm Flaps & Water-Tight Zips</h4>
-            <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950 px-2 py-0.5 rounded-full border border-sky-200 dark:border-sky-800 self-start">Mechanical Shield</span>
+            <h4 class="card-title-aligned font-display font-extrabold text-base text-slate-900 dark:text-white mt-2">Dual Storm Flaps & Water-Tight Zips</h4>
+            <p class="card-desc-aligned text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
               Heavy-duty YKK AquaGuard® zippers paired with overlapping magnetic storm flaps prevent water intrusion driven by high-speed headwinds when riding motorbikes or walking into squalls.
             </p>
           </div>
-          <div class="pt-4 mt-4 border-t border-slate-200 dark:border-slate-700 text-xs font-bold text-sky-600 dark:text-sky-400">
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-200 dark:border-slate-700 text-xs font-bold text-sky-600 dark:text-sky-400">
             High-Speed Deflection
           </div>
         </div>
@@ -427,8 +420,8 @@
           <div class="card-top-content flex-1 flex flex-col">
             <div class="flex items-center justify-between text-xs font-bold text-sky-600 dark:text-sky-400 mb-2"><span>Packable Tier</span><span>Zephyr Poncho</span></div>
             <div class="text-3xl font-display font-extrabold text-sky-600 dark:text-sky-400">12,000<span class="text-xs font-normal">mm</span></div>
-            <h4 class="card-title-aligned font-bold text-sm text-slate-900 dark:text-white mt-1 min-h-[2.5rem] flex items-center">Moderate Steady Showers</h4>
-            <p class="card-desc-aligned text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed flex-1">Our ultra-packable ripstop ponchos. High breathability for bike commutes and trail runs with full heat-bonded taped seams.</p>
+            <h4 class="card-title-aligned font-bold text-sm text-slate-900 dark:text-white mt-1">Moderate Steady Showers</h4>
+            <p class="card-desc-aligned text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">Our ultra-packable ripstop ponchos. High breathability for bike commutes and trail runs with full heat-bonded taped seams.</p>
           </div>
           <div class="card-bottom-line pt-4 mt-auto border-t border-slate-200 dark:border-slate-700 text-[11px] text-slate-500 space-y-0.5">
             <div>Water Column: <strong>39.3 ft</strong></div>
@@ -441,8 +434,8 @@
           <div class="card-top-content flex-1 flex flex-col">
             <div class="flex items-center justify-between text-xs font-bold text-sky-600 dark:text-sky-400 mb-2"><span>Aegis Urban Trench</span><span>Professional</span></div>
             <div class="text-3xl font-display font-extrabold text-sky-600 dark:text-sky-400">20,000<span class="text-xs font-normal">mm</span></div>
-            <h4 class="card-title-aligned font-bold text-sm text-slate-900 dark:text-white mt-1 min-h-[2.5rem] flex items-center">Torrential Atmospheric River</h4>
-            <p class="card-desc-aligned text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed flex-1">Withstands horizontal gale rain, sitting on soaked transit seats, and all-day city storms with ZERO interior dampness.</p>
+            <h4 class="card-title-aligned font-bold text-sm text-slate-900 dark:text-white mt-1">Torrential Atmospheric River</h4>
+            <p class="card-desc-aligned text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">Withstands horizontal gale rain, sitting on soaked transit seats, and all-day city storms with ZERO interior dampness.</p>
           </div>
           <div class="card-bottom-line pt-4 mt-auto border-t border-slate-100 dark:border-slate-700 text-[11px] text-slate-500 space-y-0.5">
             <div>Water Column: <strong>65.6 ft</strong></div>
@@ -454,8 +447,8 @@
           <div class="card-top-content flex-1 flex flex-col">
             <div class="flex items-center justify-between text-xs font-bold text-sky-600 dark:text-sky-400 mb-2"><span>HydroShield Parka</span><span>Expedition</span></div>
             <div class="text-3xl font-display font-extrabold text-slate-700 dark:text-slate-300">25,000<span class="text-xs font-normal">mm</span></div>
-            <h4 class="card-title-aligned font-bold text-sm text-slate-900 dark:text-white mt-1 min-h-[2.5rem] flex items-center">Severe Hurricane Gale</h4>
-            <p class="card-desc-aligned text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed flex-1">Mountaineering-grade barrier. Zero penetration under fire-hose level water pressure and sub-zero Arctic sleet conditions.</p>
+            <h4 class="card-title-aligned font-bold text-sm text-slate-900 dark:text-white mt-1">Severe Hurricane Gale</h4>
+            <p class="card-desc-aligned text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">Mountaineering-grade barrier. Zero penetration under fire-hose level water pressure and sub-zero Arctic sleet conditions.</p>
           </div>
           <div class="card-bottom-line pt-4 mt-auto border-t border-slate-200 dark:border-slate-700 text-[11px] text-slate-500 space-y-0.5">
             <div>Water Column: <strong>82.0 ft</strong></div>
@@ -488,8 +481,8 @@
           <div class="card-align-content h-full p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs flex flex-col justify-between">
             <div class="card-top-content flex-1 flex flex-col">
               <span class="text-xs font-bold text-sky-600 dark:text-sky-400 block mb-1">Cut Tier 01</span>
-              <h4 class="card-title-aligned font-bold text-sm text-slate-900 dark:text-white min-h-[2.5rem] flex items-center">Tailored Slim (Trench)</h4>
-              <p class="card-desc-aligned text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed flex-1">Designed to drape crisply over dress shirts, knitwear, and lightweight suits without bulky folds.</p>
+              <h4 class="card-title-aligned font-bold text-sm text-slate-900 dark:text-white">Tailored Slim (Trench)</h4>
+              <p class="card-desc-aligned text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">Designed to drape crisply over dress shirts, knitwear, and lightweight suits without bulky folds.</p>
             </div>
             <div class="card-bottom-line mt-auto pt-3 border-t border-slate-100 dark:border-slate-700/60 text-[11px] text-slate-500 space-y-0.5">
               <div>Under-layer: <strong>T-shirt or Blazer</strong></div>
@@ -500,8 +493,8 @@
           <div class="card-align-content h-full p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs flex flex-col justify-between">
             <div class="card-top-content flex-1 flex flex-col">
               <span class="text-xs font-bold text-sky-600 dark:text-sky-400 block mb-1">Cut Tier 02</span>
-              <h4 class="card-title-aligned font-bold text-sm text-slate-900 dark:text-white min-h-[2.5rem] flex items-center">Active Regular (Anorak)</h4>
-              <p class="card-desc-aligned text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed flex-1">Engineered with articulated raglan sleeves for cycling and hiking. Accommodates a midweight fleece or hoodie.</p>
+              <h4 class="card-title-aligned font-bold text-sm text-slate-900 dark:text-white">Active Regular (Anorak)</h4>
+              <p class="card-desc-aligned text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">Engineered with articulated raglan sleeves for cycling and hiking. Accommodates a midweight fleece or hoodie.</p>
             </div>
             <div class="card-bottom-line mt-auto pt-3 border-t border-slate-100 dark:border-slate-700/60 text-[11px] text-slate-500 space-y-0.5">
               <div>Under-layer: <strong>Fleece / Sweater</strong></div>
@@ -512,8 +505,8 @@
           <div class="card-align-content h-full p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs flex flex-col justify-between">
             <div class="card-top-content flex-1 flex flex-col">
               <span class="text-xs font-bold text-sky-600 dark:text-sky-400 block mb-1">Cut Tier 03</span>
-              <h4 class="card-title-aligned font-bold text-sm text-slate-900 dark:text-white min-h-[2.5rem] flex items-center">Expedition Relaxed (Parka)</h4>
-              <p class="card-desc-aligned text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed flex-1">Generous volume designed to fit over heavy down jackets or thick thermal mid-layers in freezing storm conditions.</p>
+              <h4 class="card-title-aligned font-bold text-sm text-slate-900 dark:text-white">Expedition Relaxed (Parka)</h4>
+              <p class="card-desc-aligned text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">Generous volume designed to fit over heavy down jackets or thick thermal mid-layers in freezing storm conditions.</p>
             </div>
             <div class="card-bottom-line mt-auto pt-3 border-t border-slate-100 dark:border-slate-700/60 text-[11px] text-slate-500 space-y-0.5">
               <div>Under-layer: <strong>Down Puffer Jacket</strong></div>
@@ -586,16 +579,16 @@
               <div class="flex text-amber-400 text-xs">★★★★★</div>
               <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300">Verified Purchaser</span>
             </div>
-            <h4 class="card-title-aligned font-bold text-sm text-slate-900 dark:text-white min-h-[2.75rem] flex items-center">"Wore the Aegis Trench through non-stop heavy downtown downpours."</h4>
-            <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed flex-1">
+            <h4 class="card-title-aligned font-bold text-sm text-slate-900 dark:text-white">"Wore the Aegis Trench through non-stop heavy downtown downpours."</h4>
+            <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
               "Most raincoats feel like cheap hot plastic sheets where you sweat inside. The Aegis breathes comfortably in humid weather while looking formal and sharp for office meetings. Not a single drop leaked at the shoulders or seams."
             </p>
           </div>
-          <div class="card-bottom-line card-bottom-author pt-4 mt-auto border-t border-slate-100 dark:border-slate-700 flex items-center gap-3">
-            <img src="assets/images/avatars/avatar-ananya-s.jpg" alt="Ananya Sharma" class="w-9 h-9 rounded-full object-cover shadow-xs border border-slate-200 dark:border-slate-700 shrink-0">
+          <div class="card-bottom-line card-bottom-author pt-4 mt-auto border-t border-slate-100 dark:border-slate-700 flex items-start gap-3">
+            <img src="assets/images/avatars/avatar-ananya-s.jpg" alt="Ananya Sharma" class="w-9 h-9 rounded-full object-cover shadow-xs border border-slate-200 dark:border-slate-700 shrink-0 mt-0.5">
             <div>
               <div class="text-xs font-bold text-slate-900 dark:text-white">Ananya Sharma</div>
-              <div class="text-[10px] text-slate-500 dark:text-slate-400">Corporate Lead • Tech Corridor District • Aegis Trench (Sand)</div>
+              <div class="text-[10px] text-slate-500 dark:text-slate-400">Corporate Lead • Aegis Trench (Sand)</div>
             </div>
           </div>
         </div>
@@ -607,16 +600,16 @@
               <div class="flex text-amber-400 text-xs">★★★★★</div>
               <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300">Verified Purchaser</span>
             </div>
-            <h4 class="card-title-aligned font-bold text-sm text-slate-900 dark:text-white min-h-[2.75rem] flex items-center">"The Zephyr poncho saved my daily 15km bike commute in coastal winds."</h4>
-            <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed flex-1">
+            <h4 class="card-title-aligned font-bold text-sm text-slate-900 dark:text-white">"The Zephyr poncho saved my daily 15km bike commute in coastal winds."</h4>
+            <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
               "The handlebar clips and thumb loops keep the poncho from blowing up in heavy highway winds. 360-degree reflective strips are great for dark, waterlogged night rides. Packs down into my backpack in seconds."
             </p>
           </div>
-          <div class="card-bottom-line card-bottom-author pt-4 mt-auto border-t border-slate-100 dark:border-slate-700 flex items-center gap-3">
-            <img src="assets/images/avatars/avatar-arjun-p.jpg" alt="Arjun Pillai" class="w-9 h-9 rounded-full object-cover shadow-xs border border-slate-200 dark:border-slate-700 shrink-0">
+          <div class="card-bottom-line card-bottom-author pt-4 mt-auto border-t border-slate-100 dark:border-slate-700 flex items-start gap-3">
+            <img src="assets/images/avatars/avatar-arjun-p.jpg" alt="Arjun Pillai" class="w-9 h-9 rounded-full object-cover shadow-xs border border-slate-200 dark:border-slate-700 shrink-0 mt-0.5">
             <div>
               <div class="text-xs font-bold text-slate-900 dark:text-white">Arjun Pillai</div>
-              <div class="text-[10px] text-slate-500 dark:text-slate-400">Software Engineer • Coastal IT Park • Zephyr Poncho (Slate)</div>
+              <div class="text-[10px] text-slate-500 dark:text-slate-400">Software Engineer • Zephyr Poncho (Slate)</div>
             </div>
           </div>
         </div>
@@ -628,17 +621,238 @@
               <div class="flex text-amber-400 text-xs">★★★★★</div>
               <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300">Verified Purchaser</span>
             </div>
-            <h4 class="card-title-aligned font-bold text-sm text-slate-900 dark:text-white min-h-[2.75rem] flex items-center">"HydroShield Parka survived a sudden mountain ridge downpour."</h4>
-            <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed flex-1">
+            <h4 class="card-title-aligned font-bold text-sm text-slate-900 dark:text-white">"HydroShield Parka survived a sudden mountain ridge downpour."</h4>
+            <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
               "Hit by heavy 80 km/h gusts and driving rain while riding. My friends in ordinary windcheaters were drenched within minutes. I stayed completely dry inside. Sealed waterproof zips worked like magic."
             </p>
           </div>
-          <div class="card-bottom-line card-bottom-author pt-4 mt-auto border-t border-slate-100 dark:border-slate-700 flex items-center gap-3">
-            <img src="assets/images/avatars/avatar-rahul-v.jpg" alt="Rahul Verma" class="w-9 h-9 rounded-full object-cover shadow-xs border border-slate-200 dark:border-slate-700 shrink-0">
+          <div class="card-bottom-line card-bottom-author pt-4 mt-auto border-t border-slate-100 dark:border-slate-700 flex items-start gap-3">
+            <img src="assets/images/avatars/avatar-rahul-v.jpg" alt="Rahul Verma" class="w-9 h-9 rounded-full object-cover shadow-xs border border-slate-200 dark:border-slate-700 shrink-0 mt-0.5">
             <div>
               <div class="text-xs font-bold text-slate-900 dark:text-white">Rahul Verma</div>
-              <div class="text-[10px] text-slate-500 dark:text-slate-400">Field Lead • Western Ridge Highway • HydroShield Suit (Graphite Grey)</div>
+              <div class="text-[10px] text-slate-500 dark:text-slate-400">Field Lead • HydroShield Suit (Graphite)</div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== NEW SECTION: DUAL-VENTILATION & MICRO-CLIMATE CONTROL ==================== -->
+  <section class="py-16 sm:py-20 bg-slate-50 dark:bg-slate-900/60 border-t border-slate-200/80 dark:border-slate-800 reveal-on-scroll">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-bold uppercase tracking-widest text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950/80 px-3 py-1 rounded-full border border-sky-200 dark:border-sky-800 inline-block mb-3">Thermal Comfort Dynamics</span>
+        <h2 class="font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white">
+          Active Pit-Zips & Micro-Climate Vapor Venting
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mt-3 leading-relaxed">
+          Stay dry on the outside without overheating on the inside. How our dual-stage ventilation regulates body temperature during humid monsoon sprints.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift h-full flex flex-col justify-between">
+          <div class="card-top-content">
+            <div class="w-12 h-12 rounded-2xl bg-sky-100 dark:bg-sky-900/60 text-sky-600 dark:text-sky-400 flex items-center justify-center text-xl mb-4 font-bold">
+              ⚡
+            </div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950/80 px-2 py-0.5 rounded-full">Thermoregulation</span>
+              <span class="text-xs font-mono font-bold text-slate-400">YKK AquaGuard</span>
+            </div>
+            <h4 class="card-title-aligned font-bold text-base sm:text-lg text-slate-900 dark:text-white">Two-Way Underarm Pit Zippers</h4>
+            <p class="card-desc-aligned text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
+              When navigating crowded metro footbridges or climbing hills, unzip the dual underarm slides to instantly purge heat pockets. Built with hooded zipper garages that keep sideways rain from penetrating the cabin.
+            </p>
+          </div>
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-100 dark:border-slate-700 flex items-center justify-between text-xs">
+            <span class="font-bold text-slate-500">Airflow Boost:</span>
+            <span class="font-bold text-sky-600 dark:text-sky-400">+340% Core Cooling</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift h-full flex flex-col justify-between">
+          <div class="card-top-content">
+            <div class="w-12 h-12 rounded-2xl bg-cyan-100 dark:bg-cyan-900/60 text-cyan-600 dark:text-cyan-400 flex items-center justify-center text-xl mb-4 font-bold">
+              💨
+            </div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-cyan-600 dark:text-cyan-400 bg-cyan-50 dark:bg-cyan-950/80 px-2 py-0.5 rounded-full">Passive Exhaust</span>
+              <span class="text-xs font-mono font-bold text-slate-400">Storm Baffle</span>
+            </div>
+            <h4 class="card-title-aligned font-bold text-base sm:text-lg text-slate-900 dark:text-white">Laser-Slotted Back Vent Cape</h4>
+            <p class="card-desc-aligned text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
+              The rear shoulder flap features an internal hydrophobic micro-mesh matrix. Thermal convection draws warm moisture upward and outward through downward-angled storm louvers without admitting a drop of moisture.
+            </p>
+          </div>
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-100 dark:border-slate-700 flex items-center justify-between text-xs">
+            <span class="font-bold text-slate-500">Exhaust Design:</span>
+            <span class="font-bold text-cyan-600 dark:text-cyan-400">Continuous Draft Vent</span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift h-full flex flex-col justify-between">
+          <div class="card-top-content">
+            <div class="w-12 h-12 rounded-2xl bg-indigo-100 dark:bg-indigo-900/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-xl mb-4 font-bold">
+              💧
+            </div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/80 px-2 py-0.5 rounded-full">Breathability</span>
+              <span class="text-xs font-mono font-bold text-slate-400">JIS L1099 B-1</span>
+            </div>
+            <h4 class="card-title-aligned font-bold text-base sm:text-lg text-slate-900 dark:text-white">20,000 g/m²/24h Vapor Permeability</h4>
+            <p class="card-desc-aligned text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
+              Certified microporous membrane pore sizes are 700 times larger than water vapor molecules, but 20,000 times smaller than liquid rain droplets. Your shirt stays completely crisp without the "plastic bag" greenhouse effect.
+            </p>
+          </div>
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-100 dark:border-slate-700 flex items-center justify-between text-xs">
+            <span class="font-bold text-slate-500">Lab Rating:</span>
+            <span class="font-bold text-indigo-600 dark:text-indigo-400">20,000 MVTR</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== NEW SECTION: PACKABILITY & COMPACT STOWAGE ==================== -->
+  <section class="py-16 sm:py-20 bg-white dark:bg-slate-900 border-t border-slate-200/80 dark:border-slate-800 reveal-on-scroll">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-5 space-y-4">
+          <span class="text-xs font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/80 px-3 py-1 rounded-full border border-emerald-200 dark:border-emerald-800 inline-block">Commuter Utility</span>
+          <h2 class="font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white">
+            320-Gram Self-Stowage & Pocket Transformation
+          </h2>
+          <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">
+            Bulk is the enemy of daily commuters. Every UmbrellaZone raincoat packs neatly into its own reversible chest pocket with an integrated carabiner loop, sliding effortlessly into laptop sleeves or bike panniers.
+          </p>
+          <div class="pt-2 space-y-3 text-xs sm:text-sm font-semibold text-slate-800 dark:text-slate-200">
+            <div class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-full bg-emerald-100 dark:bg-emerald-900/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-xs">✓</span>
+              <span>Reversible pouch with double-sided zipper puller</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-full bg-emerald-100 dark:bg-emerald-900/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-xs">✓</span>
+              <span>Wrinkle-recovery ripstop recovers smooth drape in under 60 seconds</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-full bg-emerald-100 dark:bg-emerald-900/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-xs">✓</span>
+              <span>Anodized aluminum mini-carabiner for exterior bag attachment</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="p-6 rounded-3xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift flex flex-col justify-between">
+            <div class="card-top-content">
+              <div class="text-3xl mb-3">🎒</div>
+              <h4 class="card-title-aligned font-bold text-base text-slate-900 dark:text-white">Sleek Book-Sized Stow</h4>
+              <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+                Compresses down to 18cm × 12cm × 4cm. Weighs less than a standard cup of coffee, eliminating backpack clutter.
+              </p>
+            </div>
+            <div class="card-bottom-line pt-3 mt-4 border-t border-slate-200/80 dark:border-slate-700 flex justify-between text-xs">
+              <span class="text-slate-500 font-medium">Net Weight:</span>
+              <span class="font-bold text-emerald-600 dark:text-emerald-400">Just 320 Grams</span>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-3xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift flex flex-col justify-between">
+            <div class="card-top-content">
+              <div class="text-3xl mb-3">⏱️</div>
+              <h4 class="card-title-aligned font-bold text-base text-slate-900 dark:text-white">15-Second Rapid Pack</h4>
+              <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+                No complex origami folds needed. Invert the chest pouch, stuff the sleeves and torso inward, and zip shut smoothly.
+              </p>
+            </div>
+            <div class="card-bottom-line pt-3 mt-4 border-t border-slate-200/80 dark:border-slate-700 flex justify-between text-xs">
+              <span class="text-slate-500 font-medium">Stow Velocity:</span>
+              <span class="font-bold text-emerald-600 dark:text-emerald-400">&lt; 15 Seconds</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== NEW SECTION: NIGHT REFLECTIVITY & PEDESTRIAN SAFETY ==================== -->
+  <section class="py-16 sm:py-20 bg-slate-50 dark:bg-slate-900/60 border-t border-slate-200/80 dark:border-slate-800 reveal-on-scroll">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-bold uppercase tracking-widest text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/80 px-3 py-1 rounded-full border border-amber-200 dark:border-amber-800 inline-block mb-3">Night Transit Security</span>
+        <h2 class="font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white">
+          360° 3M Scotchlite Reflective Safety Arrays
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mt-3 leading-relaxed">
+          Over 65% of monsoon pedestrian hazards occur during torrential night downpours. Our micro-prismatic trims reflect oncoming headlights up to 200 meters away.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Safety 1 -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift h-full flex flex-col justify-between">
+          <div class="card-top-content">
+            <div class="w-12 h-12 rounded-2xl bg-amber-100 dark:bg-amber-900/60 text-amber-600 dark:text-amber-400 flex items-center justify-center text-xl mb-4 font-bold">
+              🔦
+            </div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/80 px-2 py-0.5 rounded-full">Retro-Reflection</span>
+              <span class="text-xs font-mono font-bold text-slate-400">200m Beam</span>
+            </div>
+            <h4 class="card-title-aligned font-bold text-base sm:text-lg text-slate-900 dark:text-white">500 Candlepower Luminescence</h4>
+            <p class="card-desc-aligned text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
+              Equipped with genuine 3M Scotchlite reflective tape containing thousands of microscopic retro-reflective glass spheres. When vehicles approach in heavy rain, the tape flares brilliantly back directly to driver eyes.
+            </p>
+          </div>
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-100 dark:border-slate-700 flex items-center justify-between text-xs">
+            <span class="font-bold text-slate-500">Sight Distance:</span>
+            <span class="font-bold text-amber-600 dark:text-amber-400">200+ Meters Clear</span>
+          </div>
+        </div>
+
+        <!-- Safety 2 -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift h-full flex flex-col justify-between">
+          <div class="card-top-content">
+            <div class="w-12 h-12 rounded-2xl bg-sky-100 dark:bg-sky-900/60 text-sky-600 dark:text-sky-400 flex items-center justify-center text-xl mb-4 font-bold">
+              🔄
+            </div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950/80 px-2 py-0.5 rounded-full">Coverage</span>
+              <span class="text-xs font-mono font-bold text-slate-400">360° Radial</span>
+            </div>
+            <h4 class="card-title-aligned font-bold text-base sm:text-lg text-slate-900 dark:text-white">Anatomical Multi-Zone Placement</h4>
+            <p class="card-desc-aligned text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
+              Reflective highlights are strategically laminated on cuff wristbands, lower hem edges, center chest, and upper spine yoke. Drivers instantly recognize human silhouette movement even through rain-blurred windshields.
+            </p>
+          </div>
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-100 dark:border-slate-700 flex items-center justify-between text-xs">
+            <span class="font-bold text-slate-500">Recognition:</span>
+            <span class="font-bold text-sky-600 dark:text-sky-400">Full Human Silhouette</span>
+          </div>
+        </div>
+
+        <!-- Safety 3 -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift h-full flex flex-col justify-between">
+          <div class="card-top-content">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-100 dark:bg-emerald-900/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl mb-4 font-bold">
+              🛡️
+            </div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/80 px-2 py-0.5 rounded-full">Durability</span>
+              <span class="text-xs font-mono font-bold text-slate-400">Wash Tested</span>
+            </div>
+            <h4 class="card-title-aligned font-bold text-base sm:text-lg text-slate-900 dark:text-white">Thermo-Welded Delamination Proofing</h4>
+            <p class="card-desc-aligned text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
+              Instead of cheap iron-on decals that crack after two rains, our reflective ribbons are molecularly hot-melt bonded into the woven polyurethane face. Resists over 50 machine wash cycles without flaking.
+            </p>
+          </div>
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-100 dark:border-slate-700 flex items-center justify-between text-xs">
+            <span class="font-bold text-slate-500">Wash Life:</span>
+            <span class="font-bold text-emerald-600 dark:text-emerald-400">50+ Cycles Intact</span>
           </div>
         </div>
       </div>
@@ -677,14 +891,14 @@
         
         <!-- Col 1: Brand Info & Social Media -->
         <div class="lg:col-span-2 space-y-4">
-          <a href="index.html" class="flex items-center gap-3 group cursor-pointer inline-flex" title="UmbrellaZone Home">
-            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-600 to-cyan-500 flex items-center justify-center text-white font-bold shadow-md shadow-sky-600/30 shrink-0 group-hover:scale-105 transition">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <a href="index.html" class="flex items-center gap-3 group cursor-pointer inline-flex footer-brand-link" title="UmbrellaZone Home">
+            <div class="footer-logo-box w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-600 to-cyan-500 flex items-center justify-center text-white font-bold shadow-md shadow-sky-600/30 shrink-0 group-hover:scale-105 transition">
+              <svg class="footer-logo-svg w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 2C6.48 2 2 6.48 2 12c0 1.25.23 2.45.65 3.55.15.39.54.64.96.61h16.78c.42.03.81-.22.96-.61.42-1.1.65-2.3.65-3.55 0-5.52-4.48-10-10-10z"></path>
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 12v7a2 2 0 104 0"></path>
               </svg>
             </div>
-            <span class="font-display font-extrabold text-2xl tracking-tight text-white whitespace-nowrap">Umbrella<span class="text-sky-600">Zone</span></span>
+            <span class="footer-brand-name font-display font-extrabold text-2xl tracking-tight text-white whitespace-nowrap">Umbrella<span class="text-sky-600 footer-brand-highlight">Zone</span></span>
           </a>
           <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
             Specialty windproof umbrellas, waterproof raincoats, and anti-slip rain boots engineered to survive the heaviest downpours with complete 2-year warranty support.
@@ -1030,10 +1244,10 @@
                   <span class="font-semibold uppercase tracking-wider text-sky-600 dark:text-sky-400">${prod.subCategory}</span>
                   <span class="text-amber-500 font-bold">★ ${prod.rating}</span>
                 </div>
-                <h3 class="font-bold text-lg text-slate-900 dark:text-white group-hover:text-sky-600 transition">
+                <h3 class="product-card-title font-bold text-lg text-slate-900 dark:text-white group-hover:text-sky-600 transition">
                   <a href="product-detail.html?id=${prod.id}">${prod.name}</a>
                 </h3>
-                <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 line-clamp-3 leading-relaxed">${prod.longDesc}</p>
+                <p class="product-card-desc text-xs text-slate-500 dark:text-slate-400 leading-relaxed">${prod.longDesc}</p>
                 
                 <!-- Interactive Colorway Swatches with Live Image Switching -->
                 <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800/80">

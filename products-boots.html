@@ -131,13 +131,6 @@
             <span class="rtl-label-text font-bold">RTL</span>
           </button>
 
-          <!-- Search: Visible on Mobile, Tablet & Desktop -->
-          <button type="button" class="search-modal-trigger w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 flex items-center justify-center transition cursor-pointer" aria-label="Search rain gear" title="Search Store">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-            </svg>
-          </button>
-
           <!-- Wishlist: Hidden on mobile & tablet (<1024px, accessed via drawer Saved Wishlist), visible on desktop -->
           <a href="favorites.html" class="hidden lg:inline-flex relative w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-200 items-center justify-center transition" aria-label="Monsoon Favorites" title="Monsoon Favorites">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -146,8 +139,8 @@
             <span class="wishlist-badge-count absolute -top-1 -right-1 w-5 h-5 bg-rose-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center shadow-xs">0</span>
           </a>
 
-          <!-- Cart: Visible on Mobile, Tablet & Desktop with badge -->
-          <a href="cart.html" class="relative w-10 h-10 rounded-xl bg-sky-600 hover:bg-sky-700 text-white flex items-center justify-center transition shadow-md shadow-sky-600/20 active:scale-95" aria-label="Open Shopping Cart" title="View Cart">
+          <!-- Cart: Hidden on mobile & tablet (<1024px, accessed via hamburger menu drawer), visible on desktop -->
+          <a href="cart.html" class="hidden lg:flex relative w-10 h-10 rounded-xl bg-sky-600 hover:bg-sky-700 text-white items-center justify-center transition shadow-md shadow-sky-600/20 active:scale-95" aria-label="Open Shopping Cart" title="View Cart">
             <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
             </svg>
@@ -171,9 +164,9 @@
     <!-- Background Image Layer (Active in both Bright & Dark Modes) -->
     <div class="hero-bg-enhanced absolute inset-0 bg-cover bg-no-repeat bg-center sm:bg-right transition-all duration-300" style="background-image: url('assets/images/bg-boots-hero.png');"></div>
     <!-- Bright Mode Gradient Mask: ensures featured boots artwork is 100% visible on right while protecting text contrast on left -->
-    <div class="dark:hidden absolute inset-0 max-sm:bg-white/90 sm:bg-gradient-to-r sm:from-white/85 sm:via-white/40 sm:to-transparent pointer-events-none transition-colors duration-300"></div>
+    <div class="absolute inset-0 max-sm:bg-white/90 sm:bg-gradient-to-r sm:from-white/85 sm:via-white/40 sm:to-transparent pointer-events-none opacity-100 dark:opacity-0 transition-opacity duration-300"></div>
     <!-- Dark Mode Gradient Mask: deep dark contrast mask -->
-    <div class="hidden dark:block absolute inset-0 max-sm:bg-slate-950/90 sm:bg-gradient-to-r sm:from-slate-950 sm:via-slate-950/80 sm:to-transparent pointer-events-none transition-colors duration-300"></div>
+    <div class="absolute inset-0 max-sm:bg-slate-950/90 sm:bg-gradient-to-r sm:from-slate-950 sm:via-slate-950/80 sm:to-transparent pointer-events-none opacity-0 dark:opacity-100 transition-opacity duration-300"></div>
     <div class="rain-container"></div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="flex items-center gap-2 text-xs mb-3 font-semibold">
@@ -308,58 +301,58 @@
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         
-        <div class="p-6 rounded-3xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 flex flex-col justify-between hover-lift">
-          <div>
+        <div class="card-align-content h-full p-6 rounded-3xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 flex flex-col justify-between hover-lift">
+          <div class="card-top-content flex-1 flex flex-col">
             <div class="w-12 h-12 rounded-2xl bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-400 flex items-center justify-center font-bold text-xl mb-4">🏛️</div>
-            <span class="text-[10px] font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950 px-2 py-0.5 rounded-full border border-sky-200 dark:border-sky-800">Smooth Wet Surfaces</span>
-            <h4 class="font-display font-extrabold text-base text-slate-900 dark:text-white mt-2">Wet Tile & Metro Stairs</h4>
-            <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950 px-2 py-0.5 rounded-full border border-sky-200 dark:border-sky-800 self-start">Smooth Wet Surfaces</span>
+            <h4 class="card-title-aligned font-display font-extrabold text-base text-slate-900 dark:text-white mt-2">Wet Tile & Metro Stairs</h4>
+            <p class="card-desc-aligned text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
               Thin water films create frictionless hydroplaning on polished marble, granite, and transit stairs. Razor-siped marine gum rubber evacuates water horizontally to maintain direct rubber-to-stone contact.
             </p>
           </div>
-          <div class="pt-4 mt-4 border-t border-slate-200 dark:border-slate-700 text-xs font-bold text-sky-600 dark:text-sky-400">
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-200 dark:border-slate-700 text-xs font-bold text-sky-600 dark:text-sky-400">
             Recommended: Coastline Slip-On
           </div>
         </div>
 
-        <div class="p-6 rounded-3xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 flex flex-col justify-between hover-lift">
-          <div>
+        <div class="card-align-content h-full p-6 rounded-3xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 flex flex-col justify-between hover-lift">
+          <div class="card-top-content flex-1 flex flex-col">
             <div class="w-12 h-12 rounded-2xl bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-400 flex items-center justify-center font-bold text-xl mb-4">🌊</div>
-            <span class="text-[10px] font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950 px-2 py-0.5 rounded-full border border-sky-200 dark:border-sky-800">Standing Floodwater</span>
-            <h4 class="font-display font-extrabold text-base text-slate-900 dark:text-white mt-2">Flooded Urban Crossings</h4>
-            <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950 px-2 py-0.5 rounded-full border border-sky-200 dark:border-sky-800 self-start">Standing Floodwater</span>
+            <h4 class="card-title-aligned font-display font-extrabold text-base text-slate-900 dark:text-white mt-2">Flooded Urban Crossings</h4>
+            <p class="card-desc-aligned text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
               When city drains overflow, hidden curbs and debris threaten foot safety. Seamless 15–16" vulcanized tree rubber protects socks up to the knee while embedded steel shanks provide underfoot puncture stability.
             </p>
           </div>
-          <div class="pt-4 mt-4 border-t border-slate-200 dark:border-slate-700 text-xs font-bold text-sky-600 dark:text-sky-400">
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-200 dark:border-slate-700 text-xs font-bold text-sky-600 dark:text-sky-400">
             Recommended: MudMaster Wellies
           </div>
         </div>
 
-        <div class="p-6 rounded-3xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 flex flex-col justify-between hover-lift">
-          <div>
+        <div class="card-align-content h-full p-6 rounded-3xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 flex flex-col justify-between hover-lift">
+          <div class="card-top-content flex-1 flex flex-col">
             <div class="w-12 h-12 rounded-2xl bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-400 flex items-center justify-center font-bold text-xl mb-4">🏙️</div>
-            <span class="text-[10px] font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950 px-2 py-0.5 rounded-full border border-sky-200 dark:border-sky-800">Daily Urban Walking</span>
-            <h4 class="font-display font-extrabold text-base text-slate-900 dark:text-white mt-2">Pavements & Puddle Splashes</h4>
-            <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950 px-2 py-0.5 rounded-full border border-sky-200 dark:border-sky-800 self-start">Daily Urban Walking</span>
+            <h4 class="card-title-aligned font-display font-extrabold text-base text-slate-900 dark:text-white mt-2">Pavements & Puddle Splashes</h4>
+            <p class="card-desc-aligned text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
               Office commutes require footwear that matches tailored trousers without feeling heavy. Hexagonal micro-stud soles provide confident grip on wet curbs and asphalt while cushioned insoles absorb heel strike.
             </p>
           </div>
-          <div class="pt-4 mt-4 border-t border-slate-200 dark:border-slate-700 text-xs font-bold text-sky-600 dark:text-sky-400">
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-200 dark:border-slate-700 text-xs font-bold text-sky-600 dark:text-sky-400">
             Recommended: Thames Chelsea Boot
           </div>
         </div>
 
-        <div class="p-6 rounded-3xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 flex flex-col justify-between hover-lift">
-          <div>
+        <div class="card-align-content h-full p-6 rounded-3xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 flex flex-col justify-between hover-lift">
+          <div class="card-top-content flex-1 flex flex-col">
             <div class="w-12 h-12 rounded-2xl bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-400 flex items-center justify-center font-bold text-xl mb-4">🌲</div>
-            <span class="text-[10px] font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950 px-2 py-0.5 rounded-full border border-sky-200 dark:border-sky-800">Unpaved Terrain</span>
-            <h4 class="font-display font-extrabold text-base text-slate-900 dark:text-white mt-2">Slippery Mud & Forest Trails</h4>
-            <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950 px-2 py-0.5 rounded-full border border-sky-200 dark:border-sky-800 self-start">Unpaved Terrain</span>
+            <h4 class="card-title-aligned font-display font-extrabold text-base text-slate-900 dark:text-white mt-2">Slippery Mud & Forest Trails</h4>
+            <p class="card-desc-aligned text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
               Standard flat rubber soles pack with mud and slide like skis. Self-cleaning chevron lugs flex with each step to eject soil and clods dynamically, retaining sharp traction on steep muddy hillsides.
             </p>
           </div>
-          <div class="pt-4 mt-4 border-t border-slate-200 dark:border-slate-700 text-xs font-bold text-sky-600 dark:text-sky-400">
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-200 dark:border-slate-700 text-xs font-bold text-sky-600 dark:text-sky-400">
             Recommended: Highland Tall Wellies
           </div>
         </div>
@@ -523,8 +516,8 @@
           <div class="card-align-content h-full p-5 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs flex flex-col justify-between">
             <div class="card-top-content flex-1 flex flex-col">
               <span class="text-xs font-bold text-sky-600 dark:text-sky-400 block mb-1">Shaft: 5.5 Inches</span>
-              <h4 class="card-title-aligned font-bold text-sm text-slate-900 dark:text-white min-h-[2.5rem] flex items-center">Thames Chelsea Cut</h4>
-              <p class="card-desc-aligned text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed flex-1">Twin elastic stretch side gores allow instant 2-second slip-on entry while hugging the ankle snugly to block rain splashes.</p>
+              <h4 class="card-title-aligned font-bold text-sm text-slate-900 dark:text-white">Thames Chelsea Cut</h4>
+              <p class="card-desc-aligned text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">Twin elastic stretch side gores allow instant 2-second slip-on entry while hugging the ankle snugly to block rain splashes.</p>
             </div>
             <div class="card-bottom-line mt-auto pt-3 border-t border-slate-200 dark:border-slate-700 text-[11px] text-slate-500 space-y-0.5">
               <div>Socks: <strong>Standard Cotton Socks</strong></div>
@@ -535,8 +528,8 @@
           <div class="card-align-content h-full p-5 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs flex flex-col justify-between">
             <div class="card-top-content flex-1 flex flex-col">
               <span class="text-xs font-bold text-sky-600 dark:text-sky-400 block mb-1">Shaft: 7.0 Inches</span>
-              <h4 class="card-title-aligned font-bold text-sm text-slate-900 dark:text-white min-h-[2.5rem] flex items-center">Coastline Deck Cut</h4>
-              <p class="card-desc-aligned text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed flex-1">Mid-height collar with reinforced heel pull loops. Wide throat easily accommodates jeans or office trousers.</p>
+              <h4 class="card-title-aligned font-bold text-sm text-slate-900 dark:text-white">Coastline Deck Cut</h4>
+              <p class="card-desc-aligned text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">Mid-height collar with reinforced heel pull loops. Wide throat easily accommodates jeans or office trousers.</p>
             </div>
             <div class="card-bottom-line mt-auto pt-3 border-t border-slate-200 dark:border-slate-700 text-[11px] text-slate-500 space-y-0.5">
               <div>Socks: <strong>Everyday Crew Socks</strong></div>
@@ -547,8 +540,8 @@
           <div class="card-align-content h-full p-5 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs flex flex-col justify-between">
             <div class="card-top-content flex-1 flex flex-col">
               <span class="text-xs font-bold text-sky-600 dark:text-sky-400 block mb-1">Shaft: 15.5 Inches</span>
-              <h4 class="card-title-aligned font-bold text-sm text-slate-900 dark:text-white min-h-[2.5rem] flex items-center">Highland Tall Wellie</h4>
-              <p class="card-desc-aligned text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed flex-1">Full knee-height protection against deep waterlogging. Flexible calf buckle expands comfortably for any calf width.</p>
+              <h4 class="card-title-aligned font-bold text-sm text-slate-900 dark:text-white">Highland Tall Wellie</h4>
+              <p class="card-desc-aligned text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">Full knee-height protection against deep waterlogging. Flexible calf buckle expands comfortably for any calf width.</p>
             </div>
             <div class="card-bottom-line mt-auto pt-3 border-t border-slate-200 dark:border-slate-700 text-[11px] text-slate-500 space-y-0.5">
               <div>Socks: <strong>Cotton or Wool Socks</strong></div>
@@ -583,16 +576,16 @@
               <div class="flex text-amber-400 text-xs">★★★★★</div>
               <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300">Verified Purchaser</span>
             </div>
-            <h4 class="card-title-aligned font-bold text-sm text-slate-900 dark:text-white min-h-[3rem] flex items-center">"Finally a rain boot that looks sharp and smart in my corporate office."</h4>
-            <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed flex-1">
+            <h4 class="card-title-aligned font-bold text-sm text-slate-900 dark:text-white">"Finally a rain boot that looks sharp and smart in my corporate office."</h4>
+            <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
               "The Thames Chelsea in Matte Black looks just like my formal leather boots. Walked through heavy waterlogged roads outside the central transit station. My feet and socks were completely dry throughout my 9-hour workday."
             </p>
           </div>
-          <div class="card-bottom-line card-bottom-author pt-4 mt-auto border-t border-slate-100 dark:border-slate-700 flex items-center gap-3">
-            <img src="assets/images/avatars/avatar-kulkarni.jpg" alt="Rahul Kulkarni" class="w-9 h-9 rounded-full object-cover shadow-xs border border-slate-200 dark:border-slate-700 shrink-0">
+          <div class="card-bottom-line card-bottom-author pt-4 mt-auto border-t border-slate-100 dark:border-slate-700 flex items-start gap-3">
+            <img src="assets/images/avatars/avatar-kulkarni.jpg" alt="Rahul Kulkarni" class="w-9 h-9 rounded-full object-cover shadow-xs border border-slate-200 dark:border-slate-700 shrink-0 mt-0.5">
             <div>
               <div class="text-xs font-bold text-slate-900 dark:text-white">Rahul Kulkarni</div>
-              <div class="text-[10px] text-slate-500 dark:text-slate-400">IT Architect • Financial District • Thames Chelsea (Matte Black)</div>
+              <div class="text-[10px] text-slate-500 dark:text-slate-400">IT Architect • Thames Chelsea (Matte Black)</div>
             </div>
           </div>
         </div>
@@ -603,16 +596,16 @@
               <div class="flex text-amber-400 text-xs">★★★★★</div>
               <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300">Verified Purchaser</span>
             </div>
-            <h4 class="card-title-aligned font-bold text-sm text-slate-900 dark:text-white min-h-[3rem] flex items-center">"Anti-slip razor siping grips slippery ferry ramps and wet tiles like glue."</h4>
-            <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed flex-1">
+            <h4 class="card-title-aligned font-bold text-sm text-slate-900 dark:text-white">"Anti-slip razor siping grips slippery ferry ramps and wet tiles like glue."</h4>
+            <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
               "I take the coastal ferry shuttle every morning. The wet metal ramps and slick granite tiles used to be dangerous in heavy rain. These Coastline shoes feel planted and completely slip-free."
             </p>
           </div>
-          <div class="card-bottom-line card-bottom-author pt-4 mt-auto border-t border-slate-100 dark:border-slate-700 flex items-center gap-3">
-            <img src="assets/images/avatars/avatar-neha.jpg" alt="Dr. Neha Thomas" class="w-9 h-9 rounded-full object-cover shadow-xs border border-slate-200 dark:border-slate-700 shrink-0">
+          <div class="card-bottom-line card-bottom-author pt-4 mt-auto border-t border-slate-100 dark:border-slate-700 flex items-start gap-3">
+            <img src="assets/images/avatars/avatar-neha.jpg" alt="Dr. Neha Thomas" class="w-9 h-9 rounded-full object-cover shadow-xs border border-slate-200 dark:border-slate-700 shrink-0 mt-0.5">
             <div>
               <div class="text-xs font-bold text-slate-900 dark:text-white">Dr. Neha Thomas</div>
-              <div class="text-[10px] text-slate-500 dark:text-slate-400">Marine Researcher • Coastal Harbor District • Coastline Slip-On (Navy)</div>
+              <div class="text-[10px] text-slate-500 dark:text-slate-400">Marine Researcher • Coastline Slip-On (Navy)</div>
             </div>
           </div>
         </div>
@@ -623,17 +616,238 @@
               <div class="flex text-amber-400 text-xs">★★★★★</div>
               <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300">Verified Purchaser</span>
             </div>
-            <h4 class="card-title-aligned font-bold text-sm text-slate-900 dark:text-white min-h-[3rem] flex items-center">"Walked through knee-deep waterlogged trails without a single drop entering."</h4>
-            <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed flex-1">
+            <h4 class="card-title-aligned font-bold text-sm text-slate-900 dark:text-white">"Walked through knee-deep waterlogged trails without a single drop entering."</h4>
+            <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
               "We have heavy rainfall along the mountain estate trails. These 15-inch tall boots kept my pants clean and feet completely dry. The deep rubber lugs give solid grip on muddy slopes."
             </p>
           </div>
-          <div class="card-bottom-line card-bottom-author pt-4 mt-auto border-t border-slate-100 dark:border-slate-700 flex items-center gap-3">
-            <img src="assets/images/avatars/avatar-sandeep.jpg" alt="Sandeep Nair" class="w-9 h-9 rounded-full object-cover shadow-xs border border-slate-200 dark:border-slate-700 shrink-0">
+          <div class="card-bottom-line card-bottom-author pt-4 mt-auto border-t border-slate-100 dark:border-slate-700 flex items-start gap-3">
+            <img src="assets/images/avatars/avatar-sandeep.jpg" alt="Sandeep Nair" class="w-9 h-9 rounded-full object-cover shadow-xs border border-slate-200 dark:border-slate-700 shrink-0 mt-0.5">
             <div>
               <div class="text-xs font-bold text-slate-900 dark:text-white">Sandeep Nair</div>
-              <div class="text-[10px] text-slate-500 dark:text-slate-400">Estate Manager • Highland Valley Trails • Highland Wellies</div>
+              <div class="text-[10px] text-slate-500 dark:text-slate-400">Estate Manager • Highland Wellies (Olive)</div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== NEW SECTION: DUAL-DENSITY ORTHOTIC FOOTBED ==================== -->
+  <section class="py-16 sm:py-20 bg-slate-50 dark:bg-slate-900/60 border-t border-slate-200/80 dark:border-slate-800 reveal-on-scroll">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-bold uppercase tracking-widest text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950/80 px-3 py-1 rounded-full border border-sky-200 dark:border-sky-800 inline-block mb-3">Ergonomic Underfoot Science</span>
+        <h2 class="font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white">
+          Dual-Density Orthotic Support & All-Day Cushioning
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mt-3 leading-relaxed">
+          Traditional gumboots feel flat, heavy, and exhausting. UmbrellaZone footwear features anatomical orthotic footbeds engineered for 12,000+ daily commuter steps.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift h-full flex flex-col justify-between">
+          <div class="card-top-content">
+            <div class="w-12 h-12 rounded-2xl bg-sky-100 dark:bg-sky-900/60 text-sky-600 dark:text-sky-400 flex items-center justify-center text-xl mb-4 font-bold">
+              🦶
+            </div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950/80 px-2 py-0.5 rounded-full">Arch Stability</span>
+              <span class="text-xs font-mono font-bold text-slate-400">EVA Honeycomb</span>
+            </div>
+            <h4 class="card-title-aligned font-bold text-base sm:text-lg text-slate-900 dark:text-white">EVA Honeycomb Arch Cradle</h4>
+            <p class="card-desc-aligned text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
+              Precision contoured arch reinforcement aligns the plantar fascia and prevents fatigue. The lightweight honeycomb structure absorbs continuous vibration from asphalt pavements and train platforms.
+            </p>
+          </div>
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-100 dark:border-slate-700 flex items-center justify-between text-xs">
+            <span class="font-bold text-slate-500">Endurance Metric:</span>
+            <span class="font-bold text-sky-600 dark:text-sky-400">12,000+ Steps Daily</span>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift h-full flex flex-col justify-between">
+          <div class="card-top-content">
+            <div class="w-12 h-12 rounded-2xl bg-indigo-100 dark:bg-indigo-900/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-xl mb-4 font-bold">
+              ⚡
+            </div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/80 px-2 py-0.5 rounded-full">Shock Damper</span>
+              <span class="text-xs font-mono font-bold text-slate-400">Visco-Elastic</span>
+            </div>
+            <h4 class="card-title-aligned font-bold text-base sm:text-lg text-slate-900 dark:text-white">Impact-Absorbing Gel Heel Core</h4>
+            <p class="card-desc-aligned text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
+              When leaping across swollen storm gutters and flooded curbs, heel strike forces can jar knee joints. Our visco-elastic heel cushion disperses up to 72% of kinetic energy before it reaches your spine.
+            </p>
+          </div>
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-100 dark:border-slate-700 flex items-center justify-between text-xs">
+            <span class="font-bold text-slate-500">Shock Attenuation:</span>
+            <span class="font-bold text-indigo-600 dark:text-indigo-400">72% Dissipation</span>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift h-full flex flex-col justify-between">
+          <div class="card-top-content">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-100 dark:bg-emerald-900/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl mb-4 font-bold">
+              🌿
+            </div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/80 px-2 py-0.5 rounded-full">Hygiene</span>
+              <span class="text-xs font-mono font-bold text-slate-400">Silver-Ion Treated</span>
+            </div>
+            <h4 class="card-title-aligned font-bold text-base sm:text-lg text-slate-900 dark:text-white">Silver-Ion Odor Defense Liners</h4>
+            <p class="card-desc-aligned text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
+              Hot humid monsoons breed fungal bacteria inside closed footwear. Our removable insole fabric is infused with microscopic antimicrobial silver ions that inhibit 99.4% of odor microbes indefinitely.
+            </p>
+          </div>
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-100 dark:border-slate-700 flex items-center justify-between text-xs">
+            <span class="font-bold text-slate-500">Antibacterial:</span>
+            <span class="font-bold text-emerald-600 dark:text-emerald-400">99.4% Inhibition</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== NEW SECTION: HANDS-FREE KICK-SPUR ERGONOMICS ==================== -->
+  <section class="py-16 sm:py-20 bg-white dark:bg-slate-900 border-t border-slate-200/80 dark:border-slate-800 reveal-on-scroll">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-5 space-y-4">
+          <span class="text-xs font-bold uppercase tracking-widest text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/80 px-3 py-1 rounded-full border border-amber-200 dark:border-amber-800 inline-block">Doorstep Convenience</span>
+          <h2 class="font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white">
+            Hands-Free Heel Kick-Spur & Entry Loops
+          </h2>
+          <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">
+            Taking off muddy, wet boots should never leave your hands dirty or track slush across clean home flooring. Step on the molded rear kick-spur to slip out of your boots effortlessly in 2 seconds.
+          </p>
+          <div class="pt-2 space-y-3 text-xs sm:text-sm font-semibold text-slate-800 dark:text-slate-200">
+            <div class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-full bg-amber-100 dark:bg-amber-900/60 text-amber-600 dark:text-amber-400 flex items-center justify-center font-bold text-xs">✓</span>
+              <span>100% hands-free removal protects clean socks and pant cuffs</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-full bg-amber-100 dark:bg-amber-900/60 text-amber-600 dark:text-amber-400 flex items-center justify-center font-bold text-xs">✓</span>
+              <span>Bar-tack reinforced rear pull-tabs for rapid slip-on entrance</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-full bg-amber-100 dark:bg-amber-900/60 text-amber-600 dark:text-amber-400 flex items-center justify-center font-bold text-xs">✓</span>
+              <span>Non-marking heel spur material won't scuff fine hardwood or tile</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="p-6 rounded-3xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift flex flex-col justify-between">
+            <div class="card-top-content">
+              <div class="text-3xl mb-3">👞</div>
+              <h4 class="card-title-aligned font-bold text-base text-slate-900 dark:text-white">Molded Rear Kick-Spur</h4>
+              <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+                A rigid vulcanized ridge integrated directly behind the heel counter lets you anchor the boot with your opposite foot and slide right out.
+              </p>
+            </div>
+            <div class="card-bottom-line pt-3 mt-4 border-t border-slate-200/80 dark:border-slate-700 flex justify-between text-xs">
+              <span class="text-slate-500 font-medium">Removal Speed:</span>
+              <span class="font-bold text-amber-600 dark:text-amber-400">2-Second Exit</span>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-3xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift flex flex-col justify-between">
+            <div class="card-top-content">
+              <div class="text-3xl mb-3">🪝</div>
+              <h4 class="card-title-aligned font-bold text-base text-slate-900 dark:text-white">Woven Pull-Tab Webbing</h4>
+              <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+                Triple-stitched ballistic nylon loops withstand up to 45kg of pulling force, making tight sock entry smooth and zero-friction.
+              </p>
+            </div>
+            <div class="card-bottom-line pt-3 mt-4 border-t border-slate-200/80 dark:border-slate-700 flex justify-between text-xs">
+              <span class="text-slate-500 font-medium">Loop Strength:</span>
+              <span class="font-bold text-amber-600 dark:text-amber-400">45kg Tensile Rating</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== NEW SECTION: NATURAL RUBBER CARE & BLOOMING PROTOCOL ==================== -->
+  <section class="py-16 sm:py-20 bg-slate-50 dark:bg-slate-900/60 border-t border-slate-200/80 dark:border-slate-800 reveal-on-scroll">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/80 px-3 py-1 rounded-full border border-emerald-200 dark:border-emerald-800 inline-block mb-3">Longevity & Preservation</span>
+        <h2 class="font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white">
+          Natural Rubber Blooming & Conditioning Care
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mt-3 leading-relaxed">
+          Why authentic vulcanized rubber develops a protective wax coating, and how simple conditioning keeps your boots looking showroom-fresh for years.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift h-full flex flex-col justify-between">
+          <div class="card-top-content">
+            <div class="w-12 h-12 rounded-2xl bg-sky-100 dark:bg-sky-900/60 text-sky-600 dark:text-sky-400 flex items-center justify-center text-xl mb-4 font-bold">
+              🧪
+            </div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950/80 px-2 py-0.5 rounded-full">Material Truth</span>
+              <span class="text-xs font-mono font-bold text-slate-400">Pure Latex</span>
+            </div>
+            <h4 class="card-title-aligned font-bold text-base sm:text-lg text-slate-900 dark:text-white">Understanding Rubber "Bloom"</h4>
+            <p class="card-desc-aligned text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
+              If your boots develop a whitish film, do not panic! This natural phenomenon is called "blooming," where protective insoluble waxes migrate to the surface to shield the rubber matrix from atmospheric ozone cracking.
+            </p>
+          </div>
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-100 dark:border-slate-700 flex items-center justify-between text-xs">
+            <span class="font-bold text-slate-500">Purity Indicator:</span>
+            <span class="font-bold text-sky-600 dark:text-sky-400">100% Genuine Latex</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift h-full flex flex-col justify-between">
+          <div class="card-top-content">
+            <div class="w-12 h-12 rounded-2xl bg-amber-100 dark:bg-amber-900/60 text-amber-600 dark:text-amber-400 flex items-center justify-center text-xl mb-4 font-bold">
+              🧽
+            </div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/80 px-2 py-0.5 rounded-full">Restoration</span>
+              <span class="text-xs font-mono font-bold text-slate-400">Silicone Buffer</span>
+            </div>
+            <h4 class="card-title-aligned font-bold text-base sm:text-lg text-slate-900 dark:text-white">The 30-Second Silicone Sponge Buff</h4>
+            <p class="card-desc-aligned text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
+              Simply wipe the boots with a damp cloth to clear dried mud, then gently buff with a silicone boot conditioner sponge. The matte or lustrous sheen instantly reawakens with zero sticky surface build-up.
+            </p>
+          </div>
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-100 dark:border-slate-700 flex items-center justify-between text-xs">
+            <span class="font-bold text-slate-500">Restoration:</span>
+            <span class="font-bold text-amber-600 dark:text-amber-400">Original Luster Restored</span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift h-full flex flex-col justify-between">
+          <div class="card-top-content">
+            <div class="w-12 h-12 rounded-2xl bg-purple-100 dark:bg-purple-900/60 text-purple-600 dark:text-purple-400 flex items-center justify-center text-xl mb-4 font-bold">
+              ☀️
+            </div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-purple-950/80 px-2 py-0.5 rounded-full">Storage</span>
+              <span class="text-xs font-mono font-bold text-slate-400">Cool & Shaded</span>
+            </div>
+            <h4 class="card-title-aligned font-bold text-base sm:text-lg text-slate-900 dark:text-white">UV & Heat Shielded Storage</h4>
+            <p class="card-desc-aligned text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
+              Never dry boots next to active radiator heaters or bake them on hot open balconies. Store them standing upright in a cool, ventilated closet to preserve the vulcanized polymer bonds for over 8 seasons.
+            </p>
+          </div>
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-100 dark:border-slate-700 flex items-center justify-between text-xs">
+            <span class="font-bold text-slate-500">Life Expectancy:</span>
+            <span class="font-bold text-purple-600 dark:text-purple-400">8+ Monsoon Seasons</span>
           </div>
         </div>
       </div>
@@ -671,11 +885,11 @@
         
         <!-- Col 1: Brand Info & Social Media -->
         <div class="lg:col-span-2 space-y-4">
-          <a href="index.html" class="flex items-center gap-3 group cursor-pointer inline-flex" title="UmbrellaZone Home">
-            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-600 to-cyan-500 flex items-center justify-center text-white font-bold shadow-md shadow-sky-600/30 shrink-0 group-hover:scale-105 transition">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 2C6.48 2 2 6.48 2 12c0 1.25.23 2.45.65 3.55.15.39.54.64.96.61h16.78c.42.03.81-.22.96-.61.42-1.1.65-2.3.65-3.55 0-5.52-4.48-10-10-10z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 12v7a2 2 0 104 0"></path></svg>
+          <a href="index.html" class="flex items-center gap-3 group cursor-pointer inline-flex footer-brand-link" title="UmbrellaZone Home">
+            <div class="footer-logo-box w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-600 to-cyan-500 flex items-center justify-center text-white font-bold shadow-md shadow-sky-600/30 shrink-0 group-hover:scale-105 transition">
+              <svg class="footer-logo-svg w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 2C6.48 2 2 6.48 2 12c0 1.25.23 2.45.65 3.55.15.39.54.64.96.61h16.78c.42.03.81-.22.96-.61.42-1.1.65-2.3.65-3.55 0-5.52-4.48-10-10-10z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 12v7a2 2 0 104 0"></path></svg>
             </div>
-            <span class="font-display font-extrabold text-2xl tracking-tight text-white whitespace-nowrap">Umbrella<span class="text-sky-600">Zone</span></span>
+            <span class="footer-brand-name font-display font-extrabold text-2xl tracking-tight text-white whitespace-nowrap">Umbrella<span class="text-sky-600 footer-brand-highlight">Zone</span></span>
           </a>
           <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
             Specialty windproof umbrellas, waterproof raincoats, and anti-slip rain boots engineered to survive the heaviest downpours with complete 2-year warranty support.
@@ -1022,10 +1236,10 @@
                 <span class="font-semibold uppercase tracking-wider text-sky-600 dark:text-sky-400">${prod.subCategory}</span>
                 <span class="text-amber-500 font-bold">★ ${prod.rating}</span>
               </div>
-              <h3 class="font-bold text-lg text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition">
+              <h3 class="product-card-title font-bold text-lg text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition">
                 <a href="product-detail.html?id=${prod.id}">${prod.name}</a>
               </h3>
-              <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 line-clamp-3 leading-relaxed">${prod.longDesc}</p>
+              <p class="product-card-desc text-xs text-slate-500 dark:text-slate-400 leading-relaxed">${prod.longDesc}</p>
               
               <div class="mt-4 flex items-center justify-between text-xs">
                 <div class="flex items-center gap-1.5" id="boot-swatches-${prod.id}">

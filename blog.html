@@ -130,13 +130,6 @@
             <span class="rtl-label-text font-bold">RTL</span>
           </button>
 
-          <!-- Search: Visible on Mobile, Tablet & Desktop -->
-          <button type="button" class="search-modal-trigger w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 flex items-center justify-center transition cursor-pointer" aria-label="Search rain gear" title="Search Store">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-            </svg>
-          </button>
-
           <!-- Wishlist: Hidden on mobile & tablet (<1024px, accessed via drawer Saved Wishlist), visible on desktop -->
           <a href="favorites.html" class="hidden lg:inline-flex relative w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-200 items-center justify-center transition" aria-label="Monsoon Favorites" title="Monsoon Favorites">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -145,8 +138,8 @@
             <span class="wishlist-badge-count absolute -top-1 -right-1 w-5 h-5 bg-rose-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center shadow-xs">0</span>
           </a>
 
-          <!-- Cart: Visible on Mobile, Tablet & Desktop with badge -->
-          <a href="cart.html" class="relative w-10 h-10 rounded-xl bg-sky-600 hover:bg-sky-700 text-white flex items-center justify-center transition shadow-md shadow-sky-600/20 active:scale-95" aria-label="Open Shopping Cart" title="View Cart">
+          <!-- Cart: Hidden on mobile & tablet (<1024px, accessed via hamburger menu drawer), visible on desktop -->
+          <a href="cart.html" class="hidden lg:flex relative w-10 h-10 rounded-xl bg-sky-600 hover:bg-sky-700 text-white items-center justify-center transition shadow-md shadow-sky-600/20 active:scale-95" aria-label="Open Shopping Cart" title="View Cart">
             <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
             </svg>
@@ -171,10 +164,10 @@
     <div class="hero-bg-blueprint absolute inset-0 bg-cover bg-no-repeat bg-center transition-all duration-300" style="background-image: url('assets/images/bg-blog-hero.png');"></div>
 
     <!-- Soft vertical edge fades to seamlessly blend with header and next section without masking the central artwork -->
-    <div class="dark:hidden absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-white/75 via-white/20 to-transparent pointer-events-none"></div>
-    <div class="dark:hidden absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-slate-100/80 via-slate-100/20 to-transparent pointer-events-none"></div>
-    <div class="hidden dark:block absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-[#060b14]/85 via-[#060b14]/30 to-transparent pointer-events-none"></div>
-    <div class="hidden dark:block absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#060b14]/85 via-[#060b14]/30 to-transparent pointer-events-none"></div>
+    <div class="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-white/75 via-white/20 to-transparent pointer-events-none opacity-100 dark:opacity-0 transition-opacity duration-300"></div>
+    <div class="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-slate-100/80 via-slate-100/20 to-transparent pointer-events-none opacity-100 dark:opacity-0 transition-opacity duration-300"></div>
+    <div class="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-[#060b14]/85 via-[#060b14]/30 to-transparent pointer-events-none opacity-0 dark:opacity-100 transition-opacity duration-300"></div>
+    <div class="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#060b14]/85 via-[#060b14]/30 to-transparent pointer-events-none opacity-0 dark:opacity-100 transition-opacity duration-300"></div>
     <div class="rain-container pointer-events-none"></div>
 
     <!-- Top Headline: Centered & Balanced -->
@@ -349,14 +342,14 @@
         <div class="p-6 flex-1 flex flex-col justify-between">
           <div class="card-top-content flex-1 flex flex-col space-y-2.5">
             <div class="text-[11px] font-bold text-sky-600 dark:text-sky-400 uppercase tracking-wider">Kinematic Design</div>
-            <h4 class="card-title-aligned font-display font-bold text-lg text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition leading-snug min-h-[3.75rem] flex items-center">
+            <h4 class="blog-card-title font-display font-bold text-lg text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition leading-snug">
               Why Inverted Folding Keeps Car Interiors Dry During Downpours
             </h4>
-            <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-3 flex-1">
+            <p class="blog-card-desc text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
               Standard umbrellas trap water against your clothes the moment they are folded shut. Discover the reverse mechanical linkages that trap water inside a dry cocoon when slipping into car doors.
             </p>
           </div>
-          <div class="card-bottom-line mt-auto pt-5 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+          <div class="card-bottom-line blog-card-author mt-auto pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
             <div class="flex items-center gap-2.5">
               <img src="assets/images/avatars/avatar-arjun.jpg" alt="Rahul Verma" class="w-8 h-8 rounded-full object-cover ring-1 ring-slate-200 dark:ring-slate-700">
               <span class="text-xs font-bold text-slate-700 dark:text-slate-300">Rahul Verma</span>
@@ -382,14 +375,14 @@
         <div class="p-6 flex-1 flex flex-col justify-between">
           <div class="card-top-content flex-1 flex flex-col space-y-2.5">
             <div class="text-[11px] font-bold text-sky-600 dark:text-sky-400 uppercase tracking-wider">Welded Polyurethane</div>
-            <h4 class="card-title-aligned font-display font-bold text-lg text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition leading-snug min-h-[3.75rem] flex items-center">
-              Hot-Air Seam Sealing: Why Stitched Needles Leak and How Polyurethane Tape Fixes It
+            <h4 class="blog-card-title font-display font-bold text-lg text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition leading-snug">
+              Hot-Air Seam Sealing: Why Welded Polyurethane Tape Beats Needles
             </h4>
-            <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-3 flex-1">
+            <p class="blog-card-desc text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
               Every sewing needle creates thousands of microscopic holes in waterproof fabric. Discover how our triple-barrier hot-air welded thermoplastic seam tape creates a 100% molecular seal against driving monsoon rain.
             </p>
           </div>
-          <div class="card-bottom-line mt-auto pt-5 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+          <div class="card-bottom-line blog-card-author mt-auto pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
             <div class="flex items-center gap-2.5">
               <img src="assets/images/avatars/avatar-amit.jpg" alt="Dr. K. N. Sunder" class="w-8 h-8 rounded-full object-cover ring-1 ring-slate-200 dark:ring-slate-700">
               <span class="text-xs font-bold text-slate-700 dark:text-slate-300">Dr. K. N. Sunder</span>
@@ -415,14 +408,14 @@
         <div class="p-6 flex-1 flex flex-col justify-between">
           <div class="card-top-content flex-1 flex flex-col space-y-2.5">
             <div class="text-[11px] font-bold text-sky-600 dark:text-sky-400 uppercase tracking-wider">Fabric Hydrostatics</div>
-            <h4 class="card-title-aligned font-display font-bold text-lg text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition leading-snug min-h-[3.75rem] flex items-center">
+            <h4 class="blog-card-title font-display font-bold text-lg text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition leading-snug">
               25,000mm Hydrostatic Head: What Waterproof Column Ratings Mean
             </h4>
-            <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-3 flex-1">
+            <p class="blog-card-desc text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
               Most commercial rain jackets leak at 5,000mm during driving rains. Here is how microporous ePTFE dual-laminate membranes withstand hydraulic cloudburst pressure without trapping internal body perspiration.
             </p>
           </div>
-          <div class="card-bottom-line mt-auto pt-5 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+          <div class="card-bottom-line blog-card-author mt-auto pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
             <div class="flex items-center gap-2.5">
               <img src="assets/images/avatars/avatar-priya.jpg" alt="Priya Iyer" class="w-8 h-8 rounded-full object-cover ring-1 ring-slate-200 dark:ring-slate-700">
               <span class="text-xs font-bold text-slate-700 dark:text-slate-300">Priya Iyer</span>
@@ -448,14 +441,14 @@
         <div class="p-6 flex-1 flex flex-col justify-between">
           <div class="card-top-content flex-1 flex flex-col space-y-2.5">
             <div class="text-[11px] font-bold text-sky-600 dark:text-sky-400 uppercase tracking-wider">Natural Elastomers</div>
-            <h4 class="card-title-aligned font-display font-bold text-lg text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition leading-snug min-h-[3.75rem] flex items-center">
+            <h4 class="blog-card-title font-display font-bold text-lg text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition leading-snug">
               FSC Vulcanized Rubber vs Synthetic PVC: Why Quality Wellies Don't Crack
             </h4>
-            <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-3 flex-1">
+            <p class="blog-card-desc text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
               Petrochemical PVC boots become brittle in cold rainwater. Examine how sulfur-heat vulcanization bonds sustainably-harvested tree rubber into seamless, 100% waterproof boots that flex indefinitely.
             </p>
           </div>
-          <div class="card-bottom-line mt-auto pt-5 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+          <div class="card-bottom-line blog-card-author mt-auto pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
             <div class="flex items-center gap-2.5">
               <img src="assets/images/avatars/avatar-vikram.jpg" alt="Vikram Malhotra" class="w-8 h-8 rounded-full object-cover ring-1 ring-slate-200 dark:ring-slate-700">
               <span class="text-xs font-bold text-slate-700 dark:text-slate-300">Vikram Malhotra</span>
@@ -481,14 +474,14 @@
         <div class="p-6 flex-1 flex flex-col justify-between">
           <div class="card-top-content flex-1 flex flex-col space-y-2.5">
             <div class="text-[11px] font-bold text-sky-600 dark:text-sky-400 uppercase tracking-wider">Urban Strategies</div>
-            <h4 class="card-title-aligned font-display font-bold text-lg text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition leading-snug min-h-[3.75rem] flex items-center">
+            <h4 class="blog-card-title font-display font-bold text-lg text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition leading-snug">
               Surviving The Monsoon Transit Rush: 7 Strategies for Trains & Metros
             </h4>
-            <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-3 flex-1">
+            <p class="blog-card-desc text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
               Stepping onto packed public transit with soaked outerwear ruins clothes and laptops. Our commuter team shares tested protocols for quick drip-shedding, compact stowing, and rapid ventilation.
             </p>
           </div>
-          <div class="card-bottom-line mt-auto pt-5 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+          <div class="card-bottom-line blog-card-author mt-auto pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
             <div class="flex items-center gap-2.5">
               <img src="assets/images/avatars/avatar-ananya.jpg" alt="Sneha Kulkarni" class="w-8 h-8 rounded-full object-cover ring-1 ring-slate-200 dark:ring-slate-700">
               <span class="text-xs font-bold text-slate-700 dark:text-slate-300">Sneha Kulkarni</span>
@@ -514,14 +507,14 @@
         <div class="p-6 flex-1 flex flex-col justify-between">
           <div class="card-top-content flex-1 flex flex-col space-y-2.5">
             <div class="text-[11px] font-bold text-sky-600 dark:text-sky-400 uppercase tracking-wider">Maintenance Protocol</div>
-            <h4 class="card-title-aligned font-display font-bold text-lg text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition leading-snug min-h-[3.75rem] flex items-center">
-              Caring for DWR Nano-Coatings: Keeping Water Beading Season After Season
+            <h4 class="blog-card-title font-display font-bold text-lg text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition leading-snug">
+              Caring for DWR Nano-Coatings: Restoring Factory Water Shedding
             </h4>
-            <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-3 flex-1">
+            <p class="blog-card-desc text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
               When raindrops stop beading and start soaking into the surface, your garment hasn't failed—its hydrophobic polymers just need heat reactivation. Follow our lab protocol to restore factory water-shedding.
             </p>
           </div>
-          <div class="card-bottom-line mt-auto pt-5 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+          <div class="card-bottom-line blog-card-author mt-auto pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
             <div class="flex items-center gap-2.5">
               <img src="assets/images/avatars/avatar-debashis.jpg" alt="Debashis Roy" class="w-8 h-8 rounded-full object-cover ring-1 ring-slate-200 dark:ring-slate-700">
               <span class="text-xs font-bold text-slate-700 dark:text-slate-300">Debashis Roy</span>
@@ -714,6 +707,236 @@
     </div>
   </section>
 
+  <!-- ==================== NEW SECTION: BEAUFORT WIND SCALE & MONSOON INTENSITY MATRIX ==================== -->
+  <section class="py-16 sm:py-20 bg-slate-50 dark:bg-slate-900/60 border-t border-slate-200/80 dark:border-slate-800 reveal-on-scroll">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-bold uppercase tracking-widest text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950/80 px-3 py-1 rounded-full border border-sky-200 dark:border-sky-800 inline-block mb-3">Field Reference Matrix</span>
+        <h2 class="font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white">
+          Beaufort Wind Scale & Monsoon Severity Matrix
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mt-3 leading-relaxed">
+          How to evaluate incoming weather forecasts and select the exact gear configuration for commuter survival.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Scale 1 -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift h-full flex flex-col justify-between">
+          <div class="card-top-content">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/80 px-2 py-0.5 rounded-full">Force 4 • Moderate</span>
+              <span class="text-xs font-mono font-bold text-slate-400">20-28 km/h</span>
+            </div>
+            <h4 class="card-title-aligned font-bold text-base text-slate-900 dark:text-white">Urban City Drizzle</h4>
+            <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+              Dust and loose paper raised; small branches move. Standard folding umbrellas suffice. Light street surface puddles.
+            </p>
+          </div>
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-100 dark:border-slate-700 text-xs flex justify-between">
+            <span class="font-bold text-slate-500">Gear Match:</span>
+            <span class="font-bold text-emerald-600 dark:text-emerald-400">AeroPocket Mini</span>
+          </div>
+        </div>
+
+        <!-- Scale 2 -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift h-full flex flex-col justify-between">
+          <div class="card-top-content">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950/80 px-2 py-0.5 rounded-full">Force 6 • Strong</span>
+              <span class="text-xs font-mono font-bold text-slate-400">39-49 km/h</span>
+            </div>
+            <h4 class="card-title-aligned font-bold text-base text-slate-900 dark:text-white">Bustling Metro Squall</h4>
+            <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+              Large branches in motion; whistling heard in overhead powerlines. Metal umbrellas invert and snap. Dual-vent fiberglass mandatory.
+            </p>
+          </div>
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-100 dark:border-slate-700 text-xs flex justify-between">
+            <span class="font-bold text-slate-500">Gear Match:</span>
+            <span class="font-bold text-sky-600 dark:text-sky-400">Vortex-9 Auto</span>
+          </div>
+        </div>
+
+        <!-- Scale 3 -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift h-full flex flex-col justify-between">
+          <div class="card-top-content">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/80 px-2 py-0.5 rounded-full">Force 8 • Gale</span>
+              <span class="text-xs font-mono font-bold text-slate-400">62-74 km/h</span>
+            </div>
+            <h4 class="card-title-aligned font-bold text-base text-slate-900 dark:text-white">Coastal Sea Front Storm</h4>
+            <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+              Walking into the wind is seriously impeded; twigs break off trees. Requires 14mm thick fiberglass stick shafts and sealed seam trench coats.
+            </p>
+          </div>
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-100 dark:border-slate-700 text-xs flex justify-between">
+            <span class="font-bold text-slate-500">Gear Match:</span>
+            <span class="font-bold text-amber-600 dark:text-amber-400">Titanium Stick 54"</span>
+          </div>
+        </div>
+
+        <!-- Scale 4 -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift h-full flex flex-col justify-between">
+          <div class="card-top-content">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-950/80 px-2 py-0.5 rounded-full">Cloudburst Torrent</span>
+              <span class="text-xs font-mono font-bold text-slate-400">100+ mm/hr</span>
+            </div>
+            <h4 class="card-title-aligned font-bold text-base text-slate-900 dark:text-white">Flash Flood Conditions</h4>
+            <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+              Instant roadway standing water over 30cm deep. Zero umbrella protection against sideways spray; full hooded suit and tall boots required.
+            </p>
+          </div>
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-100 dark:border-slate-700 text-xs flex justify-between">
+            <span class="font-bold text-slate-500">Gear Match:</span>
+            <span class="font-bold text-rose-600 dark:text-rose-400">Highland Wellies</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== NEW SECTION: BEHIND-THE-LENS PHOTOJOURNALISM ==================== -->
+  <section class="py-16 sm:py-20 bg-white dark:bg-slate-900 border-t border-slate-200/80 dark:border-slate-800 reveal-on-scroll">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-bold uppercase tracking-widest text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/80 px-3 py-1 rounded-full border border-indigo-200 dark:border-indigo-800 inline-block mb-3">Photojournalism Dispatch</span>
+        <h2 class="font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white">
+          Behind-The-Lens Field Testing Logs
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mt-3 leading-relaxed">
+          Visual dispatches from our field engineers and storm photographers documenting real commuter survival in extreme downpours.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Story 1 -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift h-full flex flex-col justify-between">
+          <div class="card-top-content">
+            <div class="w-12 h-12 rounded-2xl bg-sky-100 dark:bg-sky-900/60 text-sky-600 dark:text-sky-400 flex items-center justify-center text-xl mb-4 font-bold">
+              📸
+            </div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950/80 px-2 py-0.5 rounded-full">Mumbai Marine Drive</span>
+              <span class="text-xs font-mono font-bold text-slate-400">High Tide Squall</span>
+            </div>
+            <h4 class="card-title-aligned font-bold text-base sm:text-lg text-slate-900 dark:text-white">Facing The Arabian Sea Spray</h4>
+            <p class="card-desc-aligned text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
+              When 5-meter tidal swells crash against the promenade wall, 80 km/h wind shear sends salt-heavy sheets of water across the boulevard. We clocked our Vortex-9 canopy resisting 45 minutes of direct onslaught without inverted buckling.
+            </p>
+          </div>
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-200/80 dark:border-slate-700 flex items-center justify-between text-xs">
+            <span class="font-bold text-slate-500">Wind Telemetry:</span>
+            <span class="font-bold text-sky-600 dark:text-sky-400">82 km/h Recorded</span>
+          </div>
+        </div>
+
+        <!-- Story 2 -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift h-full flex flex-col justify-between">
+          <div class="card-top-content">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-100 dark:bg-emerald-900/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl mb-4 font-bold">
+              🌿
+            </div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/80 px-2 py-0.5 rounded-full">Meghalaya Hills</span>
+              <span class="text-xs font-mono font-bold text-slate-400">11,800mm Zone</span>
+            </div>
+            <h4 class="card-title-aligned font-bold text-base sm:text-lg text-slate-900 dark:text-white">Living Root Bridges Under Cloudburst</h4>
+            <p class="card-desc-aligned text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
+              Documenting continuous 72-hour precipitation in the Khasi Hills. Rain is so dense that standard visibility drops below 20 meters. Our 3-layer Aegis trench proved zero seam wetting while maintaining inner breathability on steep hikes.
+            </p>
+          </div>
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-200/80 dark:border-slate-700 flex items-center justify-between text-xs">
+            <span class="font-bold text-slate-500">Hydrostatic Head:</span>
+            <span class="font-bold text-emerald-600 dark:text-emerald-400">25,000mm Verified</span>
+          </div>
+        </div>
+
+        <!-- Story 3 -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift h-full flex flex-col justify-between">
+          <div class="card-top-content">
+            <div class="w-12 h-12 rounded-2xl bg-purple-100 dark:bg-purple-900/60 text-purple-600 dark:text-purple-400 flex items-center justify-center text-xl mb-4 font-bold">
+              🏙️
+            </div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-purple-950/80 px-2 py-0.5 rounded-full">Bengaluru IT Hub</span>
+              <span class="text-xs font-mono font-bold text-slate-400">Outer Ring Road</span>
+            </div>
+            <h4 class="card-title-aligned font-bold text-base sm:text-lg text-slate-900 dark:text-white">The 5 PM Tech Park Flash Inundation</h4>
+            <p class="card-desc-aligned text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
+              A 45-minute cloudburst floods office campus exit gates under knee-deep stormwater. Commuters in sneakers get soaked socks instantly; our vulcanized Thames Chelsea boots navigated the mud without a drop entering.
+            </p>
+          </div>
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-200/80 dark:border-slate-700 flex items-center justify-between text-xs">
+            <span class="font-bold text-slate-500">Submersion Depth:</span>
+            <span class="font-bold text-purple-600 dark:text-purple-400">100% Water Ingress Proof</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== NEW SECTION: READER COMMUTER STORY SUBMISSIONS ==================== -->
+  <section class="py-16 sm:py-20 bg-slate-50 dark:bg-slate-900/60 border-t border-slate-200/80 dark:border-slate-800 reveal-on-scroll">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-5 space-y-4">
+          <span class="text-xs font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/80 px-3 py-1 rounded-full border border-emerald-200 dark:border-emerald-800 inline-block">Community Dispatch</span>
+          <h2 class="font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white">
+            Monsoon Commuter Stories Desk
+          </h2>
+          <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">
+            Have a wild monsoon transit story? How did your gear perform when the sky opened up? Share your storm photographs, commuter hacks, and anecdotes with our editorial team.
+          </p>
+          <div class="pt-2 space-y-3 text-xs sm:text-sm font-semibold text-slate-800 dark:text-slate-200">
+            <div class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-full bg-emerald-100 dark:bg-emerald-900/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-xs">✓</span>
+              <span>Featured submissions receive a ₹2,000 UmbrellaZone storm voucher</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-full bg-emerald-100 dark:bg-emerald-900/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-xs">✓</span>
+              <span>Published in our monthly "Monsoon Journal" digital magazine</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-full bg-emerald-100 dark:bg-emerald-900/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-xs">✓</span>
+              <span>Community gear feedback directly shapes our next prototype engineering</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="p-6 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift flex flex-col justify-between">
+            <div class="card-top-content">
+              <div class="text-3xl mb-3">✍️</div>
+              <h4 class="card-title-aligned font-bold text-base text-slate-900 dark:text-white">Submit A Commuter Dispatch</h4>
+              <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+                Send 300 words and 2 photos to stories@umbrellazone.com. Our editorial board reviews dispatches on the 1st of every month.
+              </p>
+            </div>
+            <div class="card-bottom-line pt-3 mt-4 border-t border-slate-100 dark:border-slate-700 flex justify-between text-xs">
+              <span class="text-slate-500 font-medium">Reward:</span>
+              <span class="font-bold text-emerald-600 dark:text-emerald-400">₹2,000 Gear Voucher</span>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift flex flex-col justify-between">
+            <div class="card-top-content">
+              <div class="text-3xl mb-3">👥</div>
+              <h4 class="card-title-aligned font-bold text-base text-slate-900 dark:text-white">45,000+ Commuters</h4>
+              <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+                Join India's largest active weather-defense commuter community sharing real-time localized rainfall alerts and transit routing.
+              </p>
+            </div>
+            <div class="card-bottom-line pt-3 mt-4 border-t border-slate-100 dark:border-slate-700 flex justify-between text-xs">
+              <span class="text-slate-500 font-medium">Network:</span>
+              <span class="font-bold text-emerald-600 dark:text-emerald-400">Pan-India Transit Desk</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ==================== DISPATCH NEWSLETTER CTA ==================== -->
   <section class="py-16 bg-gradient-to-r from-sky-50 via-slate-50 to-sky-100 dark:from-slate-900 dark:via-slate-950 dark:to-slate-900 text-slate-900 dark:text-white relative overflow-hidden border-t border-slate-200 dark:border-slate-800">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-5">
@@ -793,14 +1016,14 @@
         
         <!-- Col 1: Brand Info & Social Media -->
         <div class="lg:col-span-2 space-y-4">
-          <a href="index.html" class="flex items-center gap-3 group cursor-pointer inline-flex" title="UmbrellaZone Home">
-            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-600 to-cyan-500 flex items-center justify-center text-white font-bold shadow-md shadow-sky-600/30 shrink-0 group-hover:scale-105 transition">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <a href="index.html" class="flex items-center gap-3 group cursor-pointer inline-flex footer-brand-link" title="UmbrellaZone Home">
+            <div class="footer-logo-box w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-600 to-cyan-500 flex items-center justify-center text-white font-bold shadow-md shadow-sky-600/30 shrink-0 group-hover:scale-105 transition">
+              <svg class="footer-logo-svg w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 2C6.48 2 2 6.48 2 12c0 1.25.23 2.45.65 3.55.15.39.54.64.96.61h16.78c.42.03.81-.22.96-.61.42-1.1.65-2.3.65-3.55 0-5.52-4.48-10-10-10z"></path>
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 12v7a2 2 0 104 0"></path>
               </svg>
             </div>
-            <span class="font-display font-extrabold text-2xl tracking-tight text-white whitespace-nowrap">Umbrella<span class="text-sky-600">Zone</span></span>
+            <span class="footer-brand-name font-display font-extrabold text-2xl tracking-tight text-white whitespace-nowrap">Umbrella<span class="text-sky-600 footer-brand-highlight">Zone</span></span>
           </a>
           <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
             Specialty windproof umbrellas, waterproof raincoats, and anti-slip rain boots engineered to survive the heaviest monsoons with complete 2-year warranty support.

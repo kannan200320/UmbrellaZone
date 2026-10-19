@@ -134,13 +134,6 @@
             <span class="rtl-label-text font-bold">RTL</span>
           </button>
 
-          <!-- Search: Visible on Mobile, Tablet & Desktop -->
-          <button type="button" class="search-modal-trigger w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 flex items-center justify-center transition cursor-pointer" aria-label="Search rain gear" title="Search Store">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-            </svg>
-          </button>
-
           <!-- Wishlist: Hidden on mobile & tablet (<1024px, accessed via drawer Saved Wishlist), visible on desktop -->
           <a href="favorites.html" class="hidden lg:inline-flex relative w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-200 items-center justify-center transition" aria-label="Monsoon Favorites" title="Monsoon Favorites">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -149,8 +142,8 @@
             <span class="wishlist-badge-count absolute -top-1 -right-1 w-5 h-5 bg-rose-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center shadow-xs">0</span>
           </a>
 
-          <!-- Cart: Visible on Mobile, Tablet & Desktop with badge -->
-          <a href="cart.html" class="relative w-10 h-10 rounded-xl bg-sky-600 hover:bg-sky-700 text-white flex items-center justify-center transition shadow-md shadow-sky-600/20 active:scale-95" aria-label="Open Shopping Cart" title="View Cart">
+          <!-- Cart: Hidden on mobile & tablet (<1024px, accessed via hamburger menu drawer), visible on desktop -->
+          <a href="cart.html" class="hidden lg:flex relative w-10 h-10 rounded-xl bg-sky-600 hover:bg-sky-700 text-white items-center justify-center transition shadow-md shadow-sky-600/20 active:scale-95" aria-label="Open Shopping Cart" title="View Cart">
             <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
             </svg>
@@ -174,9 +167,9 @@
     <!-- Background Image Layer (Active in both Bright & Dark Modes) -->
     <div class="hero-bg-enhanced absolute inset-0 bg-cover bg-no-repeat bg-center sm:bg-right transition-all duration-300" style="background-image: url('assets/images/bg-umbrellas-hero.png');"></div>
     <!-- Bright Mode Gradient Mask: ensures featured umbrella artwork is 100% visible on right while protecting text contrast on left -->
-    <div class="dark:hidden absolute inset-0 max-sm:bg-white/90 sm:bg-gradient-to-r sm:from-white/85 sm:via-white/40 sm:to-transparent pointer-events-none transition-colors duration-300"></div>
+    <div class="absolute inset-0 max-sm:bg-white/90 sm:bg-gradient-to-r sm:from-white/85 sm:via-white/40 sm:to-transparent pointer-events-none opacity-100 dark:opacity-0 transition-opacity duration-300"></div>
     <!-- Dark Mode Gradient Mask: deep dark contrast mask -->
-    <div class="hidden dark:block absolute inset-0 max-sm:bg-slate-950/90 sm:bg-gradient-to-r sm:from-slate-950 sm:via-slate-950/80 sm:to-transparent pointer-events-none transition-colors duration-300"></div>
+    <div class="absolute inset-0 max-sm:bg-slate-950/90 sm:bg-gradient-to-r sm:from-slate-950 sm:via-slate-950/80 sm:to-transparent pointer-events-none opacity-0 dark:opacity-100 transition-opacity duration-300"></div>
     <div class="rain-container"></div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="flex items-center gap-2 text-xs mb-3 font-semibold">
@@ -314,8 +307,8 @@
           <div class="card-top-content flex-1 flex flex-col">
             <div class="w-12 h-12 rounded-2xl bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-400 flex items-center justify-center font-bold text-xl mb-4">💨</div>
             <span class="text-[10px] font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950 px-2 py-0.5 rounded-full border border-sky-200 dark:border-sky-800 self-start">Airflow Mechanics</span>
-            <h4 class="card-title-aligned font-display font-extrabold text-base text-slate-900 dark:text-white mt-2 min-h-[3rem] flex items-center">Dual-Tier Vortex Venting</h4>
-            <p class="card-desc-aligned text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed flex-1">
+            <h4 class="card-title-aligned font-display font-extrabold text-base text-slate-900 dark:text-white mt-2">Dual-Tier Vortex Venting</h4>
+            <p class="card-desc-aligned text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
               An overlapping fabric tier allows turbulent updrafts to bleed upwards through concealed vents, equalizing under-canopy pressure so strong winds cannot flip the umbrella out of your hands.
             </p>
           </div>
@@ -328,8 +321,8 @@
           <div class="card-top-content flex-1 flex flex-col">
             <div class="w-12 h-12 rounded-2xl bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-400 flex items-center justify-center font-bold text-xl mb-4">🪶</div>
             <span class="text-[10px] font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950 px-2 py-0.5 rounded-full border border-sky-200 dark:border-sky-800 self-start">Flex Memory</span>
-            <h4 class="card-title-aligned font-display font-extrabold text-base text-slate-900 dark:text-white mt-2 min-h-[3rem] flex items-center">Memory-Flex Fiberglass Ribs</h4>
-            <p class="card-desc-aligned text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed flex-1">
+            <h4 class="card-title-aligned font-display font-extrabold text-base text-slate-900 dark:text-white mt-2">Memory-Flex Fiberglass Ribs</h4>
+            <p class="card-desc-aligned text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
               Standard aluminum ribs bend permanently at 30 km/h. Our aerospace fiberglass ribs flex elastically under extreme load and snap straight back into original curvature with zero metal fatigue.
             </p>
           </div>
@@ -342,8 +335,8 @@
           <div class="card-top-content flex-1 flex flex-col">
             <div class="w-12 h-12 rounded-2xl bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-400 flex items-center justify-center font-bold text-xl mb-4">💧</div>
             <span class="text-[10px] font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950 px-2 py-0.5 rounded-full border border-sky-200 dark:border-sky-800 self-start">Surface Tension</span>
-            <h4 class="card-title-aligned font-display font-extrabold text-base text-slate-900 dark:text-white mt-2 min-h-[3rem] flex items-center">Teflon™ Lotus-Leaf Shedding</h4>
-            <p class="card-desc-aligned text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed flex-1">
+            <h4 class="card-title-aligned font-display font-extrabold text-base text-slate-900 dark:text-white mt-2">Teflon™ Lotus-Leaf Shedding</h4>
+            <p class="card-desc-aligned text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
               High-density 300T pongee weave treated with fluorine-free molecular repellent creates a >150° water contact angle. Water drops bead instantly and roll off before soaking into the fabric fibers.
             </p>
           </div>
@@ -356,8 +349,8 @@
           <div class="card-top-content flex-1 flex flex-col">
             <div class="w-12 h-12 rounded-2xl bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-400 flex items-center justify-center font-bold text-xl mb-4">⚡</div>
             <span class="text-[10px] font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950 px-2 py-0.5 rounded-full border border-sky-200 dark:border-sky-800 self-start">Thunderstorm Safe</span>
-            <h4 class="card-title-aligned font-display font-extrabold text-base text-slate-900 dark:text-white mt-2 min-h-[3rem] flex items-center">Dielectric Non-Conductive Core</h4>
-            <p class="card-desc-aligned text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed flex-1">
+            <h4 class="card-title-aligned font-display font-extrabold text-base text-slate-900 dark:text-white mt-2">Dielectric Non-Conductive Core</h4>
+            <p class="card-desc-aligned text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
               Engineered with all-fiberglass rib linkages and polymer joints that do not conduct electricity, making our full-size tour golf and commuter frames safe during active electrical squalls.
             </p>
           </div>
@@ -461,7 +454,7 @@
         <div class="card-align-content h-full p-6 rounded-3xl bg-white dark:bg-slate-800/90 border border-slate-200/80 dark:border-slate-700 shadow-sm flex flex-col justify-between hover-lift">
           <div class="card-top-content flex-1 flex flex-col">
             <div class="w-12 h-12 rounded-2xl bg-sky-50 dark:bg-sky-950/60 text-sky-600 dark:text-sky-400 flex items-center justify-center font-bold text-lg mb-4">38"</div>
-            <div class="card-title-aligned min-h-[3rem] flex flex-col justify-center">
+            <div class="card-title-aligned min-h-[3rem] flex flex-col justify-start">
               <h4 class="font-display font-extrabold text-base text-slate-900 dark:text-white leading-tight">Pocket Ultra</h4>
               <p class="text-xs text-sky-600 dark:text-sky-400 font-semibold mt-0.5">Everyday Carry / Clutch Bag</p>
             </div>
@@ -478,7 +471,7 @@
           <span class="absolute -top-3 right-6 bg-sky-600 text-white text-[10px] font-black uppercase tracking-wider px-3 py-0.5 rounded-full shadow-sm">Commuter Choice</span>
           <div class="card-top-content flex-1 flex flex-col">
             <div class="w-12 h-12 rounded-2xl bg-sky-50 dark:bg-sky-950/60 text-sky-600 dark:text-sky-400 flex items-center justify-center font-bold text-lg mb-4">43"</div>
-            <div class="card-title-aligned min-h-[3rem] flex flex-col justify-center">
+            <div class="card-title-aligned min-h-[3rem] flex flex-col justify-start">
               <h4 class="font-display font-extrabold text-base text-slate-900 dark:text-white leading-tight">Vortex Commuter</h4>
               <p class="text-xs text-sky-600 dark:text-sky-400 font-semibold mt-0.5">Subway & City Streets</p>
             </div>
@@ -494,7 +487,7 @@
         <div class="card-align-content h-full p-6 rounded-3xl bg-white dark:bg-slate-800/90 border border-slate-200/80 dark:border-slate-700 shadow-sm flex flex-col justify-between hover-lift">
           <div class="card-top-content flex-1 flex flex-col">
             <div class="w-12 h-12 rounded-2xl bg-sky-50 dark:bg-sky-950/60 text-sky-600 dark:text-sky-400 flex items-center justify-center font-bold text-lg mb-4">54"</div>
-            <div class="card-title-aligned min-h-[3rem] flex flex-col justify-center">
+            <div class="card-title-aligned min-h-[3rem] flex flex-col justify-start">
               <h4 class="font-display font-extrabold text-base text-slate-900 dark:text-white leading-tight">Executive Cane Stick</h4>
               <p class="text-xs text-sky-600 dark:text-sky-400 font-semibold mt-0.5">Formal Boardroom & Couple</p>
             </div>
@@ -510,7 +503,7 @@
         <div class="card-align-content h-full p-6 rounded-3xl bg-white dark:bg-slate-800/90 border border-slate-200/80 dark:border-slate-700 shadow-sm flex flex-col justify-between hover-lift">
           <div class="card-top-content flex-1 flex flex-col">
             <div class="w-12 h-12 rounded-2xl bg-sky-50 dark:bg-sky-950/60 text-sky-600 dark:text-sky-400 flex items-center justify-center font-bold text-lg mb-4">68"</div>
-            <div class="card-title-aligned min-h-[3rem] flex flex-col justify-center">
+            <div class="card-title-aligned min-h-[3rem] flex flex-col justify-start">
               <h4 class="font-display font-extrabold text-base text-slate-900 dark:text-white leading-tight">Apex Tour Golf</h4>
               <p class="text-xs text-sky-600 dark:text-sky-400 font-semibold mt-0.5">Links Course & Field Expedition</p>
             </div>
@@ -624,16 +617,16 @@
               <div class="flex text-amber-400 text-xs">★★★★★</div>
               <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300">Verified Purchaser</span>
             </div>
-            <h4 class="card-title-aligned font-bold text-sm text-slate-900 dark:text-white min-h-[2.75rem] flex items-center">"Survived 80 km/h gusts at the coastal promenade without flipping inside-out."</h4>
-            <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed flex-1">
+            <h4 class="card-title-aligned font-bold text-sm text-slate-900 dark:text-white">"Survived 80 km/h gusts at the coastal promenade without flipping inside-out."</h4>
+            <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
               "Every monsoon I used to buy cheap roadside umbrellas that broke in the first heavy rain. The Vortex-9 feels solid and strong. The dual wind vents let the wind blow through without flipping. My office bag stayed completely dry."
             </p>
           </div>
-          <div class="card-bottom-line card-bottom-author pt-4 mt-auto border-t border-slate-200 dark:border-slate-700 flex items-center gap-3">
-            <img src="assets/images/avatars/avatar-rohan.jpg" alt="Rohan Mehta" class="w-9 h-9 rounded-full object-cover shadow-xs border border-slate-200 dark:border-slate-700 shrink-0">
+          <div class="card-bottom-line card-bottom-author pt-4 mt-auto border-t border-slate-200 dark:border-slate-700 flex items-start gap-3">
+            <img src="assets/images/avatars/avatar-rohan.jpg" alt="Rohan Mehta" class="w-9 h-9 rounded-full object-cover shadow-xs border border-slate-200 dark:border-slate-700 shrink-0 mt-0.5">
             <div>
               <div class="text-xs font-bold text-slate-900 dark:text-white">Rohan Mehta</div>
-              <div class="text-[10px] text-slate-500 dark:text-slate-400">Software Lead • Urban Commuter • Vortex-9 Matte Black</div>
+              <div class="text-[10px] text-slate-500 dark:text-slate-400">Software Lead • Vortex-9 (Matte Black)</div>
             </div>
           </div>
         </div>
@@ -645,16 +638,16 @@
               <div class="flex text-amber-400 text-xs">★★★★★</div>
               <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300">Verified Purchaser</span>
             </div>
-            <h4 class="card-title-aligned font-bold text-sm text-slate-900 dark:text-white min-h-[2.75rem] flex items-center">"The Inverted dry fold kept my cab and car seats completely dry."</h4>
-            <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed flex-1">
+            <h4 class="card-title-aligned font-bold text-sm text-slate-900 dark:text-white">"The Inverted dry fold kept my cab and car seats completely dry."</h4>
+            <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
               "In metropolitan traffic during sudden evening storms, getting in and out of cabs is messy. The InvisiShield closes inside-out, so all the wet raindrops are trapped inside. No water dripping on my trousers or car seat."
             </p>
           </div>
-          <div class="card-bottom-line card-bottom-author pt-4 mt-auto border-t border-slate-200 dark:border-slate-700 flex items-center gap-3">
-            <img src="assets/images/avatars/avatar-priya-i.jpg" alt="Priya Iyer" class="w-9 h-9 rounded-full object-cover shadow-xs border border-slate-200 dark:border-slate-700 shrink-0">
+          <div class="card-bottom-line card-bottom-author pt-4 mt-auto border-t border-slate-200 dark:border-slate-700 flex items-start gap-3">
+            <img src="assets/images/avatars/avatar-priya-i.jpg" alt="Priya Iyer" class="w-9 h-9 rounded-full object-cover shadow-xs border border-slate-200 dark:border-slate-700 shrink-0 mt-0.5">
             <div>
               <div class="text-xs font-bold text-slate-900 dark:text-white">Priya Iyer</div>
-              <div class="text-[10px] text-slate-500 dark:text-slate-400">Product Designer • Downtown Transit • InvisiShield Inverted Navy</div>
+              <div class="text-[10px] text-slate-500 dark:text-slate-400">Product Designer • InvisiShield (Navy)</div>
             </div>
           </div>
         </div>
@@ -666,17 +659,238 @@
               <div class="flex text-amber-400 text-xs">★★★★★</div>
               <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300">Verified Purchaser</span>
             </div>
-            <h4 class="card-title-aligned font-bold text-sm text-slate-900 dark:text-white min-h-[2.75rem] flex items-center">"Heavy continuous rain in windy avenues — stayed rock-solid without shaking."</h4>
-            <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed flex-1">
+            <h4 class="card-title-aligned font-bold text-sm text-slate-900 dark:text-white">"Heavy continuous rain in windy avenues — stayed rock-solid without shaking."</h4>
+            <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
               "Walked through waterlogged downtown streets during heavy July downpours. The 54-inch Titanium Stick gives huge coverage for two people. Solid grip and very strong ribs."
             </p>
           </div>
-          <div class="card-bottom-line card-bottom-author pt-4 mt-auto border-t border-slate-200 dark:border-slate-700 flex items-center gap-3">
-            <img src="assets/images/avatars/avatar-vikram.jpg" alt="Vikram Sen" class="w-9 h-9 rounded-full object-cover shadow-xs border border-slate-200 dark:border-slate-700 shrink-0">
+          <div class="card-bottom-line card-bottom-author pt-4 mt-auto border-t border-slate-200 dark:border-slate-700 flex items-start gap-3">
+            <img src="assets/images/avatars/avatar-vikram.jpg" alt="Vikram Sen" class="w-9 h-9 rounded-full object-cover shadow-xs border border-slate-200 dark:border-slate-700 shrink-0 mt-0.5">
             <div>
               <div class="text-xs font-bold text-slate-900 dark:text-white">Vikram Sen</div>
-              <div class="text-[10px] text-slate-500 dark:text-slate-400">Consultant • Metropolitan Area • Titanium Aero Stick 54"</div>
+              <div class="text-[10px] text-slate-500 dark:text-slate-400">Consultant • Titanium Stick (54")</div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== NEW SECTION: HANDLE ERGONOMICS & SPRING DAMPER KINEMATICS ==================== -->
+  <section class="py-16 sm:py-20 bg-slate-50 dark:bg-slate-900/60 border-t border-slate-200/80 dark:border-slate-800 reveal-on-scroll">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-bold uppercase tracking-widest text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950/80 px-3 py-1 rounded-full border border-sky-200 dark:border-sky-800 inline-block mb-3">Precision Mechanical Design</span>
+        <h2 class="font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white">
+          Kinematic Handle Ergonomics & Anti-Rebound Dampers
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mt-3 leading-relaxed">
+          Engineered to eliminate dangerous mechanical kickback and slip during turbulent monsoon windstorms.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift h-full flex flex-col justify-between">
+          <div class="card-top-content">
+            <div class="w-12 h-12 rounded-2xl bg-sky-100 dark:bg-sky-900/60 text-sky-600 dark:text-sky-400 flex items-center justify-center text-xl mb-4 font-bold">
+              ⚙️
+            </div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950/80 px-2 py-0.5 rounded-full">Kinematics</span>
+              <span class="text-xs font-mono font-bold text-slate-400">Zero Recoil</span>
+            </div>
+            <h4 class="card-title-aligned font-bold text-base sm:text-lg text-slate-900 dark:text-white">Hydraulic Internal Spring Dampers</h4>
+            <p class="card-desc-aligned text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
+              Standard automatic umbrellas recoil forcefully against your wrist when locked. Our progressive hydraulic coil brake decelerates the telescoping shaft during closure for effortless one-handed control.
+            </p>
+          </div>
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-100 dark:border-slate-700 flex items-center justify-between text-xs">
+            <span class="font-bold text-slate-500">Shock Reduction:</span>
+            <span class="font-bold text-sky-600 dark:text-sky-400">85% Less Kickback</span>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift h-full flex flex-col justify-between">
+          <div class="card-top-content">
+            <div class="w-12 h-12 rounded-2xl bg-amber-100 dark:bg-amber-900/60 text-amber-600 dark:text-amber-400 flex items-center justify-center text-xl mb-4 font-bold">
+              🪵
+            </div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/80 px-2 py-0.5 rounded-full">Ergonomics</span>
+              <span class="text-xs font-mono font-bold text-slate-400">FSC Certified</span>
+            </div>
+            <h4 class="card-title-aligned font-bold text-base sm:text-lg text-slate-900 dark:text-white">Beechwood & Dual-Density Rubber Grips</h4>
+            <p class="card-desc-aligned text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
+              Sculpted handle contours follow the anatomical palmar arch. Whether selecting genuine oiled German beechwood or textured cross-hatch EVA rubber, our grips remain 100% slip-proof even in torrential downpours.
+            </p>
+          </div>
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-100 dark:border-slate-700 flex items-center justify-between text-xs">
+            <span class="font-bold text-slate-500">Traction Index:</span>
+            <span class="font-bold text-amber-600 dark:text-amber-400">Tested to 0.88 µ</span>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift h-full flex flex-col justify-between">
+          <div class="card-top-content">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-100 dark:bg-emerald-900/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl mb-4 font-bold">
+              🔒
+            </div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/80 px-2 py-0.5 rounded-full">Safety Lock</span>
+              <span class="text-xs font-mono font-bold text-slate-400">Triple Catch</span>
+            </div>
+            <h4 class="card-title-aligned font-bold text-base sm:text-lg text-slate-900 dark:text-white">Micro-Machined Push-Lock Spindle</h4>
+            <p class="card-desc-aligned text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
+              A hardened beryllium brass detent spindle latches securely into the center shaft. Unlike flimsy plastic triggers, it resists accidental closure under violent upward drafts and gale-force wind turbulence.
+            </p>
+          </div>
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-100 dark:border-slate-700 flex items-center justify-between text-xs">
+            <span class="font-bold text-slate-500">Release Tolerance:</span>
+            <span class="font-bold text-emerald-600 dark:text-emerald-400">12,000 Click Certified</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== NEW SECTION: UV-50+ SOLAR SHIELD & DUAL-SEASON DEFENSE ==================== -->
+  <section class="py-16 sm:py-20 bg-white dark:bg-slate-900 border-t border-slate-200/80 dark:border-slate-800 reveal-on-scroll">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-5 space-y-4">
+          <span class="text-xs font-bold uppercase tracking-widest text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/80 px-3 py-1 rounded-full border border-indigo-200 dark:border-indigo-800 inline-block">Dual-Season Protection</span>
+          <h2 class="font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white">
+            UV-50+ Solar Block & Sub-Canopy Cooling
+          </h2>
+          <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">
+            Severe monsoon heatwaves alternate with cloudbursts. UmbrellaZone canopies feature vacuum-deposited titanium dioxide undercoatings that reflect thermal infrared radiation and block 99.8% of ultraviolet rays.
+          </p>
+          <div class="pt-2 space-y-3">
+            <div class="flex items-center gap-3 text-xs sm:text-sm font-semibold text-slate-800 dark:text-slate-200">
+              <span class="w-6 h-6 rounded-full bg-indigo-100 dark:bg-indigo-900/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold text-xs">✓</span>
+              <span>Sub-canopy ambient temperature drops by up to 4.5°C</span>
+            </div>
+            <div class="flex items-center gap-3 text-xs sm:text-sm font-semibold text-slate-800 dark:text-slate-200">
+              <span class="w-6 h-6 rounded-full bg-indigo-100 dark:bg-indigo-900/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold text-xs">✓</span>
+              <span>Dermatologist recommended UPF 50+ total UV-A/UV-B protection</span>
+            </div>
+            <div class="flex items-center gap-3 text-xs sm:text-sm font-semibold text-slate-800 dark:text-slate-200">
+              <span class="w-6 h-6 rounded-full bg-indigo-100 dark:bg-indigo-900/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold text-xs">✓</span>
+              <span>Zero gummy residue or chemical odor in tropical summer humidity</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="p-6 rounded-3xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift flex flex-col justify-between">
+            <div class="card-top-content">
+              <div class="text-3xl mb-3">☀️</div>
+              <h4 class="card-title-aligned font-bold text-base text-slate-900 dark:text-white">UPF 50+ Certified Barrier</h4>
+              <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+                Tested against ASTM D6603 standards, blocking 99.8% of skin-damaging solar radiation during harsh high-noon exposures.
+              </p>
+            </div>
+            <div class="card-bottom-line pt-3 mt-4 border-t border-slate-200/80 dark:border-slate-700 flex justify-between text-xs">
+              <span class="text-slate-500 font-medium">Solar Shielding:</span>
+              <span class="font-bold text-indigo-600 dark:text-indigo-400">99.8% UV Block</span>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-3xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift flex flex-col justify-between">
+            <div class="card-top-content">
+              <div class="text-3xl mb-3">❄️</div>
+              <h4 class="card-title-aligned font-bold text-base text-slate-900 dark:text-white">-4.5°C Microclimate</h4>
+              <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+                Reflective under-canopy film repels infrared wavelengths, creating a noticeably cooler personal shade pocket in 40°C heat.
+              </p>
+            </div>
+            <div class="card-bottom-line pt-3 mt-4 border-t border-slate-200/80 dark:border-slate-700 flex justify-between text-xs">
+              <span class="text-slate-500 font-medium">Thermal Delta:</span>
+              <span class="font-bold text-indigo-600 dark:text-indigo-400">-4.5°C Under Canopy</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== NEW SECTION: UMBRELLA LONGEVITY & MAINTENANCE MASTERCLASS ==================== -->
+  <section class="py-16 sm:py-20 bg-slate-50 dark:bg-slate-900/60 border-t border-slate-200/80 dark:border-slate-800 reveal-on-scroll">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/80 px-3 py-1 rounded-full border border-emerald-200 dark:border-emerald-800 inline-block mb-3">Care & Longevity Protocol</span>
+        <h2 class="font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white">
+          The 10-Year Umbrella Maintenance Masterclass
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mt-3 leading-relaxed">
+          Simple daily habits to keep your fluoropolymer canopy shedding water effortlessly and your mechanical springs responsive for a decade.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Step 1 -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift h-full flex flex-col justify-between">
+          <div class="card-top-content">
+            <div class="w-12 h-12 rounded-2xl bg-sky-100 dark:bg-sky-900/60 text-sky-600 dark:text-sky-400 flex items-center justify-center text-xl mb-4 font-bold">
+              💨
+            </div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950/80 px-2 py-0.5 rounded-full">Step 01</span>
+              <span class="text-xs font-mono font-bold text-slate-400">Hydrophobic Shake</span>
+            </div>
+            <h4 class="card-title-aligned font-bold text-base sm:text-lg text-slate-900 dark:text-white">The 5-Second Double Shake</h4>
+            <p class="card-desc-aligned text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
+              Before entering your vehicle or office, snap the umbrella open and give two sharp downward shakes. The Lotus Nano-bead coating casts off 99% of surface droplets instantly, preventing moisture entrapment in the folds.
+            </p>
+          </div>
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-100 dark:border-slate-700 flex items-center justify-between text-xs">
+            <span class="font-bold text-slate-500">Drying Time:</span>
+            <span class="font-bold text-sky-600 dark:text-sky-400">&lt; 30 Seconds</span>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift h-full flex flex-col justify-between">
+          <div class="card-top-content">
+            <div class="w-12 h-12 rounded-2xl bg-amber-100 dark:bg-amber-900/60 text-amber-600 dark:text-amber-400 flex items-center justify-center text-xl mb-4 font-bold">
+              🚿
+            </div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/80 px-2 py-0.5 rounded-full">Step 02</span>
+              <span class="text-xs font-mono font-bold text-slate-400">Coastal Care</span>
+            </div>
+            <h4 class="card-title-aligned font-bold text-base sm:text-lg text-slate-900 dark:text-white">Freshwater Salt De-Ionization</h4>
+            <p class="card-desc-aligned text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
+              If walking along coastal shorelines where seawater spray strikes the canopy, rinse the fabric and rib joints with tap water once a month. This clears microscopic saline crystals and maintains silky glide movement.
+            </p>
+          </div>
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-100 dark:border-slate-700 flex items-center justify-between text-xs">
+            <span class="font-bold text-slate-500">Frequency:</span>
+            <span class="font-bold text-amber-600 dark:text-amber-400">Monthly in Coastal Zones</span>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift h-full flex flex-col justify-between">
+          <div class="card-top-content">
+            <div class="w-12 h-12 rounded-2xl bg-purple-100 dark:bg-purple-900/60 text-purple-600 dark:text-purple-400 flex items-center justify-center text-xl mb-4 font-bold">
+              ☂️
+            </div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-purple-950/80 px-2 py-0.5 rounded-full">Step 03</span>
+              <span class="text-xs font-mono font-bold text-slate-400">Open Storage</span>
+            </div>
+            <h4 class="card-title-aligned font-bold text-base sm:text-lg text-slate-900 dark:text-white">Post-Storm Vertical Relaxation</h4>
+            <p class="card-desc-aligned text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed">
+              Never cram a soaked umbrella into a sealed handbag or glove compartment overnight. Prop it open tip-down in a well-ventilated corner to allow fiberglass rib tension to normalize and fabric weaves to breathe.
+            </p>
+          </div>
+          <div class="card-bottom-line pt-4 mt-auto border-t border-slate-100 dark:border-slate-700 flex items-center justify-between text-xs">
+            <span class="font-bold text-slate-500">Lifespan Gain:</span>
+            <span class="font-bold text-purple-600 dark:text-purple-400">+5 Years Service Life</span>
           </div>
         </div>
       </div>
@@ -769,14 +983,14 @@
         
         <!-- Col 1: Brand Info & Social Media -->
         <div class="lg:col-span-2 space-y-4">
-          <a href="index.html" class="flex items-center gap-3 group cursor-pointer inline-flex" title="UmbrellaZone Home">
-            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-600 to-cyan-500 flex items-center justify-center text-white font-bold shadow-md shadow-sky-600/30 shrink-0 group-hover:scale-105 transition">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <a href="index.html" class="flex items-center gap-3 group cursor-pointer inline-flex footer-brand-link" title="UmbrellaZone Home">
+            <div class="footer-logo-box w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-600 to-cyan-500 flex items-center justify-center text-white font-bold shadow-md shadow-sky-600/30 shrink-0 group-hover:scale-105 transition">
+              <svg class="footer-logo-svg w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 2C6.48 2 2 6.48 2 12c0 1.25.23 2.45.65 3.55.15.39.54.64.96.61h16.78c.42.03.81-.22.96-.61.42-1.1.65-2.3.65-3.55 0-5.52-4.48-10-10-10z"></path>
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 12v7a2 2 0 104 0"></path>
               </svg>
             </div>
-            <span class="font-display font-extrabold text-2xl tracking-tight text-white whitespace-nowrap">Umbrella<span class="text-sky-600">Zone</span></span>
+            <span class="footer-brand-name font-display font-extrabold text-2xl tracking-tight text-white whitespace-nowrap">Umbrella<span class="text-sky-600 footer-brand-highlight">Zone</span></span>
           </a>
           <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
             Specialty windproof umbrellas, waterproof raincoats, and anti-slip rain boots engineered to survive the heaviest monsoons with complete 2-year warranty support.
@@ -1124,13 +1338,13 @@
                   <span class="font-semibold uppercase tracking-wider text-sky-600 dark:text-sky-400">${prod.subCategory}</span>
                   <span class="text-amber-500 font-bold">★ ${prod.rating} (${prod.reviewCount})</span>
                 </div>
-                <h3 class="font-bold text-base text-slate-900 dark:text-white group-hover:text-sky-600 transition">
+                <h3 class="product-card-title font-bold text-base text-slate-900 dark:text-white group-hover:text-sky-600 transition">
                   <a href="product-detail.html?id=${prod.id}">${prod.name}</a>
                 </h3>
-                <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 line-clamp-2 leading-relaxed">${prod.shortDesc}</p>
+                <p class="product-card-desc text-xs text-slate-500 dark:text-slate-400 leading-relaxed">${prod.shortDesc}</p>
                 
                 <!-- Color Swatches & Quick Spec Tags -->
-                <div class="mt-3 flex items-center justify-between">
+                <div class="product-card-swatches-row">
                   <div class="flex items-center gap-1.5" id="umb-swatches-${prod.id}">
                     ${(prod.colors || []).map((c, idx) => `
                       <button type="button" 

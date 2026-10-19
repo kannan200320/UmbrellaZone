@@ -5,7 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Coming Soon & Monsoon Lab Update | UmbrellaZone™</title>
   <meta name="description" content="We are testing new stormwear prototypes in our weather testing wind-rig lab for the upcoming storm season. Sign up for early access.">
-  
+  <!-- Instant Dark Mode & RTL Theme Initializer (Prevents Theme Flash / Glitch on Navigation) -->
+  <script>
+    (function() {
+      try {
+        var theme = localStorage.getItem('umbrellaZone_theme_v1');
+        if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+        var dir = localStorage.getItem('umbrellaZone_dir_v1');
+        if (dir === 'rtl') {
+          document.documentElement.setAttribute('dir', 'rtl');
+          document.documentElement.setAttribute('lang', 'ar');
+        } else {
+          document.documentElement.setAttribute('dir', 'ltr');
+          document.documentElement.setAttribute('lang', 'en');
+        }
+      } catch (e) {}
+    })();
+  </script>
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -69,22 +90,22 @@
     </p>
 
     <!-- Countdown Timer -->
-    <div class="grid grid-cols-4 gap-3 max-w-md mx-auto pt-4">
-      <div class="p-4 bg-slate-900/90 rounded-2xl border border-slate-800 shadow-xl">
-        <span id="cs-days" class="font-display text-3xl font-black text-white block">14</span>
-        <span class="text-[10px] text-slate-400 uppercase font-semibold">Days</span>
+    <div class="grid grid-cols-4 gap-2 sm:gap-3 max-w-md mx-auto pt-4">
+      <div class="p-2 sm:p-4 bg-slate-900/90 rounded-2xl border border-slate-800 shadow-xl">
+        <span id="cs-days" class="font-display text-2xl sm:text-3xl font-black text-white block">14</span>
+        <span class="text-[9px] sm:text-[10px] text-slate-400 uppercase font-semibold">Days</span>
       </div>
-      <div class="p-4 bg-slate-900/90 rounded-2xl border border-slate-800 shadow-xl">
-        <span id="cs-hours" class="font-display text-3xl font-black text-white block">08</span>
-        <span class="text-[10px] text-slate-400 uppercase font-semibold">Hours</span>
+      <div class="p-2 sm:p-4 bg-slate-900/90 rounded-2xl border border-slate-800 shadow-xl">
+        <span id="cs-hours" class="font-display text-2xl sm:text-3xl font-black text-white block">08</span>
+        <span class="text-[9px] sm:text-[10px] text-slate-400 uppercase font-semibold">Hours</span>
       </div>
-      <div class="p-4 bg-slate-900/90 rounded-2xl border border-slate-800 shadow-xl">
-        <span id="cs-mins" class="font-display text-3xl font-black text-white block">42</span>
-        <span class="text-[10px] text-slate-400 uppercase font-semibold">Mins</span>
+      <div class="p-2 sm:p-4 bg-slate-900/90 rounded-2xl border border-slate-800 shadow-xl">
+        <span id="cs-mins" class="font-display text-2xl sm:text-3xl font-black text-white block">42</span>
+        <span class="text-[9px] sm:text-[10px] text-slate-400 uppercase font-semibold">Mins</span>
       </div>
-      <div class="p-4 bg-slate-900/90 rounded-2xl border border-slate-800 shadow-xl">
-        <span id="cs-secs" class="font-display text-3xl font-black text-cyan-400 block">59</span>
-        <span class="text-[10px] text-slate-400 uppercase font-semibold">Secs</span>
+      <div class="p-2 sm:p-4 bg-slate-900/90 rounded-2xl border border-slate-800 shadow-xl">
+        <span id="cs-secs" class="font-display text-2xl sm:text-3xl font-black text-cyan-400 block">59</span>
+        <span class="text-[9px] sm:text-[10px] text-slate-400 uppercase font-semibold">Secs</span>
       </div>
     </div>
 

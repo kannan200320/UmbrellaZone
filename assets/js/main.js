@@ -39,15 +39,23 @@ if (document.readyState === 'loading') {
 
 // ==================== THEME MANAGEMENT (DARK / LIGHT) ====================
 const THEME_KEY = 'umbrellaZone_theme_v1';
+let themeTransitionTimer = null;
 
 function initTheme() {
-  const savedTheme = localStorage.getItem(THEME_KEY) || 'light';
+  let savedTheme = localStorage.getItem(THEME_KEY);
+  if (!savedTheme) {
+    savedTheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+  }
   applyTheme(savedTheme, false);
 
-  // Wire up any theme toggle buttons on the page
+  // Wire up any theme toggle buttons on the page (protected against duplicate bindings)
   const toggles = document.querySelectorAll('.theme-toggle-btn');
   toggles.forEach(btn => {
-    btn.addEventListener('click', () => {
+    if (btn.dataset.themeBound) return;
+    btn.dataset.themeBound = 'true';
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
       const isDark = document.documentElement.classList.contains('dark');
       const newTheme = isDark ? 'light' : 'dark';
       applyTheme(newTheme, true);
@@ -57,7 +65,12 @@ function initTheme() {
 
 function applyTheme(theme, isUserToggle = false) {
   if (isUserToggle) {
+    if (themeTransitionTimer) {
+      clearTimeout(themeTransitionTimer);
+    }
     document.documentElement.classList.add('theme-transitioning');
+    // Synchronously force style reflow so transition properties are active BEFORE dark class changes
+    void document.documentElement.offsetHeight;
   }
   if (theme === 'dark') {
     document.documentElement.classList.add('dark');
@@ -68,8 +81,9 @@ function applyTheme(theme, isUserToggle = false) {
   }
   updateThemeIcons(theme);
   if (isUserToggle) {
-    setTimeout(() => {
+    themeTransitionTimer = setTimeout(() => {
       document.documentElement.classList.remove('theme-transitioning');
+      themeTransitionTimer = null;
     }, 350);
   }
 }
@@ -91,6 +105,7 @@ function toggleTheme() {
   const isDark = document.documentElement.classList.contains('dark');
   applyTheme(isDark ? 'light' : 'dark', true);
 }
+window.toggleTheme = toggleTheme;
 
 // ==================== RTL / LTR MANAGEMENT ====================
 const DIR_KEY = 'umbrellaZone_dir_v1';
