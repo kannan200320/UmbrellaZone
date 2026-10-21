@@ -1319,8 +1319,8 @@
       } else {
         if (emptyState) emptyState.classList.add('hidden');
         grid.innerHTML = items.map(prod => `
-          <div class="product-card animate-filter-fade hover-lift bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/80 dark:border-slate-800 overflow-hidden shadow-sm flex flex-col group">
-            <div class="relative aspect-square bg-slate-100 dark:bg-slate-950 overflow-hidden">
+          <div class="product-card animate-filter-fade hover-lift bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/80 dark:border-slate-800 overflow-hidden shadow-sm flex flex-col justify-between group h-full">
+            <div class="relative w-full aspect-square bg-slate-100 dark:bg-slate-950 overflow-hidden">
               <img id="umb-img-${prod.id}" src="${prod.images[0]}" alt="${prod.name}" class="img-zoom w-full h-full object-cover transition duration-300">
               <span class="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider text-slate-900 dark:text-white bg-white/90 dark:bg-slate-900/90 backdrop-blur-md px-2.5 py-1 rounded-full shadow-xs border border-white/60 dark:border-slate-700">
                 ${prod.badge || 'Windproof'}
@@ -1332,7 +1332,7 @@
               </div>
             </div>
 
-            <div class="p-6 flex-1 flex flex-col justify-between">
+            <div class="p-5 sm:p-6 w-full flex-1 flex flex-col justify-between">
               <div>
                 <div class="flex items-center justify-between text-xs text-slate-400 mb-1.5">
                   <span class="font-semibold uppercase tracking-wider text-sky-600 dark:text-sky-400">${prod.subCategory}</span>

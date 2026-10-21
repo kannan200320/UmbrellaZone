@@ -800,21 +800,36 @@ html.dark .hover-lift:hover {
 
 /* ==================== PRODUCT CATALOG GRID CARD ALIGNMENT ==================== */
 .product-card-title {
-  min-height: 3rem !important;
-  display: block !important;
-  line-height: 1.35 !important;
-  margin-top: 0.5rem !important;
-  margin-bottom: 0.25rem !important;
-}
-
-.product-card-desc {
-  min-height: 2.75rem !important;
+  min-height: 2.85rem !important;
+  max-height: 2.85rem !important;
+  height: 2.85rem !important;
   display: -webkit-box !important;
   -webkit-line-clamp: 2 !important;
   -webkit-box-orient: vertical !important;
   overflow: hidden !important;
-  line-height: 1.4 !important;
-  margin-top: 0.5rem !important;
+  text-overflow: ellipsis !important;
+  line-height: 1.35 !important;
+  margin-top: 0.35rem !important;
+  margin-bottom: 0.25rem !important;
+}
+
+.product-card-desc {
+  min-height: 3.65rem !important;
+  max-height: 3.65rem !important;
+  height: 3.65rem !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  line-height: 1.55 !important;
+  font-size: 0.75rem !important;
+  margin-top: 0.45rem !important;
+  margin-bottom: 0.25rem !important;
+}
+
+html.dark .product-card-desc {
+  color: #94a3b8 !important;
 }
 
 .product-card-swatches-row {
@@ -823,6 +838,132 @@ html.dark .hover-lift:hover {
   align-items: center !important;
   justify-content: space-between !important;
   margin-top: 0.75rem !important;
+}
+
+/* Product Catalog Cards: 100% button visibility and no clipping on 768px, 1024px and all screens */
+.product-card {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+}
+
+.product-card > div:first-child {
+  width: 100% !important;
+}
+
+.product-card > div:last-child {
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.product-card button[onclick*="addToCart"],
+.product-card a[href*="product-detail"] {
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+
+/* ==================== EXPERT & LEADERSHIP TEAM CARDS ALIGNMENT ==================== */
+.expert-card {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  height: 100% !important;
+}
+
+.expert-card-badge-row {
+  min-height: 1.85rem !important;
+  max-height: 1.85rem !important;
+  height: 1.85rem !important;
+  display: flex !important;
+  align-items: center !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.expert-card-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  white-space: nowrap !important;
+  font-size: 10px !important;
+  line-height: 1 !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  padding: 0.35rem 0.65rem !important;
+  border-radius: 9999px !important;
+}
+
+.expert-card-name {
+  font-size: 1.05rem !important;
+  font-weight: 800 !important;
+  line-height: 1.3 !important;
+  min-height: 1.75rem !important;
+  max-height: 1.75rem !important;
+  height: 1.75rem !important;
+  display: flex !important;
+  align-items: center !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  margin-bottom: 0.35rem !important;
+}
+
+.expert-card-desc {
+  font-size: 0.75rem !important;
+  line-height: 1.55 !important;
+  min-height: 4.85rem !important;
+  max-height: 4.85rem !important;
+  height: 4.85rem !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 4 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  margin-top: 0.25rem !important;
+  margin-bottom: 0 !important;
+}
+html.dark .expert-card-desc {
+  color: #94a3b8 !important;
+}
+
+.expert-card-footer {
+  margin-top: auto !important;
+  padding-top: 0.75rem !important;
+  border-top-width: 1px !important;
+  min-height: 2.25rem !important;
+  max-height: 2.25rem !important;
+  height: 2.25rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  font-size: 11px !important;
+  white-space: nowrap !important;
+  width: 100% !important;
+}
+
+.expert-card-lab {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+.expert-card-metric {
+  flex-shrink: 0 !important;
+  margin-left: 0.5rem !important;
+  font-weight: 700 !important;
+  white-space: nowrap !important;
+}
+
+/* Guaranteed text contrast on dark floating badges / lab rig cards across bright and dark modes */
+.bg-slate-900\/95 p,
+.bg-slate-950\/95 p,
+.bg-slate-900 p.text-white,
+.bg-slate-900\/95 .text-white,
+.bg-slate-900\/95 .text-slate-300,
+.bg-slate-900\/95 .text-slate-200,
+.bg-slate-900\/95 .text-slate-100 {
+  color: #f1f5f9 !important;
 }
 
 /* ==================== BLOG ARTICLE CARD ALIGNMENT ==================== */
@@ -1462,7 +1603,6 @@ body.overflow-hidden {
 
   /* Card padding and grid gap polish for 3-column layouts at 768px */
   .card-align-content,
-  .product-card,
   .p-8,
   .p-6.sm\:p-8 {
     padding: 1.25rem !important; /* 20px padding prevents interior content cramping */

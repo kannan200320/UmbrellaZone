@@ -1217,8 +1217,8 @@
 
       // Render Cards
       grid.innerHTML = items.map(prod => `
-        <div class="product-card animate-filter-fade hover-lift bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/80 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col sm:flex-row group">
-          <div class="relative sm:w-1/2 aspect-square sm:aspect-auto bg-slate-100 dark:bg-slate-800 overflow-hidden">
+        <div class="product-card animate-filter-fade hover-lift bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/80 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group h-full">
+          <div class="relative w-full aspect-[4/3] bg-slate-100 dark:bg-slate-800 overflow-hidden">
             <img id="boot-img-${prod.id}" src="${prod.images[0]}" alt="${prod.name}" class="img-zoom w-full h-full object-cover">
             <span class="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider text-slate-900 bg-white/95 dark:bg-slate-900/90 dark:text-white backdrop-blur-md px-2.5 py-1 rounded-full shadow-xs">
               ${prod.badge || 'FSC Rubber'}
@@ -1230,19 +1230,19 @@
             </div>
           </div>
 
-          <div class="p-6 sm:w-1/2 flex flex-col justify-between">
+          <div class="p-5 sm:p-6 w-full flex-1 flex flex-col justify-between">
             <div>
               <div class="flex items-center justify-between text-xs text-slate-400 dark:text-slate-500 mb-1.5">
                 <span class="font-semibold uppercase tracking-wider text-sky-600 dark:text-sky-400">${prod.subCategory}</span>
                 <span class="text-amber-500 font-bold">★ ${prod.rating}</span>
               </div>
-              <h3 class="product-card-title font-bold text-lg text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition">
+              <h3 class="product-card-title font-bold text-base text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition">
                 <a href="product-detail.html?id=${prod.id}">${prod.name}</a>
               </h3>
-              <p class="product-card-desc text-xs text-slate-500 dark:text-slate-400 leading-relaxed">${prod.longDesc}</p>
+              <p class="product-card-desc text-xs text-slate-500 dark:text-slate-400 leading-relaxed">${prod.shortDesc || prod.longDesc}</p>
               
-              <div class="mt-4 flex items-center justify-between text-xs">
-                <div class="flex items-center gap-1.5" id="boot-swatches-${prod.id}">
+              <div class="product-card-swatches-row">
+                <div class="flex items-center gap-1.5 shrink-0" id="boot-swatches-${prod.id}">
                   ${(prod.colors || []).map((c, idx) => `
                     <button type="button" 
                       onclick="switchBootCardColor('${prod.id}', ${idx}, event)" 
@@ -1254,23 +1254,23 @@
                   `).join('')}
                   ${prod.colors && prod.colors.length > 4 ? `<span class="text-[9px] font-bold text-slate-400">+${prod.colors.length - 4}</span>` : ''}
                 </div>
-                <span class="text-[10px] font-bold text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950/80 px-2 py-0.5 rounded-md">${prod.specs["Traction Sole"] || prod.specs["Outsole"] || prod.specs["Sole Grip"] || 'Non-Slip Tread'}</span>
+                <span class="text-[10px] font-bold text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950/80 px-2 py-0.5 rounded-md truncate">${prod.specs["Traction Sole"] || prod.specs["Outsole"] || prod.specs["Sole Grip"] || 'Non-Slip Tread'}</span>
               </div>
             </div>
 
-            <div class="pt-5 mt-5 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
-              <div>
+            <div class="pt-4 mt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2">
+              <div class="min-w-0">
                 <div class="flex items-baseline gap-1.5">
-                  <span class="font-display font-extrabold text-xl text-slate-900 dark:text-white">₹${prod.price.toLocaleString('en-IN')}</span>
+                  <span class="font-display font-extrabold text-lg sm:text-xl text-slate-900 dark:text-white">₹${prod.price.toLocaleString('en-IN')}</span>
                   ${prod.originalPrice ? `<span class="text-xs text-slate-400 line-through">₹${prod.originalPrice.toLocaleString('en-IN')}</span>` : ''}
                 </div>
-                ${prod.originalPrice ? `<span class="text-[10px] font-bold text-emerald-600 dark:text-emerald-400">Save ₹${(prod.originalPrice - prod.price).toLocaleString('en-IN')}</span>` : '<span class="text-[10px] text-slate-400">2-Yr Sole Guarantee</span>'}
+                ${prod.originalPrice ? `<span class="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 block truncate">Save ₹${(prod.originalPrice - prod.price).toLocaleString('en-IN')}</span>` : '<span class="text-[10px] text-slate-400 block">2-Yr Sole Guarantee</span>'}
               </div>
-              <div class="flex items-center gap-2">
+              <div class="flex items-center gap-2 shrink-0">
                 <a href="product-detail.html?id=${prod.id}" class="px-3 py-2 border border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 text-slate-700 dark:text-slate-300 font-bold text-xs rounded-xl transition">
                   Details
                 </a>
-                <button onclick="addToCart('${prod.id}', 1)" class="px-4 py-2 bg-sky-600 hover:bg-sky-700 active:scale-95 text-white font-bold text-xs rounded-xl transition flex items-center gap-1.5 shadow-sm shadow-sky-600/20">
+                <button onclick="addToCart('${prod.id}', 1)" class="px-3.5 sm:px-4 py-2 bg-sky-600 hover:bg-sky-700 active:scale-95 text-white font-bold text-xs rounded-xl transition flex items-center gap-1.5 shadow-sm shadow-sky-600/20 whitespace-nowrap">
                   <span>Add</span>
                   <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
                 </button>

@@ -353,7 +353,7 @@ function renderFavoritesPage() {
               </h3>
 
               <!-- Short Description -->
-              <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-300 mt-2 line-clamp-2 leading-relaxed flex-1">
+              <p class="card-desc-aligned text-xs text-slate-600 dark:text-slate-300 mt-2 line-clamp-3 leading-relaxed flex-1">
                 ${desc}
               </p>
 

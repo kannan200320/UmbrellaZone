@@ -214,9 +214,9 @@
           <div class="rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] bg-slate-900 border-2 border-sky-500/20">
             <img src="assets/images/wind-tunnel-testing-lab.jpg" alt="Storm Wind Tunnel Testing Rig Run 12" class="w-full h-full object-cover">
           </div>
-          <div class="absolute -bottom-6 -left-6 bg-slate-900/95 backdrop-blur text-white p-5 rounded-2xl shadow-xl border border-slate-800 max-w-xs hidden sm:block">
+          <div class="absolute -bottom-6 -left-6 bg-slate-900/95 dark:bg-slate-950/95 backdrop-blur text-white p-5 rounded-2xl shadow-xl border border-slate-700/80 dark:border-slate-800 max-w-xs hidden sm:block">
             <div class="text-xs font-bold text-sky-400">Wind Tunnel Lab — Active Rig</div>
-            <p class="text-[11px] text-slate-300 mt-1">High-pressure spray & 80 km/h turbulent storm simulation testing.</p>
+            <p class="text-xs text-white text-slate-100 mt-1 leading-relaxed font-medium">High-pressure spray & 80 km/h turbulent storm simulation testing.</p>
           </div>
         </div>
 
@@ -320,68 +320,124 @@
         <p class="text-slate-500 dark:text-slate-400 text-sm mt-3">Combining aeronautical structural engineering with deep understanding of severe weather realities.</p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
         <!-- Leader 1 -->
-        <div class="card-align-content h-full bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/90 dark:border-slate-800 p-6 shadow-sm hover:shadow-xl transition group flex flex-col justify-between">
+        <div class="expert-card card-align-content h-full bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/90 dark:border-slate-800 p-5 shadow-sm hover:shadow-xl transition group flex flex-col justify-between">
           <div class="card-top-content flex-1 flex flex-col">
-            <div class="aspect-square rounded-2xl overflow-hidden mb-5 bg-slate-100 dark:bg-slate-800">
-              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Dr. Rajiv Sharma" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="aspect-square rounded-2xl overflow-hidden mb-4 bg-slate-100 dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 shadow-xs">
+              <img src="assets/images/avatars/avatar-rahul.jpg" alt="Dr. Rajiv Sharma - Lead Aerodynamicist" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" loading="lazy">
             </div>
-            <div class="inline-block px-2.5 py-0.5 rounded-full bg-sky-100 dark:bg-sky-950/80 text-sky-700 dark:text-sky-300 text-[10px] font-bold uppercase mb-2 self-start">Lead Aerodynamicist</div>
-            <h3 class="font-bold text-lg text-slate-900 dark:text-white">Dr. Rajiv Sharma</h3>
-            <p class="card-desc-aligned text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed flex-1">Aerospace engineer and fluid mechanics researcher; designer of the 9-rib inverted wind-vent dispersion canopy.</p>
+            <div class="expert-card-badge-row">
+              <span class="expert-card-badge bg-sky-100 dark:bg-sky-950/80 text-sky-700 dark:text-sky-300">
+                Lead Aerodynamicist
+              </span>
+            </div>
+            <h3 class="expert-card-name font-display text-slate-900 dark:text-white">
+              Dr. Rajiv Sharma
+            </h3>
+            <p class="expert-card-desc text-slate-500 dark:text-slate-400">
+              Aerospace engineer and fluid researcher; designer of our 9-rib inverted wind-vent dispersion canopy.
+            </p>
           </div>
-          <div class="card-bottom-line mt-auto pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[11px] text-slate-400">
-            <span>Central Storm Lab</span>
-            <span class="text-sky-600 dark:text-sky-400 font-medium">8 Patents</span>
+          <div class="expert-card-footer border-slate-100 dark:border-slate-800 text-slate-500 dark:text-slate-400">
+            <span class="expert-card-lab">Central Storm Lab</span>
+            <span class="expert-card-metric text-sky-600 dark:text-sky-400">8 Patents</span>
           </div>
         </div>
 
         <!-- Leader 2 -->
-        <div class="card-align-content h-full bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/90 dark:border-slate-800 p-6 shadow-sm hover:shadow-xl transition group flex flex-col justify-between">
+        <div class="expert-card card-align-content h-full bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/90 dark:border-slate-800 p-5 shadow-sm hover:shadow-xl transition group flex flex-col justify-between">
           <div class="card-top-content flex-1 flex flex-col">
-            <div class="aspect-square rounded-2xl overflow-hidden mb-5 bg-slate-100 dark:bg-slate-800">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Anand Kulkarni" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="aspect-square rounded-2xl overflow-hidden mb-4 bg-slate-100 dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 shadow-xs">
+              <img src="assets/images/avatars/avatar-amit.jpg" alt="Anand Kulkarni - Head of Metallurgy" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" loading="lazy">
             </div>
-            <div class="inline-block px-2.5 py-0.5 rounded-full bg-sky-100 dark:bg-sky-950/80 text-sky-700 dark:text-sky-300 text-[10px] font-bold uppercase mb-2 self-start">Head of Metallurgy</div>
-            <h3 class="font-bold text-lg text-slate-900 dark:text-white">Anand Kulkarni</h3>
-            <p class="card-desc-aligned text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed flex-1">Materials engineer specializing in flexible fiberglass joints and corrosion-resistant T6061 aircraft aluminum shafts.</p>
+            <div class="expert-card-badge-row">
+              <span class="expert-card-badge bg-sky-100 dark:bg-sky-950/80 text-sky-700 dark:text-sky-300">
+                Head of Metallurgy
+              </span>
+            </div>
+            <h3 class="expert-card-name font-display text-slate-900 dark:text-white">
+              Anand Kulkarni
+            </h3>
+            <p class="expert-card-desc text-slate-500 dark:text-slate-400">
+              Materials engineer specializing in flexible fiberglass joints and corrosion-resistant T6061 shafts.
+            </p>
           </div>
-          <div class="card-bottom-line mt-auto pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[11px] text-slate-400">
-            <span>Metropolitan Lab</span>
-            <span class="text-sky-600 dark:text-sky-400 font-medium">Fiberglass Tech</span>
+          <div class="expert-card-footer border-slate-100 dark:border-slate-800 text-slate-500 dark:text-slate-400">
+            <span class="expert-card-lab">Metropolitan Lab</span>
+            <span class="expert-card-metric text-sky-600 dark:text-sky-400">Fiberglass Tech</span>
           </div>
         </div>
 
         <!-- Leader 3 -->
-        <div class="card-align-content h-full bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/90 dark:border-slate-800 p-6 shadow-sm hover:shadow-xl transition group flex flex-col justify-between">
+        <div class="expert-card card-align-content h-full bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/90 dark:border-slate-800 p-5 shadow-sm hover:shadow-xl transition group flex flex-col justify-between">
           <div class="card-top-content flex-1 flex flex-col">
-            <div class="aspect-square rounded-2xl overflow-hidden mb-5 bg-slate-100 dark:bg-slate-800">
-              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Meera Sundaram" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="aspect-square rounded-2xl overflow-hidden mb-4 bg-slate-100 dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 shadow-xs">
+              <img src="assets/images/avatars/avatar-priya.jpg" alt="Meera Sundaram - Canopy Textile Director" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" loading="lazy">
             </div>
-            <div class="inline-block px-2.5 py-0.5 rounded-full bg-sky-100 dark:bg-sky-950/80 text-sky-700 dark:text-sky-300 text-[10px] font-bold uppercase mb-2 self-start">Canopy Textile Director</div>
-            <h3 class="font-bold text-lg text-slate-900 dark:text-white">Meera Sundaram</h3>
-            <p class="card-desc-aligned text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed flex-1">Textile veteran; engineered our 300T rPET nanotech fabric that repels torrential cloudbursts with one-shake dry efficiency.</p>
+            <div class="expert-card-badge-row">
+              <span class="expert-card-badge bg-sky-100 dark:bg-sky-950/80 text-sky-700 dark:text-sky-300">
+                Textile Director
+              </span>
+            </div>
+            <h3 class="expert-card-name font-display text-slate-900 dark:text-white">
+              Meera Sundaram
+            </h3>
+            <p class="expert-card-desc text-slate-500 dark:text-slate-400">
+              Textile veteran; developer of our 300T rPET nanotech fabric that repels storms with one-shake dry speed.
+            </p>
           </div>
-          <div class="card-bottom-line mt-auto pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[11px] text-slate-400">
-            <span>Textile Engineering Lab</span>
-            <span class="text-sky-600 dark:text-sky-400 font-medium">300T Hydrophobic</span>
+          <div class="expert-card-footer border-slate-100 dark:border-slate-800 text-slate-500 dark:text-slate-400">
+            <span class="expert-card-lab">Textile Lab</span>
+            <span class="expert-card-metric text-sky-600 dark:text-sky-400">300T Nano</span>
           </div>
         </div>
 
         <!-- Leader 4 -->
-        <div class="card-align-content h-full bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/90 dark:border-slate-800 p-6 shadow-sm hover:shadow-xl transition group flex flex-col justify-between">
+        <div class="expert-card card-align-content h-full bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/90 dark:border-slate-800 p-5 shadow-sm hover:shadow-xl transition group flex flex-col justify-between">
           <div class="card-top-content flex-1 flex flex-col">
-            <div class="aspect-square rounded-2xl overflow-hidden mb-5 bg-slate-100 dark:bg-slate-800">
-              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80" alt="Vikram Rathore" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="aspect-square rounded-2xl overflow-hidden mb-4 bg-slate-100 dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 shadow-xs">
+              <img src="assets/images/avatars/avatar-vikram.jpg" alt="Vikram Rathore - Director of Testing" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" loading="lazy">
             </div>
-            <div class="inline-block px-2.5 py-0.5 rounded-full bg-sky-100 dark:bg-sky-950/80 text-sky-700 dark:text-sky-300 text-[10px] font-bold uppercase mb-2 self-start">Quality & Extreme Testing</div>
-            <h3 class="font-bold text-lg text-slate-900 dark:text-white">Vikram Rathore</h3>
-            <p class="card-desc-aligned text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed flex-1">Monsoon field-testing director; coordinates real-world evaluations across mountain cloudbursts and coastal squalls.</p>
+            <div class="expert-card-badge-row">
+              <span class="expert-card-badge bg-sky-100 dark:bg-sky-950/80 text-sky-700 dark:text-sky-300">
+                Director of Testing
+              </span>
+            </div>
+            <h3 class="expert-card-name font-display text-slate-900 dark:text-white">
+              Vikram Rathore
+            </h3>
+            <p class="expert-card-desc text-slate-500 dark:text-slate-400">
+              Field-testing director; coordinates severe real-world evaluations across mountain and coastal squalls.
+            </p>
           </div>
-          <div class="card-bottom-line mt-auto pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[11px] text-slate-400">
-            <span>Dynamic Wind Lab</span>
-            <span class="text-sky-600 dark:text-sky-400 font-medium">80 km/h Tested</span>
+          <div class="expert-card-footer border-slate-100 dark:border-slate-800 text-slate-500 dark:text-slate-400">
+            <span class="expert-card-lab">Dynamic Wind Lab</span>
+            <span class="expert-card-metric text-sky-600 dark:text-sky-400">80 km/h Pass</span>
+          </div>
+        </div>
+
+        <!-- Leader 5 -->
+        <div class="expert-card card-align-content h-full bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/90 dark:border-slate-800 p-5 shadow-sm hover:shadow-xl transition group flex flex-col justify-between">
+          <div class="card-top-content flex-1 flex flex-col">
+            <div class="aspect-square rounded-2xl overflow-hidden mb-4 bg-slate-100 dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 shadow-xs">
+              <img src="assets/images/avatars/avatar-ananya.jpg" alt="Dr. Ananya Sen - Atmospheric Lead" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            </div>
+            <div class="expert-card-badge-row">
+              <span class="expert-card-badge bg-sky-100 dark:bg-sky-950/80 text-sky-700 dark:text-sky-300">
+                Atmospheric Lead
+              </span>
+            </div>
+            <h3 class="expert-card-name font-display text-slate-900 dark:text-white">
+              Dr. Ananya Sen
+            </h3>
+            <p class="expert-card-desc text-slate-500 dark:text-slate-400">
+              Meteorological researcher; calibrated our 14-point monsoon torture protocol against cyclonic storm data.
+            </p>
+          </div>
+          <div class="expert-card-footer border-slate-100 dark:border-slate-800 text-slate-500 dark:text-slate-400">
+            <span class="expert-card-lab">Atmospheric Rig</span>
+            <span class="expert-card-metric text-sky-600 dark:text-sky-400">Force 9 Pass</span>
           </div>
         </div>
       </div>
