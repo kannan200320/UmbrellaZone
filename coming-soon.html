@@ -54,9 +54,17 @@
   <header class="p-6 relative z-10">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3 group shrink-0">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-600 to-cyan-500 flex items-center justify-center text-white font-bold shadow-md shadow-sky-600/30 group-hover:scale-105 transition shrink-0">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 2C6.48 2 2 6.48 2 12c0 1.25.23 2.45.65 3.55.15.39.54.64.96.61h16.78c.42.03.81-.22.96-.61.42-1.1.65-2.3.65-3.55 0-5.52-4.48-10-10-10z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 12v7a2 2 0 104 0"></path></svg>
-        </div>
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-slate-950 via-slate-900 to-sky-950 p-[1.5px] shadow-md shadow-sky-950/40 group-hover:scale-105 transition shrink-0 border border-sky-400/30">
+            <div class="w-full h-full rounded-[10px] bg-slate-950 flex items-center justify-center overflow-hidden">
+              <svg class="w-6 h-6 text-sky-400" viewBox="0 0 32 32" fill="none">
+                <path d="M16 5.5C10 5.5 5.8 10 5 15.2C7.2 14.6 9.8 14.3 12 14.8C13.5 15.1 14.8 15.8 16 16.6C17.2 15.8 18.5 15.1 20 14.8C22.2 14.3 24.8 14.6 27 15.2C26.2 10 22 5.5 16 5.5Z" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                <path d="M11.5 8C13.2 10.5 15 13.5 16 16.6C17 13.5 18.8 10.5 20.5 8" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round" stroke-opacity="0.85"/>
+                <path d="M16 4V16.6" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M16 16.6V23.5C16 25.2 14.6 26.5 13 26.5C11.4 26.5 10 25.2 10 23.5" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round"/>
+                <circle cx="16" cy="4" r="1.2" fill="#38bdf8"/>
+              </svg>
+            </div>
+          </div>
         <span class="font-display font-extrabold text-2xl tracking-tight text-white group-hover:text-sky-400 transition whitespace-nowrap">
           Umbrella<span class="text-sky-400">Zone</span>
         </span>
@@ -66,9 +74,7 @@
         <button class="theme-toggle-btn w-10 h-10 rounded-xl bg-slate-800 text-slate-300 hover:text-white flex items-center justify-center transition" title="Toggle Dark/Light Mode">
           <span class="theme-toggle-icon"></span>
         </button>
-        <button class="rtl-toggle-btn px-3 h-10 rounded-xl bg-slate-800 text-slate-300 hover:text-white text-xs font-bold transition flex items-center gap-1.5" title="Toggle RTL / LTR layout">
-          <span class="rtl-arrow-icon text-sm font-bold">→</span>
-          <span class="rtl-label-text">RTL</span>
+        <button class="rtl-toggle-btn px-3 h-10 rounded-xl bg-slate-800 text-slate-300 hover:text-white text-xs font-bold transition flex items-center gap-1.5" title="Toggle RTL / LTR layout"><span class="rtl-label-text">RTL</span>
         </button>
       </div>
     </div>

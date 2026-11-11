@@ -920,9 +920,9 @@ const PRODUCTS_DATA = [
     shortDesc: "Seamless injection-molded closed-cell rubber rain clogs with textured arch massage footbed, pivoting heel strap, and anti-slip wet floor grip for doorstep, garden, and quick monsoon errands.",
     longDesc: "The ideal slip-on footwear for stepping out during rainy weather without soaking your everyday socks or sneakers. Molded entirely from single-piece closed-cell EVA and natural rubber blend, AquaGrip clogs are 100% waterproof, odor-resistant, and buoyant. The dual-mode pivoting heel strap flips forward for easy slide-in or back for a secure fit, while the channel-siped outsole prevents slips on wet verandah tiles and slippery apartment lobbies.",
     images: [
-      "assets/images/urban-sneaker-yellow.png",
-      "assets/images/urban-sneaker-grey.png",
-      "assets/images/urban-sneaker-black.png"
+      "assets/images/aquagrip-mustard.jpg",
+      "assets/images/aquagrip-slate.jpg",
+      "assets/images/aquagrip-black.jpg"
     ],
     colors: [
       { name: "Bright Mustard", hex: "#ca8a04" },

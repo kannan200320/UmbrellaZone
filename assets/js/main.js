@@ -133,14 +133,14 @@ function applyDirection(dir) {
   buttons.forEach(btn => {
     if (btn.classList.contains('icon-only')) {
       btn.setAttribute('title', dir === 'rtl' ? 'Switch to LTR Layout' : 'Switch to RTL Layout');
-      btn.innerHTML = `<span class="text-lg font-bold text-slate-700 dark:text-slate-200">⇄</span>`;
+      btn.innerHTML = `<span class="rtl-label-text font-bold tracking-wider text-xs">${dir === 'rtl' ? 'LTR' : 'RTL'}</span>`;
     } else {
       if (dir === 'rtl') {
         btn.setAttribute('title', 'Switch to LTR Layout');
-        btn.innerHTML = `<span class="rtl-arrow-icon text-sm font-bold">→</span><span class="rtl-label-text font-bold">LTR</span>`;
+        btn.innerHTML = `<span class="rtl-label-text font-bold tracking-wider">LTR</span>`;
       } else {
         btn.setAttribute('title', 'Switch to RTL Layout');
-        btn.innerHTML = `<span class="rtl-arrow-icon text-sm font-bold">←</span><span class="rtl-label-text font-bold">RTL</span>`;
+        btn.innerHTML = `<span class="rtl-label-text font-bold tracking-wider">RTL</span>`;
       }
     }
   });
@@ -511,12 +511,15 @@ function initSearchModal() {
   function renderSearchItemMarkup(product) {
     const catEmoji = product.category === 'umbrellas' ? '☂️' : (product.category === 'raincoats' ? '🧥' : '👢');
     const isFav = typeof isInWishlist === 'function' ? isInWishlist(product.id) : false;
-    const imgUrl = (product.images && product.images[0]) ? product.images[0] : 'assets/images/placeholder.jpg';
+    const fallbackImg = product.category === 'raincoats'
+      ? 'assets/images/aegis-trench-olive.jpg'
+      : (product.category === 'boots' ? 'assets/images/thames-boot-black.png' : 'assets/images/typhoon-x-black.png');
+    const imgUrl = (product.images && product.images[0]) ? product.images[0] : fallbackImg;
 
     return `
       <div class="flex items-center gap-3.5 p-3 rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-800/60 hover:bg-slate-50 dark:hover:bg-slate-800 hover:border-amber-500/30 transition group">
         <a href="product-detail.html?id=${product.id}" class="flex items-center gap-3.5 flex-1 min-w-0">
-          <img src="${imgUrl}" alt="${product.name}" class="w-14 h-14 object-cover rounded-xl bg-slate-100 dark:bg-slate-800 flex-shrink-0 border border-slate-200/60 dark:border-slate-700/60">
+          <img src="${imgUrl}" onerror="this.onerror=null;this.src='${fallbackImg}'" alt="${product.name}" class="w-14 h-14 object-cover rounded-xl bg-slate-100 dark:bg-slate-800 flex-shrink-0 border border-slate-200/60 dark:border-slate-700/60">
           <div class="min-w-0 flex-1">
             <span class="text-[10px] font-bold uppercase tracking-wider text-amber-700 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/70 px-2 py-0.5 rounded-md inline-block mb-1">
               ${catEmoji} ${product.category}

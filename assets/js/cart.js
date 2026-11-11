@@ -200,7 +200,7 @@ function handleMoveToCart(productId) {
       name: product.name,
       category: product.category,
       price: product.price,
-      image: (product.images && product.images[0]) ? product.images[0] : 'assets/images/placeholder.jpg',
+      image: (product.images && product.images[0]) ? product.images[0] : 'assets/images/typhoon-x-black.png',
       color: (product.colors && product.colors[0]?.name) || 'Standard',
       size: (product.sizes && product.sizes[0]) || 'Standard',
       quantity: 1
@@ -237,7 +237,7 @@ function moveAllFavoritesToCart() {
           name: product.name,
           category: product.category,
           price: product.price,
-          image: (product.images && product.images[0]) ? product.images[0] : 'assets/images/placeholder.jpg',
+          image: (product.images && product.images[0]) ? product.images[0] : 'assets/images/typhoon-x-black.png',
           color: (product.colors && product.colors[0]?.name) || 'Standard',
           size: (product.sizes && product.sizes[0]) || 'Standard',
           quantity: 1
@@ -311,7 +311,7 @@ function renderFavoritesPage() {
     container.innerHTML = items.map(product => {
       const catEmoji = product.category === 'umbrellas' ? '☂️' : (product.category === 'raincoats' ? '🧥' : '👢');
       const catName = product.category === 'umbrellas' ? 'Windproof Umbrella' : (product.category === 'raincoats' ? 'Monsoon Rainwear' : 'Waterproof Footwear');
-      const primaryImage = (product.images && product.images.length > 0) ? product.images[0] : 'assets/images/placeholder.jpg';
+      const primaryImage = (product.images && product.images.length > 0) ? product.images[0] : 'assets/images/typhoon-x-black.png';
       const rating = product.rating || 4.9;
       const reviewsCount = product.reviewCount || product.reviewsCount || 180;
       const originalPrice = product.originalPrice || Math.round((product.price || 999) * 1.35);

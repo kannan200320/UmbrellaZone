@@ -1,13 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="64" height="64">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="64" height="64">
   <defs>
-    <linearGradient id="favUmbrellaGrad" x1="0%" y1="100%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#0284c7"/>
-      <stop offset="100%" stop-color="#06b6d4"/>
+    <linearGradient id="uzBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c192c"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+    <linearGradient id="uzBorderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <linearGradient id="uzCanopyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="uzSpireGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#bae6fd"/>
     </linearGradient>
   </defs>
-  <rect width="24" height="24" rx="6" fill="url(#favUmbrellaGrad)"/>
-  <g fill="none" stroke="#ffffff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" transform="matrix(0.82 0 0 0.82 2.16 2.16)">
-    <path d="M12 2C6.48 2 2 6.48 2 12c0 1.25.23 2.45.65 3.55.15.39.54.64.96.61h16.78c.42.03.81-.22.96-.61.42-1.1.65-2.3.65-3.55 0-5.52-4.48-10-10-10z"/>
-    <path d="M12 12v7a2 2 0 104 0"/>
-  </g>
+  <!-- Sleek Squircle Frame -->
+  <rect x="1" y="1" width="30" height="30" rx="9" fill="url(#uzBgGrad)" stroke="url(#uzBorderGrad)" stroke-width="1.5"/>
+  <!-- Aerodynamic Faceted Vault Canopy -->
+  <path d="M16 5.5C10 5.5 5.8 10 5 15.2C7.2 14.6 9.8 14.3 12 14.8C13.5 15.1 14.8 15.8 16 16.6C17.2 15.8 18.5 15.1 20 14.8C22.2 14.3 24.8 14.6 27 15.2C26.2 10 22 5.5 16 5.5Z" fill="url(#uzCanopyGrad)" fill-opacity="0.3" stroke="url(#uzCanopyGrad)" stroke-width="1.6" stroke-linejoin="round"/>
+  <!-- Internal Aero Flutes / Rib Struts -->
+  <path d="M11.5 8C13.2 10.5 15 13.5 16 16.6C17 13.5 18.8 10.5 20.5 8" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round" stroke-opacity="0.85"/>
+  <!-- Central Structural Spine & Ergonomic J-Hook -->
+  <path d="M16 4V16.6" stroke="url(#uzSpireGrad)" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M16 16.6V23.5C16 25.2 14.6 26.5 13 26.5C11.4 26.5 10 25.2 10 23.5" stroke="url(#uzSpireGrad)" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Ferrule Crown Gem -->
+  <circle cx="16" cy="4" r="1.2" fill="#38bdf8"/>
 </svg>
