@@ -400,20 +400,20 @@
             
             <!-- Trust Card: Lab Stress Tested Standards -->
             <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm p-6 sm:p-7 space-y-5 transition-colors">
-              <div class="h-32 w-full rounded-2xl bg-slate-100 dark:bg-slate-800 overflow-hidden border border-slate-200/80 dark:border-slate-700/80 shadow-inner">
-                <img src="assets/images/wind-tunnel-testing-lab.jpg" alt="Wind-Tunnel Certified Lab Stress Testing" class="h-full w-full object-cover" />
+              <div class="h-36 sm:h-40 w-full rounded-2xl bg-slate-100 dark:bg-slate-800 overflow-hidden border border-slate-200/80 dark:border-slate-700/80 shadow-inner">
+                <img id="pd-lab-img" src="assets/images/wind-tunnel-testing-lab.jpg" alt="Wind-Tunnel Certified Lab Stress Testing" class="h-full w-full object-cover" />
               </div>
               <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-2xl bg-sky-100 dark:bg-sky-950 text-sky-600 dark:text-sky-400 flex items-center justify-center text-lg font-black shrink-0">
+                <div id="pd-lab-icon" class="w-10 h-10 rounded-2xl bg-sky-100 dark:bg-sky-950 text-sky-600 dark:text-sky-400 flex items-center justify-center text-lg font-black shrink-0">
                   🌪️
                 </div>
                 <div>
-                  <h4 class="font-display font-black text-sm text-slate-950 dark:text-white">Lab Stress Tested</h4>
-                  <p class="text-[11px] text-slate-500 dark:text-slate-400">Wind-Tunnel Certified Standards</p>
+                  <h4 id="pd-lab-title" class="font-display font-black text-sm text-slate-950 dark:text-white">Lab Stress Tested</h4>
+                  <p id="pd-lab-subtitle" class="text-[11px] text-slate-500 dark:text-slate-400">Wind-Tunnel Certified Standards</p>
                 </div>
               </div>
 
-              <div class="space-y-3 text-xs">
+              <div id="pd-lab-points" class="space-y-3 text-xs">
                 <div class="flex items-start gap-3 p-3 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-700/60">
                   <span class="text-base leading-none">💨</span>
                   <div>
@@ -713,8 +713,8 @@
         
         <div class="p-6 rounded-3xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 shadow-xs flex flex-col justify-between hover-lift">
           <div>
-            <div class="h-32 w-full rounded-2xl bg-slate-100 dark:bg-slate-900/90 overflow-hidden mb-4 border border-slate-200/80 dark:border-slate-700/80 relative">
-              <img src="assets/images/blog-monsoon-transit.png" alt="Vertical Shake Protocol" class="w-full h-full object-cover">
+            <div class="h-36 w-full rounded-2xl bg-slate-100 dark:bg-slate-900/90 overflow-hidden mb-4 border border-slate-200/80 dark:border-slate-700/80 relative">
+              <img src="assets/images/care-vertical-shake.jpg" alt="Vertical Shake Protocol Shedding Rain Droplets" class="w-full h-full object-cover object-center">
               <span class="absolute top-2 left-2 w-7 h-7 rounded-lg bg-sky-600 text-white flex items-center justify-center font-bold text-xs shadow">01</span>
             </div>
             <h4 class="font-bold text-sm text-slate-900 dark:text-white">Vertical Shake Protocol</h4>
@@ -729,8 +729,8 @@
 
         <div class="p-6 rounded-3xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 shadow-xs flex flex-col justify-between hover-lift">
           <div>
-            <div class="h-32 w-full rounded-2xl bg-slate-100 dark:bg-slate-900/90 overflow-hidden mb-4 border border-slate-200/80 dark:border-slate-700/80 relative">
-              <img src="assets/images/aegis-trench-olive.jpg" alt="Air-Dry Before Tight Storage" class="w-full h-full object-cover object-top">
+            <div class="h-36 w-full rounded-2xl bg-slate-100 dark:bg-slate-900/90 overflow-hidden mb-4 border border-slate-200/80 dark:border-slate-700/80 relative">
+              <img src="assets/images/care-air-dry-outerwear.jpg" alt="Waterproof Rain Outerwear Air-Dry Care Protocol" class="w-full h-full object-cover object-[center_25%]">
               <span class="absolute top-2 left-2 w-7 h-7 rounded-lg bg-sky-600 text-white flex items-center justify-center font-bold text-xs shadow">02</span>
             </div>
             <h4 class="font-bold text-sm text-slate-900 dark:text-white">Air-Dry Before Tight Storage</h4>
@@ -745,8 +745,8 @@
 
         <div class="p-6 rounded-3xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 shadow-xs flex flex-col justify-between hover-lift">
           <div>
-            <div class="h-32 w-full rounded-2xl bg-white dark:bg-slate-900/90 p-2 flex items-center justify-center overflow-hidden mb-4 border border-slate-200/80 dark:border-slate-700/80 relative">
-              <img src="assets/images/aquagrip-slate.jpg" alt="Cold Water Rinse Care" class="w-full h-full object-contain">
+            <div class="h-36 w-full rounded-2xl bg-white overflow-hidden mb-4 border border-slate-200/80 dark:border-slate-700/80 relative">
+              <img src="assets/images/care-cold-water-boots.jpg" alt="Cold Water Rinse Care for Natural Rubber Boots" class="w-full h-full object-cover object-center">
               <span class="absolute top-2 left-2 w-7 h-7 rounded-lg bg-sky-600 text-white flex items-center justify-center font-bold text-xs shadow">03</span>
             </div>
             <h4 class="font-bold text-sm text-slate-900 dark:text-white">Cold Water Rinse Only</h4>
@@ -761,8 +761,8 @@
 
         <div class="p-6 rounded-3xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 shadow-xs flex flex-col justify-between hover-lift">
           <div>
-            <div class="h-32 w-full rounded-2xl bg-white dark:bg-slate-900/90 p-2 flex items-center justify-center overflow-hidden mb-4 border border-slate-200/80 dark:border-slate-700/80 relative">
-              <img src="assets/images/typhoon-x-marine.png" alt="Free Doorstep Rib Replacement" class="w-full h-full object-contain">
+            <div class="h-36 w-full rounded-2xl bg-slate-100 dark:bg-slate-900/90 overflow-hidden mb-4 border border-slate-200/80 dark:border-slate-700/80 relative">
+              <img src="assets/images/care-storm-warranty-jacket.jpg" alt="2-Year Monsoon Storm Protection & Replacement Coverage" class="w-full h-full object-cover object-[center_20%]">
               <span class="absolute top-2 left-2 w-7 h-7 rounded-lg bg-sky-600 text-white flex items-center justify-center font-bold text-xs shadow">04</span>
             </div>
             <h4 class="font-bold text-sm text-slate-900 dark:text-white">Free Doorstep Rib Replacement</h4>
@@ -790,9 +790,6 @@
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
         <div class="p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs">
-          <div class="h-28 w-full rounded-xl bg-slate-100 dark:bg-slate-900/90 overflow-hidden mb-3 border border-slate-200/80 dark:border-slate-700/80">
-            <img src="assets/images/pocket-mini-charcoal.jpg" alt="Metropolitan Same-Day Express Gear" class="w-full h-full object-cover">
-          </div>
           <div class="flex items-center justify-between text-xs font-bold text-slate-400 mb-2"><span>Metropolitan Zone</span><span>Same / Next Day</span></div>
           <div class="text-xl font-display font-extrabold text-slate-900 dark:text-white">24 Hours</div>
           <p class="text-xs text-emerald-600 dark:text-emerald-400 font-semibold mt-1">Free Express Delivery (₹999+)</p>
@@ -800,9 +797,6 @@
         </div>
 
         <div class="p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs">
-          <div class="h-28 w-full rounded-xl bg-slate-100 dark:bg-slate-900/90 overflow-hidden mb-3 border border-slate-200/80 dark:border-slate-700/80">
-            <img src="assets/images/vanguard-rider-orange.jpg" alt="Regional Express Gear Delivery" class="w-full h-full object-cover object-top">
-          </div>
           <div class="flex items-center justify-between text-xs font-bold text-slate-400 mb-2"><span>Regional Hubs</span><span>Metro Express</span></div>
           <div class="text-xl font-display font-extrabold text-slate-900 dark:text-white">2 - 3 Days</div>
           <p class="text-xs text-sky-600 dark:text-sky-400 font-semibold mt-1">Air Cargo Priority</p>
@@ -810,9 +804,6 @@
         </div>
 
         <div class="p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs">
-          <div class="h-28 w-full rounded-xl bg-slate-100 dark:bg-slate-900/90 overflow-hidden mb-3 border border-slate-200/80 dark:border-slate-700/80">
-            <img src="assets/images/aegis-trench-black.jpg" alt="Outer Districts Dispatch" class="w-full h-full object-cover object-top">
-          </div>
           <div class="flex items-center justify-between text-xs font-bold text-slate-400 mb-2"><span>Major Outer Districts</span><span>Standard Transit</span></div>
           <div class="text-xl font-display font-extrabold text-slate-900 dark:text-white">2 - 3 Days</div>
           <p class="text-xs text-sky-600 dark:text-sky-400 font-semibold mt-1">Priority Courier Partners</p>
@@ -820,9 +811,6 @@
         </div>
 
         <div class="p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs">
-          <div class="h-28 w-full rounded-xl bg-white dark:bg-slate-900/90 p-1.5 flex items-center justify-center overflow-hidden mb-3 border border-slate-200/80 dark:border-slate-700/80">
-            <img src="assets/images/thames-boot-black.png" alt="Standard Surface Footwear Fleet" class="w-full h-full object-contain">
-          </div>
           <div class="flex items-center justify-between text-xs font-bold text-slate-400 mb-2"><span>Standard Delivery Zones</span><span>Towns & Outlying</span></div>
           <div class="text-xl font-display font-extrabold text-slate-900 dark:text-white">3 - 5 Days</div>
           <p class="text-xs text-sky-600 dark:text-sky-400 font-semibold mt-1">Express Surface Fleet</p>
@@ -849,8 +837,8 @@
         <!-- Benchmark 1 -->
         <div class="p-6 sm:p-8 rounded-3xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift h-full flex flex-col justify-between">
           <div class="card-top-content">
-            <div class="h-36 w-full rounded-2xl bg-white dark:bg-slate-900/90 p-2 flex items-center justify-center overflow-hidden mb-4 border border-slate-200/80 dark:border-slate-700/80 shadow-inner">
-              <img src="assets/images/weather-storm.png" alt="15kg Tip Deflection Load Test" class="w-full h-full object-contain">
+            <div class="h-36 w-full rounded-2xl bg-white p-1 flex items-center justify-center overflow-hidden mb-4 border border-slate-200/80 dark:border-slate-700/80 shadow-inner">
+              <img src="assets/images/benchmark-tensile-deflection.jpg" alt="15kg Tip Deflection Load Test" class="w-full h-full object-contain">
             </div>
             <div class="flex items-center justify-between mb-2">
               <span class="text-[10px] font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950/80 px-2 py-0.5 rounded-full">Tensile Load</span>
@@ -870,8 +858,8 @@
         <!-- Benchmark 2 -->
         <div class="p-6 sm:p-8 rounded-3xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift h-full flex flex-col justify-between">
           <div class="card-top-content">
-            <div class="h-36 w-full rounded-2xl bg-white dark:bg-slate-900/90 p-2 flex items-center justify-center overflow-hidden mb-4 border border-slate-200/80 dark:border-slate-700/80 shadow-inner">
-              <img src="assets/images/vortex-9-green.png" alt="2,000-Cycle Pneumatic Piston Test" class="w-full h-full object-contain">
+            <div class="h-36 w-full rounded-2xl bg-white p-1 flex items-center justify-center overflow-hidden mb-4 border border-slate-200/80 dark:border-slate-700/80 shadow-inner">
+              <img src="assets/images/benchmark-pneumatic-piston.jpg" alt="2,000-Cycle Pneumatic Piston Test" class="w-full h-full object-contain">
             </div>
             <div class="flex items-center justify-between mb-2">
               <span class="text-[10px] font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/80 px-2 py-0.5 rounded-full">Actuation</span>
@@ -892,7 +880,7 @@
         <div class="p-6 sm:p-8 rounded-3xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift h-full flex flex-col justify-between">
           <div class="card-top-content">
             <div class="h-36 w-full rounded-2xl bg-slate-100 dark:bg-slate-900/90 overflow-hidden mb-4 border border-slate-200/80 dark:border-slate-700/80 shadow-inner">
-              <img src="assets/images/blog-seam-sealing.jpg" alt="Hydrostatic Infiltration Resistance" class="w-full h-full object-cover">
+              <img src="assets/images/benchmark-hydrostatic-chamber.jpg" alt="Hydrostatic Infiltration Resistance" class="w-full h-full object-cover object-center">
             </div>
             <div class="flex items-center justify-between mb-2">
               <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/80 px-2 py-0.5 rounded-full">Hydraulic Head</span>
@@ -943,9 +931,6 @@
         <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-5">
           <div class="p-5 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift flex flex-col justify-between">
             <div class="card-top-content">
-              <div class="h-28 w-full rounded-xl bg-slate-100 dark:bg-slate-900/90 overflow-hidden mb-3 border border-slate-200/80 dark:border-slate-700/80">
-                <img src="assets/images/pocket-mini-pink.jpg" alt="Ventilated Travel Sleeve" class="w-full h-full object-cover">
-              </div>
               <h4 class="card-title-aligned font-bold text-sm text-slate-900 dark:text-white">Ventilated Sleeve</h4>
               <p class="card-desc-aligned text-[11px] text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
                 Dual YKK zippered carry sheath featuring breathable brass eyelets to prevent damp mildew odors.
@@ -958,9 +943,6 @@
 
           <div class="p-5 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift flex flex-col justify-between">
             <div class="card-top-content">
-              <div class="h-28 w-full rounded-xl bg-white dark:bg-slate-900/90 p-2 flex items-center justify-center overflow-hidden mb-3 border border-slate-200/80 dark:border-slate-700/80">
-                <img src="assets/images/weather-drizzle.png" alt="400 GSM Waffle Microfiber Towel" class="w-full h-full object-contain">
-              </div>
               <h4 class="card-title-aligned font-bold text-sm text-slate-900 dark:text-white">Microfiber Towel</h4>
               <p class="card-desc-aligned text-[11px] text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
                 400 GSM fast-drying waffle microfiber cloth to wipe down shafts and grips after downpours.
@@ -973,9 +955,6 @@
 
           <div class="p-5 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 shadow-xs card-align-content hover-lift flex flex-col justify-between">
             <div class="card-top-content">
-              <div class="h-28 w-full rounded-xl bg-white dark:bg-slate-900/90 p-1.5 flex items-center justify-center overflow-hidden mb-3 border border-slate-200/80 dark:border-slate-700/80">
-                <img src="assets/images/typhoon-x-black.png" alt="Laser-Engraved Serial Warranty Card" class="w-full h-full object-contain">
-              </div>
               <h4 class="card-title-aligned font-bold text-sm text-slate-900 dark:text-white">Warranty Card</h4>
               <p class="card-desc-aligned text-[11px] text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
                 Anodized aluminum card with your unique QR code for 1-tap doorstep replacement dispatch.
@@ -1497,6 +1476,9 @@
         `).join('');
       }
 
+      // Category-specific Lab Stress Tested Card
+      updateCategoryLabCard(currentProduct.category);
+
       // Related Products
       renderRelatedProducts();
 
@@ -1513,6 +1495,72 @@
         } else {
           pdBtn.classList.remove('text-rose-500', 'border-rose-300');
         }
+      }
+    }
+
+    function updateCategoryLabCard(category) {
+      const labConfig = {
+        umbrellas: {
+          img: 'assets/images/wind-tunnel-testing-lab.jpg',
+          alt: 'Wind-Tunnel Certified Umbrella Lab Stress Testing',
+          imgClass: 'h-full w-full object-cover object-center',
+          icon: '🌪️',
+          subtitle: 'Wind-Tunnel Certified Standards',
+          points: [
+            { icon: '💨', title: 'Gale Force Certified', desc: 'Dual aerodynamic vents equalize pressure to prevent inside-out flipping.' },
+            { icon: '💧', title: 'Lotus Hydrophobic Bead', desc: 'High-density nano-barrier fabric sheds 95% standing water with one flick.' },
+            { icon: '🛡️', title: 'Lifetime Frame Guarantee', desc: 'Free doorstep replacement and reverse logistics for structural rib damage.' }
+          ]
+        },
+        raincoats: {
+          img: 'assets/images/blog-hydrostatic-head.jpg',
+          alt: '25,000mm Hydrostatic Rainwear Stress Testing',
+          imgClass: 'h-full w-full object-cover object-[center_25%]',
+          icon: '🌧️',
+          subtitle: 'Hydrostatic & Seam-Weld Standards',
+          points: [
+            { icon: '🌧️', title: '25,000mm Water Barrier', desc: 'Tri-layer breathable TPU membrane blocks torrential monsoon pressure without clamminess.' },
+            { icon: '💧', title: '380°C Hot-Air Seam Weld', desc: 'Thermo-polyurethane tape seals every needle puncture against sideways gale seepage.' },
+            { icon: '🛡️', title: '2-Year Storm Seam Guarantee', desc: 'Free doorstep replacement for membrane delamination or waterproof zipper failure.' }
+          ]
+        },
+        boots: {
+          img: 'assets/images/blog-vulcanized-rubber.jpg',
+          alt: 'SATRA Wet-Grip & Vulcanized Rubber Flood Testing',
+          imgClass: 'h-full w-full object-cover object-[center_45%]',
+          icon: '🥾',
+          subtitle: 'SATRA Wet-Grip & Flood Standards',
+          points: [
+            { icon: '🥾', title: 'SATRA Wet-Grip Certified', desc: 'Razor-siped natural rubber lugs evacuate standing water to prevent wet tile slips.' },
+            { icon: '💧', title: '100% Seamless Vulcanized Seal', desc: 'Natural FSC® tree rubber compound resists cracking and blocks deep floodwater.' },
+            { icon: '🛡️', title: '2-Year Sole & Seal Guarantee', desc: 'Free doorstep replacement for outsole separation, rubber cracking, or leaks.' }
+          ]
+        }
+      };
+
+      const cfg = labConfig[category] || labConfig.umbrellas;
+      const labImg = document.getElementById('pd-lab-img');
+      const labIcon = document.getElementById('pd-lab-icon');
+      const labSubtitle = document.getElementById('pd-lab-subtitle');
+      const labPoints = document.getElementById('pd-lab-points');
+
+      if (labImg) {
+        labImg.src = cfg.img;
+        labImg.alt = cfg.alt;
+        labImg.className = cfg.imgClass;
+      }
+      if (labIcon) labIcon.textContent = cfg.icon;
+      if (labSubtitle) labSubtitle.textContent = cfg.subtitle;
+      if (labPoints) {
+        labPoints.innerHTML = cfg.points.map(pt => `
+          <div class="flex items-start gap-3 p-3 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-700/60">
+            <span class="text-base leading-none">${pt.icon}</span>
+            <div>
+              <div class="font-bold text-slate-900 dark:text-white">${pt.title}</div>
+              <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">${pt.desc}</div>
+            </div>
+          </div>
+        `).join('');
       }
     }
 
